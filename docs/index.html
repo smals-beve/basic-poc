@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Documentation</title>
+    <link rel="stylesheet" type="text/css" href="lib4ui/swagger-ui.css" />
+    <script src="lib4ui/swagger-ui-bundle.js" charset="UTF-8"></script>
+    <script src="lib4ui/swagger-ui-standalone-preset.js" charset="UTF-8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+      #markdown-doc {
+        max-width: 900px;
+        margin: 2em auto;
+        padding: 1em;
+        border: 1px solid #ddd;
+        background: #f9f9f9;
+        font-family: sans-serif;
+    }
+  </style>
+  </head>
+  <body>
+    <div id="swagger-ui"></div>
+    <hr>
+   <div id="markdown-doc"></div>
+    <script>
+      const ui = SwaggerUIBundle({
+        url: "technical_specs/basic.yaml",
+        dom_id: '#swagger-ui',
+        deepLinking: true,
+        presets: [
+          SwaggerUIBundle.presets.apis,
+          SwaggerUIStandalonePreset
+        ],
+        layout: "StandaloneLayout"
+      });
+       // Markdown loading
+    fetch('technical_docs_nl/README.md')
+      .then(response => response.text())
+      .then(text => {
+        document.getElementById('markdown-doc').innerHTML = marked.parse(text);
+      });
+    </script>
+  </body>
+</html>

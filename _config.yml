@@ -1,0 +1,6 @@
+title: Your Project Title
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

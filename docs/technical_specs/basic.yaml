@@ -1,0 +1,629 @@
+openapi: 3.0.3
+info:
+  title: "Work Remuneration - REST API"
+  description: "Service that allows to transmit data of work and remuneration calculations"
+  version: 1.0.0
+  #contact:
+  #  name: Flexijobs team
+  #  email: FlexijobsTeam@smals.be
+servers:
+  - url: https://services.socialsecurity.be/REST/workRemuneration/v1
+#security: A compléter
+tags:
+  - name: Calculation Results
+    description: "Information about work and remuneration calculation results"
+  - name: Monitoring
+    description: "Service monitoring"
+
+paths:
+  /calculationResults:
+    post:
+      tags:
+        - Calculation Results
+      summary: "Submit work and remuneration calculation results for a relation between an enterprise and a natural person."
+      operationId: submitCalculationResults
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CalculationRequest"
+        required: true
+      responses:
+        201:
+          description: Created
+          headers:
+            Location:
+              schema:
+                type: string
+                format: uri
+              description: Location of calculation results sent
+        400:
+          description: Bad request
+          content:
+            application/problem+json:
+              schema:
+                $ref: "../../belgif/problem/v1/problem-v1.yaml#/components/schemas/InputValidationProblem"
+        default:
+          description: Default response
+          content:
+            application/problem+json:
+              schema:
+                $ref: "../../belgif/problem/v1/problem-v1.yaml#/components/schemas/Problem"
+      #security:
+      #  - Oauth:
+      x-oauth2-required-scopes: any
+
+  /calculationResults/{calculationResultId}:
+    get:
+      tags:
+        - Calculation Results
+      summary: "Return work and remuneration calculation results for a given id."
+      operationId: getCalculationResultsById
+      parameters:
+        - $ref: "#/components/parameters/CalculationIdPathParameter"
+      responses:
+        200:
+          description: The requested resource was found or a search request returns some content
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Calculation"
+        400:
+          description: Bad request
+          content:
+            application/problem+json:
+              schema:
+                $ref: "../../belgif/problem/v1/problem-v1.yaml#/components/schemas/InputValidationProblem"
+        404:
+          description: The requested resource was not found
+          content:
+            application/problem+json:
+              schema:
+                $ref: "../../belgif/problem/v1/problem-v1.yaml#/components/schemas/Problem"
+        500:
+          description: Internal server error
+          content:
+            application/problem+json:
+              schema:
+                $ref: "../../belgif/problem/v1/problem-v1.yaml#/components/schemas/Problem"
+        default:
+          description: Default response
+          content:
+            application/problem+json:
+              schema:
+                $ref: "../../belgif/problem/v1/problem-v1.yaml#/components/schemas/Problem"
+      #security:
+        #- Oauth:
+      x-oauth2-required-scopes: any
+
+    put:
+      tags:
+        - Calculation Results
+      summary: "Update work and remuneration calculation results by id."
+      operationId: updateCalculationResultsById
+      parameters:
+        - $ref: "#/components/parameters/CalculationIdPathParameter"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                remunerationCalculation:
+                  $ref: "#/components/schemas/CalculationRequest"
+        required: true
+      responses:
+        204:
+          description: No content
+          headers:
+            Location:
+              schema:
+                type: string
+                format: uri
+              description: Location of modified relation
+        400:
+          description: Bad request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '../../belgif/problem/v1/problem-v1.yaml#/components/schemas/InputValidationProblem'
+        404:
+          description: The requested resource was not found
+          content:
+            application/problem+json:
+              schema:
+                $ref: "../../belgif/problem/v1/problem-v1.yaml#/components/schemas/Problem"
+        #409: A voir si on en aura besoin
+        #  description: ""
+        #  content:
+        #    application/problem+json:
+        #      schema:
+        #        $ref: "../../belgif/problem/v1/problem-v1.yaml#/components/schemas/Problem"
+        500:
+          description: Internal server error
+          content:
+            application/problem+json:
+              schema:
+                $ref: "../../belgif/problem/v1/problem-v1.yaml#/components/schemas/Problem"
+        default:
+          description: Default response
+          content:
+            application/problem+json:
+              schema:
+                $ref: '../../belgif/problem/v1/problem-v1.yaml#/components/schemas/Problem'
+      #security:
+        #- Oauth:
+      x-oauth2-required-scopes: any
+
+    delete:
+      tags:
+        - Calculation Results
+      summary: "Delete work and remuneration calculation results by id."
+      operationId: cancelCalculationResultsById
+      parameters:
+        - $ref: "#/components/parameters/CalculationIdPathParameter"
+      responses:
+        204:
+          description: No content
+        400:
+          description: Bad request
+          content:
+            application/problem+json:
+              schema:
+                $ref: '../../belgif/problem/v1/problem-v1.yaml#/components/schemas/InputValidationProblem'
+        404:
+          description: "The requested resource was not found."
+          content:
+            application/problem+json:
+              schema:
+                $ref: "../../belgif/problem/v1/problem-v1.yaml#/components/schemas/Problem"
+        #409:
+        #  description: ""
+        #  content:
+        #    application/problem+json:
+        #      schema:
+        #        $ref: "../../belgif/problem/v1/problem-v1.yaml#/components/schemas/Problem"
+        500:
+          description: Internal server error
+          content:
+            application/problem+json:
+              schema:
+                $ref: "../../belgif/problem/v1/problem-v1.yaml#/components/schemas/Problem"
+        default:
+          description: Default response
+          content:
+            application/problem+json:
+              schema:
+                $ref: '../../belgif/problem/v1/problem-v1.yaml#/components/schemas/Problem'
+      #security:
+        #- Oauth:
+      x-oauth2-required-scopes: any
+
+  /health:
+    get:
+      tags:
+        - Monitoring
+      summary: Check health of the service
+      operationId: checkHealth
+      externalDocs:
+        url: "https://www.belgif.be/specification/rest/api-guide/#health"
+      responses:
+        200:
+          description: The service is UP or DEGRADED
+          content:
+            application/json:
+              schema:
+                $ref: "../../belgif/common/v1/common-v1.yaml#/components/schemas/HealthStatus"
+              examples:
+                responseUp:
+                  value:
+                    {
+                      "status": "UP"
+                    }
+                responseDegraded:
+                  value:
+                    {
+                      "status": "DEGRADED"
+                    }
+        503:
+          description: "The service is DOWN."
+          content:
+            application/json:
+              schema:
+                $ref: "../../belgif/common/v1/common-v1.yaml#/components/schemas/HealthStatus"
+              examples:
+                responseDown:
+                  value:
+                    {
+                      "status": "DOWN"
+                    }
+        500:
+          $ref: '../../belgif/problem/v1/problem-v1.yaml#/components/responses/ProblemResponse'
+        default:
+          description: Default response
+          content:
+            application/problem+json:
+              schema:
+                $ref: '../../belgif/problem/v1/problem-v1.yaml#/components/schemas/Problem'
+      security: [ ]
+
+components:
+  parameters:
+    CalculationIdPathParameter:
+      name: calculationResultId
+      in: path
+      description: "Universally Unique Identifier of a remuneration calculation"
+      required: true
+      schema:
+        $ref: "../../belgif/common/v1/common-v1.yaml#/components/schemas/Uuid"
+  schemas:
+    Enterprise:
+      type: object
+      description: Only one of the two data (employerId or enterpriseNumber) must be completed.
+      properties:
+        enterpriseNumber:
+          $ref: "../../belgif/organization/identifier/v1/organization-identifier-v1.yaml#/components/schemas/EnterpriseNumber"
+        nssoNumber:
+          #$ref: "../../belgif/employment/identifier/v1/employment-identifier-v1.yaml#/components/schemas/EmployerId"
+          type: integer
+          format: int64
+          minimum: 199999937
+          maximum: 499999982
+      oneOf:
+        - required: [ enterpriseNumber ]
+        - required: [ nssoNumber ]
+    Relation:
+      type: object
+      properties:
+        declarantReference:
+          type: string
+        type:
+          type: string
+    CalculationData:
+      type: object
+      properties:
+        id:
+          $ref: "../../belgif/common/v1/common-v1.yaml#/components/schemas/Uuid"
+        startDate:
+          type: string
+          format: date
+        endDate:
+          type: string
+          format: date
+        calculationDate:
+          type: string
+          format: date
+        frequency: #calculationFrequency ?
+          type: integer #Ou string ?
+        relation:
+          $ref: "#/components/schemas/Relation"
+        enterprise:
+          $ref: "#/components/schemas/Enterprise"
+        naturalPerson:
+          $ref: "#/components/schemas/NaturalPerson"
+    CalculationRequest:
+      allOf:
+        - $ref: "#/components/schemas/CalculationData"
+        - type: object
+          properties:
+            services:
+              type: array
+              items:
+                $ref: "#/components/schemas/ServiceRequest"
+            identifyingSocialFeatures:
+              type: array
+              items:
+                $ref: "#/components/schemas/IdentifyingSocialFeatureRequest"
+            fiscalFeatures:
+              type: array
+              items:
+                $ref: "#/components/schemas/FiscalFeatureRequest"
+    Calculation:
+      allOf:
+        - $ref: "#/components/schemas/CalculationData"
+        - type: object
+          properties:
+            services:
+              type: array
+              items:
+                $ref: "#/components/schemas/Service"
+            identifyingSocialFeatures:
+              type: array
+              items:
+                $ref: "#/components/schemas/IdentifyingSocialFeature"
+            fiscalFeatures:
+              type: array
+              items:
+                $ref: "#/components/schemas/FiscalFeature"
+    ServiceRequest:
+      type: object
+      properties:
+        type: #service code
+          type: string
+        startDate:
+          type: string
+          format: date
+        endDate:
+          type: string
+          format: date
+        numberOfHours:
+          type: integer
+        feature:
+          $ref: "#/components/schemas/ServiceFeature"
+    Service:
+      allOf:
+        - type: object
+          properties:
+            sequenceNumber:
+              type: integer
+        - $ref: "#/components/schemas/ServiceRequest"
+    ServiceFeature:
+      type: object
+      properties:
+        informationOfServiceFeatureToCome: #... On n'a pas encore les infos
+          type: string
+    IdentifyingSocialFeatureData:
+      type: object
+      properties:
+        startDate:
+          type: string
+          format: date
+        endDate:
+          type: string
+          format: date
+        status: #integer ou string ? Si integer, peut-être l'appler statusCode
+          type: string
+        employerClass:
+          type: integer
+          minimum: 0
+          maximum: 999
+        workerCode:
+          type: integer
+          minimum: 0
+          maximum: 999
+        flatRateCode:
+          type: integer
+    IdentifyingSocialFeatureRequest:
+      allOf:
+        - $ref: "#/components/schemas/IdentifyingSocialFeatureData"
+        - type: object
+          properties:
+            operationalSocialFeatures:
+              type: array
+              items:
+                $ref: "#/components/schemas/OperationalSocialFeaturesRequest"
+            financialElements:
+              type: array
+              items:
+                $ref: "#/components/schemas/FinancialElementRequest"
+    IdentifyingSocialFeature:
+      allOf:
+        - $ref: "#/components/schemas/IdentifyingSocialFeatureData"
+        - type: object
+          properties:
+            operationalSocialFeatures:
+              type: array
+              items:
+                $ref: "#/components/schemas/OperationalSocialFeatures"
+            financialElements:
+              type: array
+              items:
+                $ref: "#/components/schemas/FinancialElement"
+    OperationalSocialFeaturesData:
+      type: object
+      properties:
+        startDate:
+          type: string
+          format: date
+          example: 2000-12-30
+          x-glossary: "00910"
+          x-description:
+            en: "Start date of the daily registration"
+            fr: "Date de début de l'enregistrement journalier"
+            nl: "Startdatum van de dagelijkse registratie"
+        endDate:
+          type: string
+          format: date
+        contractType: #Ou  workLoad ou workSchedule ?
+          type: string
+          enum:
+            - partTime
+            - fullTime
+        establishmentUnitNumber:
+          $ref: "../../belgif/organization/identifier/v1/organization-identifier-v1.yaml#/components/schemas/EstablishmentUnitNumber"
+        jointCommissionNumber:
+          type: string
+        economicActivity: #NaceCode mais on doit utiliser economicActivity (Rest Board)
+          $ref: "../../belgif/organization/v1/organization-v1.yaml#/components/schemas/NaceCode"
+        servicePercentages:
+          type: array
+          items:
+            $ref: "#/components/schemas/ServicePercentage"
+
+    OperationalSocialFeaturesRequest:
+      allOf:
+        - $ref: "#/components/schemas/OperationalSocialFeaturesData"
+        - type: object
+          properties:
+            details:
+              type: array
+              items:
+                $ref: "#/components/schemas/SocialFeaturesDetailRequest"
+            financialElements:
+              type: array
+              items:
+                $ref: "#/components/schemas/FinancialElementRequest"
+
+    OperationalSocialFeatures:
+      allOf:
+        - $ref: "#/components/schemas/OperationalSocialFeaturesData"
+        - type: object
+          properties:
+            details:
+              type: array
+              items:
+                $ref: "#/components/schemas/SocialFeaturesDetail"
+            financialElements:
+              type: array
+              items:
+                $ref: "#/components/schemas/FinancialElement"
+
+    SocialFeaturesDetailRequest:
+      type: object
+      properties:
+        startDate:
+          type: string
+          format: date
+        endDate:
+          type: string
+          format: date
+        jobTitle:
+          type: string
+        #...
+        weeklyMaxNumberOfHoursAllowed:
+          type: integer
+        #...
+
+    SocialFeaturesDetail:
+      allOf:
+        - type: object
+          properties:
+            sequenceNumber:
+              type: integer
+        - $ref: "#/components/schemas/SocialFeaturesDetailRequest"
+
+    ServicePercentage:
+      type: object
+      properties:
+        type: #Autre nom ?
+          type: string #Autre type ?
+        effectiveAverageWeeklyWorkingHours:
+          type: integer
+        annualAverageWeeklyWorkingHours:
+          type: integer
+        annualAverageWeeklyPaidWorkingHours:
+          type: integer
+
+    FinancialElementRequest:
+      type: object
+      properties:
+        type:
+          $ref: "#/components/schemas/FinancialElementType"
+        amount:
+          $ref: "../../belgif/money/v1/money-v1.yaml#/components/schemas/EuroCentAmount"
+        allocationFrequency:
+          type: integer
+        numberOfUnits:
+          type: integer
+        amountPerUnit:
+          $ref: "../../belgif/money/v1/money-v1.yaml#/components/schemas/EuroCentAmount"
+        detail:
+          $ref: "#/components/schemas/FinancialElementDetail"
+
+    FinancialElementType:
+      type: object
+      properties:
+        category:
+          type: string
+        code:
+          type: integer
+
+    FinancialElement:
+      allOf:
+        - type: object
+          properties:
+            sequenceNumber:
+              type: integer
+        - $ref: "#/components/schemas/FinancialElementRequest"
+
+    FinancialElementDetail:
+      type: object
+      properties:
+        startDate:
+          type: string
+          format: date
+        endDate:
+          type: string
+          format: date
+        #...
+    FiscalFeatureData:
+      type: object
+      properties:
+        startDate:
+          type: string
+          format: date
+        endDate:
+          type: string
+          format: date
+        civilStatusType:
+          $ref: "../../belgif/person/v2/person-v2.yaml#/components/schemas/CivilStatusTypeCode"
+        numberOfDependentChildren:
+          type: integer
+        numberOfDependentDisabledChildren:
+          type: integer
+        numberOfDependents:
+          type: integer
+        numberOfDisabledDependents:
+          type: integer
+        disabilityIndicator:
+          type: string #Ou integer ?
+        #...
+
+    FiscalFeatureRequest:
+      allOf:
+        - $ref: "#/components/schemas/FiscalFeatureData"
+        - type: object
+          properties:
+            financialElements:
+              type: array
+              items:
+                $ref: "#/components/schemas/FinancialElementRequest"
+
+    FiscalFeature:
+      allOf:
+        - $ref: "#/components/schemas/FiscalFeatureData"
+        - type: object
+          properties:
+            financialElements:
+              type: array
+              items:
+                $ref: "#/components/schemas/FinancialElement"
+
+    NaturalPerson:
+      type: object
+      properties:
+        ssin:
+          $ref: "../../belgif/person/identifier/v1/person-identifier-v1.yaml#/components/schemas/Ssin"
+      required:
+        - ssin
+    startDate:
+      type: string
+      format: date
+      example: 2000-12-30
+      x-glossary: "00910"
+      x-description:
+        en: "Start date of the daily registration"
+        fr: "Date de début de l'enregistrement journalier"
+        nl: "Startdatum van de dagelijkse registratie"
+
+    PageLinks:
+      description: Object containing links of paginated collection of resources
+      type: object
+      properties:
+        prev:
+          type: string
+          description: URL of the previous page
+          format: uri
+        next:
+          type: string
+          description: URL of the next page
+          format: uri
+        page:
+          type: integer
+          description: Number of the current page
+        pageSize:
+          type: integer
+          description: Number of items per page
+        total:
+          type: integer
+          description: Total number of items found
