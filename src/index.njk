@@ -1,0 +1,56 @@
+---
+layout: default
+title: e-Gov 3.0 Documentation
+---
+
+<h1>{{ title }}</h1>
+
+<section>
+  <h2>Guides &amp; Glossary</h2>
+
+  <h3>English</h3>
+  <ul>
+    {% for page in collections.docs_en %}
+      <li>
+        <a href="{{ page.url }}">
+          {{ page.data.title or page.fileSlug }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <h3>Français</h3>
+  <ul>
+    {% for page in collections.docs_fr %}
+      <li>
+        <a href="{{ page.url }}">
+          {{ page.data.title or page.fileSlug }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <h3>Nederlands</h3>
+  <ul>
+    {% for page in collections.docs_nl %}
+      <li>
+        <a href="{{ page.url }}">
+          {{ page.data.title or page.fileSlug }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section>
+  <h2>API Specs</h2>
+  <ul>
+    {% for spec in collections.apiSpecs %}
+      <li>
+        <a href="/api/{{ spec.fileSlug }}/">
+          {{ spec.data.info.title or spec.fileSlug }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

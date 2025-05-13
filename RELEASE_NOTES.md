@@ -27,4 +27,4 @@ Cette première version du fichier JSON pour e-Test 3.0 introduit une définitio
 - Intégration du standard ISO 5218 pour la représentation du genre.
 - Contraintes claires sur les valeurs acceptables pour le statut civil et les relations au ménage, alignées avec les codes du registre national.
 
-Consultez les [Notes Techniques](docs/technical_notes.md) pour des détails complets.
+Consultez les [Notes Techniques](src/content/technical_notes.md) pour des détails complets.
