@@ -16,10 +16,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "18.x"
-          cache: "npm"            # auto-cache package-lock.json & node_modules
+          cache: "npm"
 
       - name: Install dependencies
-        run: npm ci               # clean, lockfile-based install
+        run: npm ci
 
       - name: Build site
         run: npm run build
