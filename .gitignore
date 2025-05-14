@@ -9,5 +9,3 @@ _site/
 .idea/
 .vscode/
 
-package-lock.json
-
