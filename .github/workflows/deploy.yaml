@@ -14,10 +14,10 @@ jobs:
       - name: Setup Node.js & cache
         uses: actions/setup-node@v3
         with:
-          node-version: "22.5.1"
+          node-version: "18.x"
           cache: "npm"
 
-      - name: Force registry → npmjs.org
+      - name: Ensure default npm registry
         run: npm config set registry https://registry.npmjs.org/
 
       - name: Install dependencies
