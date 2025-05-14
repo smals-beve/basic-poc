@@ -3,17 +3,21 @@ pagination:
   data: collections.apiSpecs
   size: 1
   alias: spec
+
 permalink: "api/{{ spec.fileSlug }}/index.html"
 layout: default
-title: "{{ spec.data.info.title }}"
+
+# Compute the page title _after_ `spec` is available
+eleventyComputed:
+  title: "{{ spec.data.info.title }}"
 ---
-<h1>{{ spec.data.info.title }}</h1>
+
 <div id="swagger-ui"></div>
 <script src="/lib4ui/swagger-ui-bundle.js"></script>
 <script src="/lib4ui/swagger-ui-standalone-preset.js"></script>
 <script>
   SwaggerUIBundle({
-    url: "/technical_specs/{{ spec.fileSlug }}.yaml",
+    url: "/content/technical_specs/{{ spec.fileSlug }}.yaml",
     dom_id: "#swagger-ui",
     deepLinking: true,
     presets: [

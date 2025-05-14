@@ -12,7 +12,7 @@ Code die het type prestatie of afwezigheid aanduidt.
 ### Gegevens van het veld:
 
 * **Type :** String
-* **Enumeration :** Zie bijlage [Annex 100](../../technical_specs/Annex/codes%20prestation.xlsx) 
+* **Enumeration :** Zie bijlage [Annex 100](../../../technical_specs/Annex/annex100_service_code.xlsx) 
 
 ### Zakelijke Beperkingen:
 * **Verplicht**: Het veld moet altijd ingevuld worden wanneer een prestatie of afwezigheid is opgegeven.
