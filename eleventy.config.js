@@ -1,55 +1,55 @@
 import fs from "fs";
 import path from "path";
-import { fileURLToPath } from "url";
+import {fileURLToPath} from "url";
 import yaml from "js-yaml";
-import { InputPathToUrlTransformPlugin } from "@11ty/eleventy";
+import {InputPathToUrlTransformPlugin, HtmlBasePlugin} from "@11ty/eleventy";
 
 // __dirname shim for ESM
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-export default function(eleventyConfig) {
-    // 1) Rewrite .md links → folder URLs
+export default function (eleventyConfig) {
+    // 1) Automatically inject <base> tag and rewrite all URLs by pathPrefix
+    eleventyConfig.addPlugin(HtmlBasePlugin);
+
+    // 2) Convert Markdown links (folder URLs) using Eleventy’s plugin
     eleventyConfig.addPlugin(InputPathToUrlTransformPlugin, {
         extensions: "html"
     });
 
-    // 2) Passthrough copy
+    // 3) Copy static assets directly into output
     eleventyConfig.addPassthroughCopy({
         "public/lib4ui": "lib4ui",
         "src/assets": "assets",
         "src/content/technical_specs": "content/technical_specs"
     });
 
-    // 3) Language‐specific collections
-    ["en","fr","nl"].forEach(lang => {
+    // 4) Create language‐specific doc collections from Markdown
+    ["en", "fr", "nl"].forEach(lang => {
         eleventyConfig.addCollection(`docs_${lang}`, coll =>
             coll.getFilteredByGlob(`src/content/technical_docs_${lang}/**/*.md`)
         );
     });
 
-    // 4) API specs from YAML
+    // 5) Build API specs collection by loading YAML files
     eleventyConfig.addCollection("apiSpecs", () => {
         const specsDir = path.join(__dirname, "src", "content", "technical_specs");
         return fs.readdirSync(specsDir)
             .filter(f => /\.(ya?ml)$/.test(f))
-            .map(filename => ({
-                fileSlug: path.parse(filename).name,
-                data: yaml.load(fs.readFileSync(path.join(specsDir, filename), "utf8"))
+            .map(file => ({
+                fileSlug: path.parse(file).name,
+                data: yaml.load(fs.readFileSync(path.join(specsDir, file), "utf8"))
             }));
     });
 
-    // 5) Layout alias & .nojekyll passthrough
+    // 6) Alias default layout and prevent GitHub Pages from ignoring files
     eleventyConfig.addLayoutAlias("default", "base.njk");
-    eleventyConfig.addPassthroughCopy({ ".nojekyll": ".nojekyll" });
+    eleventyConfig.addPassthroughCopy({".nojekyll": ".nojekyll"});
 
-    // 6) Dev server tweaks
-    eleventyConfig.setBrowserSyncConfig({
-        open: true,
-        notify: false
-    });
+    // 7) Tweak BrowserSync for local dev: auto-open, no notifications
+    eleventyConfig.setBrowserSyncConfig({open: true, notify: false});
 
-    // 7) Basic directory settings; no pathPrefix here!
+    // 8) Core directory settings; pathPrefix is handled via CLI flag
     return {
         dir: {
             input: "src",
