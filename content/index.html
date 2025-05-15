@@ -1,68 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Documentation | e-Gov 3.0</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="/basic-poc/lib4ui/swagger-ui.css">
-  <link rel="stylesheet" href="/basic-poc/assets/styles.css">
+	<meta charset="UTF-8">
+	<title>Documentation</title>
+	<link rel="stylesheet" type="text/css" href="lib4ui/swagger-ui.css">
+	<script src="lib4ui/swagger-ui-bundle.js" charset="UTF-8"></script>
+	<script src="lib4ui/swagger-ui-standalone-preset.js" charset="UTF-8"></script>
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+	<style>
+		#markdown-doc {
+			max-width: 900px;
+			margin: 2em auto;
+			padding: 1em;
+			border: 1px solid #ddd;
+			background: #f9f9f9;
+			font-family: sans-serif;
+		}
+	</style>
 </head>
 <body>
-  <nav>
-    <a href="/basic-poc/">Home</a> |
-    <a href="/basic-poc/api/basic/">API</a>
-  </nav>
-  <main>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Documentation</title>
-
-  <!-- CSS and JS assets: HTML Base plugin will prefix these automatically -->
-  <link rel="stylesheet" href="/basic-poc/basic-poc/lib4ui/swagger-ui.css">
-  <script src="/basic-poc/basic-poc/lib4ui/swagger-ui-bundle.js" charset="UTF-8"></script>
-  <script src="/basic-poc/basic-poc/lib4ui/swagger-ui-standalone-preset.js" charset="UTF-8"></script>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-  <style>
-    #markdown-doc {
-      max-width: 900px;
-      margin: 2em auto;
-      padding: 1em;
-      border: 1px solid #ddd;
-      background: #f9f9f9;
-      font-family: sans-serif;
-    }
-  </style>
-</head>
-<body>
-  <div id="swagger-ui"></div>
-  <hr>
-  <div id="markdown-doc"></div>
-
-  <script>
-    // Use Eleventy’s url filter to get properly prefixed YAML path
-    const ui = SwaggerUIBundle({
-      url: "/basic-poc/content/technical_specs/basic.yaml",  // step 3 :contentReference[oaicite:9]{index=9}
-      dom_id: '#swagger-ui',
-      deepLinking: true,
-      presets: [
-        SwaggerUIBundle.presets.apis,
-        SwaggerUIStandalonePreset
-      ],
-      layout: "StandaloneLayout"
-    });
-
-    // Fetch Markdown with correct prefix
-    fetch("/basic-poc/content/technical_docs_nl/README.md")     // step 4 :contentReference[oaicite:10]{index=10}
-      .then(r => r.text())
-      .then(text => {
-        document.getElementById('markdown-doc').innerHTML = marked.parse(text);
-      });
-  </script>
-</body>
-</html>
-</main>
+<div id="swagger-ui"></div>
+<hr>
+<div id="markdown-doc"></div>
+<script>
+	const ui = SwaggerUIBundle({
+		url: "technical_specs/basic.yaml",
+		dom_id: '#swagger-ui',
+		deepLinking: true,
+		presets: [
+			SwaggerUIBundle.presets.apis,
+			SwaggerUIStandalonePreset
+		],
+		layout: "StandaloneLayout"
+	});
+	// Markdown loading
+	fetch('technical_docs_nl/README.md')
+		.then(response => response.text())
+		.then(text => {
+			document.getElementById('markdown-doc').innerHTML = marked.parse(text);
+		});
+</script>
 </body>
 </html>
