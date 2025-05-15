@@ -13,11 +13,8 @@ eleventyComputed:
 ---
 
 <div id="swagger-ui"></div>
-
-<!-- Swagger UI assets: will be prefixed by the HTML Base plugin -->
-<script src="{{ '/lib4ui/swagger-ui-bundle.js' | url }}" charset="UTF-8"></script>
-<script src="{{ '/lib4ui/swagger-ui-standalone-preset.js' | url }}" charset="UTF-8"></script>
-
+<script src="/lib4ui/swagger-ui-bundle.js"></script>
+<script src="/lib4ui/swagger-ui-standalone-preset.js"></script>
 <script>
   SwaggerUIBundle({
     // Injects /basic-poc/content/technical_specs/<slug>.yaml
