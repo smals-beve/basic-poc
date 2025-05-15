@@ -46,10 +46,7 @@ export default function (eleventyConfig) {
     eleventyConfig.addLayoutAlias("default", "base.njk");
     eleventyConfig.addPassthroughCopy({".nojekyll": ".nojekyll"});
 
-    // 7) Tweak BrowserSync for local dev: auto-open, no notifications
-    eleventyConfig.setBrowserSyncConfig({open: true, notify: false});
-
-    // 8) Core directory settings; pathPrefix is handled via CLI flag
+    // 7) Core directory settings; pathPrefix is handled via CLI flag
     return {
         dir: {
             input: "src",
