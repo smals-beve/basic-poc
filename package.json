@@ -4,8 +4,8 @@
   "description": "Welcome to the `basic` repository of the **e-Gov 3.0** project, dedicated to the definition and standardization of data types.",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy",
-    "serve": "eleventy --serve"
+    "serve": "ELEVENTY_ENV=development eleventy --serve",
+    "build": "ELEVENTY_ENV=production eleventy"
   },
   "keywords": [],
   "author": "",
