@@ -18,22 +18,13 @@ jobs:
           node-version: "20.x"
           cache: npm
 
-      - name: Clear proxy environment variables
-        run: |
-          unset HTTP_PROXY
-          unset HTTPS_PROXY
-          unset http_proxy
-          unset https_proxy
+      - name: Downgrade npm to v9
+        run: npm install -g npm@9.8.1
 
-      - name: Force public npm registry
+      - name: Point npm at public registry
         run: npm config set registry https://registry.npmjs.org/
 
-      - name: Override project .npmrc
-        run: echo "registry=https://registry.npmjs.org/" > .npmrc
-
       - name: Install dependencies
-        env:
-          npm_config_registry: https://registry.npmjs.org/
         run: npm ci
 
       - name: Build site
