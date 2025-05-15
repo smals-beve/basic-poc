@@ -9,33 +9,39 @@ permissions:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
 
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Node.js & cache
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "20.x"
-          cache: npm
+          node-version: "18"
 
-      - name: Downgrade npm to v9
-        run: npm install -g npm@9.8.1
+      - name: Persist npm cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
 
-      - name: Point npm at public registry
-        run: npm config set registry https://registry.npmjs.org/
+      - name: Persist Eleventy cache
+        uses: actions/cache@v3
+        with:
+          path: ./.cache
+          key: ${{ runner.os }}-eleventy-fetch-cache }}
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Build site
-        run: npx eleventy
+      - name: Build for GitHub Pages
+        run: npm run build
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: "./_site"
-          commit_message: "📦 Eleventy site: ${{ github.sha }}"
+          publish_dir: ./_site

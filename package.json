@@ -1,15 +1,12 @@
 {
   "name": "basic-poc",
   "version": "1.0.0",
-  "description": "Welcome to the `basic` repository of the **e-Gov 3.0** project, dedicated to the definition and standardization of data types.",
+  "description": "Welcome to the `basic` repository of the **e-Gov 3.0** project.",
   "main": "index.js",
   "scripts": {
-    "serve": "ELEVENTY_ENV=development eleventy --serve",
-    "build": "ELEVENTY_ENV=production eleventy"
+    "serve": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy --pathprefix=/basic-poc/"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "type": "module",
   "dependencies": {
     "@11ty/eleventy": "^3.1.0",
