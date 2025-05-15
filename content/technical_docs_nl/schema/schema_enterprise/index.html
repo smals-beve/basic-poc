@@ -1,0 +1,67 @@
+<p><a href="/content/technical_docs_nl/README/">Return</a></p>
+<h2>Schema:  Enterprise</h2>
+<p><strong>Beschrijving:</strong><br>
+Objet permettant d'identifier une entreprise dans une déclaration employeur. Seul un des deux numéros (<code>enterpriseNumber</code> ou <code>nssoNumber</code>) doit obligatoirement être renseigné.</p>
+<h3>Gerelateerde Documentatie:</h3>
+<h3>Schema Eigenschappen:</h3>
+<table>
+<thead>
+<tr>
+<th>Veldnaam</th>
+<th>Beschrijving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/content/technical_docs_nl/field/enterpriseNumber/">enterpriseNumber</a></td>
+<td>Ondernemingsnummer</td>
+</tr>
+<tr>
+<td><a href="/content/technical_docs_nl/field/nssoNumber/">nssoNumber</a></td>
+<td>RSZ-nummer</td>
+</tr>
+</tbody>
+</table>
+<h3>Contraintes métier :</h3>
+<ul>
+<li><strong>Condition exclusive</strong> : Un seul des deux numéros peut être complété (<code>oneOf</code>).</li>
+</ul>
+<p>Stelt de verklaring van de voordelen van een werknemer voor een bezetting van de lijn van de werknemer mogelijk.<br>
+Dit schema bevat verschillende gegevens.</p>
+<table>
+<thead>
+<tr>
+<th>Veldnaam</th>
+<th>Beschrijving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sequenceNbr</td>
+<td>Volgnummer</td>
+</tr>
+<tr>
+<td>ServiceType</td>
+<td>Prestatie- of afwezigheidscode</td>
+</tr>
+<tr>
+<td>startDate</td>
+<td>Datum of begindatum van prestatie of afwezigheid</td>
+</tr>
+<tr>
+<td>endDate</td>
+<td>Einddatum van prestatie of afwezigheid</td>
+</tr>
+<tr>
+<td>nbrOfHours</td>
+<td>Aantal uren van prestatie of afwezigheid</td>
+</tr>
+</tbody>
+</table>
+<h3>Zakelijke Beperkingen:</h3>
+<ul>
+<li><strong>Verplicht</strong>: Ten minste één voordeel moet worden gedeclareerd.</li>
+<li><strong>Formaat</strong>: Het datumformaat is <code>YYYY-MM-DD</code> en tijd wordt uitgedrukt in uren.</li>
+</ul>
+<h3>Anomalieën:</h3>
+<p>Binnenkort beschikbaar</p>
