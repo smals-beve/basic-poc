@@ -1,27 +1,36 @@
-[Return](../README.md)
+[🔙 Terug naar overzicht](../README.md)
 
-## Veld : serviceType (Prestatie- of afwezigheidscode)
+# 🧩 Veld: `serviceType` (Prestatie- of afwezigheidscode)
 
-**Beschrijving :**  
-Code die het type prestatie of afwezigheid aanduidt.
+## 📝 Beschrijving
 
-### Externe Documentatie
+Het veld `serviceType` geeft aan welk type prestatie of afwezigheid van toepassing is voor de opgegeven periode binnen
+een tewerkstelling.
 
-[Glossarium - 00062 - PRESTATIECODE](https://www.socialsecurity.be/portail/glossaires/dmfa.nsf/56d13fe0587c9d6dc1256b210060ae6a/9b8d5096479a172dc1258bea00337fd6?OpenDocument)
+---
 
-### Gegevens van het veld:
+## ⚙️ Technische specificaties
 
-* **Type :** String
-* **Enumeration :** Zie bijlage [Annex 100](../../../technical_specs/Annex/annex100_service_code.xlsx) 
+- **Type** : `String`
+- **Enumeratie** : De toegelaten waarden worden opgesomd in de bijlage  
+  👉 <a href="../../../technical_specs/Annex/annex100_service_code.xlsx" target="_blank">📂 Annex 100 – Codes Prestatie (
+  Excel)</a>
 
-### Zakelijke Beperkingen:
-* **Verplicht**: Het veld moet altijd ingevuld worden wanneer een prestatie of afwezigheid is opgegeven.
-* **Formaat**: De waarde moet overeenkomen met een van de geldige codes uit de bijlage.
+---
 
+## ⚠️ Zakelijke beperkingen
 
-### Anomalieën:
+- **Verplicht**: Dit veld **moet** ingevuld worden zodra een prestatie of afwezigheid is opgegeven.
+- **Validatie**: De waarde moet exact overeenkomen met een van de geldige codes uit *Annex 100*.
 
-**Binnenkort beschikbaar**
+---
 
+## 🧪 Anomalieën
 
+Een overzicht van mogelijke anomalieën wordt binnenkort toegevoegd.
 
+---
+
+## 📎 Gerelateerde documentatie
+
+- [Schema: Service](../schema/schema_service.md)

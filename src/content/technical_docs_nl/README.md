@@ -107,6 +107,6 @@ Op langere termijn, bij de verdere realisatie van de centrale datalaag in het ka
 
 ### 3.3 bijlagen
 
-| bijlagen Naam                             | Beschrijving                    | 
-|-------------------------------------------|---------------------------------|
-| [Service Code](../technical_specs/Annex/annex100_service_code.xlsx) | Prestatie- of afwezigheidscode  |
+| bijlagen Naam                                                          | Beschrijving                    | 
+|------------------------------------------------------------------------|---------------------------------|
+| [Service Code](../../technical_specs/Annex/annex100_service_code.xlsx) | Prestatie- of afwezigheidscode  |

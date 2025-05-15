@@ -1,36 +1,54 @@
+# 📄 Documentatie - Schema: `Service` (Prestaties)
+
+## 📘 Context
+
+Dit document maakt deel uit van de **functioneel/technische documentatie** voor eGov3.0. Het biedt een beschrijving van het dataschema `Service`, dat gebruikt wordt voor het aangeven van prestaties of afwezigheden van een werknemer.
+
+Voor een goed begrip, raden we aan eerst de [algemene context en inleiding](../README.md) te bekijken.
+
 ---
-layout: default
-title: Schema Service NL
+
+## 🧾 Beschrijving
+
+Het `Service`-schema stelt de aangifte van voordelen of prestaties van een werknemer mogelijk, binnen een bepaalde periode van zijn/haar tewerkstelling. Het bevat verschillende gegevensvelden die nodig zijn voor een correcte verwerking van de prestaties.
+
 ---
-[Return](../README.md)
 
-# Schema: Service
+## ⚙️ Schema-eigenschappen (blok)
 
-## Schema: Service (Prestaties)
+- **Label technique** : `Service`
+- **Cardinaliteit** : Min. `0` – Max. `*`
+- **Aanwezigheid (presence)** :
+    - **Voorwaarde** : Verplicht als ten minste één prestatie moet worden gedeclareerd.
+    - **Extra beperkingen** : Een specifieke prestatiecode mag slechts één keer voorkomen per bezetting.
 
-**Beschrijving:**  
-Stelt de verklaring van de voordelen van een werknemer voor een bezetting van de lijn van de werknemer mogelijk.  
-Dit schema bevat verschillende gegevens.
+---
 
-### Schema Eigenschappen:
+## 📑 Gegevensvelden
 
-| Veldnaam          | Beschrijving                                     | 
-|-------------------|--------------------------------------------------|
-| sequenceNbr       | Volgnummer                                       | 
-| [ServiceType](../field/serviceType.md)       | Prestatie- of afwezigheidscode                   | 
-| startDate         | Datum of begindatum van prestatie of afwezigheid | 
-| endDate           | Einddatum van prestatie of afwezigheid           | 
-| nbrOfHours        | Aantal uren van prestatie of afwezigheid         | 
+| **Veldnaam**     | **Beschrijving**                                          |
+|------------------|-----------------------------------------------------------|
+| `sequenceNbr`    | Volgnummer van de aangifte                               |
+| [`serviceType`](../field/serviceType.md)    | Code die het type prestatie of afwezigheid aanduidt      |
+| `startDate`      | Startdatum van de prestatie of afwezigheid (formaat: `YYYY-MM-DD`) |
+| `endDate`        | Einddatum van de prestatie of afwezigheid (formaat: `YYYY-MM-DD`) |
+| `nbrOfHours`     | Aantal gepresteerde of afwezige uren (in uren)           |
 
-### Zakelijke Beperkingen:
 
-* **Verplicht**: Ten minste één voordeel moet worden gedeclareerd.
-* **Formaat**: Het datumformaat is `YYYY-MM-DD` en tijd wordt uitgedrukt in uren.
+---
 
-### Anomalieën:
+## 🧪 Anomalieën
 
-Binnenkort beschikbaar
+Momenteel worden anomalieën nog uitgewerkt. Een overzicht zal hier binnenkort beschikbaar zijn.
 
-### Gerelateerde Documentatie:
-[Annex 90018](https://www.socialsecurity.be/portail/glossaires/dmfa.nsf/be8ba64d95a2ed0ec125686200574ff5/3ec8c3acff4dffc1c1258bea003378c9?OpenDocument)
+---
 
+## 📎 Gerelateerde documentatie
+
+?
+
+---
+
+## ❌ Belangrijke opmerking
+
+?

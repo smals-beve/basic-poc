@@ -15,20 +15,29 @@ jobs:
       - name: Setup Node.js & cache
         uses: actions/setup-node@v3
         with:
-          node-version: "18.x"
+          node-version: "20.x"
           cache: npm
 
-      - name: Point npm at public registry
+      - name: Clear proxy environment variables
+        run: |
+          unset HTTP_PROXY
+          unset HTTPS_PROXY
+          unset http_proxy
+          unset https_proxy
+
+      - name: Force public npm registry
         run: npm config set registry https://registry.npmjs.org/
 
-      - name: Regenerate lockfile
-        run: npm ci --package-lock-only
+      - name: Override project .npmrc
+        run: echo "registry=https://registry.npmjs.org/" > .npmrc
 
       - name: Install dependencies
+        env:
+          npm_config_registry: https://registry.npmjs.org/
         run: npm ci
 
       - name: Build site
-        run: npm run build
+        run: npx eleventy
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
