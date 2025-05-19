@@ -4,14 +4,39 @@
   <meta charset="utf-8">
   <title>{{ title }} | e-Gov 3.0</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="/lib4ui/swagger-ui.css">
-  <link rel="stylesheet" href="/assets/styles.css">
+
+  <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | url }}">
+  <link rel="stylesheet" href="{{ '/assets/styles.css'       | url }}">
+
+  {% if page.url.indexOf("/api/") === 0 and page.url !== ("/api/" | url) %}
+    <link rel="stylesheet" href="{{ '/lib4ui/swagger-ui.css' | url }}">
+  {% endif %}
 </head>
 <body>
-  <nav>
-    <a href="/">Home</a> |
-    <a href="/api/basic/">API</a>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+    <div class="container">
+      <a class="navbar-brand" href="{{ '/' | url }}">e-Gov 3.0</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ '/'    | url }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ '/api/' | url }}">API Overview</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
-  <main>{{ content | safe }}</main>
+
+  <main class="container my-4">
+    {{ content | safe }}
+  </main>
+
+  <script src="{{ '/assets/js/bootstrap.bundle.min.js' | url }}"></script>
 </body>
 </html>

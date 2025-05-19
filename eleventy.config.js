@@ -24,14 +24,20 @@ export default function (eleventyConfig) {
         "src/content/technical_specs": "content/technical_specs"
     });
 
-    // 4) Create language‐specific doc collections from Markdown
+    // 4) Bootstrap passthrough
+    eleventyConfig.addPassthroughCopy({
+        "node_modules/bootstrap/dist/css/bootstrap.min.css": "assets/css/bootstrap.min.css",
+        "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js": "assets/js/bootstrap.bundle.min.js"
+    });
+
+    // 5) Create language‐specific doc collections from Markdown
     ["en", "fr", "nl"].forEach(lang => {
         eleventyConfig.addCollection(`docs_${lang}`, coll =>
             coll.getFilteredByGlob(`src/content/technical_docs_${lang}/**/*.md`)
         );
     });
 
-    // 5) Build API specs collection by loading YAML files
+    // 6) Build API specs collection by loading YAML files
     eleventyConfig.addCollection("apiSpecs", () => {
         const specsDir = path.join(__dirname, "src", "content", "technical_specs");
         return fs.readdirSync(specsDir)
@@ -42,11 +48,11 @@ export default function (eleventyConfig) {
             }));
     });
 
-    // 6) Alias default layout and prevent GitHub Pages from ignoring files
+    // 7) Alias default layout and prevent GitHub Pages from ignoring files
     eleventyConfig.addLayoutAlias("default", "base.njk");
     eleventyConfig.addPassthroughCopy({".nojekyll": ".nojekyll"});
 
-    // 7) Core directory settings; pathPrefix is handled via CLI flag
+    // 8) Core directory settings; pathPrefix is handled via CLI flag
     return {
         dir: {
             input: "src",
