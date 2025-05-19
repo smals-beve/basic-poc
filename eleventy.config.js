@@ -54,10 +54,7 @@ export default function (eleventyConfig) {
 
     // 8) Core directory settings; pathPrefix is handled via CLI flag
     return {
-        dir: {
-            input: "src",
-            includes: "layouts",
-            output: "_site"
-        }
+        pathPrefix: "/basic-poc/",
+        dir: {input: "src", includes: "layouts", output: "_site"}
     };
 }

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "serve": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy --pathprefix=/basic-poc/"
+    "build": "npx @11ty/eleventy"
   },
   "type": "module",
   "dependencies": {
