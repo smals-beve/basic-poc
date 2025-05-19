@@ -3,54 +3,61 @@ layout: default
 title: e-Gov 3.0 Documentation
 ---
 
-<h1>{{ title }}</h1>
+{% set langs = [
+  { code: "en", label: "English" },
+  { code: "fr", label: "Français" },
+  { code: "nl", label: "Nederlands" }
+] %}
 
-<section>
-  <h2>Guides &amp; Glossary</h2>
+<h1 class="mb-4">{{ title }}</h1>
 
-  <h3>English</h3>
-  <ul>
-    {% for page in collections.docs_en %}
-      <li>
-        <a href="{{ page.url }}">
-          {{ page.data.title or page.fileSlug }}
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
+<!-- Language Tabs -->
+<ul class="nav nav-tabs mb-4" id="langTabs" role="tablist">
+  {% for lang in langs %}
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link {{ lang.code == "en" and "active" or "" }}"
+        id="{{ lang.code }}-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#{{ lang.code }}"
+        type="button"
+        role="tab"
+      >
+        {{ lang.label }}
+      </button>
+    </li>
+  {% endfor %}
+</ul>
 
-  <h3>Français</h3>
-  <ul>
-    {% for page in collections.docs_fr %}
-      <li>
-        <a href="{{ page.url }}">
-          {{ page.data.title or page.fileSlug }}
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <h3>Nederlands</h3>
-  <ul>
-    {% for page in collections.docs_nl %}
-      <li>
-        <a href="{{ page.url }}">
-          {{ page.data.title or page.fileSlug }}
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
-
-<section>
-  <h2>API Specs</h2>
-  <ul>
-    {% for spec in collections.apiSpecs %}
-      <li>
-        <a href="/api/{{ spec.fileSlug }}/">
-          {{ spec.data.info.title or spec.fileSlug }}
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
+<!-- Tab Panes -->
+<div class="tab-content" id="langTabsContent">
+  {% for lang in langs %}
+    <div
+      class="tab-pane fade {{ lang.code == "en" and "show active" or "" }}"
+      id="{{ lang.code }}"
+      role="tabpanel"
+      aria-labelledby="{{ lang.code }}-tab"
+    >
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for page in collections["docs_" + lang.code] %}
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                  {{ page.data.title or page.fileSlug }}
+                </h5>
+                {% if page.data.description %}
+                  <p class="card-text">{{ page.data.description }}</p>
+                {% endif %}
+                <a href="{{ page.url }}"
+                   class="mt-auto btn btn-sm btn-primary">
+                  Read →
+                </a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
