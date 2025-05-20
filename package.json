@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "serve": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "build": "cross-env ELEVENTY_ENV=production npx @11ty/eleventy"
   },
   "type": "module",
   "dependencies": {
     "@11ty/eleventy": "^3.1.0",
     "bootstrap": "^5.3.6",
     "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }

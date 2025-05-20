@@ -5,29 +5,25 @@
   <title>{{ title }} | e-Gov 3.0</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | url }}">
-  <link rel="stylesheet" href="{{ '/assets/styles.css'       | url }}">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/styles.css">
 
-  {% if page.url.indexOf("/api/") === 0 and page.url !== ("/api/" | url) %}
-    <link rel="stylesheet" href="{{ '/lib4ui/swagger-ui.css' | url }}">
+  {% if page.url.startsWith('/api/') and page.url !== '/api/' %}
+    <link rel="stylesheet" href="/lib4ui/swagger-ui.css">
   {% endif %}
 </head>
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
     <div class="container">
-      <a class="navbar-brand" href="{{ '/' | url }}">e-Gov 3.0</a>
+      <a class="navbar-brand" href="/">e-Gov 3.0</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="{{ '/'    | url }}">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ '/api/' | url }}">API Overview</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/api/">API Overview</a></li>
         </ul>
       </div>
     </div>
@@ -37,6 +33,6 @@
     {{ content | safe }}
   </main>
 
-  <script src="{{ '/assets/js/bootstrap.bundle.min.js' | url }}"></script>
+  <script src="/assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
