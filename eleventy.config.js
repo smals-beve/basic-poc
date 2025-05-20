@@ -61,6 +61,6 @@ export default function (eleventyConfig) {
             input: "src",
             includes: "layouts",
             output: "_site",
-        },
+        }
     };
 }
