@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>e-Gov 3.0 Documentation | e-Gov 3.0</title>
+    <title> | e-Gov 3.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="/basic-poc/assets/css/bootstrap.min.css">
@@ -51,19 +51,21 @@
                     <nav id="sidebar" class="sidebar bg-light">
     <ul class="nav flex-column">
         <li class="nav-item">
-            <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-en-overview" role="button" aria-expanded="true" aria-controls="collapse-en-overview">
-                <span>Overview</span>
+            <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-nl-overview" role="button" aria-expanded="true" aria-controls="collapse-nl-overview">
+                <span>Overzicht</span>
                 <span class="caret"></span>
             </a>
-            <div class="collapse show" id="collapse-en-overview" data-bs-parent="#sidebar">
+            <div class="collapse show" id="collapse-nl-overview" data-bs-parent="#sidebar">
                 <ul class="nav flex-column ms-3">
                     
                         
                             <li class="nav-item">
-                                <a class="nav-link " href="/basic-poc/en/">
-                                    Overview
+                                <a class="nav-link " href="/basic-poc/nl/">
+                                    Overzicht
                                 </a>
                             </li>
+                        
+                    
                         
                     
                         
@@ -82,11 +84,11 @@
         </li>
         
             <li class="nav-item">
-                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-en-field" role="button" aria-expanded="false" aria-controls="collapse-en-field">
-                    <span>Fields</span>
+                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-nl-field" role="button" aria-expanded="false" aria-controls="collapse-nl-field">
+                    <span>Velden</span>
                     <span class="caret"></span>
                 </a>
-                <div class="collapse" id="collapse-en-field" data-bs-parent="#sidebar">
+                <div class="collapse" id="collapse-nl-field" data-bs-parent="#sidebar">
                     <ul class="nav flex-column ms-3">
                         
                             
@@ -95,7 +97,7 @@
                             
                             
                                 <li class="nav-item">
-                                    <a class="nav-link " href="/basic-poc/en/field/enterpriseNumber/">
+                                    <a class="nav-link " href="/basic-poc/nl/field/enterpriseNumber/">
                                         enterpriseNumber
                                     </a>
                                 </li>
@@ -104,8 +106,17 @@
                             
                             
                                 <li class="nav-item">
-                                    <a class="nav-link " href="/basic-poc/en/field/nssoNumber/">
+                                    <a class="nav-link " href="/basic-poc/nl/field/nssoNumber/">
                                         nssoNumber
+                                    </a>
+                                </li>
+                            
+                        
+                            
+                            
+                                <li class="nav-item">
+                                    <a class="nav-link " href="/basic-poc/nl/field/serviceType/">
+                                        serviceType
                                     </a>
                                 </li>
                             
@@ -124,11 +135,11 @@
             </li>
         
             <li class="nav-item">
-                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-en-schema" role="button" aria-expanded="false" aria-controls="collapse-en-schema">
+                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-nl-schema" role="button" aria-expanded="false" aria-controls="collapse-nl-schema">
                     <span>Schemas</span>
                     <span class="caret"></span>
                 </a>
-                <div class="collapse" id="collapse-en-schema" data-bs-parent="#sidebar">
+                <div class="collapse" id="collapse-nl-schema" data-bs-parent="#sidebar">
                     <ul class="nav flex-column ms-3">
                         
                             
@@ -142,9 +153,12 @@
                         
                             
                             
+                        
+                            
+                            
                                 <li class="nav-item">
-                                    <a class="nav-link " href="/basic-poc/en/schema/schema_Enterprise/">
-                                        schema_Enterprise
+                                    <a class="nav-link active" href="/basic-poc/nl/schema/schema_enterprise/">
+                                        schema_enterprise
                                     </a>
                                 </li>
                             
@@ -152,8 +166,8 @@
                             
                             
                                 <li class="nav-item">
-                                    <a class="nav-link " href="/basic-poc/en/schema/schema_service_nl/">
-                                        schema_service_nl
+                                    <a class="nav-link " href="/basic-poc/nl/schema/schema_service/">
+                                        schema_service
                                     </a>
                                 </li>
                             
@@ -176,8 +190,73 @@
         <div class="col py-3">
             
 <main class="px-4 py-3">
-    
-<h1>e-Gov 3.0 Documentation</h1>
+    <p><a href="/basic-poc/nl/">Return</a></p>
+<h2>Schema:  Enterprise</h2>
+<p><strong>Beschrijving:</strong><br>
+Objet permettant d'identifier une entreprise dans une déclaration employeur. Seul un des deux numéros (<code>enterpriseNumber</code> ou <code>nssoNumber</code>) doit obligatoirement être renseigné.</p>
+<h3>Gerelateerde Documentatie:</h3>
+<h3>Schema Eigenschappen:</h3>
+<table>
+<thead>
+<tr>
+<th>Veldnaam</th>
+<th>Beschrijving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/basic-poc/nl/field/enterpriseNumber/">enterpriseNumber</a></td>
+<td>Ondernemingsnummer</td>
+</tr>
+<tr>
+<td><a href="/basic-poc/nl/field/nssoNumber/">nssoNumber</a></td>
+<td>RSZ-nummer</td>
+</tr>
+</tbody>
+</table>
+<h3>Contraintes métier :</h3>
+<ul>
+<li><strong>Condition exclusive</strong> : Un seul des deux numéros peut être complété (<code>oneOf</code>).</li>
+</ul>
+<p>Stelt de verklaring van de voordelen van een werknemer voor een bezetting van de lijn van de werknemer mogelijk.<br>
+Dit schema bevat verschillende gegevens.</p>
+<table>
+<thead>
+<tr>
+<th>Veldnaam</th>
+<th>Beschrijving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sequenceNbr</td>
+<td>Volgnummer</td>
+</tr>
+<tr>
+<td>ServiceType</td>
+<td>Prestatie- of afwezigheidscode</td>
+</tr>
+<tr>
+<td>startDate</td>
+<td>Datum of begindatum van prestatie of afwezigheid</td>
+</tr>
+<tr>
+<td>endDate</td>
+<td>Einddatum van prestatie of afwezigheid</td>
+</tr>
+<tr>
+<td>nbrOfHours</td>
+<td>Aantal uren van prestatie of afwezigheid</td>
+</tr>
+</tbody>
+</table>
+<h3>Zakelijke Beperkingen:</h3>
+<ul>
+<li><strong>Verplicht</strong>: Ten minste één voordeel moet worden gedeclareerd.</li>
+<li><strong>Formaat</strong>: Het datumformaat is <code>YYYY-MM-DD</code> en tijd wordt uitgedrukt in uren.</li>
+</ul>
+<h3>Anomalieën:</h3>
+<p>Binnenkort beschikbaar</p>
 
 </main>
 

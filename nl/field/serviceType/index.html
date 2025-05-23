@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>e-Gov 3.0 Documentation | e-Gov 3.0</title>
+    <title> | e-Gov 3.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="/basic-poc/assets/css/bootstrap.min.css">
@@ -51,19 +51,21 @@
                     <nav id="sidebar" class="sidebar bg-light">
     <ul class="nav flex-column">
         <li class="nav-item">
-            <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-en-overview" role="button" aria-expanded="true" aria-controls="collapse-en-overview">
-                <span>Overview</span>
+            <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-nl-overview" role="button" aria-expanded="true" aria-controls="collapse-nl-overview">
+                <span>Overzicht</span>
                 <span class="caret"></span>
             </a>
-            <div class="collapse show" id="collapse-en-overview" data-bs-parent="#sidebar">
+            <div class="collapse show" id="collapse-nl-overview" data-bs-parent="#sidebar">
                 <ul class="nav flex-column ms-3">
                     
                         
                             <li class="nav-item">
-                                <a class="nav-link " href="/basic-poc/en/">
-                                    Overview
+                                <a class="nav-link " href="/basic-poc/nl/">
+                                    Overzicht
                                 </a>
                             </li>
+                        
+                    
                         
                     
                         
@@ -82,11 +84,11 @@
         </li>
         
             <li class="nav-item">
-                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-en-field" role="button" aria-expanded="false" aria-controls="collapse-en-field">
-                    <span>Fields</span>
+                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-nl-field" role="button" aria-expanded="false" aria-controls="collapse-nl-field">
+                    <span>Velden</span>
                     <span class="caret"></span>
                 </a>
-                <div class="collapse" id="collapse-en-field" data-bs-parent="#sidebar">
+                <div class="collapse" id="collapse-nl-field" data-bs-parent="#sidebar">
                     <ul class="nav flex-column ms-3">
                         
                             
@@ -95,7 +97,7 @@
                             
                             
                                 <li class="nav-item">
-                                    <a class="nav-link " href="/basic-poc/en/field/enterpriseNumber/">
+                                    <a class="nav-link " href="/basic-poc/nl/field/enterpriseNumber/">
                                         enterpriseNumber
                                     </a>
                                 </li>
@@ -104,8 +106,17 @@
                             
                             
                                 <li class="nav-item">
-                                    <a class="nav-link " href="/basic-poc/en/field/nssoNumber/">
+                                    <a class="nav-link " href="/basic-poc/nl/field/nssoNumber/">
                                         nssoNumber
+                                    </a>
+                                </li>
+                            
+                        
+                            
+                            
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="/basic-poc/nl/field/serviceType/">
+                                        serviceType
                                     </a>
                                 </li>
                             
@@ -124,11 +135,11 @@
             </li>
         
             <li class="nav-item">
-                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-en-schema" role="button" aria-expanded="false" aria-controls="collapse-en-schema">
+                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-nl-schema" role="button" aria-expanded="false" aria-controls="collapse-nl-schema">
                     <span>Schemas</span>
                     <span class="caret"></span>
                 </a>
-                <div class="collapse" id="collapse-en-schema" data-bs-parent="#sidebar">
+                <div class="collapse" id="collapse-nl-schema" data-bs-parent="#sidebar">
                     <ul class="nav flex-column ms-3">
                         
                             
@@ -142,9 +153,12 @@
                         
                             
                             
+                        
+                            
+                            
                                 <li class="nav-item">
-                                    <a class="nav-link " href="/basic-poc/en/schema/schema_Enterprise/">
-                                        schema_Enterprise
+                                    <a class="nav-link " href="/basic-poc/nl/schema/schema_enterprise/">
+                                        schema_enterprise
                                     </a>
                                 </li>
                             
@@ -152,8 +166,8 @@
                             
                             
                                 <li class="nav-item">
-                                    <a class="nav-link " href="/basic-poc/en/schema/schema_service_nl/">
-                                        schema_service_nl
+                                    <a class="nav-link " href="/basic-poc/nl/schema/schema_service/">
+                                        schema_service
                                     </a>
                                 </li>
                             
@@ -176,8 +190,33 @@
         <div class="col py-3">
             
 <main class="px-4 py-3">
-    
-<h1>e-Gov 3.0 Documentation</h1>
+    <p><a href="/basic-poc/nl/">🔙 Terug naar overzicht</a></p>
+<h1>🧩 Veld: <code>serviceType</code> (Prestatie- of afwezigheidscode)</h1>
+<h2>📝 Beschrijving</h2>
+<p>Het veld <code>serviceType</code> geeft aan welk type prestatie of afwezigheid van toepassing is voor de opgegeven periode binnen
+een tewerkstelling.</p>
+<hr>
+<h2>⚙️ Technische specificaties</h2>
+<ul>
+<li><strong>Type</strong> : <code>String</code></li>
+<li><strong>Enumeratie</strong> : De toegelaten waarden worden opgesomd in de bijlage<br>
+👉 <a href="../../../technical_specs/Annex/annex100_service_code.xlsx" target="_blank">📂 Annex 100 – Codes Prestatie (
+Excel)</a></li>
+</ul>
+<hr>
+<h2>⚠️ Zakelijke beperkingen</h2>
+<ul>
+<li><strong>Verplicht</strong>: Dit veld <strong>moet</strong> ingevuld worden zodra een prestatie of afwezigheid is opgegeven.</li>
+<li><strong>Validatie</strong>: De waarde moet exact overeenkomen met een van de geldige codes uit <em>Annex 100</em>.</li>
+</ul>
+<hr>
+<h2>🧪 Anomalieën</h2>
+<p>Een overzicht van mogelijke anomalieën wordt binnenkort toegevoegd.</p>
+<hr>
+<h2>📎 Gerelateerde documentatie</h2>
+<ul>
+<li><a href="/basic-poc/nl/schema/schema_service/">Schema: Service</a></li>
+</ul>
 
 </main>
 

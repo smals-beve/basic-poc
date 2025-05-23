@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title> | e-Gov 3.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/basic-poc/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/basic-poc/assets/styles.css">
+    
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/basic-poc/">e-Gov 3.0</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="/basic-poc/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/basic-poc/api/">API Overview</a></li>
+                
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Language
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                            <li><a class="dropdown-item" href="/basic-poc/en/">English</a></li>
+                            <li><a class="dropdown-item" href="/basic-poc/fr/">Français</a></li>
+                            <li><a class="dropdown-item" href="/basic-poc/nl/">Nederlands</a></li>
+                        </ul>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+
+        
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-dark min-vh-100">
+                    <a href="/basic-poc/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline">Menu</span>
+                    </a>
+
+                    <nav id="sidebar" class="sidebar bg-light">
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-nl-overview" role="button" aria-expanded="true" aria-controls="collapse-nl-overview">
+                <span>Overzicht</span>
+                <span class="caret"></span>
+            </a>
+            <div class="collapse show" id="collapse-nl-overview" data-bs-parent="#sidebar">
+                <ul class="nav flex-column ms-3">
+                    
+                        
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/basic-poc/nl/">
+                                    Overzicht
+                                </a>
+                            </li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                </ul>
+            </div>
+        </li>
+        <li>
+            <hr class="my-2">
+        </li>
+        
+            <li class="nav-item">
+                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-nl-field" role="button" aria-expanded="false" aria-controls="collapse-nl-field">
+                    <span>Velden</span>
+                    <span class="caret"></span>
+                </a>
+                <div class="collapse" id="collapse-nl-field" data-bs-parent="#sidebar">
+                    <ul class="nav flex-column ms-3">
+                        
+                            
+                            
+                        
+                            
+                            
+                                <li class="nav-item">
+                                    <a class="nav-link " href="/basic-poc/nl/field/enterpriseNumber/">
+                                        enterpriseNumber
+                                    </a>
+                                </li>
+                            
+                        
+                            
+                            
+                                <li class="nav-item">
+                                    <a class="nav-link " href="/basic-poc/nl/field/nssoNumber/">
+                                        nssoNumber
+                                    </a>
+                                </li>
+                            
+                        
+                            
+                            
+                                <li class="nav-item">
+                                    <a class="nav-link " href="/basic-poc/nl/field/serviceType/">
+                                        serviceType
+                                    </a>
+                                </li>
+                            
+                        
+                            
+                            
+                        
+                            
+                            
+                        
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <hr class="my-2">
+            </li>
+        
+            <li class="nav-item">
+                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-nl-schema" role="button" aria-expanded="false" aria-controls="collapse-nl-schema">
+                    <span>Schemas</span>
+                    <span class="caret"></span>
+                </a>
+                <div class="collapse" id="collapse-nl-schema" data-bs-parent="#sidebar">
+                    <ul class="nav flex-column ms-3">
+                        
+                            
+                            
+                        
+                            
+                            
+                        
+                            
+                            
+                        
+                            
+                            
+                        
+                            
+                            
+                                <li class="nav-item">
+                                    <a class="nav-link " href="/basic-poc/nl/schema/schema_enterprise/">
+                                        schema_enterprise
+                                    </a>
+                                </li>
+                            
+                        
+                            
+                            
+                                <li class="nav-item">
+                                    <a class="nav-link " href="/basic-poc/nl/schema/schema_service/">
+                                        schema_service
+                                    </a>
+                                </li>
+                            
+                        
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <hr class="my-2">
+            </li>
+        
+
+    </ul>
+</nav>
+
+                </div>
+            </div>
+        
+
+        <div class="col py-3">
+            
+<main class="px-4 py-3">
+    <p><a href="https://github.com/test-belgium-test/basic/blob/main/README.md">Return to main page  </a></p>
+<h1>Inhoudsopgave</h1>
+<ol>
+<li>
+<p><a href="#1-context">Context</a><br>
+1.1 <a href="#11-egov30">EGOV3.0</a><br>
+1.2 <a href="#12-pilootproject-flexi-jobs">PILOOTPROJECT FLEXI-JOBS</a></p>
+</li>
+<li>
+<p><a href="#2-praktische-modaliteiten">PRAKTISCHE MODALITEITEN</a><br>
+2.1 <a href="#21-toepassingsgebied">TOEPASSINGSGEBIED</a><br>
+2.2 <a href="#22-indieningstermijn">INDIENINGSTERMIJN</a><br>
+2.3 <a href="#23-verzendingskanalen">VERZENDINGSKANALEN</a></p>
+</li>
+<li>
+<p><a href="#3-gegevens">GEGEVENS</a><br>
+3.1 <a href="#31-overzicht">OVERZICHT</a><br>
+3.2 <a href="#32-schema-blokken">Schema (Blokken)</a><br>
+3.3 <a href="#33-bijlagen">Bijlagen</a></p>
+</li>
+</ol>
+<hr>
+<h2>1. Context</h2>
+<h3>1.1 EGOV3.0</h3>
+<p>De manier waarop de overheid vandaag gegevens ophaalt voor de sociale zekerheid, is intussen meer dan 20 jaar geleden bedacht om tegemoet te komen aan de noden van toen. Vandaag ziet onze maatschappij er anders uit, en dat vraagt om nieuwe oplossingen.</p>
+<p>In dit kader heeft de RSZ in samenwerking met andere socialezekerheidsinstellingen het project <strong>“eGov 3.0”</strong> opgestart.</p>
+<p>Het project formuleert antwoorden op:</p>
+<ul>
+<li>de vraag om meer gebruiksvriendelijke en snellere systemen,</li>
+<li>de veranderingen in traditionele begrippen waarmee de sociale zekerheid werkt – inkomen, statuut, arbeidstijd, gezinsvormen en huishoudens, ten laste zijn, en meer,</li>
+<li>de sterke verhoging van de internationale mobiliteit van burgers,</li>
+<li>de groeiende digitale kloof, en</li>
+<li>de snelle technologische evolutie van de laatste jaren.</li>
+</ul>
+<p>Een <strong>centrale datalaag</strong> biedt een antwoord op veel van deze noden.<br>
+Concreet streven we naar een digitale dienstverlening die gebaseerd is op de gegevens die nodig zijn om de socialezekerheidsrechten van een burger te regelen.</p>
+<p>De datalaag wordt gevoed door werkgevers, hun dienstverleners en instellingen op alle niveaus.<br>
+De datalaag zal gebruikt kunnen worden voor verschillende doeleinden zoals bijvoorbeeld de toekenning van uitkeringen.</p>
+<h3>1.2 PILOOTPROJECT FLEXI-JOBS</h3>
+<p>Vanaf 1 januari 2024 zijn bezoldigingen van niet-gepensioneerde flexi-jobbers fiscaal vrijgesteld tot een plafondbedrag van €12.000 per jaar. De flexijobber zal via MyCareer.be een teller van zijn flexi-job-inkomsten kunnen consulteren om te checken of hij/zij het grensbedrag al dan niet overschrijdt.</p>
+<p>Deze teller zal in 2024 worden gebaseerd op DmfA-gegevens. De driemaandelijkse DmfA wordt ingediend na afloop van het kwartaal in kwestie en loopt dus relatief ver achter op de feiten. Bijvoorbeeld: een flexiloon uitbetaald in januari wordt pas in april aangegeven in de DmfA.</p>
+<p>Teneinde de teller sneller te laten aansluiten bij de realiteit zal de teller vanaf 1 januari 2025 worden gebaseerd op een nieuwe aangifte: <strong>Flexi At Work</strong>. Deze aangifte bevat (beperkte) informatie over de loonbrieven van de flexijobbers.</p>
+<p>Deze nieuwe aangifte vormt een pilootproject van het grotere <strong>eGov 3.0-project</strong>. Het pilootproject vormt het onderwerp van dit document.</p>
+<p><strong>Ter verduidelijking</strong> : Flexi At Work vervangt de bestaande Dimona en DmfA niet. Er moet nog steeds een Dimona en DmfA worden ingediend voor de flexijobbers.De verdere evolutie van de DmfA zal worden onderzocht in de verdere uitwerking van het project <strong>eGov 3.0</strong>.</p>
+<hr>
+<h2>2. PRAKTISCHE MODALITEITEN</h2>
+<h3>2.1 TOEPASSINGSGEBIED</h3>
+<p><strong>Flexi At Work</strong> betreft de loonbrieven van de gepensioneerde en de niet-gepensioneerde flexi-jobbers, meer bepaald de loonberekeningen m.b.t. het jaar 2025 en later.</p>
+<p>Hoewel de onlinedienst <strong>Flexi At Work</strong> beschikbaar is vanaf 2 december 2024, geldt de verplichting om loongegevens aan te geven pas voor flexi-prestaties geleverd vanaf 1 januari 2025.</p>
+<p>Regularisaties uitgevoerd in 2025 van flexiloon dat betrekking heeft op 2024 moeten niet worden gemeld in <strong>Flexi At Work</strong>. Bijv. een regularisatie in januari 2025 van flexiloon betreffende december 2024 moet niet worden aangegeven.</p>
+<p>Regularisatie uitgevoerd in 2026 van flexiloon dat betrekking heeft op 2025 moeten wel worden gemeld in <strong>Flexi At Work</strong>. Bijv. een regularisatie in januari 2026 van flexiloon betreffende december 2025 moet wel worden aangegeven.</p>
+<h3>2.2 INDIENINGSTERMIJN</h3>
+<p>De aangifte wordt in principe verzonden uiterlijk 5 dagen na de creatie van elk loonbrief.</p>
+<p>Indien in de loop van een kalendermaand meerdere loonbrieven worden gegenereerd, dan mogen deze loonbrieven worden verzonden op het einde van de maand. In de pilootfase moet er een afzonderlijk aangiftebestand per loonbrief worden verzonden. Ze moeten worden aangegeven uiterlijk 5 dagen na de creatie van de laatste loonbrief die betrekking heeft op de kalendermaand in kwestie.</p>
+<p>Bijvoorbeeld: voor een uitzendkracht wordt elke week een loonbrief gegenereerd. In de maand februari wordt een loonbrief gecreëerd op 7/2/2025, 14/2/2025, 21/2/2025 en 28/2/2025. De vier loonbrieven voor de maand februari mogen worden verzonden op uiterlijk 5/3/2025.</p>
+<h3>2.3 VERZENDINGSKANALEN</h3>
+<p>De gegevens kunnen worden verzonden via een batchkanaal of een webtoepassing op de portaalsite van de sociale zekerheid.</p>
+<p>Het batchkanaal is eerder gericht op gebruik door grote verzenders, zoals bijvoorbeeld sociale secretariaten, dienstverleners en grote werkgevers. De webtoepassing daarentegen is eerder gericht op gebruik door kleine werkgevers.</p>
+<hr>
+<h2>3. GEGEVENS</h2>
+<h3>3.1 OVERZICHT</h3>
+<p>Hieronder vindt u een overzicht van de verschillende gegevensblokken en de inhoud van elk blok in de pilootfase.</p>
+<p><img src="https://github.com/user-attachments/assets/d4904400-792e-46e7-b600-2d9eb2d843bc" alt="image">
+Op langere termijn, bij de verdere realisatie van de centrale datalaag in het kader van het eGov 3.0-project, zullen deze blokken bijkomende gegevens bevatten. Er zullen mogelijks ook extra blokken worden toegevoegd aan het bovenstaande schema.</p>
+<h3>3.2 Schema (Blokken)</h3>
+<table>
+<thead>
+<tr>
+<th>Schema Naam</th>
+<th>Beschrijving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/basic-poc/nl/schema/schema_service/">service</a></td>
+<td>Prestaties</td>
+</tr>
+<tr>
+<td>remunerationCalculation</td>
+<td>TODO</td>
+</tr>
+<tr>
+<td>relation</td>
+<td>TODO</td>
+</tr>
+<tr>
+<td><a href="/basic-poc/nl/schema/schema_enterprise/">enterprise</a></td>
+<td>TODO</td>
+</tr>
+</tbody>
+</table>
+<h3>3.3 bijlagen</h3>
+<table>
+<thead>
+<tr>
+<th>bijlagen Naam</th>
+<th>Beschrijving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../technical_specs/Annex/annex100_service_code.xlsx">Service Code</a></td>
+<td>Prestatie- of afwezigheidscode</td>
+</tr>
+</tbody>
+</table>
+
+</main>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="/basic-poc/assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

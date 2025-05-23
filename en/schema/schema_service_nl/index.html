@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>e-Gov 3.0 Documentation | e-Gov 3.0</title>
+    <title> | e-Gov 3.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="/basic-poc/assets/css/bootstrap.min.css">
@@ -152,7 +152,7 @@
                             
                             
                                 <li class="nav-item">
-                                    <a class="nav-link " href="/basic-poc/en/schema/schema_service_nl/">
+                                    <a class="nav-link active" href="/basic-poc/en/schema/schema_service_nl/">
                                         schema_service_nl
                                     </a>
                                 </li>
@@ -176,8 +176,50 @@
         <div class="col py-3">
             
 <main class="px-4 py-3">
-    
-<h1>e-Gov 3.0 Documentation</h1>
+    <h2>Schema: Service NL</h2>
+<p><strong>Beschrijving:</strong><br>
+Stelt de verklaring van de voordelen van een werknemer voor een bezetting van de lijn van de werknemer mogelijk.<br>
+Dit schema bevat verschillende gegevens.</p>
+<h3>Schema Eigenschappen:</h3>
+<table>
+<thead>
+<tr>
+<th>Veldnaam</th>
+<th>Beschrijving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sequenceNbr</td>
+<td>Volgnummer</td>
+</tr>
+<tr>
+<td>ServiceType</td>
+<td>Prestatie- of afwezigheidscode</td>
+</tr>
+<tr>
+<td>startDate</td>
+<td>Datum of begindatum van prestatie of afwezigheid</td>
+</tr>
+<tr>
+<td>endDate</td>
+<td>Einddatum van prestatie of afwezigheid</td>
+</tr>
+<tr>
+<td>nbrOfHours</td>
+<td>Aantal uren van prestatie of afwezigheid</td>
+</tr>
+</tbody>
+</table>
+<h3>Zakelijke Beperkingen:</h3>
+<ul>
+<li><strong>Verplicht</strong>: Ten minste één voordeel moet worden gedeclareerd.</li>
+<li><strong>Formaat</strong>: Het datumformaat is <code>YYYY-MM-DD</code> en tijd wordt uitgedrukt in uren.</li>
+</ul>
+<h3>Anomalieën:</h3>
+<p>Binnenkort beschikbaar</p>
+<h3>Gerelateerde Documentatie:</h3>
+<p><a href="https://www.socialsecurity.be/portail/glossaires/dmfa.nsf/be8ba64d95a2ed0ec125686200574ff5/3ec8c3acff4dffc1c1258bea003378c9?OpenDocument">Annex 90018</a></p>
 
 </main>
 

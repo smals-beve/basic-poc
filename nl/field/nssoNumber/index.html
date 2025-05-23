@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>e-Gov 3.0 Documentation | e-Gov 3.0</title>
+    <title> | e-Gov 3.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="/basic-poc/assets/css/bootstrap.min.css">
@@ -51,19 +51,21 @@
                     <nav id="sidebar" class="sidebar bg-light">
     <ul class="nav flex-column">
         <li class="nav-item">
-            <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-en-overview" role="button" aria-expanded="true" aria-controls="collapse-en-overview">
-                <span>Overview</span>
+            <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-nl-overview" role="button" aria-expanded="true" aria-controls="collapse-nl-overview">
+                <span>Overzicht</span>
                 <span class="caret"></span>
             </a>
-            <div class="collapse show" id="collapse-en-overview" data-bs-parent="#sidebar">
+            <div class="collapse show" id="collapse-nl-overview" data-bs-parent="#sidebar">
                 <ul class="nav flex-column ms-3">
                     
                         
                             <li class="nav-item">
-                                <a class="nav-link " href="/basic-poc/en/">
-                                    Overview
+                                <a class="nav-link " href="/basic-poc/nl/">
+                                    Overzicht
                                 </a>
                             </li>
+                        
+                    
                         
                     
                         
@@ -82,11 +84,11 @@
         </li>
         
             <li class="nav-item">
-                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-en-field" role="button" aria-expanded="false" aria-controls="collapse-en-field">
-                    <span>Fields</span>
+                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-nl-field" role="button" aria-expanded="false" aria-controls="collapse-nl-field">
+                    <span>Velden</span>
                     <span class="caret"></span>
                 </a>
-                <div class="collapse" id="collapse-en-field" data-bs-parent="#sidebar">
+                <div class="collapse" id="collapse-nl-field" data-bs-parent="#sidebar">
                     <ul class="nav flex-column ms-3">
                         
                             
@@ -95,7 +97,7 @@
                             
                             
                                 <li class="nav-item">
-                                    <a class="nav-link " href="/basic-poc/en/field/enterpriseNumber/">
+                                    <a class="nav-link " href="/basic-poc/nl/field/enterpriseNumber/">
                                         enterpriseNumber
                                     </a>
                                 </li>
@@ -104,8 +106,17 @@
                             
                             
                                 <li class="nav-item">
-                                    <a class="nav-link " href="/basic-poc/en/field/nssoNumber/">
+                                    <a class="nav-link active" href="/basic-poc/nl/field/nssoNumber/">
                                         nssoNumber
+                                    </a>
+                                </li>
+                            
+                        
+                            
+                            
+                                <li class="nav-item">
+                                    <a class="nav-link " href="/basic-poc/nl/field/serviceType/">
+                                        serviceType
                                     </a>
                                 </li>
                             
@@ -124,11 +135,11 @@
             </li>
         
             <li class="nav-item">
-                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-en-schema" role="button" aria-expanded="false" aria-controls="collapse-en-schema">
+                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-nl-schema" role="button" aria-expanded="false" aria-controls="collapse-nl-schema">
                     <span>Schemas</span>
                     <span class="caret"></span>
                 </a>
-                <div class="collapse" id="collapse-en-schema" data-bs-parent="#sidebar">
+                <div class="collapse" id="collapse-nl-schema" data-bs-parent="#sidebar">
                     <ul class="nav flex-column ms-3">
                         
                             
@@ -142,9 +153,12 @@
                         
                             
                             
+                        
+                            
+                            
                                 <li class="nav-item">
-                                    <a class="nav-link " href="/basic-poc/en/schema/schema_Enterprise/">
-                                        schema_Enterprise
+                                    <a class="nav-link " href="/basic-poc/nl/schema/schema_enterprise/">
+                                        schema_enterprise
                                     </a>
                                 </li>
                             
@@ -152,8 +166,8 @@
                             
                             
                                 <li class="nav-item">
-                                    <a class="nav-link " href="/basic-poc/en/schema/schema_service_nl/">
-                                        schema_service_nl
+                                    <a class="nav-link " href="/basic-poc/nl/schema/schema_service/">
+                                        schema_service
                                     </a>
                                 </li>
                             
@@ -176,8 +190,40 @@
         <div class="col py-3">
             
 <main class="px-4 py-3">
-    
-<h1>e-Gov 3.0 Documentation</h1>
+    <p><a href="/basic-poc/nl/">Return</a></p>
+<h2>Veld : nssoNumber</h2>
+<p><strong>Beschrijving :</strong><br>
+Nummer toegekend door de Rijksdienst voor Sociale Zekerheid dat een onderneming met personeel onderworpen aan de wet van 27 juni 1969 eenduidig identificeert. Het betreft het definitieve RSZ-nummer.</p>
+<h3>Externe Documentatie</h3>
+<p><a href="https://www.socialsecurity.be/portail/glossaires/dmfa.nsf/56d13fe0587c9d6dc1256b210060ae6a/b83118da000d2d63c1258bea00337b1c?OpenDocument">Glossarium - 00011 - RSZ-NUMMER</a></p>
+<h3>Gegevens van het veld:</h3>
+<ul>
+<li>
+<p><strong>Type :</strong> integer</p>
+</li>
+<li>
+<p><strong>Formaat :</strong> numeriek</p>
+</li>
+<li>
+<p><strong>Lengte :</strong> 9 cijfers</p>
+</li>
+<li>
+<p><strong>Verwachte structuur :</strong></p>
+<ul>
+<li>Posities 1 tot 7 : volgnummer (positie 1 begint met 0 of 1)</li>
+<li>Posities 8 en 9 : controlecijfers</li>
+</ul>
+</li>
+<li>
+<p><strong>Standaardwaarde als onbekend :</strong> 0</p>
+</li>
+</ul>
+<h3>Zakelijke Beperkingen:</h3>
+<ul>
+<li><strong>Definitiegebied</strong> : Geheel getal en element van [100006;199999934] voor de definitieve nummers.</li>
+</ul>
+<h3>Anomalieën:</h3>
+<p><strong>Binnenkort beschikbaar</strong></p>
 
 </main>
 

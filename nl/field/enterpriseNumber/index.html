@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>e-Gov 3.0 Documentation | e-Gov 3.0</title>
+    <title> | e-Gov 3.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="/basic-poc/assets/css/bootstrap.min.css">
@@ -51,19 +51,21 @@
                     <nav id="sidebar" class="sidebar bg-light">
     <ul class="nav flex-column">
         <li class="nav-item">
-            <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-en-overview" role="button" aria-expanded="true" aria-controls="collapse-en-overview">
-                <span>Overview</span>
+            <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-nl-overview" role="button" aria-expanded="true" aria-controls="collapse-nl-overview">
+                <span>Overzicht</span>
                 <span class="caret"></span>
             </a>
-            <div class="collapse show" id="collapse-en-overview" data-bs-parent="#sidebar">
+            <div class="collapse show" id="collapse-nl-overview" data-bs-parent="#sidebar">
                 <ul class="nav flex-column ms-3">
                     
                         
                             <li class="nav-item">
-                                <a class="nav-link " href="/basic-poc/en/">
-                                    Overview
+                                <a class="nav-link " href="/basic-poc/nl/">
+                                    Overzicht
                                 </a>
                             </li>
+                        
+                    
                         
                     
                         
@@ -82,11 +84,11 @@
         </li>
         
             <li class="nav-item">
-                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-en-field" role="button" aria-expanded="false" aria-controls="collapse-en-field">
-                    <span>Fields</span>
+                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-nl-field" role="button" aria-expanded="false" aria-controls="collapse-nl-field">
+                    <span>Velden</span>
                     <span class="caret"></span>
                 </a>
-                <div class="collapse" id="collapse-en-field" data-bs-parent="#sidebar">
+                <div class="collapse" id="collapse-nl-field" data-bs-parent="#sidebar">
                     <ul class="nav flex-column ms-3">
                         
                             
@@ -95,7 +97,7 @@
                             
                             
                                 <li class="nav-item">
-                                    <a class="nav-link " href="/basic-poc/en/field/enterpriseNumber/">
+                                    <a class="nav-link active" href="/basic-poc/nl/field/enterpriseNumber/">
                                         enterpriseNumber
                                     </a>
                                 </li>
@@ -104,8 +106,17 @@
                             
                             
                                 <li class="nav-item">
-                                    <a class="nav-link " href="/basic-poc/en/field/nssoNumber/">
+                                    <a class="nav-link " href="/basic-poc/nl/field/nssoNumber/">
                                         nssoNumber
+                                    </a>
+                                </li>
+                            
+                        
+                            
+                            
+                                <li class="nav-item">
+                                    <a class="nav-link " href="/basic-poc/nl/field/serviceType/">
+                                        serviceType
                                     </a>
                                 </li>
                             
@@ -124,11 +135,11 @@
             </li>
         
             <li class="nav-item">
-                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-en-schema" role="button" aria-expanded="false" aria-controls="collapse-en-schema">
+                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-nl-schema" role="button" aria-expanded="false" aria-controls="collapse-nl-schema">
                     <span>Schemas</span>
                     <span class="caret"></span>
                 </a>
-                <div class="collapse" id="collapse-en-schema" data-bs-parent="#sidebar">
+                <div class="collapse" id="collapse-nl-schema" data-bs-parent="#sidebar">
                     <ul class="nav flex-column ms-3">
                         
                             
@@ -142,9 +153,12 @@
                         
                             
                             
+                        
+                            
+                            
                                 <li class="nav-item">
-                                    <a class="nav-link " href="/basic-poc/en/schema/schema_Enterprise/">
-                                        schema_Enterprise
+                                    <a class="nav-link " href="/basic-poc/nl/schema/schema_enterprise/">
+                                        schema_enterprise
                                     </a>
                                 </li>
                             
@@ -152,8 +166,8 @@
                             
                             
                                 <li class="nav-item">
-                                    <a class="nav-link " href="/basic-poc/en/schema/schema_service_nl/">
-                                        schema_service_nl
+                                    <a class="nav-link " href="/basic-poc/nl/schema/schema_service/">
+                                        schema_service
                                     </a>
                                 </li>
                             
@@ -176,8 +190,71 @@
         <div class="col py-3">
             
 <main class="px-4 py-3">
-    
-<h1>e-Gov 3.0 Documentation</h1>
+    <p><a href="/basic-poc/nl/">Return</a></p>
+<h2>Veld : enterpriseNumber</h2>
+<p><strong>Beschrijving :</strong></p>
+<p>Nummer dat een werkgever eenduidig identificeert, of het nu gaat om een natuurlijk persoon, een groepering van natuurlijke personen of een rechtspersoon.</p>
+<h3>Externe Documentatie</h3>
+<p><a href="https://www.socialsecurity.be/portail/glossaires/dmfa.nsf/56d13fe0587c9d6dc1256b210060ae6a/10f0d84de7fae4fcc1258bea00337b64?OpenDocument">Glossarium - 00014 - ONDERNEMINGSNUMMER</a></p>
+<h3>Gegevens van het veld:</h3>
+<ul>
+<li>
+<p><strong>Type :</strong> integer</p>
+</li>
+<li>
+<p><strong>Formaat :</strong> numeriek</p>
+</li>
+<li>
+<p><strong>Lengte :</strong> 10 cijfers</p>
+</li>
+<li>
+<p><strong>Verwachte structuur :</strong></p>
+<ul>
+<li>Posities 1 tot 8 : volgnummer (positie 1 begint met 0 of 1)</li>
+<li>Posities 9 en 10 : controlecijfers</li>
+</ul>
+</li>
+<li>
+<p><strong>Standaardwaarde als onbekend :</strong> 0</p>
+</li>
+</ul>
+<h3>Anomalieën:</h3>
+<p><strong>Binnenkort beschikbaar</strong></p>
+<h4>Gedetailleerd voorbeeld van een anomalie (Niet numeriek)</h4>
+<table>
+<thead>
+<tr>
+<th>Foutcode</th>
+<th>Beschrijving</th>
+<th>Ernst</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>002</td>
+<td>Niet numeriek</td>
+<td>B</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Voorbeeld van de JSON-reactie</strong></p>
+<pre><code class="language-json">{
+  &quot;type&quot;: &quot;urn:problem-type:belgif:resourceNotFound&quot;,
+  &quot;href&quot;: &quot;https://www.belgif.be/specification/rest/api-guide/problems/resourceNotFound.html&quot;,
+  &quot;instance&quot;: &quot;2LKKKTUPIOUOI&quot;,
+  &quot;status&quot;: 400,
+  &quot;title&quot;: &quot;Not Processed Due to Errors&quot;,
+  &quot;detail&quot;: &quot;There are issues in the pocessed form&quot;,
+  &quot;issues&quot;: [
+      {
+        &quot;in&quot;: &quot;Enterprise/enterpriseNumber&quot;,
+        &quot;name&quot;: &quot;enterpriseNumber&quot;,
+        &quot;detail&quot;: &quot;004 - Invalid check digit&quot;,
+        &quot;value&quot;: &quot;012345AAAA&quot;
+      }
+  ]
+}
+</code></pre>
 
 </main>
 
