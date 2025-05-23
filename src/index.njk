@@ -1,63 +1,8 @@
 ---
-layout: default
+layout: landing.njk
 title: e-Gov 3.0 Documentation
+lang: en
+permalink: /
 ---
 
-{% set langs = [
-  { code: "en", label: "English" },
-  { code: "fr", label: "Français" },
-  { code: "nl", label: "Nederlands" }
-] %}
-
-<h1 class="mb-4">{{ title }}</h1>
-
-<!-- Language Tabs -->
-<ul class="nav nav-tabs mb-4" id="langTabs" role="tablist">
-  {% for lang in langs %}
-    <li class="nav-item" role="presentation">
-      <button
-        class="nav-link {{ lang.code == "en" and "active" or "" }}"
-        id="{{ lang.code }}-tab"
-        data-bs-toggle="tab"
-        data-bs-target="#{{ lang.code }}"
-        type="button"
-        role="tab"
-      >
-        {{ lang.label }}
-      </button>
-    </li>
-  {% endfor %}
-</ul>
-
-<!-- Tab Panes -->
-<div class="tab-content" id="langTabsContent">
-  {% for lang in langs %}
-    <div
-      class="tab-pane fade {{ lang.code == "en" and "show active" or "" }}"
-      id="{{ lang.code }}"
-      role="tabpanel"
-      aria-labelledby="{{ lang.code }}-tab"
-    >
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        {% for page in collections["docs_" + lang.code] %}
-          <div class="col">
-            <div class="card h-100">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">
-                  {{ page.data.title or page.fileSlug }}
-                </h5>
-                {% if page.data.description %}
-                  <p class="card-text">{{ page.data.description }}</p>
-                {% endif %}
-                <a href="{{ page.url }}"
-                   class="mt-auto btn btn-sm btn-primary">
-                  Read →
-                </a>
-              </div>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-  {% endfor %}
-</div>
+<h1>{{ title }}</h1>
