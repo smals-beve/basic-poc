@@ -1,0 +1,80 @@
+<nav id="sidebar" class="sidebar bg-light">
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a
+                    class="nav-link d-flex justify-content-between align-items-center"
+                    data-bs-toggle="collapse"
+                    href="#collapse-{{ lang }}-overview"
+                    role="button"
+                    aria-expanded="true"
+                    aria-controls="collapse-{{ lang }}-overview"
+            >
+                <span>{{ categoryLabels.overview[lang] }}</span>
+                <span class="caret"></span>
+            </a>
+            <div
+                    class="collapse show"
+                    id="collapse-{{ lang }}-overview"
+                    data-bs-parent="#sidebar"
+            >
+                <ul class="nav flex-column ms-3">
+                    {% for doc in collections["docs_" ~ lang] %}
+                        {% if (doc.fileSlug | lower) == "readme" %}
+                            <li class="nav-item">
+                                <a
+                                        class="nav-link {{ doc.url == page.url and 'active' or '' }}"
+                                        href="{{ doc.url }}"
+                                >
+                                    {{ doc.data.title or categoryLabels.overview[lang] }}
+                                </a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </li>
+        <li>
+            <hr class="my-2">
+        </li>
+        {% for key in docCategories %}
+            <li class="nav-item">
+                <a
+                        class="nav-link d-flex justify-content-between align-items-center"
+                        data-bs-toggle="collapse"
+                        href="#collapse-{{ lang }}-{{ key }}"
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="collapse-{{ lang }}-{{ key }}"
+                >
+                    <span>{{ categoryLabels[key][lang] }}</span>
+                    <span class="caret"></span>
+                </a>
+                <div
+                        class="collapse"
+                        id="collapse-{{ lang }}-{{ key }}"
+                        data-bs-parent="#sidebar"
+                >
+                    <ul class="nav flex-column ms-3">
+                        {% for doc in collections["docs_" ~ lang] %}
+                            {% set url = doc.url or '' %}
+                            {% if ("/" ~ key ~ "/") in url %}
+                                <li class="nav-item">
+                                    <a
+                                            class="nav-link {{ url == page.url and 'active' or '' }}"
+                                            href="{{ url }}"
+                                    >
+                                        {{ doc.data.title or doc.fileSlug }}
+                                    </a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <hr class="my-2">
+            </li>
+        {% endfor %}
+
+    </ul>
+</nav>
