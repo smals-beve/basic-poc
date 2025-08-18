@@ -3,7 +3,8 @@
 ## Veld : nssoNumber
 
 **Beschrijving :**  
-Nummer toegekend door de Rijksdienst voor Sociale Zekerheid dat een onderneming met personeel onderworpen aan de wet van 27 juni 1969 eenduidig identificeert. Het betreft het definitieve RSZ-nummer.
+Nummer toegekend door de Rijksdienst voor Sociale Zekerheid dat een onderneming met personeel onderworpen aan de wet van
+27 juni 1969 eenduidig identificeert. Het betreft het definitieve RSZ-nummer.
 
 ### Externe Documentatie
 
@@ -16,13 +17,13 @@ Nummer toegekend door de Rijksdienst voor Sociale Zekerheid dat een onderneming 
 * **Lengte :** 9 cijfers
 * **Verwachte structuur :**
 
-  * Posities 1 tot 7 : volgnummer (positie 1 begint met 0 of 1)
-  * Posities 8 en 9 : controlecijfers
+    * Posities 1 tot 7 : volgnummer (positie 1 begint met 0 of 1)
+    * Posities 8 en 9 : controlecijfers
 * **Standaardwaarde als onbekend :** 0
 
 ### Zakelijke Beperkingen:
-* **Definitiegebied** : Geheel getal en element van [100006;199999934] voor de definitieve nummers.
 
+* **Definitiegebied** : Geheel getal en element van [100006;199999934] voor de definitieve nummers.
 
 ### Anomalieën:
 

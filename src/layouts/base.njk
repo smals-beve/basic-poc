@@ -15,15 +15,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">e-Gov 3.0</a>
-        <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mainNav"
-                aria-controls="mainNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -33,14 +26,8 @@
                 <li class="nav-item"><a class="nav-link" href="/api/">API Overview</a></li>
                 {% if not page.url.startsWith('/api') %}
                     <li class="nav-item dropdown">
-                        <a
-                                class="nav-link dropdown-toggle"
-                                href="#"
-                                id="langDropdown"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                        >
+                        <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
                             Language
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
@@ -57,14 +44,11 @@
 
 <div class="container-fluid">
     <div class="row flex-nowrap">
-
         {% if not page.url.startsWith('/api') %}
             <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light">
                 <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-dark min-vh-100">
-                    <a
-                            href="/"
-                            class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
-                    >
+                    <a href="/"
+                       class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                         <span class="fs-5 d-none d-sm-inline">Menu</span>
                     </a>
 
@@ -72,11 +56,9 @@
                 </div>
             </div>
         {% endif %}
-
         <div class="{% if not page.url.startsWith('/api') %}col{% else %}col-12{% endif %} py-3">
             {{ content | safe }}
         </div>
-
     </div>
 </div>
 
