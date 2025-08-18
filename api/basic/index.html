@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Work Remuneration - REST API | e-Gov 3.0</title>
+    <title>{{ spec.data.info.title }} | e-Gov 3.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="/basic-poc/assets/css/bootstrap.min.css">
@@ -31,28 +31,25 @@
 
 <div class="container-fluid">
     <div class="row flex-nowrap">
-
         
-
         <div class="col-12 py-3">
             
 <div id="swagger-ui"></div>
 <script src="/basic-poc/lib4ui/swagger-ui-bundle.js"></script>
 <script src="/basic-poc/lib4ui/swagger-ui-standalone-preset.js"></script>
 <script>
-  SwaggerUIBundle({
-    url: "/basic-poc/content/technical_specs/basic.yaml",
-    dom_id: "#swagger-ui",
-    deepLinking: true,
-    presets: [
-      SwaggerUIBundle.presets.apis,
-      SwaggerUIStandalonePreset
-    ]
-  });
+    SwaggerUIBundle({
+        url: "/basic-poc/content/technical_specs/basic.yaml",
+        dom_id: "#swagger-ui",
+        deepLinking: true,
+        presets: [
+            SwaggerUIBundle.presets.apis,
+            SwaggerUIStandalonePreset
+        ]
+    });
 </script>
 
         </div>
-
     </div>
 </div>
 
