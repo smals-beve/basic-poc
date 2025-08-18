@@ -5,14 +5,10 @@ permalink: "/api/index.html"
 ---
 
 <h1 class="mb-4">{{ title }}</h1>
-
 <div class="list-group">
-  {% for spec in collections.apiSpecs %}
-    <a
-      href="/api/{{ spec.fileSlug }}/"
-      class="list-group-item list-group-item-action"
-    >
-      {{ spec.data.info.title or spec.fileSlug }}
-    </a>
-  {% endfor %}
+    {% for spec in collections.apiSpecs %}
+        <a href="/api/{{ spec.fileSlug }}/" class="list-group-item list-group-item-action">
+            {{ spec.data.info.title or spec.fileSlug }}
+        </a>
+    {% endfor %}
 </div>

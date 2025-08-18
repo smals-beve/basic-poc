@@ -92,7 +92,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: "../../belgif/problem/v1/problem-v1.yaml#/components/schemas/Problem"
-      #security:
+        #security:
         #- Oauth:
       x-oauth2-required-scopes: any
 
@@ -151,7 +151,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '../../belgif/problem/v1/problem-v1.yaml#/components/schemas/Problem'
-      #security:
+        #security:
         #- Oauth:
       x-oauth2-required-scopes: any
 
@@ -195,7 +195,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '../../belgif/problem/v1/problem-v1.yaml#/components/schemas/Problem'
-      #security:
+        #security:
         #- Oauth:
       x-oauth2-required-scopes: any
 
