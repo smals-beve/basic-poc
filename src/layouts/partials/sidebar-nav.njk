@@ -1,19 +1,30 @@
 <nav id="sidebar" class="sidebar bg-light">
     <ul class="nav flex-column">
+
+        {% set overviewUrl = '/' ~ lang ~ '/' %}
+        {% set isOverviewActive = page.url == overviewUrl %}
+
         <li class="nav-item">
-            <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
-               href="#collapse-{{ lang }}-overview" role="button" aria-expanded="true"
+            <a class="nav-link" data-bs-toggle="collapse"
+               href="#collapse-{{ lang }}-overview" role="button"
+               aria-expanded="{{ 'true' if isOverviewActive else 'false' }}"
                aria-controls="collapse-{{ lang }}-overview">
-                <span>{{ categoryLabels.overview[lang] }}</span>
+        <span class="label" title="{{ categoryLabels.overview[lang] }}">
+          {{ categoryLabels.overview[lang] }}
+        </span>
                 <span class="caret"></span>
             </a>
-            <div class="collapse show" id="collapse-{{ lang }}-overview" data-bs-parent="#sidebar">
+
+            <div class="collapse{% if isOverviewActive %} show{% endif %}" id="collapse-{{ lang }}-overview">
                 <ul class="nav flex-column ms-3">
                     {% for doc in collections["docs_" ~ lang] %}
-                        {% if (doc.fileSlug | lower) == "readme" %}
+                        {# Identify the overview doc by its layout so filename changes don't matter #}
+                        {% if doc.data.layout == "landing.njk" %}
                             <li class="nav-item">
-                                <a class="nav-link {{ doc.url == page.url and 'active' or '' }}" href="{{ doc.url }}">
-                                    {{ doc.data.title or categoryLabels.overview[lang] }}
+                                <a class="nav-link {{ doc.url == page.url and 'active' or '' }}"
+                                   href="{{ doc.url | url }}"
+                                   title="{{ doc.data.navLabel }}">
+                                    <span class="label">{{ doc.data.navLabel }}</span>
                                 </a>
                             </li>
                         {% endif %}
@@ -21,25 +32,34 @@
                 </ul>
             </div>
         </li>
-        <li>
-            <hr class="my-2">
-        </li>
+
+        <li><hr class="my-2"></li>
+
+        {# --- Dynamic categories (e.g., blocks, field, …) --- #}
         {% for key in docCategories %}
+            {% set groupOpen = ("/" ~ key ~ "/") in page.url %}
+
             <li class="nav-item">
-                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
-                   href="#collapse-{{ lang }}-{{ key }}" role="button" aria-expanded="false"
+                <a class="nav-link" data-bs-toggle="collapse"
+                   href="#collapse-{{ lang }}-{{ key }}" role="button"
+                   aria-expanded="{{ 'true' if groupOpen else 'false' }}"
                    aria-controls="collapse-{{ lang }}-{{ key }}">
-                    <span>{{ categoryLabels[key][lang] }}</span>
+          <span class="label" title="{{ categoryLabels[key][lang] }}">
+            {{ categoryLabels[key][lang] }}
+          </span>
                     <span class="caret"></span>
                 </a>
-                <div class="collapse" id="collapse-{{ lang }}-{{ key }}" data-bs-parent="#sidebar">
+
+                <div class="collapse{% if groupOpen %} show{% endif %}" id="collapse-{{ lang }}-{{ key }}">
                     <ul class="nav flex-column ms-3">
                         {% for doc in collections["docs_" ~ lang] %}
                             {% set url = doc.url or '' %}
                             {% if ("/" ~ key ~ "/") in url %}
                                 <li class="nav-item">
-                                    <a class="nav-link {{ url == page.url and 'active' or '' }}" href="{{ url }}">
-                                        {{ doc.data.title or doc.fileSlug }}
+                                    <a class="nav-link {{ url == page.url and 'active' or '' }}"
+                                       href="{{ url | url }}"
+                                       title="{{ doc.data.navLabel }}">
+                                        <span class="label">{{ doc.data.navLabel }}</span>
                                     </a>
                                 </li>
                             {% endif %}
@@ -47,9 +67,9 @@
                     </ul>
                 </div>
             </li>
-            <li>
-                <hr class="my-2">
-            </li>
+
+            <li><hr class="my-2"></li>
         {% endfor %}
+
     </ul>
 </nav>

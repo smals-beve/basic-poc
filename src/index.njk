@@ -1,8 +1,9 @@
 ---
-layout: landing.njk
-title: e-Gov 3.0 Documentation
-lang: nl
+layout: false
 permalink: /
 ---
-
-<h1>{{ title }}</h1>
+<meta http-equiv="refresh" content="0; url={{ ('/' ~ site.defaultLang ~ '/') | url }}">
+<link rel="canonical" href="{{ ('/' ~ site.defaultLang ~ '/') | url }}">
+<noscript>
+    <a href="{{ ('/' ~ site.defaultLang ~ '/') | url }}">Go to default language</a>
+</noscript>

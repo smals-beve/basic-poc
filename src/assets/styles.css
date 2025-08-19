@@ -1,0 +1,71 @@
+.sidebar-fixed {
+    --sidebar-w: 280px;
+    flex: 0 0 var(--sidebar-w);
+    width: var(--sidebar-w);
+    max-width: var(--sidebar-w);
+    background: #f8f9fa;
+    border-right: 1px solid #e9ecef;
+    box-sizing: border-box;
+}
+
+.sidebar-fixed .sidebar-scroll {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+.sidebar-body {
+    padding: .5rem .75rem;
+}
+
+.content-flex {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+/* ----- Sidebar list + links ----- */
+#sidebar,
+#sidebar .nav,
+#sidebar .nav-item {
+    width: 100%;
+}
+
+#sidebar .nav-link {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    width: 100%;
+    padding: .375rem .5rem;
+}
+
+/* The text span that actually truncates */
+#sidebar .nav-link .label {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Child lists get a little indent */
+#sidebar .nav .nav {
+    padding-left: .5rem;
+}
+
+/* Divider lines aligned to the sidebar edges */
+#sidebar hr {
+    margin: .5rem 0;
+    border-color: #e9ecef;
+}
+
+/* Chevron that rotates when the section is open */
+#sidebar .nav-link .caret::before {
+    content: "▸";
+    display: inline-block;
+    transition: transform .2s ease;
+}
+
+#sidebar .nav-link[aria-expanded="true"] .caret::before {
+    transform: rotate(90deg);
+}

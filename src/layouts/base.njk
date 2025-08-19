@@ -5,16 +5,16 @@
     <title>{{ title }} | e-Gov 3.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/styles.css' | url }}">
     {% if page.url.startsWith('/api/') and page.url !== '/api/' %}
-        <link rel="stylesheet" href="/lib4ui/swagger-ui.css">
+        <link rel="stylesheet" href="{{ '/lib4ui/swagger-ui.css' | url }}">
     {% endif %}
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/">e-Gov 3.0</a>
+        <a class="navbar-brand" href="{{ '/' | url }}">e-Gov 3.0</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
                 aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -22,8 +22,8 @@
 
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav ms-auto align-items-center">
-                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="/api/">API Overview</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ '/' | url }}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ '/api/' | url }}">API Overview</a></li>
                 {% if not page.url.startsWith('/api') %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
@@ -31,9 +31,9 @@
                             Language
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
-                            <li><a class="dropdown-item" href="/nl/">Nederlands</a></li>
-                            <li><a class="dropdown-item" href="/fr/">Français</a></li>
-                            <li><a class="dropdown-item" href="/en/">English</a></li>
+                            <li><a class="dropdown-item" href="{{ '/nl/' | url }}">Nederlands</a></li>
+                            <li><a class="dropdown-item" href="{{ '/fr/' | url }}">Français</a></li>
+                            <li><a class="dropdown-item" href="{{ '/en/' | url }}">English</a></li>
                         </ul>
                     </li>
                 {% endif %}
@@ -45,23 +45,26 @@
 <div class="container-fluid">
     <div class="row flex-nowrap">
         {% if not page.url.startsWith('/api') %}
-            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light">
-                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-dark min-vh-100">
-                    <a href="/"
-                       class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                        <span class="fs-5 d-none d-sm-inline">Menu</span>
-                    </a>
-
-                    {% include "partials/sidebar-nav.njk" %}
+            <aside class="sidebar-fixed">
+                <div class="sidebar-scroll">
+                    <div class="sidebar-body">
+                        <a href="{{ '/' | url }}"
+                           class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                            <span class="fs-5 d-none d-sm-inline">Menu</span>
+                        </a>
+                        {% include "partials/sidebar-nav.njk" %}
+                    </div>
                 </div>
-            </div>
+            </aside>
         {% endif %}
-        <div class="{% if not page.url.startsWith('/api') %}col{% else %}col-12{% endif %} py-3">
+
+        <main class="content-flex {% if not page.url.startsWith('/api') %}col{% else %}col-12{% endif %} py-3">
             {{ content | safe }}
-        </div>
+        </main>
     </div>
 </div>
 
-<script src="/assets/js/bootstrap.bundle.min.js"></script>
+
+<script src="{{ '/assets/js/bootstrap.bundle.min.js' | url }}"></script>
 </body>
 </html>
