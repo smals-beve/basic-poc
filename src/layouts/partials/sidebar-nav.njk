@@ -1,6 +1,7 @@
 <nav id="sidebar" class="sidebar bg-light">
     <ul class="nav flex-column">
 
+        {# --- Overview group --- #}
         {% set overviewUrl = '/' ~ lang ~ '/' %}
         {% set isOverviewActive = page.url == overviewUrl %}
 
@@ -18,11 +19,10 @@
             <div class="collapse{% if isOverviewActive %} show{% endif %}" id="collapse-{{ lang }}-overview">
                 <ul class="nav flex-column ms-3">
                     {% for doc in collections["docs_" ~ lang] %}
-                        {# Identify the overview doc by its layout so filename changes don't matter #}
                         {% if doc.data.layout == "landing.njk" %}
                             <li class="nav-item">
                                 <a class="nav-link {{ doc.url == page.url and 'active' or '' }}"
-                                   href="{{ doc.url | url }}"
+                                   href="{{ doc.url }}"
                                    title="{{ doc.data.navLabel }}">
                                     <span class="label">{{ doc.data.navLabel }}</span>
                                 </a>
@@ -35,10 +35,9 @@
 
         <li><hr class="my-2"></li>
 
-        {# --- Dynamic categories (e.g., blocks, field, …) --- #}
+        {# --- Dynamic categories --- #}
         {% for key in docCategories %}
             {% set groupOpen = ("/" ~ key ~ "/") in page.url %}
-
             <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="collapse"
                    href="#collapse-{{ lang }}-{{ key }}" role="button"
@@ -49,7 +48,6 @@
           </span>
                     <span class="caret"></span>
                 </a>
-
                 <div class="collapse{% if groupOpen %} show{% endif %}" id="collapse-{{ lang }}-{{ key }}">
                     <ul class="nav flex-column ms-3">
                         {% for doc in collections["docs_" ~ lang] %}
@@ -57,7 +55,7 @@
                             {% if ("/" ~ key ~ "/") in url %}
                                 <li class="nav-item">
                                     <a class="nav-link {{ url == page.url and 'active' or '' }}"
-                                       href="{{ url | url }}"
+                                       href="{{ url }}"
                                        title="{{ doc.data.navLabel }}">
                                         <span class="label">{{ doc.data.navLabel }}</span>
                                     </a>
@@ -67,7 +65,6 @@
                     </ul>
                 </div>
             </li>
-
             <li><hr class="my-2"></li>
         {% endfor %}
 
