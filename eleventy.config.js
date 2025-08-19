@@ -66,8 +66,7 @@ export default function (eleventyConfig) {
     });
 
     return {
-        pathPrefix: process.env.ELEVENTY_ENV === "production"
-            ? "/basic-poc/" : "/",
+        pathPrefix: process.env.ELEVENTY_ENV === "production" ? "/basic-poc/" : "/",
         dir: {
             input: "src",
             includes: "layouts",
