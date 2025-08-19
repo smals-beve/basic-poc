@@ -50,12 +50,19 @@ export default function (eleventyConfig) {
     eleventyConfig.addLayoutAlias("default", "base.njk");
     eleventyConfig.addPassthroughCopy({".nojekyll": ".nojekyll"});
 
-    // 8) Auto-scan categories (sub-folders of English docs)
+    // 8) Derive docCategories from the first language folder that has subfolders
     eleventyConfig.addGlobalData("docCategories", () => {
-        const base = path.join(__dirname, "src/content/technical_docs_en");
-        return fs.readdirSync(base, {withFileTypes: true})
-            .filter(d => d.isDirectory())
-            .map(d => d.name);
+        const langs = ["nl", "fr", "en"];
+        for (const lang of langs) {
+            const base = path.join(__dirname, `src/content/technical_docs_${lang}`);
+            if (!fs.existsSync(base)) continue;
+            const dirs = fs.readdirSync(base, {withFileTypes: true})
+                .filter(d => d.isDirectory())
+                .map(d => d.name)
+                .sort();
+            if (dirs.length) return dirs;
+        }
+        return [];
     });
 
     return {
