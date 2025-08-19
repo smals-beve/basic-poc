@@ -31,7 +31,7 @@ export default function (eleventyConfig) {
     // 5) Per-language MD collections
     ["en", "fr", "nl"].forEach(lang => {
         eleventyConfig.addCollection(`docs_${lang}`, coll =>
-            coll.getFilteredByGlob(`src/content/technical_docs_${lang}/**/*.md`)
+            coll.getFilteredByGlob(`src/content/technical_docs_${lang}/**/*.html`)
         );
     });
 

@@ -5,33 +5,25 @@ types.
 
 ## Repository Contents
 
-This repository contains functionnal documentation:
+This repository contains functional documentation:
 
-| Type     | Description                                                                                    | Documentation FR      | Documentatie NL                                                   | Documentation EN         |
-|----------|------------------------------------------------------------------------------------------------|-----------------------|-------------------------------------------------------------------|--------------------------|
-| Glossary | A standardized glossary in **OpenAPI (Swagger)** format, precisely describing the fields used. | Voir la documentation | [Bekijk de documentatie](src/content/technical_docs_nl/README.md) | See the EN documentation |
-
-This repository contains technical documentation:
-
-| Type                                                  | Description              |
-|-------------------------------------------------------|--------------------------|
-| [JSON schema](src/content/technical_specs/basic.yaml) | Retrieve the JSON schema |
-| [JSON UI](https://test-belgium-test.github.io/basic/) | View the documentation   |
-| Annex                                                 | Retrieve the annexes     |
+| Type     | Description                                                                                    | Documentation FR      | Documentatie NL                                                          | Documentation EN         |
+|----------|------------------------------------------------------------------------------------------------|-----------------------|--------------------------------------------------------------------------|--------------------------|
+| Glossary | A standardized glossary in **OpenAPI (Swagger)** format, precisely describing the fields used. | Voir la documentation | [Bekijk de documentatie](src/content/technical_docs_nl/0__overview.html) | See the EN documentation |
 
 ## Repository Structure
 
 ```
 basic/
-├── README.md                      #  Introduction and description of the repository (This page)
+├── README.md # Introduction and description of the repository (This page)
 ├── docs/
-│   ├── technical_specs/
-│   │   ├── basic.yaml             # Glossary and OpenAPI definitions
-├── technical_docs_XX/             #XX can be FR/NL/EN/DE
-│   └── README.md                  # Technical constraints explained in plain language 
-│   │   ├── schema                 # Contains documentation for different data blocks 
-│   │   ├── field                  # Contains documentation for the different fields within data blocks
-└── RELEASE_NOTES.md               # Description of glossary versions or changes
+│ ├── technical_specs/
+│ │ ├── basic.yaml # Glossary and OpenAPI definitions
+├── technical_docs_XX/ # XX can be FR/NL/EN/DE
+│ └── 0__overview.html # Technical constraints explained in plain language
+│ │ ├── schema # Contains documentation for different data blocks
+│ │ ├── field # Contains documentation for the different fields within data blocks
+└── RELEASE_NOTES.md # Description of glossary versions or changes
 ```
 
 ## How to Use These Resources
@@ -41,7 +33,3 @@ Each example JSON file and the technical documentation are designed to guide you
 by the project.
 
 Thank you!
-
-
-
-
