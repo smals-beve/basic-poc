@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title> | e-Gov 3.0</title>
+    <title>Overview | e-Gov 3.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="/basic-poc/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/basic-poc/assets/styles.css">
+    <link rel="stylesheet" href="/basic-poc/basic-poc/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/basic-poc/basic-poc/assets/styles.css">
     
 </head>
 <body>
@@ -20,16 +20,16 @@
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav ms-auto align-items-center">
                 <li class="nav-item"><a class="nav-link" href="/basic-poc/">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="/basic-poc/api/">API Overview</a></li>
+                <li class="nav-item"><a class="nav-link" href="/basic-poc/basic-poc/api/">API Overview</a></li>
                 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Language
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
-                            <li><a class="dropdown-item" href="/basic-poc/nl/">Nederlands</a></li>
-                            <li><a class="dropdown-item" href="/basic-poc/fr/">Français</a></li>
-                            <li><a class="dropdown-item" href="/basic-poc/en/">English</a></li>
+                            <li><a class="dropdown-item" href="/basic-poc/basic-poc/nl/">Nederlands</a></li>
+                            <li><a class="dropdown-item" href="/basic-poc/basic-poc/fr/">Français</a></li>
+                            <li><a class="dropdown-item" href="/basic-poc/basic-poc/en/">English</a></li>
                         </ul>
                     </li>
                 
@@ -41,37 +41,57 @@
 <div class="container-fluid">
     <div class="row flex-nowrap">
         
-            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light">
-                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-dark min-vh-100">
-                    <a href="/basic-poc/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                        <span class="fs-5 d-none d-sm-inline">Menu</span>
-                    </a>
-
-                    <nav id="sidebar" class="sidebar bg-light">
+            <aside class="sidebar-fixed">
+                <div class="sidebar-scroll">
+                    <div class="sidebar-body">
+                        <a href="/basic-poc/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                            <span class="fs-5 d-none d-sm-inline">Menu</span>
+                        </a>
+                        <nav id="sidebar" class="sidebar bg-light">
     <ul class="nav flex-column">
+
+        
+        
+
         <li class="nav-item">
-            <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-en-overview" role="button" aria-expanded="true" aria-controls="collapse-en-overview">
-                <span>Overview</span>
+            <a class="nav-link" data-bs-toggle="collapse" href="#collapse-en-overview" role="button" aria-expanded="true" aria-controls="collapse-en-overview">
+        <span class="label" title="Overview">
+          Overview
+        </span>
                 <span class="caret"></span>
             </a>
-            <div class="collapse show" id="collapse-en-overview" data-bs-parent="#sidebar">
+
+            <div class="collapse show" id="collapse-en-overview">
                 <ul class="nav flex-column ms-3">
                     
+                        
+                        
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/basic-poc/basic-poc/en/" title="0__overview">
+                                    <span class="label">0__overview</span>
+                                </a>
+                            </li>
                         
                     
                 </ul>
             </div>
         </li>
-        <li>
-            <hr class="my-2">
-        </li>
+
+        <li><hr class="my-2"></li>
+
         
+        
+            
+
             <li class="nav-item">
-                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-en-field" role="button" aria-expanded="false" aria-controls="collapse-en-field">
-                    <span>Fields</span>
+                <a class="nav-link" data-bs-toggle="collapse" href="#collapse-en-block" role="button" aria-expanded="false" aria-controls="collapse-en-block">
+          <span class="label" title="Blocks">
+            Blocks
+          </span>
                     <span class="caret"></span>
                 </a>
-                <div class="collapse" id="collapse-en-field" data-bs-parent="#sidebar">
+
+                <div class="collapse" id="collapse-en-block">
                     <ul class="nav flex-column ms-3">
                         
                             
@@ -80,16 +100,20 @@
                     </ul>
                 </div>
             </li>
-            <li>
-                <hr class="my-2">
-            </li>
+
+            <li><hr class="my-2"></li>
         
+            
+
             <li class="nav-item">
-                <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-en-schema" role="button" aria-expanded="false" aria-controls="collapse-en-schema">
-                    <span>Schemas</span>
+                <a class="nav-link" data-bs-toggle="collapse" href="#collapse-en-field" role="button" aria-expanded="false" aria-controls="collapse-en-field">
+          <span class="label" title="Fields">
+            Fields
+          </span>
                     <span class="caret"></span>
                 </a>
-                <div class="collapse" id="collapse-en-schema" data-bs-parent="#sidebar">
+
+                <div class="collapse" id="collapse-en-field">
                     <ul class="nav flex-column ms-3">
                         
                             
@@ -98,17 +122,19 @@
                     </ul>
                 </div>
             </li>
-            <li>
-                <hr class="my-2">
-            </li>
+
+            <li><hr class="my-2"></li>
         
+
     </ul>
 </nav>
 
+                    </div>
                 </div>
-            </div>
+            </aside>
         
-        <div class="col py-3">
+
+        <main class="content-flex col py-3">
             
 <main class="px-4 py-3">
     <!DOCTYPE html>
@@ -128,10 +154,11 @@
 
 </main>
 
-        </div>
+        </main>
     </div>
 </div>
 
-<script src="/basic-poc/assets/js/bootstrap.bundle.min.js"></script>
+
+<script src="/basic-poc/basic-poc/assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
