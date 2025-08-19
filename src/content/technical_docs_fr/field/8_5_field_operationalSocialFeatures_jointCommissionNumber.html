@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Glossarium Datafields – operationalSocialFeatures jointCommissionNumber</title>
+  <link href="src/assets/css/pdf.min.css" rel="stylesheet" />
+</head>
+<body class="d-flex flex-column py-8">
+
+<div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
+
+    <div class="px-12 py-10 introduction">
+        <h1>Glossarium</h1>
+        <div class="introduction__right">
+            <span>
+                Version
+                <br>
+                <strong>1</strong>
+            </span>
+            <span>
+                Date
+                <br>
+                <strong>01/07/2025</strong>
+            </span>
+        </div>
+    </div>
+    <div class="px-12 py-9">
+        <!-- Zone LoopList -->
+        <h2>Numéro de commission paritaire</h2>
+        <p>Numéro de la (sous-(sous-))commission paritaire octroyé par le SPF ETCS. Il s'agit de la commission dont dépend la personne physique en question.</p>
+
+        <dl class="mt-7">
+            <dt>TechLabel</dt>	
+            <dd>jointCommissionNumber</dd>
+            <hr class="my-5">
+            <dt>Type</dt>	
+            <dd>string</dd>
+            <hr class="my-5">
+	        <dt>Longeur</dt>
+            <dd>9</dd>
+            <hr class="my-5">
+	        <dt>Format</dt>
+            <dd>CCC ou CCC.CC ou CCC.CC.CC</dd>
+	        <hr class="my-5">
+            <dt>Domaine de définition</dt>
+            <dd>Voir annexe "commissions paritaires" (nouvelle annexe).
+
+- CCC : Les commissions paritaires ; série de 3 chiffres, alignement à gauche de la colonne.
+- CCC.CC : les sous-commissions paritaires ; série de 3 chiffres suivie d'un point et de 2 autres chiffres, alignement à gauche de la colonne.
+- CCC.CC.CC : les sous-commissions paritaires ; série de 3 chiffres suivie d'un point et de 2 autres chiffres, suivis eux aussi par un point et 2 autres chiffres.
+
+
+Si la personne physique n'appartient à aucune commission, sous-commission ou sous-sous-commision paritaire, la valeur "999" est mentionnée.</dd>
+	        <hr class="my-5">
+            <dt>Présence</dt>
+            <dd>Indispensable</dd>
+	        <hr class="my-5">
+        </dl>
+        <hr class="mt-11 mb-7 opacity-100">
+        <!-- Zone LoopList -->
+    </div>
+</div>
+</body>
+</html>

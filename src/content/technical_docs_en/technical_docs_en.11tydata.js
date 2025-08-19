@@ -2,7 +2,7 @@ export default {
     lang: "en",
     eleventyComputed: {
         layout: data => {
-            return data.page.fileSlug.toLowerCase() === "readme"
+            return data.page.fileSlug.toLowerCase() === "0__overview"
                 ? "landing.njk"
                 : "doc.njk";
         },
@@ -10,7 +10,7 @@ export default {
         permalink: data => {
             let stem = data.page.filePathStem.replace(/\\/g, "/");
             let rel = stem.replace(/.*\/technical_docs_en/, "");
-            let isOverview = /^\/?readme$/i.test(rel);
+            let isOverview = /^\/?0__overview$/i.test(rel);
 
             return isOverview
                 ? "/en/"

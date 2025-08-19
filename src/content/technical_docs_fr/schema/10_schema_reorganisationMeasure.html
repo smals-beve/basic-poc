@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Glossarium – Schema reorganisationMeasure</title>
+  <link href="src/assets/css/pdf.min.css" rel="stylesheet" />
+</head>
+<body class="d-flex flex-column py-8">
+
+<div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
+
+    <div class="px-12 py-10 introduction">
+        <h1>Glossarium</h1>
+        <div class="introduction__right">
+            <span>
+                Version
+                <br>
+                <strong>1</strong>
+            </span>
+            <span>
+                Date
+                <br>
+                <strong>01/07/2025</strong>
+            </span>
+        </div>
+    </div>
+
+
+    <div class="px-12 py-9">
+        <h2>Blok Mesure de réorganisation du temps de travail<br><code>reorganisationMeasure</code></h2>
+        <p>Eventuelle mesure de réorganisation du temps de travail avec un impact dur le temps de travail hebdomadaire de la personne physique.</p>
+
+        <div class="mt-6">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col" class="text-nowrap">Nom du champ</th>
+                    <th scope="col" class="text-nowrap">Description</th>
+					<th scope="col" class="text-nowrap">TechLabel</th>
+                </tr>
+                </thead>
+                <tbody>
+ <!-- ZONE_LOOPLIST -->
+                <tr>
+                    <td><a href="#" class="link-underline"><strong>Mesure de réorganisation du temps de travail</strong></a></td>
+                    <td>
+                        Code indiquant la mesure de réorganisation du temps de travail
+                    </td>
+					<td>
+						<code>reorganisationMeasureType</code>
+					<td>
+                </tr>
+
+                <tr>
+                    <td><a href="#" class="link-underline"><strong>Pourcentage de la mesure de réorganisation du temps de travail</strong></a></td>
+                    <td>
+                        Pourcentage avec lequel les prestations sont réduites. Ce pourcentage concerne l'ensemble de la période de suspension et  pas seulement la période de calcul salarial  en question.
+                    </td>
+					<td>
+						<code>reorganisationMeasurePercentage</code>
+					<td>
+                </tr>
+<!-- ZONE_LOOPLIST -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

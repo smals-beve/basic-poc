@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Glossarium – Schema enterprise</title>
+  <link href="src/assets/css/pdf.min.css" rel="stylesheet" />
+</head>
+<body class="d-flex flex-column py-8">
+
+<div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
+
+    <div class="px-12 py-10 introduction">
+        <h1>Glossarium</h1>
+        <div class="introduction__right">
+            <span>
+                Versie
+                <br>
+                <strong>1</strong>
+            </span>
+            <span>
+                Datum
+                <br>
+                <strong>01/07/2025</strong>
+            </span>
+        </div>
+    </div>
+
+
+    <div class="px-12 py-9">
+        <h2>Blok Onderneming<br><code>enterprise</code></h2>
+        <p>De onderneming in wiens opdracht een loonberekening voor een natuurlijk persoon uitgevoerd wordt.</p>
+
+        <div class="mt-6">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col" class="text-nowrap">Veldnaam</th>
+                    <th scope="col" class="text-nowrap">Beschrijving</th>
+					<th scope="col" class="text-nowrap">TechLabel</th>
+                </tr>
+                </thead>
+                <tbody>
+ <!-- ZONE_LOOPLIST -->
+                <tr>
+                    <td><a href="#" class="link-underline"><strong>Ondernemingsnummer</strong></a></td>
+                    <td>
+                        Nummer toegekend door de Kruispuntbank van Ondernemingen dat een onderneming eenduidig identificeert, of het nu gaat om een natuurlijk persoon, een groepering van natuurlijke personen of een rechtspersoon.
+                    </td>
+					<td>
+						<code>enterpriseNumber</code>
+					<td>
+                </tr>
+
+                <tr>
+                    <td><a href="#" class="link-underline"><strong>RSZ-nummer</strong></a></td>
+                    <td>
+                        Nummer toegekend door de Rijksdienst voor Sociale Zekerheid dat een onderneming met personeel onderworpen aan de wet van 27 juni 1969 eenduidig identificeert. Het betreft het definitieve RSZ-nummer.
+                    </td>
+					<td>
+						<code>nssoNumber</code>
+					<td>
+                </tr>
+<!-- ZONE_LOOPLIST -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

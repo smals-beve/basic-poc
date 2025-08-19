@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Glossarium – Schema job</title>
+  <link href="src/assets/css/pdf.min.css" rel="stylesheet" />
+</head>
+<body class="d-flex flex-column py-8">
+
+<div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
+
+    <div class="px-12 py-10 introduction">
+        <h1>Glossarium</h1>
+        <div class="introduction__right">
+            <span>
+                Versie
+                <br>
+                <strong>1</strong>
+            </span>
+            <span>
+                Datum
+                <br>
+                <strong>01/07/2025</strong>
+            </span>
+        </div>
+    </div>
+
+
+    <div class="px-12 py-9">
+        <h2>Blok Functie<br><code>job</code></h2>
+        <p>Gegevens over de functie uitgeoefend door de natuurlijke persoon. 
+
+Deze gegevens zijn steeds gekoppeld aan het blok "sociale signalitiek".</p>
+
+        <div class="mt-6">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col" class="text-nowrap">Veldnaam</th>
+                    <th scope="col" class="text-nowrap">Beschrijving</th>
+					<th scope="col" class="text-nowrap">TechLabel</th>
+                </tr>
+                </thead>
+                <tbody>
+ <!-- ZONE_LOOPLIST -->
+                <tr>
+                    <td><a href="#" class="link-underline"><strong>Benaming van de functie</strong></a></td>
+                    <td>
+                        Benaming van de functie uitgeoefend door de natuurlijke persoon (vrije tekst).
+                    </td>
+					<td>
+						<code>jobTitle</code>
+					<td>
+                </tr>
+<!-- ZONE_LOOPLIST -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
