@@ -1,20 +1,34 @@
+const LANG = "en";
+const FOLDER = "technical_docs_en";
+
 export default {
-    lang: "en",
+    lang: LANG,
     eleventyComputed: {
-        layout: data => {
-            return data.page.fileSlug.toLowerCase() === "0__overview"
+        layout: (data) => {
+            return (data.page.fileSlug || "").toLowerCase() === "0__overview"
                 ? "landing.njk"
                 : "doc.njk";
         },
+        permalink: (data) => {
+            const stem = data.page.filePathStem.replace(/\\/g, "/");
+            const rel = stem.replace(new RegExp(`.*/${FOLDER}`), "");
+            const isOverview = /^\/?0__overview$/i.test(rel);
+            return isOverview ? `/${LANG}/` : `/${LANG}${rel}/`;
+        },
+        title: (data) => {
+            const isOverview =
+                (data.page.fileSlug || "").toLowerCase() === "0__overview";
+            if (isOverview) return data.categoryLabels.overview[LANG];
 
-        permalink: data => {
-            let stem = data.page.filePathStem.replace(/\\/g, "/");
-            let rel = stem.replace(/.*\/technical_docs_en/, "");
-            let isOverview = /^\/?0__overview$/i.test(rel);
-
-            return isOverview
-                ? "/en/"
-                : `/en${rel}/`;
-        }
-    }
+            const stem = data.page.filePathStem.replace(/\\/g, "/");
+            const rel = stem.replace(new RegExp(`.*/${FOLDER}`), "");
+            for (const cat of data.docCategories || []) {
+                if (rel.startsWith("/" + cat + "/")) {
+                    return data.categoryLabels[cat][LANG];
+                }
+            }
+            return data.title || data.page.fileSlug || "Documentation";
+        },
+        navLabel: (data) => data.navLabel || data.page.fileSlug,
+    },
 };

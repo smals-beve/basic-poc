@@ -21,7 +21,7 @@ basic/
 │ │ ├── basic.yaml # Glossary and OpenAPI definitions
 ├── technical_docs_XX/ # XX can be FR/NL/EN/DE
 │ └── 0__overview.html # Technical constraints explained in plain language
-│ │ ├── schema # Contains documentation for different data blocks
+│ │ ├── block # Contains documentation for different data blocks
 │ │ ├── field # Contains documentation for the different fields within data blocks
 └── RELEASE_NOTES.md # Description of glossary versions or changes
 ```
