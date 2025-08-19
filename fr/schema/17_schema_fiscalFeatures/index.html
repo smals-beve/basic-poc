@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title> | e-Gov 3.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/basic-poc/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/basic-poc/assets/styles.css">
+    
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/basic-poc/">e-Gov 3.0</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="/basic-poc/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/basic-poc/api/">API Overview</a></li>
+                
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Language
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                            <li><a class="dropdown-item" href="/basic-poc/nl/">Nederlands</a></li>
+                            <li><a class="dropdown-item" href="/basic-poc/fr/">Français</a></li>
+                            <li><a class="dropdown-item" href="/basic-poc/en/">English</a></li>
+                        </ul>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-dark min-vh-100">
+                    <a href="/basic-poc/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline">Menu</span>
+                    </a>
+
+                    <nav id="sidebar" class="sidebar bg-light">
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#collapse-fr-overview" role="button" aria-expanded="true" aria-controls="collapse-fr-overview">
+                <span>Vue d’ensemble</span>
+                <span class="caret"></span>
+            </a>
+            <div class="collapse show" id="collapse-fr-overview" data-bs-parent="#sidebar">
+                <ul class="nav flex-column ms-3">
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                </ul>
+            </div>
+        </li>
+        <li>
+            <hr class="my-2">
+        </li>
+        
+    </ul>
+</nav>
+
+                </div>
+            </div>
+        
+        <div class="col py-3">
+            
+<main class="px-4 py-3">
+    <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glossarium – Schema fiscalFeatures</title>
+  <link href="src/assets/css/pdf.min.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column py-8">
+
+<div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
+
+    <div class="px-12 py-10 introduction">
+        <h1>Glossarium</h1>
+        <div class="introduction__right">
+            <span>
+                Version
+                <br>
+                <strong>1</strong>
+            </span>
+            <span>
+                Date
+                <br>
+                <strong>01/07/2025</strong>
+            </span>
+        </div>
+    </div>
+
+
+    <div class="px-12 py-9">
+        <h2>Blok Signalétique fiscale<br><code>fiscalFeatures</code></h2>
+        <p>Les données fiscales d'application dans le calcul salarial.</p>
+
+        <div class="mt-6">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col" class="text-nowrap">Nom du champ</th>
+                    <th scope="col" class="text-nowrap">Description</th>
+					<th scope="col" class="text-nowrap">TechLabel</th>
+                </tr>
+                </thead>
+                <tbody>
+ <!-- ZONE_LOOPLIST -->
+                <tr>
+                    <td><a href="#" class="link-underline"><strong>Date de début de la signalétique fiscale</strong></a></td>
+                    <td>
+                        La date de début de la période dans la période de calcul salarial à partir de laquelle l'ensemble des données qui forment ensemble la signalétique fiscale est valide.
+
+Si une ou plusieurs donnée(s) change(nt) dans la signalétique fiscale, la date de début de la signalétique fiscale correspond à la date à partir de laquelle le nouveau set de données de la signalétique fiscale est d'application.
+                    </td>
+					<td>
+						<code>startDate</code>
+					</td><td>
+                </td></tr>
+
+                <tr>
+                    <td><a href="#" class="link-underline"><strong>Date de fin de la signalétique fiscale</strong></a></td>
+                    <td>
+                        La date de fin de la période dans la période de calcul salarial jusqu'à ce que le set de données qui forment ensemble la signalétique fiscale est valide.  
+
+Si une ou plusieurs donnée(s) change(nt) dans la signalétique fiscale, la date de fin de la signalétique fiscale correspond à la date jusqu'à laquelle l'ancien ensemble de données de la signalétique fiscale est d'application.
+                    </td>
+					<td>
+						<code>endDate</code>
+					</td><td>
+                </td></tr>
+
+                <tr>
+                    <td><a href="#" class="link-underline"><strong>Statut</strong></a></td>
+                    <td>
+                        Statut de la personne physique
+                    </td>
+					<td>
+						<code>employmentStatus</code>
+					</td><td>
+                </td></tr>
+
+                <tr>
+                    <td><a href="#" class="link-underline"><strong>État civil</strong></a></td>
+                    <td>
+                        Il s'agit de l'état civil, comme appliqué dans le cadre du calcul salarial.
+                    </td>
+					<td>
+						<code>civilStatusType</code>
+					</td><td>
+                </td></tr>
+
+                <tr>
+                    <td><a href="#" class="link-underline"><strong>Nombre d'enfants à charge</strong></a></td>
+                    <td>
+                        Nombre d'enfants fiscalement à charge (en cecompris les enfants moins valides à charge), comme appliqué dans le cadre du calcul salarial.
+                    </td>
+					<td>
+						<code>numberOfDependentChildren</code>
+					</td><td>
+                </td></tr>
+
+                <tr>
+                    <td><a href="#" class="link-underline"><strong>Nombre d'enfants moins valides à charge</strong></a></td>
+                    <td>
+                        Nombre d'enfants  moins valides fiscalement à charge, comme appliqué dans le cadre du calcul salarial.
+                    </td>
+					<td>
+						<code>numberOfDependentDisabledChildren</code>
+					</td><td>
+                </td></tr>
+
+                <tr>
+                    <td><a href="#" class="link-underline"><strong>Nombre d'autres personnes à charge</strong></a></td>
+                    <td>
+                        Nombre de personnes fiscalement à charge (en ce compris les autres personnes moins valides à charge et les personnes à charge nécessitant des soins) autre que les enfants fiscalement à charge, comme appliqué dans le cadre du calcul salarial.
+                    </td>
+					<td>
+						<code>numberOfDependents</code>
+					</td><td>
+                </td></tr>
+
+                <tr>
+                    <td><a href="#" class="link-underline"><strong>Nombre d'autres personnes moins valides à charge</strong></a></td>
+                    <td>
+                        Nombre de personnes moins valides fiscalement à charge autre que les enfants fiscalement à charge, comme appliqué dans le cadre du calcul salarial.
+                    </td>
+					<td>
+						<code>numberOfDisabledDependents</code>
+					</td><td>
+                </td></tr>
+
+                <tr>
+                    <td><a href="#" class="link-underline"><strong>Notion de moins valide</strong></a></td>
+                    <td>
+                        Indication si la personne physique est considérée sur le plan fiscal comme une personne moins valide, comme appliqué dans le cadre du calcul salarial.
+                    </td>
+					<td>
+						<code>disabilityIndicator</code>
+					</td><td>
+                </td></tr>
+
+                <tr>
+                    <td><a href="#" class="link-underline"><strong>Notion de travailleur frontalier</strong></a></td>
+                    <td>
+                        Indication si la personne physique a le statut fiscal de travailleur frontalier, comme appliqué dans le cadre du calcul salarial.
+                    </td>
+					<td>
+						<code>CrossBorderWorker</code>
+					</td><td>
+                </td></tr>
+
+                <tr>
+                    <td><a href="#" class="link-underline"><strong>Notion résident belge</strong></a></td>
+                    <td>
+                        Indication si la personne physique est considérée comme résidente belge d'un point de vue fiscal.
+                    </td>
+					<td>
+						<code>BelgianResident</code>
+					</td><td>
+                </td></tr>
+
+                <tr>
+                    <td><a href="#" class="link-underline"><strong>Revenu du partenaire</strong></a></td>
+                    <td>
+                        Indication du revenu du partenaire de la personne physique, comme appliqué dans le cadre du calcul salarial.
+                    </td>
+					<td>
+						<code>incomeOfPartner</code>
+					</td><td>
+                </td></tr>
+
+                <tr>
+                    <td><a href="#" class="link-underline"><strong>Notion partenaire moins valide</strong></a></td>
+                    <td>
+                        Indication si le partenaire de la personne physique est considéré comme une personne avec moins valide sur le plan fiscal, comme appliqué dans le cadre du calcul salarial.
+                    </td>
+					<td>
+						<code>disabilityOfPartner</code>
+					</td><td>
+                </td></tr>
+
+                <tr>
+                    <td><a href="#" class="link-underline"><strong>Nombre de personnes à charge nécessitant des soins</strong></a></td>
+                    <td>
+                        Nombre de personnes à charge nécessitant des soins comme appliqué dans le cadre du calcul salarial.
+                    </td>
+					<td>
+						<code>numberOfDependentsNeedingCare</code>
+					</td><td>
+                </td></tr>
+<!-- ZONE_LOOPLIST -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+
+</main>
+
+        </div>
+    </div>
+</div>
+
+<script src="/basic-poc/assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
