@@ -74,9 +74,10 @@
 
             {{ content
             | stripOuterHtml
-            | rewriteAssetUrls(pathPrefix)
+            | rewriteAssetUrls
             | rewriteDocAnchors(lang, pathPrefix, manifestForLang)
             | safe }}
+
         </main>
 
     </div>
