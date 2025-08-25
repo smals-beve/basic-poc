@@ -17,8 +17,8 @@ title: "{{ spec.data.info.title or spec.fileSlug }}"
 
 <div id="swagger-ui"></div>
 
-<script src="{{ '/lib4ui/swagger-ui-bundle.js'}}"></script>
-<script src="{{ '/lib4ui/swagger-ui-standalone-preset.js'}}"></script>
+<script src="{{ '/lib4ui/swagger-ui-bundle.js' | url }}"></script>
+<script src="{{ '/lib4ui/swagger-ui-standalone-preset.js' | url }}"></script>
 <script>
     SwaggerUIBundle({
         url: "{{ ('/content/technical_specs/' ~ spec.fileSlug ~ '.yaml') | url }}",
