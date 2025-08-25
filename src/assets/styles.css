@@ -1,12 +1,14 @@
+/* Grid-friendly sidebar: let Bootstrap columns handle flex behavior */
 .sidebar-fixed {
     --sidebar-w: 280px;
-    flex: 0 0 var(--sidebar-w);
     width: var(--sidebar-w);
     max-width: var(--sidebar-w);
     background: #f8f9fa;
     border-right: 1px solid #e9ecef;
     box-sizing: border-box;
 }
+
+.col-auto.sidebar-fixed { flex: 0 0 var(--sidebar-w); }
 
 .sidebar-fixed .sidebar-scroll {
     height: 100vh;
@@ -15,9 +17,7 @@
     padding: 0;
 }
 
-.sidebar-body {
-    padding: .5rem .75rem;
-}
+.sidebar-body { padding: .5rem .75rem; }
 
 .content-flex {
     flex: 1 1 auto;
@@ -27,9 +27,7 @@
 /* ----- Sidebar list + links ----- */
 #sidebar,
 #sidebar .nav,
-#sidebar .nav-item {
-    width: 100%;
-}
+#sidebar .nav-item { width: 100%; }
 
 #sidebar .nav-link {
     display: flex;
@@ -39,7 +37,7 @@
     padding: .375rem .5rem;
 }
 
-/* The text span that actually truncates */
+/* Truncate long labels */
 #sidebar .nav-link .label {
     flex: 1 1 auto;
     min-width: 0;
@@ -48,10 +46,8 @@
     white-space: nowrap;
 }
 
-/* Child lists get a little indent */
-#sidebar .nav .nav {
-    padding-left: .5rem;
-}
+/* Child lists indent */
+#sidebar .nav .nav { padding-left: .5rem; }
 
 /* Divider lines aligned to the sidebar edges */
 #sidebar hr {
@@ -59,13 +55,14 @@
     border-color: #e9ecef;
 }
 
-/* Chevron that rotates when the section is open */
-#sidebar .nav-link .caret::before {
+/* Chevron rotation: if you use a <button data-bs-toggle="collapse"> */
+#sidebar .btn[aria-expanded="true"] .caret::before {
+    transform: rotate(90deg);
+}
+
+/* Default caret icon */
+#sidebar .caret::before {
     content: "▸";
     display: inline-block;
     transition: transform .2s ease;
-}
-
-#sidebar .nav-link[aria-expanded="true"] .caret::before {
-    transform: rotate(90deg);
 }

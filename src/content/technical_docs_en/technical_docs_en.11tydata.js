@@ -1,34 +1,110 @@
+import manifest from "../../_data/manifest_en.json" with { type: "json" };
+
 const LANG = "en";
-const FOLDER = "technical_docs_en";
+
+/**
+ * Find a nested (sub-block) ID by its slug, case-insensitive.
+ */
+function findNestedBlockId(slug) {
+    for (const topLevelBlock of manifest.blocks || []) {
+        for (const nestedBlock of topLevelBlock.blocks || []) {
+            if ((nestedBlock.id || "").toLowerCase() === slug) {
+                return nestedBlock.id;
+            }
+        }
+    }
+    return null;
+}
 
 export default {
     lang: LANG,
     eleventyComputed: {
-        layout: (data) => {
-            return (data.page.fileSlug || "").toLowerCase() === "0__overview"
-                ? "landing.njk"
-                : "doc.njk";
-        },
-        permalink: (data) => {
-            const stem = data.page.filePathStem.replace(/\\/g, "/");
-            const rel = stem.replace(new RegExp(`.*/${FOLDER}`), "");
-            const isOverview = /^\/?0__overview$/i.test(rel);
-            return isOverview ? `/${LANG}/` : `/${LANG}${rel}/`;
-        },
-        title: (data) => {
-            const isOverview =
-                (data.page.fileSlug || "").toLowerCase() === "0__overview";
-            if (isOverview) return data.categoryLabels.overview[LANG];
+        layout: (data) =>
+            data.page.fileSlug === "overview" ? "landing.njk" : "doc.njk",
 
-            const stem = data.page.filePathStem.replace(/\\/g, "/");
-            const rel = stem.replace(new RegExp(`.*/${FOLDER}`), "");
-            for (const cat of data.docCategories || []) {
-                if (rel.startsWith("/" + cat + "/")) {
-                    return data.categoryLabels[cat][LANG];
+        permalink: (data) => {
+            const slug = (data.page.fileSlug || "").toLowerCase();
+
+            // overview
+            if (slug === "overview") {
+                return `/${LANG}/`;
+            }
+
+            // top-level block
+            const topLevelBlock = (manifest.blocks || []).find(
+                (block) => (block.id || "").toLowerCase() === slug
+            );
+            if (topLevelBlock) {
+                return `/${LANG}/blocks/${topLevelBlock.id}/`;
+            }
+
+            // nested block
+            const nestedBlockId = findNestedBlockId(slug);
+            if (nestedBlockId) {
+                return `/${LANG}/blocks/${nestedBlockId}/`;
+            }
+
+            // field (look in top-level and nested blocks)
+            for (const topLevelBlock of manifest.blocks || []) {
+                const directField = (topLevelBlock.fields || []).find(
+                    (field) => (field.id || "").toLowerCase() === slug
+                );
+                if (directField) {
+                    return `/${LANG}/fields/${directField.id}/`;
+                }
+
+                for (const nestedBlock of topLevelBlock.blocks || []) {
+                    const nestedField = (nestedBlock.fields || []).find(
+                        (field) => (field.id || "").toLowerCase() === slug
+                    );
+                    if (nestedField) {
+                        return `/${LANG}/fields/${nestedField.id}/`;
+                    }
                 }
             }
-            return data.title || data.page.fileSlug || "Documentation";
+
+            // fallback
+            return `/${LANG}/${slug}/`;
         },
-        navLabel: (data) => data.navLabel || data.page.fileSlug,
+
+        title: (data) => {
+            const slug = (data.page.fileSlug || "").toLowerCase();
+
+            if (slug === "overview") {
+                return manifest.overview?.title || "Overview";
+            }
+
+            // block / nested block
+            for (const topLevelBlock of manifest.blocks || []) {
+                if ((topLevelBlock.id || "").toLowerCase() === slug) {
+                    return topLevelBlock.title || topLevelBlock.id;
+                }
+                for (const nestedBlock of topLevelBlock.blocks || []) {
+                    if ((nestedBlock.id || "").toLowerCase() === slug) {
+                        return nestedBlock.title || nestedBlock.id;
+                    }
+                }
+            }
+
+            // field (top & nested)
+            for (const topLevelBlock of manifest.blocks || []) {
+                for (const field of topLevelBlock.fields || []) {
+                    if ((field.id || "").toLowerCase() === slug) {
+                        return field.title || field.id;
+                    }
+                }
+                for (const nestedBlock of topLevelBlock.blocks || []) {
+                    for (const field of nestedBlock.fields || []) {
+                        if ((field.id || "").toLowerCase() === slug) {
+                            return field.title || field.id;
+                        }
+                    }
+                }
+            }
+
+            return data.title || slug || "Documentation";
+        },
+
+        navLabel: (data) => data.navLabel || data.title || data.page.fileSlug,
     },
 };

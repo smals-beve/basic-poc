@@ -2,6 +2,4 @@
 layout: default
 ---
 
-<main class="px-4 py-3">
-    {{ content | safe }}
-</main>
+{{ content | stripOuterHtml | safe }}

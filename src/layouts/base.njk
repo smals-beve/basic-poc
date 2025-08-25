@@ -5,16 +5,24 @@
     <title>{{ title }} | e-Gov 3.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/styles.css">
-    {% if page.url.startsWith('/api/') and page.url !== '/api/' %}
-        <link rel="stylesheet" href="/lib4ui/swagger-ui.css">
+    <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/styles.css' | url }}">
+
+    {# API path (respects pathPrefix) #}
+    {% set apiPrefix = (pathPrefix or '/') ~ 'api/' %}
+    {% set pageUrl = page and page.url or '' %}
+    {% set isApi = pageUrl.indexOf(apiPrefix) == 0 %}
+    {% set isApiRoot = pageUrl == apiPrefix %}
+
+    {# Swagger UI CSS only on API detail pages, not /api/ root #}
+    {% if isApi and not isApiRoot %}
+        <link rel="stylesheet" href="{{ '/lib4ui/swagger-ui.css' | url }}">
     {% endif %}
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/">e-Gov 3.0</a>
+        <a class="navbar-brand" href="{{ '/' | url }}">e-Gov 3.0</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
                 aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -22,18 +30,17 @@
 
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav ms-auto align-items-center">
-                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="/api/">API Overview</a></li>
-                {% if not page.url.startsWith('/api') %}
+                <li class="nav-item"><a class="nav-link" href="{{ '/' | url }}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ '/api/' | url }}">API Overview</a></li>
+
+                {% if not isApi %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
-                           data-bs-toggle="dropdown" aria-expanded="false">
-                            Language
-                        </a>
+                           data-bs-toggle="dropdown" aria-expanded="false">Language</a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
-                            <li><a class="dropdown-item" href="/nl/">Nederlands</a></li>
-                            <li><a class="dropdown-item" href="/fr/">Français</a></li>
-                            <li><a class="dropdown-item" href="/en/">English</a></li>
+                            <li><a class="dropdown-item" href="{{ '/nl/' | url }}">Nederlands</a></li>
+                            <li><a class="dropdown-item" href="{{ '/fr/' | url }}">Français</a></li>
+                            <li><a class="dropdown-item" href="{{ '/en/' | url }}">English</a></li>
                         </ul>
                     </li>
                 {% endif %}
@@ -44,26 +51,29 @@
 
 <div class="container-fluid">
     <div class="row flex-nowrap">
-        {% if not page.url.startsWith('/api') %}
-            <aside class="sidebar-fixed">
+
+        {# Sidebar ONLY on non-API pages #}
+        {% if not isApi %}
+            <aside class="col-auto p-0 sidebar-fixed bg-light">
                 <div class="sidebar-scroll">
                     <div class="sidebar-body">
-                        <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                        <a href="{{ '/' | url }}" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                             <span class="fs-5 d-none d-sm-inline">Menu</span>
                         </a>
-
                         {% include "partials/sidebar-nav.njk" %}
                     </div>
                 </div>
             </aside>
         {% endif %}
 
-        <main class="content-flex {% if not page.url.startsWith('/api') %}col{% else %}col-12{% endif %} py-3">
-            {{ content | safe }}
+        {# Full width on API pages; column layout otherwise #}
+        <main class="{% if isApi %}col-12{% else %}col ps-3 content-flex{% endif %} py-3">
+            {{ content | stripOuterHtml | safe }}
         </main>
+
     </div>
 </div>
 
-<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="{{ '/assets/js/bootstrap.bundle.min.js' | url }}"></script>
 </body>
 </html>
