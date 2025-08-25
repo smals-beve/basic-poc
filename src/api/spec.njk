@@ -1,27 +1,29 @@
 ---
-pagination:
-  data: collections.apiSpecs
-  size: 1
-  alias: spec
-
-permalink: "api/{{ spec.fileSlug }}/index.html"
 layout: default
 
+pagination:
+    data: collections.apiSpecs
+    size: 1
+    alias: spec
+
+permalink: "/api/{{ spec.fileSlug }}/"
 eleventyComputed:
-title: "{{ spec.data.info.title }}"
+title: "{{ spec.data.info.title or spec.fileSlug }}"
 ---
 
+<p class="mb-3">
+    <a href="{{ '/api/' | url }}">← {{ 'api_overview' | translate(lang) }}</a>
+</p>
+
 <div id="swagger-ui"></div>
-<script src="/lib4ui/swagger-ui-bundle.js"></script>
-<script src="/lib4ui/swagger-ui-standalone-preset.js"></script>
+
+<script src="{{ '/lib4ui/swagger-ui-bundle.js' | url }}"></script>
+<script src="{{ '/lib4ui/swagger-ui-standalone-preset.js' | url }}"></script>
 <script>
     SwaggerUIBundle({
-        url: "{{ ('/content/technical_specs/' + spec.fileSlug + '.yaml') | url }}",
+        url: "{{ ('/content/technical_specs/' ~ spec.fileSlug ~ '.yaml') | url }}",
         dom_id: "#swagger-ui",
         deepLinking: true,
-        presets: [
-            SwaggerUIBundle.presets.apis,
-            SwaggerUIStandalonePreset
-        ]
+        presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset],
     });
 </script>

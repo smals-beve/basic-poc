@@ -1,14 +1,20 @@
 ---
 layout: default
-title: API Specifications
-permalink: "/api/index.html"
+permalink: /api/
+eleventyComputed:
+title: "{{ 'api_specs' | translate(lang) }}"
 ---
 
-<h1 class="mb-4">{{ title }}</h1>
-<div class="list-group">
-    {% for spec in collections.apiSpecs %}
-        <a href="/api/{{ spec.fileSlug }}/" class="list-group-item list-group-item-action">
-            {{ spec.data.info.title or spec.fileSlug }}
-        </a>
-    {% endfor %}
-</div>
+<h1 class="mb-4">{{ 'api_specs' | translate(lang) }}</h1>
+
+{% if collections.apiSpecs and collections.apiSpecs.length %}
+    <div class="list-group">
+        {% for spec in collections.apiSpecs %}
+            <a href="{{ ('/api/' ~ spec.fileSlug ~ '/') | url }}" class="list-group-item list-group-item-action">
+                {{ spec.data.info.title or spec.fileSlug }}
+            </a>
+        {% endfor %}
+    </div>
+{% else %}
+    <p class="text-muted">{{ 'no_specs' | translate(lang) }}</p>
+{% endif %}
