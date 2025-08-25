@@ -16,8 +16,6 @@
 
     
     
-        <link rel="stylesheet" href="/basic-poc/lib4ui/swagger-ui.css">
-    
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -34,6 +32,16 @@
                 <li class="nav-item"><a class="nav-link" href="/basic-poc/api/">API Overview</a></li>
 
                 
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">Language</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                            <li><a class="dropdown-item" href="/basic-poc/nl/">Nederlands</a></li>
+                            <li><a class="dropdown-item" href="/basic-poc/fr/">Français</a></li>
+                            <li><a class="dropdown-item" href="/basic-poc/en/">English</a></li>
+                        </ul>
+                    </li>
+                
             </ul>
         </div>
     </div>
@@ -44,9 +52,36 @@
 
         
         
+            <aside class="col-auto p-0 sidebar-fixed bg-light">
+                <div class="sidebar-scroll">
+                    <div class="sidebar-body">
+                        <a href="/basic-poc/"
+                           class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                            <span class="fs-5 d-none d-sm-inline">Menu</span>
+                        </a>
+                        
+
+
+
+<nav id="sidebar" class="sidebar bg-light">
+    <ul class="nav flex-column">
 
         
-        <main class="col-12 py-3">
+        
+
+        
+        
+        
+    </ul>
+</nav>
+
+                    </div>
+                </div>
+            </aside>
+        
+
+        
+        <main class="col ps-3 content-flex py-3">
             
             
 
