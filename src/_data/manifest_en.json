@@ -1,0 +1,51 @@
+{
+  "lang": "en",
+  "overview": {
+    "title": "Overzicht van Blokken"
+  },
+  "blocks": [
+    {
+      "id": "block-1",
+      "title": "Blok Eén",
+      "order": 1,
+      "fields": [
+        {
+          "id": "field-1",
+          "title": "Veld Een",
+          "order": 1
+        },
+        {
+          "id": "field-2",
+          "title": "Veld Twee",
+          "order": 2
+        }
+      ],
+      "blocks": [
+        {
+          "id": "block-1a",
+          "title": "Subblok A",
+          "order": 1,
+          "fields": [
+            {
+              "id": "field-3",
+              "title": "Veld Drie",
+              "order": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "block-2",
+      "title": "Blok Twee",
+      "order": 2,
+      "fields": [
+        {
+          "id": "field-4",
+          "title": "Veld Vier",
+          "order": 1
+        }
+      ]
+    }
+  ]
+}
