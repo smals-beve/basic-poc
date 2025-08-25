@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import yaml from "js-yaml";
+import i18n from "./src/_data/i18n.js";
 
 // shim __dirname in ESM
 const __filename = fileURLToPath(import.meta.url);
@@ -106,8 +107,8 @@ export default function (eleventyConfig) {
     // 7) i18n translate filter: translate(key, lang, params) → string
     eleventyConfig.addFilter("translate", (key, lang, params = {}) => {
         try {
-            // i18n is auto-exposed from src/_data/i18n.js
-            const dict = eleventyConfig.globalData?.i18n || {};
+            // Prefer direct import; fall back to Eleventy global data if available
+            const dict = i18n || eleventyConfig.globalData?.i18n || {};
             const site = eleventyConfig.globalData?.site || {};
             const entry = dict[key] || {};
             const chosenLang = lang || site.defaultLang || "en";
