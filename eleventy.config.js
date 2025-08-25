@@ -1,7 +1,8 @@
 import fs from "fs";
 import path from "path";
-import {fileURLToPath} from "url";
+import { fileURLToPath } from "url";
 import yaml from "js-yaml";
+import i18n from "./src/_data/i18n.js";
 
 // shim __dirname in ESM
 const __filename = fileURLToPath(import.meta.url);
@@ -36,7 +37,7 @@ export default function (eleventyConfig) {
 
     // 4) Layout alias & nojekyll passthrough
     eleventyConfig.addLayoutAlias("default", "base.njk");
-    eleventyConfig.addPassthroughCopy({".nojekyll": ".nojekyll"});
+    eleventyConfig.addPassthroughCopy({ ".nojekyll": ".nojekyll" });
 
     // 5) Strip outer <!DOCTYPE>/<html>/<head>/<body> from raw templates
     eleventyConfig.addFilter("stripOuterHtml", (input) => {
@@ -68,37 +69,66 @@ export default function (eleventyConfig) {
         // src/assets/...  -> /assets/...
         out = out.replace(
             /\b(href|src)=["']((?:\.{1,2}\/)?src\/assets\/([^"']+))["']/gi,
-            (_m, attr, full, rest) => (isExternal(full) ? `${attr}="${full}"` : `${attr}="${urlFilter("/assets/" + rest)}"`)
+            (_m, attr, full, rest) =>
+                isExternal(full) ? `${attr}="${full}"` : `${attr}="${urlFilter("/assets/" + rest)}"`
         );
 
         // assets/...      -> /assets/...
         out = out.replace(
             /\b(href|src)=["']((?:\.{1,2}\/)?assets\/([^"']+))["']/gi,
-            (_m, attr, full, rest) => (isExternal(full) ? `${attr}="${full}"` : `${attr}="${urlFilter("/assets/" + rest)}"`)
+            (_m, attr, full, rest) =>
+                isExternal(full) ? `${attr}="${full}"` : `${attr}="${urlFilter("/assets/" + rest)}"`
         );
 
         // /assets/...     -> (prefix via urlFilter)
         out = out.replace(
             /\b(href|src)=["'](\/assets\/([^"']+))["']/gi,
-            (_m, attr, full, rest) => (isExternal(full) ? `${attr}="${full}"` : `${attr}="${urlFilter("/assets/" + rest)}"`)
+            (_m, attr, full, rest) =>
+                isExternal(full) ? `${attr}="${full}"` : `${attr}="${urlFilter("/assets/" + rest)}"`
         );
 
         // public/lib4ui/... -> /lib4ui/...
         out = out.replace(
             /\b(href|src)=["']((?:\.{1,2}\/)?public\/lib4ui\/([^"']+))["']/gi,
-            (_m, attr, full, rest) => (isExternal(full) ? `${attr}="${full}"` : `${attr}="${urlFilter("/lib4ui/" + rest)}"`)
+            (_m, attr, full, rest) =>
+                isExternal(full) ? `${attr}="${full}"` : `${attr}="${urlFilter("/lib4ui/" + rest)}"`
         );
 
         // lib4ui/... -> /lib4ui/...
         out = out.replace(
             /\b(href|src)=["']((?:\.{1,2}\/)?lib4ui\/([^"']+))["']/gi,
-            (_m, attr, full, rest) => (isExternal(full) ? `${attr}="${full}"` : `${attr}="${urlFilter("/lib4ui/" + rest)}"`)
+            (_m, attr, full, rest) =>
+                isExternal(full) ? `${attr}="${full}"` : `${attr}="${urlFilter("/lib4ui/" + rest)}"`
         );
 
         return out;
     });
 
-    // 7) Manifest-aware anchor rewriter: href="#slug" -> /LANG/(blocks|fields)/id/
+    // 7) i18n translate filter: translate(key, lang, params) → string
+    eleventyConfig.addFilter("translate", (key, lang, params = {}) => {
+        try {
+            // Prefer direct import; fall back to Eleventy global data if available
+            const dict = i18n || eleventyConfig.globalData?.i18n || {};
+            const site = eleventyConfig.globalData?.site || {};
+            const entry = dict[key] || {};
+            const chosenLang = lang || site.defaultLang || "en";
+            const raw =
+                entry[chosenLang] ??
+                entry[site.defaultLang] ??
+                entry.en ??
+                key; // last resort: return the key
+
+            // simple placeholder interpolation: {{name}}
+            return String(raw).replace(/\{\{\s*([\w.]+)\s*\}\}/g, (_m, p1) => {
+                const v = params?.[p1];
+                return v === undefined || v === null ? "" : String(v);
+            });
+        } catch {
+            return key;
+        }
+    });
+
+    // 8) Manifest-aware anchor rewriter: href="#slug" -> /LANG/(blocks|fields)/id/
     eleventyConfig.addFilter(
         "rewriteDocAnchors",
         (html, lang, _unusedPathPrefix = "/", manifestForLang = null) => {
@@ -132,7 +162,6 @@ export default function (eleventyConfig) {
                     const id = blockIdMap.get(lower);
                     return `href="${urlFilter("/" + lang + "/blocks/" + id + "/")}"`;
                 }
-
                 if (fieldIdMap.has(lower)) {
                     const id = fieldIdMap.get(lower);
                     return `href="${urlFilter("/" + lang + "/fields/" + id + "/")}"`;

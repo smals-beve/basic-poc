@@ -32,13 +32,13 @@
 
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav ms-auto align-items-center">
-                <li class="nav-item"><a class="nav-link" href="{{ '/' | url }}">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ '/api/' | url }}">API Overview</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ '/' | url }}">{{ 'home' | translate(lang) }}</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ '/api/' | url }}">{{ 'api_overview' | translate(lang) }}</a></li>
 
                 {% if not isApi %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
-                           data-bs-toggle="dropdown" aria-expanded="false">Language</a>
+                           data-bs-toggle="dropdown" aria-expanded="false">{{ 'language' | translate(lang) }}</a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
                             <li><a class="dropdown-item" href="{{ '/nl/' | url }}">Nederlands</a></li>
                             <li><a class="dropdown-item" href="{{ '/fr/' | url }}">Français</a></li>
@@ -61,7 +61,7 @@
                     <div class="sidebar-body">
                         <a href="{{ '/' | url }}"
                            class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                            <span class="fs-5 d-none d-sm-inline">Menu</span>
+                            <span class="fs-5 d-none d-sm-inline">{{ 'menu' | translate(lang) }}</span>
                         </a>
                         {% include "partials/sidebar-nav.njk" %}
                     </div>
@@ -97,9 +97,9 @@
                 <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
                     <form class="d-inline-flex align-items-center"
                           onChange="var v=this.switch_to.value; if(v){location.href=v;}">
-                        <label class="form-label mb-0 me-2">Jump to field</label>
+                        <label class="form-label mb-0 me-2">{{ 'jump_to_field' | translate(lang) }}</label>
                         <select name="switch_to" class="form-select form-select-sm w-auto">
-                            <option value="">— choose —</option>
+                            <option value="">{{ 'choose' | translate(lang) }}</option>
                             {% for item in fieldSwitcher.items %}
                                 <option value="{{ item.hrefPath | url }}">{{ item.title }}</option>
                             {% endfor %}
@@ -124,7 +124,6 @@
         · <span class="text-muted">v{{ site.version }}</span>
     </small>
 </footer>
-
 
 <script src="{{ '/assets/js/bootstrap.bundle.min.js' | url }}"></script>
 </body>
