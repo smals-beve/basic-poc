@@ -57,7 +57,8 @@
             <aside class="col-auto p-0 sidebar-fixed bg-light">
                 <div class="sidebar-scroll">
                     <div class="sidebar-body">
-                        <a href="{{ '/' | url }}" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                        <a href="{{ '/' | url }}"
+                           class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                             <span class="fs-5 d-none d-sm-inline">Menu</span>
                         </a>
                         {% include "partials/sidebar-nav.njk" %}
@@ -68,7 +69,10 @@
 
         {# Full width on API pages; column layout otherwise #}
         <main class="{% if isApi %}col-12{% else %}col ps-3 content-flex{% endif %} py-3">
-            {{ content | stripOuterHtml | safe }}
+            {% set manifests = { 'nl': manifest_nl, 'fr': manifest_fr, 'en': manifest_en } %}
+            {% set manifestForLang = manifests[lang] %}
+
+            {{ content| stripOuterHtml| rewriteAssetUrls(pathPrefix)| rewriteDocAnchors(lang, pathPrefix, manifestForLang)| safe }}
         </main>
 
     </div>
