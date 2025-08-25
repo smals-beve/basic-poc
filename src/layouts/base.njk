@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>{{ title }} | e-Gov 3.0</title>
+    <title>{{ title }} | {{ site.name }}</title>
+    <meta name="description" content="{{ site.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | url }}">
     <link rel="stylesheet" href="{{ '/assets/styles.css' | url }}">
 
@@ -22,7 +24,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ '/' | url }}">e-Gov 3.0</a>
+        <a class="navbar-brand" href="{{ '/' | url }}">{{ site.name }}</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
                 aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -77,7 +79,8 @@
                 <nav aria-label="breadcrumb" class="mb-3">
                     <ol class="breadcrumb">
                         {% for c in breadcrumbs %}
-                            <li class="breadcrumb-item{% if loop.last %} active{% endif %}" {% if loop.last %}aria-current="page"{% endif %}>
+                            <li class="breadcrumb-item{% if loop.last %} active{% endif %}"
+                                {% if loop.last %}aria-current="page"{% endif %}>
                                 {% if not loop.last %}
                                     <a href="{{ c.href | url }}">{{ c.title }}</a>
                                 {% else %}
@@ -114,6 +117,10 @@
 
     </div>
 </div>
+
+<footer class="text-center mt-4 mb-3">
+    <small>&copy; {{ site.year }} {{ site.author }}</small>
+</footer>
 
 <script src="{{ '/assets/js/bootstrap.bundle.min.js' | url }}"></script>
 </body>

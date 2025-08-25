@@ -34,20 +34,11 @@ export default function (eleventyConfig) {
             }));
     });
 
-    // 4) Load manifest.json per language into global data
-    ["en", "fr", "nl"].forEach((lang) => {
-        const manifestPath = path.join(__dirname, `src/_data/manifest_${lang}.json`);
-        if (fs.existsSync(manifestPath)) {
-            const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
-            eleventyConfig.addGlobalData(`manifest_${lang}`, manifest);
-        }
-    });
-
-    // 5) Layout alias & nojekyll passthrough
+    // 4) Layout alias & nojekyll passthrough
     eleventyConfig.addLayoutAlias("default", "base.njk");
     eleventyConfig.addPassthroughCopy({".nojekyll": ".nojekyll"});
 
-    // 6) Strip outer <!DOCTYPE>/<html>/<head>/<body> from raw templates
+    // 5) Strip outer <!DOCTYPE>/<html>/<head>/<body> from raw templates
     eleventyConfig.addFilter("stripOuterHtml", (input) => {
         if (!input) return input;
         let out = String(input);
@@ -66,45 +57,48 @@ export default function (eleventyConfig) {
     // Grab Eleventy's url filter for consistent pathPrefix handling
     const urlFilter = eleventyConfig.getFilter("url");
 
-    // 7) Normalize asset URLs from upstream HTML using urlFilter
+    // 6) Normalize asset URLs from upstream HTML using urlFilter
     eleventyConfig.addFilter("rewriteAssetUrls", (html) => {
         if (!html) return html;
         let out = String(html);
 
+        // Don't touch absolute/external/mail/anchor/data URLs.
+        const isExternal = (s) => /^(https?:|mailto:|data:|#)/i.test(s);
+
         // src/assets/...  -> /assets/...
         out = out.replace(
-            /\b(href|src)=["'](?:\.{1,2}\/)?src\/assets\/([^"']+)["']/gi,
-            (_m, attr, rest) => `${attr}="${urlFilter("/assets/" + rest)}"`
+            /\b(href|src)=["']((?:\.{1,2}\/)?src\/assets\/([^"']+))["']/gi,
+            (_m, attr, full, rest) => (isExternal(full) ? `${attr}="${full}"` : `${attr}="${urlFilter("/assets/" + rest)}"`)
         );
 
         // assets/...      -> /assets/...
         out = out.replace(
-            /\b(href|src)=["'](?:\.{1,2}\/)?assets\/([^"']+)["']/gi,
-            (_m, attr, rest) => `${attr}="${urlFilter("/assets/" + rest)}"`
+            /\b(href|src)=["']((?:\.{1,2}\/)?assets\/([^"']+))["']/gi,
+            (_m, attr, full, rest) => (isExternal(full) ? `${attr}="${full}"` : `${attr}="${urlFilter("/assets/" + rest)}"`)
         );
 
         // /assets/...     -> (prefix via urlFilter)
         out = out.replace(
-            /\b(href|src)=["']\/assets\/([^"']+)["']/gi,
-            (_m, attr, rest) => `${attr}="${urlFilter("/assets/" + rest)}"`
+            /\b(href|src)=["'](\/assets\/([^"']+))["']/gi,
+            (_m, attr, full, rest) => (isExternal(full) ? `${attr}="${full}"` : `${attr}="${urlFilter("/assets/" + rest)}"`)
         );
 
         // public/lib4ui/... -> /lib4ui/...
         out = out.replace(
-            /\b(href|src)=["'](?:\.{1,2}\/)?public\/lib4ui\/([^"']+)["']/gi,
-            (_m, attr, rest) => `${attr}="${urlFilter("/lib4ui/" + rest)}"`
+            /\b(href|src)=["']((?:\.{1,2}\/)?public\/lib4ui\/([^"']+))["']/gi,
+            (_m, attr, full, rest) => (isExternal(full) ? `${attr}="${full}"` : `${attr}="${urlFilter("/lib4ui/" + rest)}"`)
         );
 
         // lib4ui/... -> /lib4ui/...
         out = out.replace(
-            /\b(href|src)=["'](?:\.{1,2}\/)?lib4ui\/([^"']+)["']/gi,
-            (_m, attr, rest) => `${attr}="${urlFilter("/lib4ui/" + rest)}"`
+            /\b(href|src)=["']((?:\.{1,2}\/)?lib4ui\/([^"']+))["']/gi,
+            (_m, attr, full, rest) => (isExternal(full) ? `${attr}="${full}"` : `${attr}="${urlFilter("/lib4ui/" + rest)}"`)
         );
 
         return out;
     });
 
-    // 8) Manifest-aware anchor rewriter: href="#slug" -> /LANG/(blocks|fields)/id/
+    // 7) Manifest-aware anchor rewriter: href="#slug" -> /LANG/(blocks|fields)/id/
     eleventyConfig.addFilter(
         "rewriteDocAnchors",
         (html, lang, _unusedPathPrefix = "/", manifestForLang = null) => {
