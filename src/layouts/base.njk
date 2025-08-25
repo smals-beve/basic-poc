@@ -67,85 +67,41 @@
             </aside>
         {% endif %}
 
-        {# Full width on API pages; column layout otherwise #}
         <main class="{% if isApi %}col-12{% else %}col ps-3 content-flex{% endif %} py-3">
+            {# Manifest for anchor rewriting filter #}
             {% set manifests = { 'nl': manifest_nl, 'fr': manifest_fr, 'en': manifest_en } %}
             {% set manifestForLang = manifests[lang] %}
 
-            {# ---- Back link for fields and nested blocks (no split/ternary) ---- #}
-            {% set backUrl = '' %}
-            {% set backLabel = '' %}
-
-            {# Compute substring of page.url after '/<lang>/' #}
-            {% set langPrefix = '/' ~ lang ~ '/' %}
-            {% set afterLang = '' %}
-            {% if pageUrl and pageUrl.indexOf(langPrefix) == 0 %}
-                {% set afterLang = pageUrl.slice(langPrefix.length) %}
-            {% endif %}
-
-            {# Determine section type (fields|blocks) and remainder #}
-            {% set type = '' %}
-            {% set rest = '' %}
-            {% if afterLang and afterLang.indexOf('fields/') == 0 %}
-                {% set type = 'fields' %}
-                {% set rest = afterLang.slice(7) %} {# len('fields/') = 7 #}
-                {% elif afterLang and afterLang.indexOf('blocks/') == 0 %}
-                {% set type = 'blocks' %}
-                {% set rest = afterLang.slice(7) %} {# len('blocks/') = 7 #}
-            {% endif %}
-
-            {# Extract current id from rest #}
-            {% set currentId = '' %}
-            {% if rest %}
-                {% set slashPos = rest.indexOf('/') %}
-                {% if slashPos > -1 %}
-                    {% set currentId = rest.slice(0, slashPos) %}
-                {% else %}
-                    {% set currentId = rest %}
-                {% endif %}
-            {% endif %}
-
-            {# Resolve back destination based on manifest relations #}
-            {% if currentId and manifestForLang and manifestForLang.blocks %}
-                {% if type == 'fields' %}
-                    {# Field page: go back to owning (sub)block #}
-                    {% for top in manifestForLang.blocks %}
-                        {% set matched = false %}
-                        {% for f in top.fields or [] %}
-                            {% if f.id == currentId %}
-                                {% set backUrl = ('/' ~ lang ~ '/blocks/' ~ top.id ~ '/') | url %}
-                                {% set backLabel = top.title or top.id %}
-                                {% set matched = true %}
-                            {% endif %}
+            {# ---- Breadcrumbs ---- #}
+            {% if breadcrumbs and breadcrumbs.length %}
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb">
+                        {% for c in breadcrumbs %}
+                            <li class="breadcrumb-item{% if loop.last %} active{% endif %}" {% if loop.last %}aria-current="page"{% endif %}>
+                                {% if not loop.last %}
+                                    <a href="{{ c.href | url }}">{{ c.title }}</a>
+                                {% else %}
+                                    {{ c.title }}
+                                {% endif %}
+                            </li>
                         {% endfor %}
-                        {% if not matched %}
-                            {% for sub in top.blocks or [] %}
-                                {% for f in sub.fields or [] %}
-                                    {% if f.id == currentId %}
-                                        {% set backUrl = ('/' ~ lang ~ '/blocks/' ~ sub.id ~ '/') | url %}
-                                        {% set backLabel = sub.title or sub.id %}
-                                        {% set matched = true %}
-                                    {% endif %}
-                                {% endfor %}
+                    </ol>
+                </nav>
+            {% endif %}
+
+            {# ---- Field switcher (only on field pages) ---- #}
+            {% if fieldSwitcher and fieldSwitcher.items and fieldSwitcher.items.length %}
+                <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+                    <form class="d-inline-flex align-items-center"
+                          onChange="var v=this.switch_to.value; if(v){location.href=v;}">
+                        <label class="form-label mb-0 me-2">Jump to field</label>
+                        <select name="switch_to" class="form-select form-select-sm w-auto">
+                            <option value="">— choose —</option>
+                            {% for item in fieldSwitcher.items %}
+                                <option value="{{ item.hrefPath | url }}">{{ item.title }}</option>
                             {% endfor %}
-                        {% endif %}
-                    {% endfor %}
-                    {% elif type == 'blocks' %}
-                    {# Nested block page: go back to parent top-level block #}
-                    {% for top in manifestForLang.blocks %}
-                        {% for sub in top.blocks or [] %}
-                            {% if sub.id == currentId %}
-                                {% set backUrl = ('/' ~ lang ~ '/blocks/' ~ top.id ~ '/') | url %}
-                                {% set backLabel = top.title or top.id %}
-                            {% endif %}
-                        {% endfor %}
-                    {% endfor %}
-                {% endif %}
-            {% endif %}
-
-            {% if backUrl %}
-                <div class="mb-3">
-                    <a class="btn btn-outline-secondary btn-sm" href="{{ backUrl }}">← Back to {{ backLabel }}</a>
+                        </select>
+                    </form>
                 </div>
             {% endif %}
 
