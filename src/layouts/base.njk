@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | url }}">
     <link rel="stylesheet" href="{{ '/assets/styles.css' | url }}">
 
-    {# API path (use |url to respect pathPrefix; avoid ternary) #}
+    {# API path (use |url to respect pathPrefix) #}
     {% set apiPrefix = '/api/' | url %}
     {% set pageUrl = page and page.url or '' %}
     {% set isApi = pageUrl and (pageUrl.indexOf(apiPrefix) == 0) %}
@@ -72,12 +72,88 @@
             {% set manifests = { 'nl': manifest_nl, 'fr': manifest_fr, 'en': manifest_en } %}
             {% set manifestForLang = manifests[lang] %}
 
+            {# ---- Back link for fields and nested blocks (no split/ternary) ---- #}
+            {% set backUrl = '' %}
+            {% set backLabel = '' %}
+
+            {# Compute substring of page.url after '/<lang>/' #}
+            {% set langPrefix = '/' ~ lang ~ '/' %}
+            {% set afterLang = '' %}
+            {% if pageUrl and pageUrl.indexOf(langPrefix) == 0 %}
+                {% set afterLang = pageUrl.slice(langPrefix.length) %}
+            {% endif %}
+
+            {# Determine section type (fields|blocks) and remainder #}
+            {% set type = '' %}
+            {% set rest = '' %}
+            {% if afterLang and afterLang.indexOf('fields/') == 0 %}
+                {% set type = 'fields' %}
+                {% set rest = afterLang.slice(7) %} {# len('fields/') = 7 #}
+                {% elif afterLang and afterLang.indexOf('blocks/') == 0 %}
+                {% set type = 'blocks' %}
+                {% set rest = afterLang.slice(7) %} {# len('blocks/') = 7 #}
+            {% endif %}
+
+            {# Extract current id from rest #}
+            {% set currentId = '' %}
+            {% if rest %}
+                {% set slashPos = rest.indexOf('/') %}
+                {% if slashPos > -1 %}
+                    {% set currentId = rest.slice(0, slashPos) %}
+                {% else %}
+                    {% set currentId = rest %}
+                {% endif %}
+            {% endif %}
+
+            {# Resolve back destination based on manifest relations #}
+            {% if currentId and manifestForLang and manifestForLang.blocks %}
+                {% if type == 'fields' %}
+                    {# Field page: go back to owning (sub)block #}
+                    {% for top in manifestForLang.blocks %}
+                        {% set matched = false %}
+                        {% for f in top.fields or [] %}
+                            {% if f.id == currentId %}
+                                {% set backUrl = ('/' ~ lang ~ '/blocks/' ~ top.id ~ '/') | url %}
+                                {% set backLabel = top.title or top.id %}
+                                {% set matched = true %}
+                            {% endif %}
+                        {% endfor %}
+                        {% if not matched %}
+                            {% for sub in top.blocks or [] %}
+                                {% for f in sub.fields or [] %}
+                                    {% if f.id == currentId %}
+                                        {% set backUrl = ('/' ~ lang ~ '/blocks/' ~ sub.id ~ '/') | url %}
+                                        {% set backLabel = sub.title or sub.id %}
+                                        {% set matched = true %}
+                                    {% endif %}
+                                {% endfor %}
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                    {% elif type == 'blocks' %}
+                    {# Nested block page: go back to parent top-level block #}
+                    {% for top in manifestForLang.blocks %}
+                        {% for sub in top.blocks or [] %}
+                            {% if sub.id == currentId %}
+                                {% set backUrl = ('/' ~ lang ~ '/blocks/' ~ top.id ~ '/') | url %}
+                                {% set backLabel = top.title or top.id %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                {% endif %}
+            {% endif %}
+
+            {% if backUrl %}
+                <div class="mb-3">
+                    <a class="btn btn-outline-secondary btn-sm" href="{{ backUrl }}">← Back to {{ backLabel }}</a>
+                </div>
+            {% endif %}
+
             {{ content
             | stripOuterHtml
             | rewriteAssetUrls
             | rewriteDocAnchors(lang, pathPrefix, manifestForLang)
             | safe }}
-
         </main>
 
     </div>
