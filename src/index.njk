@@ -3,8 +3,11 @@ layout: false
 permalink: /
 ---
 
-<meta http-equiv="refresh" content="0; url=/{{ site.defaultLang }}/">
-<link rel="canonical" href="/{{ site.defaultLang }}/">
+{# Build the correct language root URL, respecting pathPrefix #}
+{% set langRoot = ('/' ~ site.defaultLang ~ '/') | url %}
+
+<meta http-equiv="refresh" content="0; url={{ langRoot }}">
+<link rel="canonical" href="{{ langRoot }}">
 <noscript>
-    <a href="/{{ site.defaultLang }}/">Go to default language</a>
+    <a href="{{ langRoot }}">Go to default language</a>
 </noscript>

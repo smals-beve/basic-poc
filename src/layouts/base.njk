@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | url }}">
     <link rel="stylesheet" href="{{ '/assets/styles.css' | url }}">
 
-    {# API path (respects pathPrefix) #}
-    {% set apiPrefix = (pathPrefix or '/') ~ 'api/' %}
+    {# API path (use |url to respect pathPrefix; avoid ternary) #}
+    {% set apiPrefix = '/api/' | url %}
     {% set pageUrl = page and page.url or '' %}
-    {% set isApi = pageUrl.indexOf(apiPrefix) == 0 %}
+    {% set isApi = pageUrl and (pageUrl.indexOf(apiPrefix) == 0) %}
     {% set isApiRoot = pageUrl == apiPrefix %}
 
     {# Swagger UI CSS only on API detail pages, not /api/ root #}
@@ -72,7 +72,11 @@
             {% set manifests = { 'nl': manifest_nl, 'fr': manifest_fr, 'en': manifest_en } %}
             {% set manifestForLang = manifests[lang] %}
 
-            {{ content| stripOuterHtml| rewriteAssetUrls(pathPrefix)| rewriteDocAnchors(lang, pathPrefix, manifestForLang)| safe }}
+            {{ content
+            | stripOuterHtml
+            | rewriteAssetUrls(pathPrefix)
+            | rewriteDocAnchors(lang, pathPrefix, manifestForLang)
+            | safe }}
         </main>
 
     </div>
