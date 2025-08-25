@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import {fileURLToPath} from "url";
+import { fileURLToPath } from "url";
 import yaml from "js-yaml";
 
 // shim __dirname in ESM
@@ -21,7 +21,7 @@ export default function (eleventyConfig) {
         "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js": "assets/js/bootstrap.bundle.min.js",
     });
 
-    // 3) Per-language MD collections (HTML content inputs)
+    // 3) Per-language HTML collections (your incoming templates)
     ["en", "fr", "nl"].forEach((lang) => {
         eleventyConfig.addCollection(`docs_${lang}`, (coll) =>
             coll.getFilteredByGlob(`src/content/technical_docs_${lang}/**/*.html`)
@@ -51,7 +51,7 @@ export default function (eleventyConfig) {
 
     // 6) Layout alias & nojekyll passthrough
     eleventyConfig.addLayoutAlias("default", "base.njk");
-    eleventyConfig.addPassthroughCopy({".nojekyll": ".nojekyll"});
+    eleventyConfig.addPassthroughCopy({ ".nojekyll": ".nojekyll" });
 
     // 7) Strip outer <!DOCTYPE>/<html>/<head>/<body> from raw templates
     eleventyConfig.addFilter("stripOuterHtml", (input) => {
@@ -69,84 +69,89 @@ export default function (eleventyConfig) {
         return out.trim();
     });
 
-    // 8) Rewrite asset URLs coming from external templates to respect pathPrefix
-    eleventyConfig.addFilter("rewriteAssetUrls", (html, pathPrefix = "/") => {
+    // Grab Eleventy's url filter for consistent pathPrefix handling
+    const urlFilter = eleventyConfig.getFilter("url");
+
+    // 8) Normalize asset URLs from upstream HTML using urlFilter
+    eleventyConfig.addFilter("rewriteAssetUrls", (html) => {
         if (!html) return html;
         let out = String(html);
 
-        // Normalize prefix: "" or "/" -> "", "/basic-poc/" -> "/basic-poc"
-        const pp = (pathPrefix && pathPrefix !== "/") ? pathPrefix.replace(/\/+$/, "") : "";
-
-        // Helper to prefix with pp, avoiding double prefixes
-        const withPrefix = (p) => (pp ? `${pp}${p.startsWith("/") ? "" : "/"}${p}` : (p.startsWith("/") ? p : `/${p}`));
-
-        // 8a) normalize src/assets -> /assets
+        // src/assets/...  -> /assets/...
         out = out.replace(
             /\b(href|src)=["'](?:\.{1,2}\/)?src\/assets\/([^"']+)["']/gi,
-            (_m, attr, rest) => `${attr}="${withPrefix(`/assets/${rest}`)}"`
+            (_m, attr, rest) => `${attr}="${urlFilter('/assets/' + rest)}"`
         );
 
-        // 8b) normalize bare assets -> /assets
+        // assets/...      -> /assets/...
         out = out.replace(
             /\b(href|src)=["'](?:\.{1,2}\/)?assets\/([^"']+)["']/gi,
-            (_m, attr, rest) => `${attr}="${withPrefix(`/assets/${rest}`)}"`
+            (_m, attr, rest) => `${attr}="${urlFilter('/assets/' + rest)}"`
         );
 
-        // 8c) ensure /assets has prefix
+        // /assets/...     -> (prefix via urlFilter)
         out = out.replace(
             /\b(href|src)=["']\/assets\/([^"']+)["']/gi,
-            (_m, attr, rest) => `${attr}="${withPrefix(`/assets/${rest}`)}"`
+            (_m, attr, rest) => `${attr}="${urlFilter('/assets/' + rest)}"`
         );
 
-        // 8d) public/lib4ui -> /lib4ui
+        // public/lib4ui/... -> /lib4ui/...
         out = out.replace(
             /\b(href|src)=["'](?:\.{1,2}\/)?public\/lib4ui\/([^"']+)["']/gi,
-            (_m, attr, rest) => `${attr}="${withPrefix(`/lib4ui/${rest}`)}"`
+            (_m, attr, rest) => `${attr}="${urlFilter('/lib4ui/' + rest)}"`
         );
 
-        // 8e) bare lib4ui -> /lib4ui
+        // lib4ui/... -> /lib4ui/...
         out = out.replace(
             /\b(href|src)=["'](?:\.{1,2}\/)?lib4ui\/([^"']+)["']/gi,
-            (_m, attr, rest) => `${attr}="${withPrefix(`/lib4ui/${rest}`)}"`
+            (_m, attr, rest) => `${attr}="${urlFilter('/lib4ui/' + rest)}"`
         );
 
         return out;
     });
 
-    // 9) Manifest-aware anchor rewriter: #slug -> /LANG/(blocks|fields)/id/
+    // 9) Manifest-aware anchor rewriter: href="#slug" -> /LANG/(blocks|fields)/id/
     eleventyConfig.addFilter(
         "rewriteDocAnchors",
-        (html, lang, pathPrefix = "/", manifestForLang = null) => {
+        (html, lang, _unusedPathPrefix = "/", manifestForLang = null) => {
             if (!html) return html;
             let out = String(html);
 
-            const pp = (pathPrefix && pathPrefix !== "/") ? pathPrefix.replace(/\/+$/, "") : "";
-
-            const blockIdMap = new Map(); // lower -> canonical
+            // Build lowercase -> canonical maps for blocks & fields (one-level nesting)
+            const blockIdMap = new Map();
             const fieldIdMap = new Map();
 
             if (manifestForLang && Array.isArray(manifestForLang.blocks)) {
                 for (const top of manifestForLang.blocks) {
                     if (top?.id) blockIdMap.set(String(top.id).toLowerCase(), top.id);
-                    for (const f of top?.fields || []) if (f?.id) fieldIdMap.set(String(f.id).toLowerCase(), f.id);
+                    for (const f of top?.fields || []) {
+                        if (f?.id) fieldIdMap.set(String(f.id).toLowerCase(), f.id);
+                    }
                     for (const sub of top?.blocks || []) {
                         if (sub?.id) blockIdMap.set(String(sub.id).toLowerCase(), sub.id);
-                        for (const f of sub?.fields || []) if (f?.id) fieldIdMap.set(String(f.id).toLowerCase(), f.id);
+                        for (const f of sub?.fields || []) {
+                            if (f?.id) fieldIdMap.set(String(f.id).toLowerCase(), f.id);
+                        }
                     }
                 }
             }
 
+            // Replace any href="#slug"
             out = out.replace(/href="#([^"\s]+)"/g, (match, rawSlug) => {
                 const lower = String(rawSlug).toLowerCase();
+
                 if (blockIdMap.has(lower)) {
                     const id = blockIdMap.get(lower);
-                    return `href="${pp}/${lang}/blocks/${id}/"`;
+                    return `href="${urlFilter('/' + lang + '/blocks/' + id + '/')}"`;
                 }
+
                 if (fieldIdMap.has(lower)) {
                     const id = fieldIdMap.get(lower);
-                    return `href="${pp}/${lang}/fields/${id}/"`;
+                    return `href="${urlFilter('/' + lang + '/fields/' + id + '/')}"`;
                 }
-                return match; // leave unknown anchors intact
+
+                // Unknown slug: leave as-is for PDF usage
+                return match;
             });
 
             return out;
