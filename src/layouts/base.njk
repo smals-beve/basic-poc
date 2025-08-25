@@ -119,8 +119,12 @@
 </div>
 
 <footer class="text-center mt-4 mb-3">
-    <small>&copy; {{ site.year }} {{ site.author }}</small>
+    <small>
+        &copy; {{ site.year }} {{ site.author }}
+        · <span class="text-muted">v{{ site.version }}</span>
+    </small>
 </footer>
+
 
 <script src="{{ '/assets/js/bootstrap.bundle.min.js' | url }}"></script>
 </body>
