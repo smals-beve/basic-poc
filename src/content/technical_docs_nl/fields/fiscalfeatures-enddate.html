@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Glossarium Datafields – ${BLOK_TECHLABEL} endDate</title>
+  
+</head>
+<body class="d-flex flex-column py-8">
+
+<div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
+
+    <div class="px-12 py-5 introduction">
+        <h4>Glossarium<br>Loondata-transfer</h4>
+        <div class="introduction__right">
+            <span>
+                Versie
+                <br>
+                <strong>1.0.2</strong>
+            </span>
+            <span>
+                Datum
+                <br>
+                <strong>26-08-2025</strong>
+            </span>
+        </div>
+    </div>
+    <div class="px-12 py-9">
+        <!-- Zone LoopList -->
+        <h2 id="fiscalfeatures-enddate">Einddatum van fiscale signalitiek</h2>
+        <p>De einddatum van de periode binnen de loonberekeningsperiode tot wanneer de set van gegevens die samen de fiscale signalitiek vormen geldig zijn.
+
+Als één of meerdere gegeven in de fiscale signalitiek wijzigen, dan komt de einddatum van de fiscale signalitiek overeen met de datum tot wanneer de oude set van fiscale signalitiekgegevens van toepassing is.</p>
+
+        <dl class="mt-7">
+            <dt>TechLabel</dt>	
+            <dd>endDate</dd>
+            <hr class="my-5">
+            <dt>Type</dt>	
+            <dd>string($date)</dd>
+            <hr class="my-5">
+	    <dt>Lengte</dt>
+            <dd>10</dd>
+            <hr class="my-5">
+	    <dt>Formaat</dt>
+            <dd>JJJJ-MM-DD<br>· JJJJ is het jaar<br>· MM is de maand<br>. DD is de dag</dd>
+	    <hr class="my-5">
+            <dt>Toegelaten domein</dt>
+            <dd>De einddatum van de fiscale signalitiek is gelijk aan of groter dan de begindatum van de fiscale signalitiek.
+
+De einddatum van de fiscale signalitiek is gelijk aan of kleiner dan de einddatum van de berekeningsperiode.
+
+Indien meerdere blokken "fiscale signalitiek" worden meegedeeld, dan mag de einddatum van de fiscale signalitiek zich niet situeren binnen de geldigheidsperiode van een ander blok "fiscale signalitiek".</dd>
+	    <hr class="my-5">
+            <dt>Aanwezigheid</dt>
+            <dd>Onmisbaar</dd>
+	    <hr class="my-5">
+        </dl>
+        <hr class="mt-11 mb-7 opacity-100">
+        <!-- Zone LoopList -->
+    </div>
+</div>
+</body>
+</html>

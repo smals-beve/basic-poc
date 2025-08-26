@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Glossarium – Schema financialElement</title>
+  
+</head>
+<body class="d-flex flex-column py-8">
+
+<div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
+
+    <div class="px-12 py-5 introduction">
+        <h2 id="financialelement">Glossarium<br>Loondata-transfer</h4>
+        <div class="introduction__right">
+            <span>
+                Versie
+                <br>
+                <strong>1.0.2</strong>
+            </span>
+            <span>
+                Datum
+                <br>
+                <strong>26-08-2025</strong>
+            </span>
+        </div>
+    </div>
+
+
+    <div class="px-12 py-9">
+        <h2>Blok Financieel element<br><code>financialElement</code></h2>
+        <span class="text-primary-emphasis fw-bolder d-block mb-2 blok-dtype"></span>
+        <p>De financiële elementen toegekend aan de natuurlijke persoon door de onderneming.
+Het betreft een generiek blok dat verschillende financiële elementen kan omvatten, zoals bezoldigingen, socialezekerheidsbijdragen, socialezekerheidsbijdrageverminderingen, …</p>
+
+        <div class="mt-6">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col" class="text-nowrap">Veldnaam</th>
+                    <th scope="col" class="text-nowrap">Beschrijving</th>
+					<th scope="col" class="text-nowrap">TechLabel</th>
+                </tr>
+                </thead>
+                <tbody>
+ <!-- ZONE_LOOPLIST -->
+                <tr>
+                    <td><a href="#financialelement-sequencenumber" class="link-underline"><strong>Volgnummer</strong></a></td>
+                    <td>
+                        Volgnummer van het blok "financieel element" binnen een blok  "sociale signalitiek", "periodieke sociale signalitiek" of "fiscale signalitiek". Dit nummer moet uniek zijn binnen het bovenliggende blok.
+                    </td>
+					<td>
+						<code>sequenceNumber</code>
+					<td>
+                </tr>
+
+                <tr>
+                    <td><a href="#financialelement-financialtype" class="link-underline"><strong>Type financieel element</strong></a></td>
+                    <td>
+                        Code die het type financieel element identificeert.
+                    </td>
+					<td>
+						<code>financialType</code>
+					<td>
+                </tr>
+
+                <tr>
+                    <td><a href="#financialelement-financialcode" class="link-underline"><strong>Code financieel element</strong></a></td>
+                    <td>
+                        Code die het specifieke financieel element identificeert.
+                    </td>
+					<td>
+						<code>financialCode</code>
+					<td>
+                </tr>
+
+                <tr>
+                    <td><a href="#financialelement-amount" class="link-underline"><strong>Bedrag</strong></a></td>
+                    <td>
+                        Het bedrag van het financieel element.
+
+Nog te verduidelijken: wanneer moeten positieve bedragen worden aangegeven en wanneer moeten negatieve bedragen worden aangegeven.
+                    </td>
+					<td>
+						<code>amount</code>
+					<td>
+                </tr>
+
+                <tr>
+                    <td><a href="#financialelement-allocationfrequency" class="link-underline"><strong>Toewijzingsfrequentie</strong></a></td>
+                    <td>
+                        De frequentie in maanden waarmee een financieel element wordt toegewezen.
+                    </td>
+					<td>
+						<code>allocationFrequency</code>
+					<td>
+                </tr>
+
+                <tr>
+                    <td><a href="#financialelement-numberofunits" class="link-underline"><strong>Aantal</strong></a></td>
+                    <td>
+                        De hoeveelheid van een financieel element.
+                    </td>
+					<td>
+						<code>numberOfUnits</code>
+					<td>
+                </tr>
+
+                <tr>
+                    <td><a href="#financialelement-amountperunit" class="link-underline"><strong>Bedrag per eenheid</strong></a></td>
+                    <td>
+                        Het bedrag van één eenheid van een financieel element.
+                    </td>
+					<td>
+						<code>amountPerUnit</code>
+					<td>
+                </tr>
+
+                <tr>
+                    <td><a href="#financialelement-subjectiontosocialsecuritycontributions" class="link-underline"><strong>Notie onderworpen aan socialezekerheidsbijdragen</strong></a></td>
+                    <td>
+                        Aanduiding of het financieel element in kwestie al dan niet is onderworpen aan socialezekerheidsbijdragen
+                    </td>
+					<td>
+						<code>subjectionToSocialSecurityContributions</code>
+					<td>
+                </tr>
+<!-- ZONE_LOOPLIST -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

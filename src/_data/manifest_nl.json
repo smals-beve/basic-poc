@@ -5,47 +5,522 @@
   },
   "blocks": [
     {
-      "id": "block-1",
-      "title": "Blok Eén",
+      "id": "enterprise",
+      "title": "Onderneming",
       "order": 1,
       "fields": [
         {
-          "id": "field-1",
-          "title": "Veld Een",
+          "id": "enterprise-enterprisenumber",
+          "title": "Ondernemingsnummer",
           "order": 1
         },
         {
-          "id": "field-2",
-          "title": "Veld Twee",
+          "id": "enterprise-nssonumber",
+          "title": "RSZ-nummer",
           "order": 2
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "naturalperson",
+      "title": "Natuurlijke persoon",
+      "order": 2,
+      "fields": [
+        {
+          "id": "naturalperson-ssin",
+          "title": "Identificatienummer bij de sociale zekerheid - INSZ",
+          "order": 1
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "relation",
+      "title": "Relatie",
+      "order": 3,
+      "fields": [
+        {
+          "id": "relation-declarantreference",
+          "title": "Identificatiesleutel van relatie",
+          "order": 1
+        },
+        {
+          "id": "relation-relationtype",
+          "title": "Type relatie",
+          "order": 2
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "remunerationcalculation",
+      "title": "Loonberekening",
+      "order": 4,
+      "fields": [
+        {
+          "id": "remunerationcalculation-id",
+          "title": "Identificatiesleutel van loonberekening",
+          "order": 1
+        },
+        {
+          "id": "remunerationcalculation-startdate",
+          "title": "Begindatum van de loonberekeningsperiode",
+          "order": 2
+        },
+        {
+          "id": "remunerationcalculation-enddate",
+          "title": "Einddatum van de loonberekeningsperiode",
+          "order": 3
+        },
+        {
+          "id": "remunerationcalculation-calculationdate",
+          "title": "Loonberekeningsdatum",
+          "order": 4
+        },
+        {
+          "id": "remunerationcalculation-frequency",
+          "title": "Loonberekeningsfrequentie",
+          "order": 5
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "service",
+      "title": "Prestatie of afwezigheid",
+      "order": 5,
+      "fields": [
+        {
+          "id": "service-sequencenumber",
+          "title": "Volgnummer van prestatie",
+          "order": 1
+        },
+        {
+          "id": "service-servicetype",
+          "title": "Prestatie- of afwezigheidscode",
+          "order": 2
+        },
+        {
+          "id": "service-startdate",
+          "title": "Datum of begindatum van prestatie of afwezigheid",
+          "order": 3
+        },
+        {
+          "id": "service-enddate",
+          "title": "Einddatum van prestatie of afwezigheid",
+          "order": 4
+        },
+        {
+          "id": "service-numberofhours",
+          "title": "Aantal uren van prestatie of afwezigheid",
+          "order": 5
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "servicefeature",
+      "title": "Prestatiekenmerken",
+      "order": 6,
+      "fields": [
+        {
+          "id": "servicefeature-overtimetype",
+          "title": "Type overuur",
+          "order": 1
+        },
+        {
+          "id": "servicefeature-subjectiontosocialsecuritycontributions",
+          "title": "Notie onderworpen aan socialezekerheidsbijdragen",
+          "order": 2
+        },
+        {
+          "id": "servicefeature-overtimeincludedincalendar",
+          "title": "Notie overuren inbegrepen in kalender",
+          "order": 3
+        },
+        {
+          "id": "servicefeature-seafarerservicetype",
+          "title": "Notie prestaties van zeevarenden",
+          "order": 4
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "identifyingsocialfeatures",
+      "title": "Sociale Signalitiek",
+      "order": 7,
+      "fields": [
+        {
+          "id": "identifyingsocialfeatures-startdate",
+          "title": "Begindatum van sociale signalitiek",
+          "order": 1
+        },
+        {
+          "id": "identifyingsocialfeatures-enddate",
+          "title": "EInddatum van sociale signalitiek",
+          "order": 2
+        },
+        {
+          "id": "identifyingsocialfeatures-employmentstatus",
+          "title": "Statuut",
+          "order": 3
+        },
+        {
+          "id": "identifyingsocialfeatures-employerclass",
+          "title": "Werkgeverscategorie",
+          "order": 4
+        },
+        {
+          "id": "identifyingsocialfeatures-workercode",
+          "title": "Werknemerskengetal",
+          "order": 5
+        },
+        {
+          "id": "identifyingsocialfeatures-flatratecode",
+          "title": "Forfaitcode",
+          "order": 6
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "operationalsocialfeatures",
+      "title": "Periodieke sociale Signalitiek",
+      "order": 8,
+      "fields": [
+        {
+          "id": "operationalsocialfeatures-startdate",
+          "title": "Begindatum van periodieke sociale signalitiek",
+          "order": 1
+        },
+        {
+          "id": "operationalsocialfeatures-enddate",
+          "title": "EInddatum van periodieke sociale signalitiek",
+          "order": 2
+        },
+        {
+          "id": "operationalsocialfeatures-contracttype",
+          "title": "Volume",
+          "order": 3
+        },
+        {
+          "id": "operationalsocialfeatures-establishmentunitnumber",
+          "title": "Identificatienummer van de lokale vestigingseenheid",
+          "order": 4
+        },
+        {
+          "id": "operationalsocialfeatures-jointcommissionnumber",
+          "title": "Nummer van paritair comité",
+          "order": 5
+        },
+        {
+          "id": "operationalsocialfeatures-economicactivity",
+          "title": "NACE-code",
+          "order": 6
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "weeklyhours",
+      "title": "Wekelijkse arbeidsduur",
+      "order": 9,
+      "fields": [
+        {
+          "id": "weeklyhours-weeklyhourstype",
+          "title": "Type",
+          "order": 1
+        },
+        {
+          "id": "weeklyhours-effectiveavgweeklyworkinghours",
+          "title": "Effectieve gemiddelde wekelijkse arbeidsduur",
+          "order": 2
+        },
+        {
+          "id": "weeklyhours-annualavgweeklyworkinghours",
+          "title": "Jaarlijks gemiddelde wekelijkse arbeidsduur",
+          "order": 3
+        },
+        {
+          "id": "weeklyhours-annualavgweeklypaidworkinghours",
+          "title": "Jaarlijks gemiddelde wekelijkse betaalde arbeidsduur",
+          "order": 4
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "reorganisationmeasure",
+      "title": "Maatregel tot reorganisatie van arbeidstijd",
+      "order": 10,
+      "fields": [
+        {
+          "id": "reorganisationmeasure-reorganisationmeasuretype",
+          "title": "Maatregel tot reorganisatie van de arbeidstijd",
+          "order": 1
+        },
+        {
+          "id": "reorganisationmeasure-reorganisationmeasurepercentage",
+          "title": "Percentage van maatregel tot reorganisatie van arbeidstijd",
+          "order": 2
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "socialfeaturesdetail",
+      "title": "Bijkomende sociale kenmerken",
+      "order": 11,
+      "fields": [
+        {
+          "id": "socialfeaturesdetail-sequencenumber",
+          "title": "Volgnummer",
+          "order": 1
+        },
+        {
+          "id": "socialfeaturesdetail-startdate",
+          "title": "Begindatum",
+          "order": 2
+        },
+        {
+          "id": "socialfeaturesdetail-enddate",
+          "title": "Einddatum",
+          "order": 3
         }
       ],
       "blocks": [
         {
-          "id": "block-1a",
-          "title": "Subblok A",
+          "id": "job",
+          "title": "Functie",
           "order": 1,
           "fields": [
             {
-              "id": "field-3",
-              "title": "Veld Drie",
+              "id": "job-jobtitle",
+              "title": "Benaming van de functie",
               "order": 1
             }
-          ]
+          ],
+          "blocks": []
+        },
+        {
+          "id": "gradualworkresumption",
+          "title": "Progressieve werkhervatting",
+          "order": 2,
+          "fields": [
+            {
+              "id": "gradualworkresumption-weeklymaxnbrofhoursallowed",
+              "title": "Maximale aantal uren toegestane arbeid per week in het kader van progressieve werkhervatting",
+              "order": 1
+            }
+          ],
+          "blocks": []
+        },
+        {
+          "id": "dismissal",
+          "title": "Ontslag",
+          "order": 3,
+          "fields": [
+            {
+              "id": "dismissal-noticeperiodstartdate",
+              "title": "Startdatum van opzeggingstermijn",
+              "order": 1
+            },
+            {
+              "id": "dismissal-noticeperiodmonths",
+              "title": "Theoretische opzeggingstermijn in maanden",
+              "order": 2
+            },
+            {
+              "id": "dismissal-noticeperiodweeks",
+              "title": "Theoretische opzeggingstermijn in weken",
+              "order": 3
+            },
+            {
+              "id": "dismissal-noticeperioddays",
+              "title": "Theoretische opzeggingstermijn in dagen",
+              "order": 4
+            }
+          ],
+          "blocks": []
+        },
+        {
+          "id": "starterjob",
+          "title": "Startbaan",
+          "order": 4,
+          "fields": [
+            {
+              "id": "starterjob-starterjobtype",
+              "title": "Type startbaanovereenkomst",
+              "order": 1
+            },
+            {
+              "id": "starterjob-remunpercentageforstartertraining",
+              "title": "Percentage van loon in het kader van startbaanovereenkomst besteed aan opleiding",
+              "order": 2
+            }
+          ],
+          "blocks": []
         }
       ]
     },
     {
-      "id": "block-2",
-      "title": "Blok Twee",
-      "order": 2,
+      "id": "financialelement",
+      "title": "Financieel element",
+      "order": 12,
       "fields": [
         {
-          "id": "field-4",
-          "title": "Veld Vier",
+          "id": "financialelement-sequencenumber",
+          "title": "Volgnummer",
           "order": 1
+        },
+        {
+          "id": "financialelement-financialtype",
+          "title": "Type financieel element",
+          "order": 2
+        },
+        {
+          "id": "financialelement-financialcode",
+          "title": "Code financieel element",
+          "order": 3
+        },
+        {
+          "id": "financialelement-amount",
+          "title": "Bedrag",
+          "order": 4
+        },
+        {
+          "id": "financialelement-allocationfrequency",
+          "title": "Toewijzingsfrequentie",
+          "order": 5
+        },
+        {
+          "id": "financialelement-numberofunits",
+          "title": "Aantal",
+          "order": 6
+        },
+        {
+          "id": "financialelement-amountperunit",
+          "title": "Bedrag per eenheid",
+          "order": 7
+        },
+        {
+          "id": "financialelement-subjectiontosocialsecuritycontributions",
+          "title": "Notie onderworpen aan socialezekerheidsbijdragen",
+          "order": 8
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "financialelementdetail",
+      "title": "Bijkomende finaniële kenmerken",
+      "order": 13,
+      "fields": [],
+      "blocks": [
+        {
+          "id": "severancepay",
+          "title": "Ontslagvergoeding",
+          "order": 1,
+          "fields": [
+            {
+              "id": "severancepay-startdate",
+              "title": "Begindatum van periode gedekt door ontslagvergoeding",
+              "order": 1
+            },
+            {
+              "id": "severancepay-enddate",
+              "title": "Einddatum van periode gedekt door ontslagvergoeding",
+              "order": 2
+            },
+            {
+              "id": "severancepay-severancepayreductionbyoutplacement",
+              "title": "Notie vermindering van verbrekingsvergoeding bij outplacementbegeleiding",
+              "order": 3
+            }
+          ],
+          "blocks": []
         }
       ]
+    },
+    {
+      "id": "fiscalfeatures",
+      "title": "Fiscale signalitiek",
+      "order": 14,
+      "fields": [
+        {
+          "id": "fiscalfeatures-startdate",
+          "title": "Begindatum van fiscale signalitiek",
+          "order": 1
+        },
+        {
+          "id": "fiscalfeatures-enddate",
+          "title": "Einddatum van fiscale signalitiek",
+          "order": 2
+        },
+        {
+          "id": "fiscalfeatures-employmentstatus",
+          "title": "Statuut",
+          "order": 3
+        },
+        {
+          "id": "fiscalfeatures-civilstatustype",
+          "title": "Burgerlijke staat",
+          "order": 4
+        },
+        {
+          "id": "fiscalfeatures-numberofdependentchildren",
+          "title": "Aantal kinderen ten laste",
+          "order": 5
+        },
+        {
+          "id": "fiscalfeatures-numberofdependentdisabledchildren",
+          "title": "Aantal mindervalide kinderen ten laste",
+          "order": 6
+        },
+        {
+          "id": "fiscalfeatures-numberofdependents",
+          "title": "Aantal andere personen ten laste",
+          "order": 7
+        },
+        {
+          "id": "fiscalfeatures-numberofdisableddependents",
+          "title": "Aantal andere mindervalide personen  ten laste",
+          "order": 8
+        },
+        {
+          "id": "fiscalfeatures-disabilityindicator",
+          "title": "Notie mindervalide",
+          "order": 9
+        },
+        {
+          "id": "fiscalfeatures-iscrossborderworker",
+          "title": "Notie grensarbeider",
+          "order": 10
+        },
+        {
+          "id": "fiscalfeatures-isbelgianresident",
+          "title": "Notie Rijksinwoner",
+          "order": 11
+        },
+        {
+          "id": "fiscalfeatures-fiscalsituationofpartner",
+          "title": "Inkomen van partner",
+          "order": 12
+        },
+        {
+          "id": "fiscalfeatures-disabilityofpartner",
+          "title": "Notie mindervalide partner",
+          "order": 13
+        },
+        {
+          "id": "fiscalfeatures-numberofcaredependents-numberofdependentsneedingcare",
+          "title": "Aantal zorgbehoevende personen ten laste",
+          "order": 14
+        }
+      ],
+      "blocks": []
     }
   ]
 }

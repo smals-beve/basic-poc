@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Glossaires Datafields – ${BLOK_TECHLABEL} weeklyHoursType</title>
+  
+</head>
+<body class="d-flex flex-column py-8">
+
+<div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
+
+    <div class="px-12 py-5 introduction">
+        <h4>Glossaires<br>Transfert de données salariales</h4>
+        <div class="introduction__right">
+            <span>
+                Version
+                <br>
+                <strong>1.0.2</strong>
+            </span>
+            <span>
+                Date
+                <br>
+                <strong>26-08-2025</strong>
+            </span>
+        </div>
+    </div>
+    <div class="px-12 py-9">
+        <!-- Zone LoopList -->
+        <h2 id="weeklyhours-weeklyhourstype">Type</h2>
+        <p>Indication de l'élément de la fraction d'occupation communiquée dans le bloc « temps de travail hebdomadaire ».</p>
+
+        <dl class="mt-7">
+            <dt>TechLabel</dt>	
+            <dd>weeklyHoursType</dd>
+            <hr class="my-5">
+            <dt>Type</dt>	
+            <dd>string</dd>
+            <hr class="my-5">
+	        <dt>Longeur</dt>
+            <dd>2</dd>
+            <hr class="my-5">
+	        <dt>Format</dt>
+            <dd>-</dd>
+	        <hr class="my-5">
+            <dt>Domaine de définition</dt>
+            <dd>S = données de la personne de référence d'application pour le travailleur en question. Par personne de référence, on entend la personne de référence théorique occupée à temps plein dans la même entreprise ou, à défaut, dans la même branche d’activités, dans une fonction analogue. Il est possible qu'au sein d'une même entreprise, il y ait plusieurs personnes de référence.
+Q = données de la personne physique sans tenir compte d'une éventuelle suspension des prestations 
+M = données de la personne physique en tenant compte d'une éventuelle suspension complète ou partielle des prestations</dd>
+	        <hr class="my-5">
+            <dt>Présence</dt>
+            <dd>Les données de la personne de référence (S) et les données de la personne physique, sans tenir compte d’une éventuelle suspension des prestations (Q), sont indispensables.
+
+Les données de la personne physique, en tenant compte d’une éventuelle suspension des prestations (M), sont obligatoires, si une mesure de réorganisation du temps de travail est d’application.</dd>
+	        <hr class="my-5">
+        </dl>
+        <hr class="mt-11 mb-7 opacity-100">
+        <!-- Zone LoopList -->
+    </div>
+</div>
+</body>
+</html>

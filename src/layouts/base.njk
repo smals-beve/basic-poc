@@ -10,16 +10,13 @@
     <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | url }}">
     <link rel="stylesheet" href="{{ '/assets/styles.css' | url }}">
 
-    {# API path (use |url to respect pathPrefix) #}
-    {% set apiPrefix = '/api/' | url %}
-    {% set pageUrl = page and page.url or '' %}
-    {% set isApi = pageUrl and (pageUrl.indexOf(apiPrefix) == 0) %}
-    {% set isApiRoot = pageUrl == apiPrefix %}
+    {# --- API path detection (works with or without pathPrefix) --- #}
+    {% set apiPrefix = '/api/' | url %}   {# e.g. '/basic-poc/api/' in prod, '/api/' locally #}
+    {% set apiBare   = '/api/' %}         {# always '/api/' #}
+    {% set pageUrl   = page and page.url or '' %}
 
-    {# Swagger UI CSS only on API detail pages, not /api/ root #}
-    {% if isApi and not isApiRoot %}
-        <link rel="stylesheet" href="{{ '/lib4ui/swagger-ui.css' | url }}">
-    {% endif %}
+    {% set isApi = (pageUrl and (pageUrl.indexOf(apiPrefix) == 0)) or (pageUrl and (pageUrl.indexOf(apiBare) == 0)) %}
+    {% set isApiRoot = (pageUrl == apiPrefix) or (pageUrl == apiBare) %}
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -79,8 +76,7 @@
                 <nav aria-label="breadcrumb" class="mb-3">
                     <ol class="breadcrumb">
                         {% for c in breadcrumbs %}
-                            <li class="breadcrumb-item{% if loop.last %} active{% endif %}"
-                                {% if loop.last %}aria-current="page"{% endif %}>
+                            <li class="breadcrumb-item{% if loop.last %} active{% endif %}" {% if loop.last %}aria-current="page"{% endif %}>
                                 {% if not loop.last %}
                                     <a href="{{ c.href | url }}">{{ c.title }}</a>
                                 {% else %}

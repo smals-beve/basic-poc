@@ -1,51 +1,526 @@
 {
   "lang": "fr",
   "overview": {
-    "title": "Overzicht van Blokken"
+    "title": "Aperçu des Blocs"
   },
   "blocks": [
     {
-      "id": "block-1",
-      "title": "Blok Eén",
+      "id": "enterprise",
+      "title": "Entreprise",
       "order": 1,
       "fields": [
         {
-          "id": "field-1",
-          "title": "Veld Een",
+          "id": "enterprise-enterprisenumber",
+          "title": "Numéro d'entreprise",
           "order": 1
         },
         {
-          "id": "field-2",
-          "title": "Veld Twee",
+          "id": "enterprise-nssonumber",
+          "title": "Numéro ONSS",
           "order": 2
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "naturalperson",
+      "title": "Personne physique",
+      "order": 2,
+      "fields": [
+        {
+          "id": "naturalperson-ssin",
+          "title": "Numéro d'identification de la sécurité sociale - NISS",
+          "order": 1
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "relation",
+      "title": "Relation",
+      "order": 3,
+      "fields": [
+        {
+          "id": "relation-declarantreference",
+          "title": "Clé d'identification de la relation",
+          "order": 1
+        },
+        {
+          "id": "relation-relationtype",
+          "title": "Type de relation",
+          "order": 2
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "remunerationcalculation",
+      "title": "Calcul salarial",
+      "order": 4,
+      "fields": [
+        {
+          "id": "remunerationcalculation-id",
+          "title": "Clé d'identification du calcul salarial",
+          "order": 1
+        },
+        {
+          "id": "remunerationcalculation-startdate",
+          "title": "Date de début de la période de calcul salarial",
+          "order": 2
+        },
+        {
+          "id": "remunerationcalculation-enddate",
+          "title": "Date de fin de la période de calcul",
+          "order": 3
+        },
+        {
+          "id": "remunerationcalculation-calculationdate",
+          "title": "Date du calcul salarial",
+          "order": 4
+        },
+        {
+          "id": "remunerationcalculation-frequency",
+          "title": "Fréquence du calcul salarial",
+          "order": 5
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "service",
+      "title": "Prestation ou absence",
+      "order": 5,
+      "fields": [
+        {
+          "id": "service-sequencenumber",
+          "title": "Numéro de suivi de la prestation",
+          "order": 1
+        },
+        {
+          "id": "service-servicetype",
+          "title": "Code de prestation ou d'absence",
+          "order": 2
+        },
+        {
+          "id": "service-startdate",
+          "title": "Date ou date de début de la prestation ou de l'absence",
+          "order": 3
+        },
+        {
+          "id": "service-enddate",
+          "title": "Date de fin de la prestation ou de l'absence",
+          "order": 4
+        },
+        {
+          "id": "service-numberofhours",
+          "title": "Nombre d'heures de prestation ou d'absence",
+          "order": 5
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "servicefeature",
+      "title": "Caractéristiques de la prestation",
+      "order": 6,
+      "fields": [
+        {
+          "id": "servicefeature-overtimetype",
+          "title": "Type d'heure supplémentaire",
+          "order": 1
+        },
+        {
+          "id": "servicefeature-subjectiontosocialsecuritycontributions",
+          "title": "Notion d'assujettissement aux cotisations de sécurité sociale",
+          "order": 2
+        },
+        {
+          "id": "servicefeature-overtimeincludedincalendar",
+          "title": "Notion d'heures supplémentaires incluses dans le calendrier",
+          "order": 3
+        },
+        {
+          "id": "servicefeature-seafarerservicetype",
+          "title": "Notion de prestations des marins",
+          "order": 4
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "identifyingsocialfeatures",
+      "title": "Signalétique sociale",
+      "order": 7,
+      "fields": [
+        {
+          "id": "identifyingsocialfeatures-startdate",
+          "title": "Date de début de la signalétique sociale",
+          "order": 1
+        },
+        {
+          "id": "identifyingsocialfeatures-enddate",
+          "title": "Date de fin de la signalétique sociale",
+          "order": 2
+        },
+        {
+          "id": "identifyingsocialfeatures-employmentstatus",
+          "title": "Statut",
+          "order": 3
+        },
+        {
+          "id": "identifyingsocialfeatures-employerclass",
+          "title": "Catégorie employeur",
+          "order": 4
+        },
+        {
+          "id": "identifyingsocialfeatures-workercode",
+          "title": "Code travailleur",
+          "order": 5
+        },
+        {
+          "id": "identifyingsocialfeatures-flatratecode",
+          "title": "Code forfait",
+          "order": 6
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "operationalsocialfeatures",
+      "title": "Signalétique sociale périodique",
+      "order": 8,
+      "fields": [
+        {
+          "id": "operationalsocialfeatures-startdate",
+          "title": "Date de début de la signalétique sociale périodique",
+          "order": 1
+        },
+        {
+          "id": "operationalsocialfeatures-enddate",
+          "title": "Date de fin de la signalétique sociale périodique",
+          "order": 2
+        },
+        {
+          "id": "operationalsocialfeatures-contracttype",
+          "title": "Volume",
+          "order": 3
+        },
+        {
+          "id": "operationalsocialfeatures-establishmentunitnumber",
+          "title": "Numéro d'identification de l'unité d'établissement  locale",
+          "order": 4
+        },
+        {
+          "id": "operationalsocialfeatures-jointcommissionnumber",
+          "title": "Numéro de commission paritaire",
+          "order": 5
+        },
+        {
+          "id": "operationalsocialfeatures-economicactivity",
+          "title": "Code NACE",
+          "order": 6
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "weeklyhours",
+      "title": "Temps de travail hebdomadaire",
+      "order": 9,
+      "fields": [
+        {
+          "id": "weeklyhours-weeklyhourstype",
+          "title": "Type",
+          "order": 1
+        },
+        {
+          "id": "weeklyhours-effectiveavgweeklyworkinghours",
+          "title": "Durée effective moyenne de travail hebdomadaire",
+          "order": 2
+        },
+        {
+          "id": "weeklyhours-annualavgweeklyworkinghours",
+          "title": "Durée annuelle moyenne de travail hebdomadaire",
+          "order": 3
+        },
+        {
+          "id": "weeklyhours-annualavgweeklypaidworkinghours",
+          "title": "Durée moyenne annuelle  du temps de travail hebdomadaire rémunéré",
+          "order": 4
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "reorganisationmeasure",
+      "title": "Mesure de réorganisation du temps de travail",
+      "order": 10,
+      "fields": [
+        {
+          "id": "reorganisationmeasure-reorganisationmeasuretype",
+          "title": "Mesure de réorganisation du temps de travail",
+          "order": 1
+        },
+        {
+          "id": "reorganisationmeasure-reorganisationmeasurepercentage",
+          "title": "Pourcentage de la mesure de réorganisation du temps de travail",
+          "order": 2
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "socialfeaturesdetail",
+      "title": "Caractéristiques sociales supplémentaires",
+      "order": 11,
+      "fields": [
+        {
+          "id": "socialfeaturesdetail-sequencenumber",
+          "title": "Numéro de suivi",
+          "order": 1
+        },
+        {
+          "id": "socialfeaturesdetail-startdate",
+          "title": "Date de début",
+          "order": 2
+        },
+        {
+          "id": "socialfeaturesdetail-enddate",
+          "title": "Date de fin",
+          "order": 3
         }
       ],
       "blocks": [
         {
-          "id": "block-1a",
-          "title": "Subblok A",
+          "id": "job",
+          "title": "-",
           "order": 1,
           "fields": [
             {
-              "id": "field-3",
-              "title": "Veld Drie",
+              "id": "job-jobtitle",
+              "title": "Dénomination de la fonction",
               "order": 1
             }
-          ]
+          ],
+          "blocks": []
+        },
+        {
+          "id": "gradualworkresumption",
+          "title": "-",
+          "order": 2,
+          "fields": [
+            {
+              "id": "gradualworkresumption-weeklymaxnbrofhoursallowed",
+              "title": "Nombre maximum d'heures de travail autorisées par semaine dans le cadre d'une reprise progressive du travail",
+              "order": 1
+            }
+          ],
+          "blocks": []
+        },
+        {
+          "id": "dismissal",
+          "title": "Licenciement",
+          "order": 3,
+          "fields": [
+            {
+              "id": "dismissal-noticeperiodstartdate",
+              "title": "Date de début du délai de préavis",
+              "order": 1
+            },
+            {
+              "id": "dismissal-noticeperiodmonths",
+              "title": "Délai de préavis théorique en mois",
+              "order": 2
+            },
+            {
+              "id": "dismissal-noticeperiodweeks",
+              "title": "Délai de préavis théorique en semaines",
+              "order": 3
+            },
+            {
+              "id": "dismissal-noticeperioddays",
+              "title": "Délai de préavis théorique en jours",
+              "order": 4
+            }
+          ],
+          "blocks": []
+        },
+        {
+          "id": "starterjob",
+          "title": "-",
+          "order": 4,
+          "fields": [
+            {
+              "id": "starterjob-starterjobtype",
+              "title": "Type de convention de premier emploi",
+              "order": 1
+            },
+            {
+              "id": "starterjob-remunpercentageforstartertraining",
+              "title": "Pourcentage du salaire dans le cadre  d'une convention premier emploi consacré à la formation",
+              "order": 2
+            }
+          ],
+          "blocks": []
         }
       ]
     },
     {
-      "id": "block-2",
-      "title": "Blok Twee",
-      "order": 2,
+      "id": "financialelement",
+      "title": "Élément financier",
+      "order": 12,
       "fields": [
         {
-          "id": "field-4",
-          "title": "Veld Vier",
+          "id": "financialelement-sequencenumber",
+          "title": "Numéro de suivi",
           "order": 1
+        },
+        {
+          "id": "financialelement-financialtype",
+          "title": "Type d'élément financier",
+          "order": 2
+        },
+        {
+          "id": "financialelement-financialcode",
+          "title": "Code élément financier",
+          "order": 3
+        },
+        {
+          "id": "financialelement-amount",
+          "title": "Montant",
+          "order": 4
+        },
+        {
+          "id": "financialelement-allocationfrequency",
+          "title": "Fréquence d'attribution",
+          "order": 5
+        },
+        {
+          "id": "financialelement-numberofunits",
+          "title": "Nombre",
+          "order": 6
+        },
+        {
+          "id": "financialelement-amountperunit",
+          "title": "Montant par unité",
+          "order": 7
+        },
+        {
+          "id": "financialelement-subjectiontosocialsecuritycontributions",
+          "title": "Notion d'assujettissement aux cotisations de sécurité sociale",
+          "order": 8
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "financialelementdetail",
+      "title": "Caractéristiques financières supplémentaires",
+      "order": 13,
+      "fields": [],
+      "blocks": [
+        {
+          "id": "severancepay",
+          "title": "Indemnité de licenciement",
+          "order": 1,
+          "fields": [
+            {
+              "id": "severancepay-startdate",
+              "title": "Date de début",
+              "order": 1
+            },
+            {
+              "id": "severancepay-enddate",
+              "title": "Date de fin",
+              "order": 2
+            },
+            {
+              "id": "severancepay-severancepayreductionbyoutplacement",
+              "title": "Notion de diminution de l'indemnité de rupture lors d'une procédure de reclassement professionnel",
+              "order": 3
+            }
+          ],
+          "blocks": []
         }
       ]
+    },
+    {
+      "id": "fiscalfeatures",
+      "title": "Signalétique fiscale",
+      "order": 14,
+      "fields": [
+        {
+          "id": "fiscalfeatures-startdate",
+          "title": "Date de début de la signalétique fiscale",
+          "order": 1
+        },
+        {
+          "id": "fiscalfeatures-enddate",
+          "title": "Date de fin de la signalétique fiscale",
+          "order": 2
+        },
+        {
+          "id": "fiscalfeatures-employmentstatus",
+          "title": "Statut",
+          "order": 3
+        },
+        {
+          "id": "fiscalfeatures-civilstatustype",
+          "title": "État civil",
+          "order": 4
+        },
+        {
+          "id": "fiscalfeatures-numberofdependentchildren",
+          "title": "Nombre d'enfants à charge",
+          "order": 5
+        },
+        {
+          "id": "fiscalfeatures-numberofdependentdisabledchildren",
+          "title": "Nombre d'enfants moins valides à charge",
+          "order": 6
+        },
+        {
+          "id": "fiscalfeatures-numberofdependents",
+          "title": "Nombre d'autres personnes à charge",
+          "order": 7
+        },
+        {
+          "id": "fiscalfeatures-numberofdisableddependents",
+          "title": "Nombre d'autres personnes moins valides à charge",
+          "order": 8
+        },
+        {
+          "id": "fiscalfeatures-disabilityindicator",
+          "title": "Notion de moins valide",
+          "order": 9
+        },
+        {
+          "id": "fiscalfeatures-iscrossborderworker",
+          "title": "Notion de travailleur frontalier",
+          "order": 10
+        },
+        {
+          "id": "fiscalfeatures-isbelgianresident",
+          "title": "Notion résident belge",
+          "order": 11
+        },
+        {
+          "id": "fiscalfeatures-fiscalsituationofpartner",
+          "title": "Revenu du partenaire",
+          "order": 12
+        },
+        {
+          "id": "fiscalfeatures-disabilityofpartner",
+          "title": "Notion partenaire moins valide",
+          "order": 13
+        },
+        {
+          "id": "fiscalfeatures-numberofcaredependents-numberofdependentsneedingcare",
+          "title": "Nombre de personnes à charge nécessitant des soins",
+          "order": 14
+        }
+      ],
+      "blocks": []
     }
   ]
 }
