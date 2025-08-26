@@ -1,16 +1,3 @@
----
-layout: default
-
-pagination:
-    data: collections.apiSpecs
-    size: 1
-    alias: spec
-
-permalink: "/api/{{ spec.fileSlug }}/"
-eleventyComputed:
-title: "{{ spec.data.info.title or spec.fileSlug }}"
----
-
 <p class="mb-3">
     <a href="{{ '/api/' | url }}">← {{ 'api_overview' | translate(lang) }}</a>
 </p>
