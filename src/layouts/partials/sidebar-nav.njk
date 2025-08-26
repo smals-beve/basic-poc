@@ -10,13 +10,12 @@
             {% set overviewUrl = ('/' ~ lang ~ '/') | url %}
             <li class="nav-item">
                 <a class="nav-link{% if page.url == overviewUrl %} active{% endif %}" href="{{ overviewUrl }}">
-                    <span class="label"
-                          title="{{ manifestForLang.overview.title }}">{{ manifestForLang.overview.title }}</span>
+                    <span class="label" title="{{ manifestForLang.overview.title }}">
+                        {{ manifestForLang.overview.title }}
+                    </span>
                 </a>
             </li>
-            <li>
-                <hr class="my-2">
-            </li>
+            <li><hr class="my-2"></li>
         {% endif %}
 
         {# Top-level blocks with one level of nested sub-blocks #}
@@ -36,7 +35,7 @@
                         </a>
 
                         {% if hasNestedBlocks %}
-                            <button class="btn btn-sm btn-link p-0 ms-2{% if not isActive %} collapsed{% endif %}"
+                            <button class="btn btn-sm btn-link p-0 ms-2 collapse-toggle{% if not isActive %} collapsed{% endif %}"
                                     type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#{{ collapseId }}"
@@ -68,9 +67,7 @@
                     {% endif %}
                 </li>
 
-                <li>
-                    <hr class="my-2">
-                </li>
+                <li><hr class="my-2"></li>
 
                 {% set lastTopBlockId = topLevelBlock.id %}
             {% endif %}
