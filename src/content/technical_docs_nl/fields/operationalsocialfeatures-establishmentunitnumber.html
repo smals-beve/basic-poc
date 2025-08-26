@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Glossarium Datafields – ${BLOK_TECHLABEL} establishmentUnitNumber</title>
+  
+</head>
+<body class="d-flex flex-column py-8">
+
+<div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
+
+    <div class="px-12 py-5 introduction">
+        <h4>Glossarium<br>Loondata-transfer</h4>
+        <div class="introduction__right">
+            <span>
+                Versie
+                <br>
+                <strong>1.0.2</strong>
+            </span>
+            <span>
+                Datum
+                <br>
+                <strong>26-08-2025</strong>
+            </span>
+        </div>
+    </div>
+    <div class="px-12 py-9">
+        <!-- Zone LoopList -->
+        <h2 id="operationalsocialfeatures-establishmentunitnumber">Identificatienummer van de lokale vestigingseenheid</h2>
+        <p>Nummer toegekend door de Kruispuntbank van Ondernemingen dat een vestigingseenheid eenduidig identificeert. Het betreft de vestigingeenheid waarin of van waar uit de werknemer tewerkgesteld is.</p>
+
+        <dl class="mt-7">
+            <dt>TechLabel</dt>	
+            <dd>establishmentUnitNumber</dd>
+            <hr class="my-5">
+            <dt>Type</dt>	
+            <dd>integer</dd>
+            <hr class="my-5">
+	    <dt>Lengte</dt>
+            <dd>10</dd>
+            <hr class="my-5">
+	    <dt>Formaat</dt>
+            <dd>-</dd>
+	    <hr class="my-5">
+            <dt>Toegelaten domein</dt>
+            <dd>Getal van 10 cijfers waarvan :
+de posities 1 tot 8 overeenkomen met een volgnummer, met op de eerste positie een cijfer gelegen tussen 2 en 8;
+de posities 9 en 10 overeenkomen met een controlegetal.
+
+In bepaalde situaties kan het gebruik van een fictief nummer noodzakelijk zijn:
+- 8999999993 = Buitenlandse werkgever zonder VE in België voor werknemers die niet op Belgisch grondgebied tewerkgesteld worden
+- 8999999104 = Buitenlandse werkgever zonder VE in België voor werknemers die op Belgisch grondgebied tewerkgesteld worden of werkgever van huispersoneel  - Vlaams Gewest
+- 8999999203 = Buitenlandse werkgever zonder VE in België voor werknemers die op Belgisch grondgebied tewerkgesteld worden of werkgever van huispersoneel  - Brussels Hoofdstedelijk Gewest
+- 8999999302 = Buitenlandse werkgever zonder VE in België voor werknemers die op Belgisch grondgebied tewerkgesteld worden of werkgever van huispersoneel  - Waals Gewest zonder de gemeenten die behoren tot de bevoegdheid van de Duitstalige gemeenschap
+- 8999999401 = Buitenlandse werkgever zonder VE in België voor werknemers die op Belgisch grondgebied tewerkgesteld worden of werkgever van huispersoneel  - Waals Gewest voor de gemeenten die behoren tot de bevoegdheid van de Duitstalige gemeenschap
+- 8999999005 = Werkgever in afwachting van een nummer van VE
+- 8999999894 = Niet van toepassing - derde betalenden (werkgeverscategorieën 033, 099, 199, 299, 405, 699, 755, 756, 757, 758, 759 en 898) - Statutair met standplaats in het buitenland</dd>
+	    <hr class="my-5">
+            <dt>Aanwezigheid</dt>
+            <dd>Onmisbaar</dd>
+	    <hr class="my-5">
+        </dl>
+        <hr class="mt-11 mb-7 opacity-100">
+        <!-- Zone LoopList -->
+    </div>
+</div>
+</body>
+</html>

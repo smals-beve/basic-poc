@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Glossarium Datafields – ${BLOK_TECHLABEL} fiscalSituationOfPartner</title>
+  
+</head>
+<body class="d-flex flex-column py-8">
+
+<div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
+
+    <div class="px-12 py-5 introduction">
+        <h4>Glossarium<br>Loondata-transfer</h4>
+        <div class="introduction__right">
+            <span>
+                Versie
+                <br>
+                <strong>1.0.2</strong>
+            </span>
+            <span>
+                Datum
+                <br>
+                <strong>26-08-2025</strong>
+            </span>
+        </div>
+    </div>
+    <div class="px-12 py-9">
+        <!-- Zone LoopList -->
+        <h2 id="fiscalfeatures-fiscalsituationofpartner">Inkomen van partner</h2>
+        <p>Aanduiding van het inkomen van de partner van de natuurlijke persoon, zoals toegepast in het kader van de loonberekening.</p>
+
+        <dl class="mt-7">
+            <dt>TechLabel</dt>	
+            <dd>fiscalSituationOfPartner</dd>
+            <hr class="my-5">
+            <dt>Type</dt>	
+            <dd>integer</dd>
+            <hr class="my-5">
+	    <dt>Lengte</dt>
+            <dd>2</dd>
+            <hr class="my-5">
+	    <dt>Formaat</dt>
+            <dd>-</dd>
+	    <hr class="my-5">
+            <dt>Toegelaten domein</dt>
+            <dd>1 = de partner heeft geen persoonlijke beroepsinkomsten
+2 = de partner heeft persoonlijke beroepsinkomsten, die uitsluitend bestaan uit pensioenen, renten of ermede gelijkgestelde inkomsten waarvan het nettobedrag niet hoger is dan 170 EUR per maand 
+3 = de partner heeft persoonlijke beroepsinkomsten, die uitsluitend bestaan uit pensioenen, renten of ermede gelijkgestelde inkomsten waarvan het nettobedrag niet hoger is dan 563 EUR per maand 
+4 = de partner heeft persoonlijke beroepsinkomsten, andere dan pensioenen, renten of ermede gelijkgestelde inkomsten, waarvan het nettobedrag niet hoger is dan 283 EUR per maand
+
+Formulering zoeken waarbij geen precieze bedragen worden vermeld. Deze bijdragen moeten anders jaarlijks worden aangepast.</dd>
+	    <hr class="my-5">
+            <dt>Aanwezigheid</dt>
+            <dd>Verplicht, indien de natuurlijk persoon gehuwd of wettelijk samenwonend is</dd>
+	    <hr class="my-5">
+        </dl>
+        <hr class="mt-11 mb-7 opacity-100">
+        <!-- Zone LoopList -->
+    </div>
+</div>
+</body>
+</html>

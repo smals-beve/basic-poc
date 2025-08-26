@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Glossarium – Schema weeklyHours</title>
+  
+</head>
+<body class="d-flex flex-column py-8">
+
+<div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
+
+    <div class="px-12 py-5 introduction">
+        <h2 id="weeklyhours">Glossarium<br>Loondata-transfer</h4>
+        <div class="introduction__right">
+            <span>
+                Versie
+                <br>
+                <strong>1.0.2</strong>
+            </span>
+            <span>
+                Datum
+                <br>
+                <strong>26-08-2025</strong>
+            </span>
+        </div>
+    </div>
+
+
+    <div class="px-12 py-9">
+        <h2>Blok Wekelijkse arbeidsduur<br><code>weeklyHours</code></h2>
+        <span class="text-primary-emphasis fw-bolder d-block mb-2 blok-dtype"></span>
+        <p>Het aantal te presteren uren per week door de natuurlijk persoon en door de fictieve maatpersoon gelinkt aan de natuurlijke persoon.</p>
+
+        <div class="mt-6">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col" class="text-nowrap">Veldnaam</th>
+                    <th scope="col" class="text-nowrap">Beschrijving</th>
+					<th scope="col" class="text-nowrap">TechLabel</th>
+                </tr>
+                </thead>
+                <tbody>
+ <!-- ZONE_LOOPLIST -->
+                <tr>
+                    <td><a href="#weeklyhours-weeklyhourstype" class="link-underline"><strong>Type</strong></a></td>
+                    <td>
+                        Aanduiding van het element van de tewerkstellingsbreuk meegedeeld in het blok "wekelijkse arbeidsduur".
+                    </td>
+					<td>
+						<code>weeklyHoursType</code>
+					<td>
+                </tr>
+
+                <tr>
+                    <td><a href="#weeklyhours-effectiveavgweeklyworkinghours" class="link-underline"><strong>Effectieve gemiddelde wekelijkse arbeidsduur</strong></a></td>
+                    <td>
+                        Per cyclus het aantal te presteren uren per week, inclusief de eventuele betaalde inhaalrust en inclusief  de eventuele onbetaalde inhaalrust.
+                    </td>
+					<td>
+						<code>effectiveAvgWeeklyWorkingHours</code>
+					<td>
+                </tr>
+
+                <tr>
+                    <td><a href="#weeklyhours-annualavgweeklyworkinghours" class="link-underline"><strong>Jaarlijks gemiddelde wekelijkse arbeidsduur</strong></a></td>
+                    <td>
+                        Op jaarbasis het aantal te presteren uren per week exclusief de eventuele betaalde inhaalrust en exclusief de eventuele onbetaalde inhaalrust.
+                    </td>
+					<td>
+						<code>annualAvgWeeklyWorkingHours</code>
+					<td>
+                </tr>
+
+                <tr>
+                    <td><a href="#weeklyhours-annualavgweeklypaidworkinghours" class="link-underline"><strong>Jaarlijks gemiddelde wekelijkse betaalde arbeidsduur</strong></a></td>
+                    <td>
+                        Op jaarbasis het aantal te presteren uren per week inclusief de eventuele betaalde inhaalrust en  exclusief de eventuele onbetaalde inhaalrust.
+                    </td>
+					<td>
+						<code>annualAvgWeeklyPaidWorkingHours</code>
+					<td>
+                </tr>
+<!-- ZONE_LOOPLIST -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
