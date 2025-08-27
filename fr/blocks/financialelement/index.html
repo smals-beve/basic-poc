@@ -442,8 +442,8 @@
                                     
                                     <li class="nav-item">
                                         <a class="nav-link"
-                                           href="/basic-poc/fr/blocks/job/" title="-">
-                                            <span class="label text-truncate">-</span>
+                                           href="/basic-poc/fr/blocks/job/" title="Fonction">
+                                            <span class="label text-truncate">Fonction</span>
                                         </a>
                                     </li>
                                     
@@ -453,8 +453,8 @@
                                     
                                     <li class="nav-item">
                                         <a class="nav-link"
-                                           href="/basic-poc/fr/blocks/gradualworkresumption/" title="-">
-                                            <span class="label text-truncate">-</span>
+                                           href="/basic-poc/fr/blocks/gradualworkresumption/" title="Reprise progressive du travail">
+                                            <span class="label text-truncate">Reprise progressive du travail</span>
                                         </a>
                                     </li>
                                     
@@ -475,8 +475,8 @@
                                     
                                     <li class="nav-item">
                                         <a class="nav-link"
-                                           href="/basic-poc/fr/blocks/starterjob/" title="-">
-                                            <span class="label text-truncate">-</span>
+                                           href="/basic-poc/fr/blocks/starterjob/" title="Premier emploi">
+                                            <span class="label text-truncate">Premier emploi</span>
                                         </a>
                                     </li>
                                     
@@ -510,60 +510,6 @@
                         
                     </div>
 
-                    
-                </li>
-
-                <li>
-                    <hr class="my-2">
-                </li>
-
-                
-            
-        
-            
-                
-                
-                
-                
-                
-
-                <li class="nav-item">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a class="nav-link flex-grow-1"
-                           href="/basic-poc/fr/blocks/financialelementdetail/" title="Caractéristiques financières supplémentaires">
-                            <span class="label text-truncate">Caractéristiques financières supplémentaires</span>
-                        </a>
-
-                        
-                            <button class="btn btn-sm btn-link p-0 ms-2 collapse-toggle collapsed"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#collapse-fr-financialelementdetail"
-                                    aria-expanded="false"
-                                    aria-controls="collapse-fr-financialelementdetail">
-                                <span class="caret"></span>
-                            </button>
-                        
-                    </div>
-
-                    
-                        <ul id="collapse-fr-financialelementdetail"
-                            class="nav flex-column ms-3 collapse"
-                            data-bs-parent="#sidebar">
-                            
-                            
-                                
-                                    
-                                    <li class="nav-item">
-                                        <a class="nav-link"
-                                           href="/basic-poc/fr/blocks/severancepay/" title="Indemnité de licenciement">
-                                            <span class="label text-truncate">Indemnité de licenciement</span>
-                                        </a>
-                                    </li>
-                                    
-                                
-                            
-                        </ul>
                     
                 </li>
 
@@ -647,7 +593,7 @@
             <span>
                 Version
                 <br>
-                <strong>1.0.2</strong>
+                <strong>1.0</strong>
             </span>
             <span>
                 Date
@@ -662,7 +608,9 @@
         <h2>Blok Élément financier<br><code>financialElement</code></h2>
 		<span class="text-primary-emphasis fw-bolder"></span>
         <p>Eléments financiers attribués à la personne physique par l'entreprise. 
-Il s'agit d'un bloc générique qui contient différents éléments financiers comme les rémunérations, les cotisations de sécurité sociale, les réductions de cotisations de sécurité sociales, ...</p>
+
+
+Plus d'informations sur les différents éléments financiers suivront dans la prochaine version de la documentation.</p>
         <div class="mt-6">
             <table class="table table-striped">
                 <thead>
@@ -673,89 +621,7 @@ Il s'agit d'un bloc générique qui contient différents éléments financiers c
                 </tr>
                 </thead>
                 <tbody>
- <!-- ZONE_LOOPLIST -->
-                <tr>
-                    <td><a href="/basic-poc/fr/fields/financialelement-sequencenumber/" class="link-underline"><strong>Numéro de suivi</strong></a></td>
-                    <td>
-                        Numéro de suivi du bloc "élément financier" dans un bloc "signalétique sociale", "signalétique sociale périodique" ou "signalétique fiscale". Ce numéro doit être unique dans les blocs situés au-dessus.
-                    </td>
-					<td>
-						<code>sequenceNumber</code>
-					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="/basic-poc/fr/fields/financialelement-financialtype/" class="link-underline"><strong>Type d'élément financier</strong></a></td>
-                    <td>
-                        Code qui identifie le type d'élément financier.
-                    </td>
-					<td>
-						<code>financialType</code>
-					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="/basic-poc/fr/fields/financialelement-financialcode/" class="link-underline"><strong>Code élément financier</strong></a></td>
-                    <td>
-                        Code qui identifie l'élément financier spécifique.
-                    </td>
-					<td>
-						<code>financialCode</code>
-					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="/basic-poc/fr/fields/financialelement-amount/" class="link-underline"><strong>Montant</strong></a></td>
-                    <td>
-                        Le montant de l'élément financier.
-
-Encore à clarifier : quand les montants positifs doivent être déclarés et quand les montants négatifs doivent être déclarés.
-                    </td>
-					<td>
-						<code>amount</code>
-					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="/basic-poc/fr/fields/financialelement-allocationfrequency/" class="link-underline"><strong>Fréquence d'attribution</strong></a></td>
-                    <td>
-                        La fréquence en mois à laquelle un élément financier est accordé.
-                    </td>
-					<td>
-						<code>allocationFrequency</code>
-					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="/basic-poc/fr/fields/financialelement-numberofunits/" class="link-underline"><strong>Nombre</strong></a></td>
-                    <td>
-                        La quantité d'un élément financier.
-                    </td>
-					<td>
-						<code>numberOfUnits</code>
-					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="/basic-poc/fr/fields/financialelement-amountperunit/" class="link-underline"><strong>Montant par unité</strong></a></td>
-                    <td>
-                        Le montant d'une unité d'un élément financier.
-                    </td>
-					<td>
-						<code>amountPerUnit</code>
-					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="/basic-poc/fr/fields/financialelement-subjectiontosocialsecuritycontributions/" class="link-underline"><strong>Notion d'assujettissement aux cotisations de sécurité sociale</strong></a></td>
-                    <td>
-                        Indication si l'élément financier en question est assujetti ou non aux cotisations de sécurité sociale.
-                    </td>
-					<td>
-						<code>subjectionToSocialSecurityContributions</code>
-					<td>
-                </tr>
-<!-- ZONE_LOOPLIST -->
+ <!-- ZONE_LOOPLIST --><!-- ZONE_LOOPLIST -->
                 </tbody>
             </table>
         </div>

@@ -442,8 +442,8 @@
                                     
                                     <li class="nav-item">
                                         <a class="nav-link"
-                                           href="/basic-poc/fr/blocks/job/" title="-">
-                                            <span class="label text-truncate">-</span>
+                                           href="/basic-poc/fr/blocks/job/" title="Fonction">
+                                            <span class="label text-truncate">Fonction</span>
                                         </a>
                                     </li>
                                     
@@ -453,8 +453,8 @@
                                     
                                     <li class="nav-item">
                                         <a class="nav-link"
-                                           href="/basic-poc/fr/blocks/gradualworkresumption/" title="-">
-                                            <span class="label text-truncate">-</span>
+                                           href="/basic-poc/fr/blocks/gradualworkresumption/" title="Reprise progressive du travail">
+                                            <span class="label text-truncate">Reprise progressive du travail</span>
                                         </a>
                                     </li>
                                     
@@ -475,8 +475,8 @@
                                     
                                     <li class="nav-item">
                                         <a class="nav-link"
-                                           href="/basic-poc/fr/blocks/starterjob/" title="-">
-                                            <span class="label text-truncate">-</span>
+                                           href="/basic-poc/fr/blocks/starterjob/" title="Premier emploi">
+                                            <span class="label text-truncate">Premier emploi</span>
                                         </a>
                                     </li>
                                     
@@ -510,60 +510,6 @@
                         
                     </div>
 
-                    
-                </li>
-
-                <li>
-                    <hr class="my-2">
-                </li>
-
-                
-            
-        
-            
-                
-                
-                
-                
-                
-
-                <li class="nav-item">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a class="nav-link flex-grow-1"
-                           href="/basic-poc/fr/blocks/financialelementdetail/" title="Caractéristiques financières supplémentaires">
-                            <span class="label text-truncate">Caractéristiques financières supplémentaires</span>
-                        </a>
-
-                        
-                            <button class="btn btn-sm btn-link p-0 ms-2 collapse-toggle collapsed"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#collapse-fr-financialelementdetail"
-                                    aria-expanded="false"
-                                    aria-controls="collapse-fr-financialelementdetail">
-                                <span class="caret"></span>
-                            </button>
-                        
-                    </div>
-
-                    
-                        <ul id="collapse-fr-financialelementdetail"
-                            class="nav flex-column ms-3 collapse"
-                            data-bs-parent="#sidebar">
-                            
-                            
-                                
-                                    
-                                    <li class="nav-item">
-                                        <a class="nav-link"
-                                           href="/basic-poc/fr/blocks/severancepay/" title="Indemnité de licenciement">
-                                            <span class="label text-truncate">Indemnité de licenciement</span>
-                                        </a>
-                                    </li>
-                                    
-                                
-                            
-                        </ul>
                     
                 </li>
 
@@ -647,7 +593,7 @@
             <span>
                 Version
                 <br>
-                <strong>1.0.2</strong>
+                <strong>1.0</strong>
             </span>
             <span>
                 Date
@@ -674,9 +620,9 @@
                 <tbody>
  <!-- ZONE_LOOPLIST -->
                 <tr>
-                    <td><a href="/basic-poc/fr/fields/socialfeaturesdetail-sequencenumber/" class="link-underline"><strong>Numéro de suivi</strong></a></td>
+                    <td><a href="/basic-poc/fr/fields/socialfeaturesdetail-sequencenumber/" class="link-underline"><strong>Numéro de séquence</strong></a></td>
                     <td>
-                        Numéro de suivi du bloc "caractéristiques sociales supplémentaires" dans le bloc "signalétique sociale" ou dans le bloc "signalétique sociale périodique". Ce numéro doit être unique dans le bloc situé au-dessus.
+                        Numéro de séquence d'une des sous-classes des caractéristiques sociales supplémentaires dans le bloc "signalétique sociale" ou dans le bloc "signalétique sociale périodique". Ce numéro doit être unique dans le bloc situé au-dessus.
                     </td>
 					<td>
 						<code>sequenceNumber</code>
@@ -686,9 +632,9 @@
                 <tr>
                     <td><a href="/basic-poc/fr/fields/socialfeaturesdetail-startdate/" class="link-underline"><strong>Date de début</strong></a></td>
                     <td>
-                        La date de début de la période dans la période de la signalétique sociale ou dans la période de la signalétique sociale périodique à partir de laquelle le set de données constituant le bloc « caractéristiques sociales supplémentaires »  s'applique.  
+                        La date de début de la période dans la période de la signalétique sociale ou dans la période de la signalétique sociale périodique à partir de laquelle le set de données, constituant une des sous-classes des caractéristiques sociales supplémentaire»,  est valide.  
 
-Si une ou plusieurs donnée(s) change(nt) dans le bloc « caractéristiques sociales supplémentaires », la date de début du bloc « caractéristiques sociales supplémentaires » correspond à la date à partir de laquelle le nouveau set de données est d'application.
+Si une ou plusieurs donnée(s) change(nt) dans une des sous-classes des  caractéristiques sociales supplémentaires, la date de début du bloc correspond à la date à partir de laquelle le nouveau set de données est d'application.
                     </td>
 					<td>
 						<code>startDate</code>
@@ -698,9 +644,9 @@ Si une ou plusieurs donnée(s) change(nt) dans le bloc « caractéristiques soc
                 <tr>
                     <td><a href="/basic-poc/fr/fields/socialfeaturesdetail-enddate/" class="link-underline"><strong>Date de fin</strong></a></td>
                     <td>
-                        La date de fin de la période dans la période de la signalétique sociale ou dans la période de la signalétique sociale périodique jusqu'à laquelle le set de données constituant le bloc « caractéristiques sociales supplémentaires » est valable.  
+                        La date de fin de la période dans la période de la signalétique sociale ou dans la période de la signalétique sociale périodique jusqu'à laquelle le set de données, constituant une des sous-classes des caractéristiques sociales supplémentaires, est valide.  
 
-Si une ou plusieurs donnée(s) change(nt) dans le bloc « caractéristiques sociales supplémentaires », la date de fin du bloc « caractéristiques sociales supplémentaires » correspond à la date jusqu'à laquelle l'ancien set de données est d'application.
+Si une ou plusieurs donnée(s) change(nt) dans une des sous-classes des caractéristiques sociales supplémentaires, la date de fin du bloc correspond à la date jusqu'à laquelle l'ancien set de données est d'application.
                     </td>
 					<td>
 						<code>endDate</code>

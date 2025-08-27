@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Numéro de suivi | e-Gov 3.0</title>
+    <title>Numéro de séquence | e-Gov 3.0</title>
     <meta name="description" content="Documentation portal for the e-Gov 3.0 API and technical specifications.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -442,8 +442,8 @@
                                     
                                     <li class="nav-item">
                                         <a class="nav-link"
-                                           href="/basic-poc/fr/blocks/job/" title="-">
-                                            <span class="label text-truncate">-</span>
+                                           href="/basic-poc/fr/blocks/job/" title="Fonction">
+                                            <span class="label text-truncate">Fonction</span>
                                         </a>
                                     </li>
                                     
@@ -453,8 +453,8 @@
                                     
                                     <li class="nav-item">
                                         <a class="nav-link"
-                                           href="/basic-poc/fr/blocks/gradualworkresumption/" title="-">
-                                            <span class="label text-truncate">-</span>
+                                           href="/basic-poc/fr/blocks/gradualworkresumption/" title="Reprise progressive du travail">
+                                            <span class="label text-truncate">Reprise progressive du travail</span>
                                         </a>
                                     </li>
                                     
@@ -475,8 +475,8 @@
                                     
                                     <li class="nav-item">
                                         <a class="nav-link"
-                                           href="/basic-poc/fr/blocks/starterjob/" title="-">
-                                            <span class="label text-truncate">-</span>
+                                           href="/basic-poc/fr/blocks/starterjob/" title="Premier emploi">
+                                            <span class="label text-truncate">Premier emploi</span>
                                         </a>
                                     </li>
                                     
@@ -510,60 +510,6 @@
                         
                     </div>
 
-                    
-                </li>
-
-                <li>
-                    <hr class="my-2">
-                </li>
-
-                
-            
-        
-            
-                
-                
-                
-                
-                
-
-                <li class="nav-item">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a class="nav-link flex-grow-1"
-                           href="/basic-poc/fr/blocks/financialelementdetail/" title="Caractéristiques financières supplémentaires">
-                            <span class="label text-truncate">Caractéristiques financières supplémentaires</span>
-                        </a>
-
-                        
-                            <button class="btn btn-sm btn-link p-0 ms-2 collapse-toggle collapsed"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#collapse-fr-financialelementdetail"
-                                    aria-expanded="false"
-                                    aria-controls="collapse-fr-financialelementdetail">
-                                <span class="caret"></span>
-                            </button>
-                        
-                    </div>
-
-                    
-                        <ul id="collapse-fr-financialelementdetail"
-                            class="nav flex-column ms-3 collapse"
-                            data-bs-parent="#sidebar">
-                            
-                            
-                                
-                                    
-                                    <li class="nav-item">
-                                        <a class="nav-link"
-                                           href="/basic-poc/fr/blocks/severancepay/" title="Indemnité de licenciement">
-                                            <span class="label text-truncate">Indemnité de licenciement</span>
-                                        </a>
-                                    </li>
-                                    
-                                
-                            
-                        </ul>
                     
                 </li>
 
@@ -630,7 +576,7 @@
                         
                             <li class="breadcrumb-item active" aria-current="page">
                                 
-                                    Numéro de suivi
+                                    Numéro de séquence
                                 
                             </li>
                         
@@ -668,7 +614,7 @@
             <span>
                 Version
                 <br>
-                <strong>1.0.2</strong>
+                <strong>1.0</strong>
             </span>
             <span>
                 Date
@@ -679,8 +625,8 @@
     </div>
     <div class="px-12 py-9">
         <!-- Zone LoopList -->
-        <h2 id="socialfeaturesdetail-sequencenumber">Numéro de suivi</h2>
-        <p>Numéro de suivi du bloc "caractéristiques sociales supplémentaires" dans le bloc "signalétique sociale" ou dans le bloc "signalétique sociale périodique". Ce numéro doit être unique dans le bloc situé au-dessus.</p>
+        <h2 id="socialfeaturesdetail-sequencenumber">Numéro de séquence</h2>
+        <p>Numéro de séquence d'une des sous-classes des caractéristiques sociales supplémentaires dans le bloc "signalétique sociale" ou dans le bloc "signalétique sociale périodique". Ce numéro doit être unique dans le bloc situé au-dessus.</p>
 
         <dl class="mt-7">
             <dt>TechLabel</dt>	
@@ -690,13 +636,13 @@
             <dd>integer</dd>
             <hr class="my-5">
 	        <dt>Longeur</dt>
-            <dd>2</dd>
+            <dd>3</dd>
             <hr class="my-5">
 	        <dt>Format</dt>
             <dd>-</dd>
 	        <hr class="my-5">
             <dt>Domaine de définition</dt>
-            <dd>[1; 99]</dd>
+            <dd>[1; 999]</dd>
 	        <hr class="my-5">
             <dt>Présence</dt>
             <dd>Indispensable</dd>

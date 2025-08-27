@@ -442,8 +442,8 @@
                                     
                                     <li class="nav-item">
                                         <a class="nav-link"
-                                           href="/basic-poc/fr/blocks/job/" title="-">
-                                            <span class="label text-truncate">-</span>
+                                           href="/basic-poc/fr/blocks/job/" title="Fonction">
+                                            <span class="label text-truncate">Fonction</span>
                                         </a>
                                     </li>
                                     
@@ -453,8 +453,8 @@
                                     
                                     <li class="nav-item">
                                         <a class="nav-link"
-                                           href="/basic-poc/fr/blocks/gradualworkresumption/" title="-">
-                                            <span class="label text-truncate">-</span>
+                                           href="/basic-poc/fr/blocks/gradualworkresumption/" title="Reprise progressive du travail">
+                                            <span class="label text-truncate">Reprise progressive du travail</span>
                                         </a>
                                     </li>
                                     
@@ -475,8 +475,8 @@
                                     
                                     <li class="nav-item">
                                         <a class="nav-link"
-                                           href="/basic-poc/fr/blocks/starterjob/" title="-">
-                                            <span class="label text-truncate">-</span>
+                                           href="/basic-poc/fr/blocks/starterjob/" title="Premier emploi">
+                                            <span class="label text-truncate">Premier emploi</span>
                                         </a>
                                     </li>
                                     
@@ -510,60 +510,6 @@
                         
                     </div>
 
-                    
-                </li>
-
-                <li>
-                    <hr class="my-2">
-                </li>
-
-                
-            
-        
-            
-                
-                
-                
-                
-                
-
-                <li class="nav-item">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a class="nav-link flex-grow-1"
-                           href="/basic-poc/fr/blocks/financialelementdetail/" title="Caractéristiques financières supplémentaires">
-                            <span class="label text-truncate">Caractéristiques financières supplémentaires</span>
-                        </a>
-
-                        
-                            <button class="btn btn-sm btn-link p-0 ms-2 collapse-toggle collapsed"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#collapse-fr-financialelementdetail"
-                                    aria-expanded="false"
-                                    aria-controls="collapse-fr-financialelementdetail">
-                                <span class="caret"></span>
-                            </button>
-                        
-                    </div>
-
-                    
-                        <ul id="collapse-fr-financialelementdetail"
-                            class="nav flex-column ms-3 collapse"
-                            data-bs-parent="#sidebar">
-                            
-                            
-                                
-                                    
-                                    <li class="nav-item">
-                                        <a class="nav-link"
-                                           href="/basic-poc/fr/blocks/severancepay/" title="Indemnité de licenciement">
-                                            <span class="label text-truncate">Indemnité de licenciement</span>
-                                        </a>
-                                    </li>
-                                    
-                                
-                            
-                        </ul>
                     
                 </li>
 
@@ -759,9 +705,11 @@ appartenant au bloc, la présence et la balise JSON.
 		            <!--Subclass-->
 <div class="ms-9">
 
-		            <h3 class="mt-0">Blok -<br><code>job</code></h3>
+		            <h3 class="mt-0">Blok Fonction<br><code>job</code></h3>
 					<span class="text-primary-emphasis fw-bolder d-block mb-2 blok-dtype">Sous-classe / spécialisation des caractéristiques sociales supplémentaires</span>
-                    <p>-</p>
+                    <p>Données relatives à la fonction exercée par la personne physique.
+
+Ces données sont toujours liées au bloc "signalétique sociale".</p>
                     <a href="/basic-poc/fr/blocks/job/" class="link-underline link-underline-icon"><span>Voir le tout</span><span class="material-symbols-rounded" aria-hidden="true" role="img">arrow_forward</span></a>
                     <hr class="my-7">
 		            
@@ -769,9 +717,12 @@ appartenant au bloc, la présence et la balise JSON.
 <!--Subclass-->
 <div class="ms-9">
 
-		            <h3 class="mt-0">Blok -<br><code>GradualWorkResumption</code></h3>
+		            <h3 class="mt-0">Blok Reprise progressive du travail<br><code>GradualWorkResumption</code></h3>
 					<span class="text-primary-emphasis fw-bolder d-block mb-2 blok-dtype">Sous-classe / spécialisation des caractéristiques sociales supplémentaires</span>
-                    <p>-</p>
+                    <p>Données relatives à la reprise progessive du travail par la personne physique avec l'accord du médecin-conseil après une période d'incapacité de travail.
+
+
+Ces données sont toujours liées au bloc "signalétique sociale périodique".</p>
                     <a href="/basic-poc/fr/blocks/gradualworkresumption/" class="link-underline link-underline-icon"><span>Voir le tout</span><span class="material-symbols-rounded" aria-hidden="true" role="img">arrow_forward</span></a>
                     <hr class="my-7">
 		            
@@ -781,7 +732,9 @@ appartenant au bloc, la présence et la balise JSON.
 
 		            <h3 class="mt-0">Blok Licenciement<br><code>dismissal</code></h3>
 					<span class="text-primary-emphasis fw-bolder d-block mb-2 blok-dtype">Sous-classe / spécialisation des caractéristiques sociales supplémentaires</span>
-                    <p>-</p>
+                    <p>Données relatives au licenciement de la personne physique.
+
+Ces données sont toujours liées au bloc "signalétique sociale".</p>
                     <a href="/basic-poc/fr/blocks/dismissal/" class="link-underline link-underline-icon"><span>Voir le tout</span><span class="material-symbols-rounded" aria-hidden="true" role="img">arrow_forward</span></a>
                     <hr class="my-7">
 		            
@@ -789,9 +742,11 @@ appartenant au bloc, la présence et la balise JSON.
 <!--Subclass-->
 <div class="ms-9">
 
-		            <h3 class="mt-0">Blok -<br><code>starterJob</code></h3>
+		            <h3 class="mt-0">Blok Premier emploi<br><code>starterJob</code></h3>
 					<span class="text-primary-emphasis fw-bolder d-block mb-2 blok-dtype">Sous-classe / spécialisation des caractéristiques sociales supplémentaires</span>
-                    <p>-</p>
+                    <p>Données sur la convention premier emploi de la personne physique.
+
+Ces données sont toujours liées au bloc "signalétique sociale".</p>
                     <a href="/basic-poc/fr/blocks/starterjob/" class="link-underline link-underline-icon"><span>Voir le tout</span><span class="material-symbols-rounded" aria-hidden="true" role="img">arrow_forward</span></a>
                     <hr class="my-7">
 		            
@@ -800,26 +755,12 @@ appartenant au bloc, la présence et la balise JSON.
 		            <h3 class="mt-0">Blok Élément financier<br><code>financialElement</code></h3>
 					<span class="text-primary-emphasis fw-bolder d-block mb-2 blok-dtype"></span>
                     <p>Eléments financiers attribués à la personne physique par l'entreprise. 
-Il s'agit d'un bloc générique qui contient différents éléments financiers comme les rémunérations, les cotisations de sécurité sociale, les réductions de cotisations de sécurité sociales, ...</p>
+
+
+Plus d'informations sur les différents éléments financiers suivront dans la prochaine version de la documentation.</p>
                     <a href="/basic-poc/fr/blocks/financialelement/" class="link-underline link-underline-icon"><span>Voir le tout</span><span class="material-symbols-rounded" aria-hidden="true" role="img">arrow_forward</span></a>
                     <hr class="my-7">
 		            
-		            <h3 class="mt-0">Blok Caractéristiques financières supplémentaires<br><code>financialElementDetail</code></h3>
-					<span class="text-primary-emphasis fw-bolder d-block mb-2 blok-dtype">Superclasse / Générique</span>
-                    <p>Information supplémentaire sur certains éléments financiers.</p>
-                    <a href="/basic-poc/fr/blocks/financialelementdetail/" class="link-underline link-underline-icon"><span>Voir le tout</span><span class="material-symbols-rounded" aria-hidden="true" role="img">arrow_forward</span></a>
-                    <hr class="my-7">
-		            <!--Subclass-->
-<div class="ms-9">
-
-		            <h3 class="mt-0">Blok Indemnité de licenciement<br><code>severancePay</code></h3>
-					<span class="text-primary-emphasis fw-bolder d-block mb-2 blok-dtype">Sous-classe / spécialisation des caractéristiques financières supplémentaires</span>
-                    <p>-</p>
-                    <a href="/basic-poc/fr/blocks/severancepay/" class="link-underline link-underline-icon"><span>Voir le tout</span><span class="material-symbols-rounded" aria-hidden="true" role="img">arrow_forward</span></a>
-                    <hr class="my-7">
-		            
-</div>
-
 		            <h3 class="mt-0">Blok Signalétique fiscale<br><code>fiscalFeatures</code></h3>
 					<span class="text-primary-emphasis fw-bolder d-block mb-2 blok-dtype"></span>
                     <p>Les données fiscales d'application dans le calcul salarial.</p>

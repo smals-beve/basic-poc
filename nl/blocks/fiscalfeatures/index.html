@@ -530,60 +530,6 @@
                 <li class="nav-item">
                     <div class="d-flex justify-content-between align-items-center">
                         <a class="nav-link flex-grow-1"
-                           href="/basic-poc/nl/blocks/financialelementdetail/" title="Bijkomende finaniële kenmerken">
-                            <span class="label text-truncate">Bijkomende finaniële kenmerken</span>
-                        </a>
-
-                        
-                            <button class="btn btn-sm btn-link p-0 ms-2 collapse-toggle collapsed"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#collapse-nl-financialelementdetail"
-                                    aria-expanded="false"
-                                    aria-controls="collapse-nl-financialelementdetail">
-                                <span class="caret"></span>
-                            </button>
-                        
-                    </div>
-
-                    
-                        <ul id="collapse-nl-financialelementdetail"
-                            class="nav flex-column ms-3 collapse"
-                            data-bs-parent="#sidebar">
-                            
-                            
-                                
-                                    
-                                    <li class="nav-item">
-                                        <a class="nav-link"
-                                           href="/basic-poc/nl/blocks/severancepay/" title="Ontslagvergoeding">
-                                            <span class="label text-truncate">Ontslagvergoeding</span>
-                                        </a>
-                                    </li>
-                                    
-                                
-                            
-                        </ul>
-                    
-                </li>
-
-                <li>
-                    <hr class="my-2">
-                </li>
-
-                
-            
-        
-            
-                
-                
-                
-                
-                
-
-                <li class="nav-item">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a class="nav-link flex-grow-1"
                            href="/basic-poc/nl/blocks/fiscalfeatures/" title="Fiscale signalitiek">
                             <span class="label text-truncate">Fiscale signalitiek</span>
                         </a>
@@ -647,7 +593,7 @@
             <span>
                 Versie
                 <br>
-                <strong>1.0.2</strong>
+                <strong>1.0</strong>
             </span>
             <span>
                 Datum
@@ -721,7 +667,7 @@ Als één of meerdere gegeven in de fiscale signalitiek wijzigen, dan komt de ei
                 <tr>
                     <td><a href="/basic-poc/nl/fields/fiscalfeatures-numberofdependentchildren/" class="link-underline"><strong>Aantal kinderen ten laste</strong></a></td>
                     <td>
-                        Aantal kinderen fiscaal ten laste, zoals toegepast in het kader van de loonberekening.
+                        Aantal kinderen fiscaal ten laste (waaronder mindervalide kinderen ten laste), zoals toegepast in het kader van de loonberekening.
                     </td>
 					<td>
 						<code>numberOfDependentChildren</code>
@@ -741,7 +687,7 @@ Als één of meerdere gegeven in de fiscale signalitiek wijzigen, dan komt de ei
                 <tr>
                     <td><a href="/basic-poc/nl/fields/fiscalfeatures-numberofdependents/" class="link-underline"><strong>Aantal andere personen ten laste</strong></a></td>
                     <td>
-                        Aantal personen fiscaal ten laste andere dan kinderen fiscaal ten laste, zoals toegepast in het kader van de loonberekening.
+                        Aantal personen fiscaal ten laste (waaronder mindervalide andere personen ten laste en zorgbehoevende personen ten laste) andere dan kinderen fiscaal ten laste, zoals toegepast in het kader van de loonberekening.
                     </td>
 					<td>
 						<code>numberOfDependents</code>
@@ -769,32 +715,32 @@ Als één of meerdere gegeven in de fiscale signalitiek wijzigen, dan komt de ei
                 </tr>
 
                 <tr>
-                    <td><a href="/basic-poc/nl/fields/fiscalfeatures-iscrossborderworker/" class="link-underline"><strong>Notie grensarbeider</strong></a></td>
+                    <td><a href="/basic-poc/nl/fields/fiscalfeatures-crossborderworker/" class="link-underline"><strong>Notie grensarbeider</strong></a></td>
                     <td>
                         Aanduiding of de natuurlijk persoon het fiscale statuut van grensarbeider heeft, zoals toegepast in het kader van de loonberekening.
                     </td>
 					<td>
-						<code>isCrossBorderWorker</code>
+						<code>CrossBorderWorker</code>
 					<td>
                 </tr>
 
                 <tr>
-                    <td><a href="/basic-poc/nl/fields/fiscalfeatures-isbelgianresident/" class="link-underline"><strong>Notie Rijksinwoner</strong></a></td>
+                    <td><a href="/basic-poc/nl/fields/fiscalfeatures-belgianresident/" class="link-underline"><strong>Notie Rijksinwoner</strong></a></td>
                     <td>
                         Aanduiding of de natuurlijke persoon op fiscaal vlak wordt beschouwd als een Rijksinwoner.
                     </td>
 					<td>
-						<code>isBelgianResident</code>
+						<code>BelgianResident</code>
 					<td>
                 </tr>
 
                 <tr>
-                    <td><a href="/basic-poc/nl/fields/fiscalfeatures-fiscalsituationofpartner/" class="link-underline"><strong>Inkomen van partner</strong></a></td>
+                    <td><a href="/basic-poc/nl/fields/fiscalfeatures-incomeofpartner/" class="link-underline"><strong>Inkomen van partner</strong></a></td>
                     <td>
                         Aanduiding van het inkomen van de partner van de natuurlijke persoon, zoals toegepast in het kader van de loonberekening.
                     </td>
 					<td>
-						<code>fiscalSituationOfPartner</code>
+						<code>incomeOfPartner</code>
 					<td>
                 </tr>
 
@@ -804,18 +750,17 @@ Als één of meerdere gegeven in de fiscale signalitiek wijzigen, dan komt de ei
                         Aanduiding of de partner van de natuurlijke persoon op fiscaal vlak wordt beschouwd als mindervalide, zoals toegepast in het kader van de loonberekening.
                     </td>
 					<td>
-						<code>disabilityOfPartner??</code>
+						<code>disabilityOfPartner</code>
 					<td>
                 </tr>
 
                 <tr>
-                    <td><a href="/basic-poc/nl/fields/fiscalfeatures-numberofcaredependents-numberofdependentsneedingcare/" class="link-underline"><strong>Aantal zorgbehoevende personen ten laste</strong></a></td>
+                    <td><a href="/basic-poc/nl/fields/fiscalfeatures-numberofdependentsneedingcare/" class="link-underline"><strong>Aantal zorgbehoevende personen ten laste</strong></a></td>
                     <td>
                         Aantal zorgbehoevende personen  fiscaal ten laste, zoals toegepast in het kader van de loonberekening.
                     </td>
 					<td>
-						<code>numberOfCareDependents???
-numberOfDependentsNeedingCare</code>
+						<code>numberOfDependentsNeedingCare</code>
 					<td>
                 </tr>
 <!-- ZONE_LOOPLIST -->
