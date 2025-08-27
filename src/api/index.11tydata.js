@@ -1,20 +1,23 @@
 export default {
+    layout: "default",
+    pagination: {
+        data: "site.supportedLangs",
+        size: 1,
+        alias: "lang",
+        addAllPagesToCollections: true,
+    },
+    permalink: (data) => `/${data.lang}/api/`,
     eleventyComputed: {
         title: (data) => {
-            const translate = (key) => {
-                const translations = data.i18n || {};
-                const siteMeta = data.site || {};
-                const language = data.lang || siteMeta.defaultLang || "en";
-                const entry = translations[key] || {};
-                return (
-                    entry[language] ??
-                    entry[siteMeta.defaultLang] ??
-                    entry.en ??
-                    key
-                );
-            };
-
-            return translate("api_specs");
+            const key = "api_specs";
+            const i18n = data.i18n || {};
+            const entry = i18n[key] || {};
+            return (
+                entry[data.lang] ??
+                entry[data.site?.defaultLang] ??
+                entry.en ??
+                "API Specifications"
+            );
         },
     },
 };

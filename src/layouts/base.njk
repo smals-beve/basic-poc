@@ -10,18 +10,18 @@
     <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | url }}">
     <link rel="stylesheet" href="{{ '/assets/styles.css' | url }}">
 
-    {# --- API path detection (works with or without pathPrefix) --- #}
-    {% set apiPrefix = '/api/' | url %}   {# e.g. '/basic-poc/api/' in prod, '/api/' locally #}
-    {% set apiBare   = '/api/' %}         {# always '/api/' #}
-    {% set pageUrl   = page and page.url or '' %}
+    {% set pageUrl = page and page.url or '' %}
+    {% set cleanUrl = pageUrl | replace('/index.html','/') %}
+    {% set isApi = '/api/' in cleanUrl %}
 
-    {% set isApi = (pageUrl and (pageUrl.indexOf(apiPrefix) == 0)) or (pageUrl and (pageUrl.indexOf(apiBare) == 0)) %}
-    {% set isApiRoot = (pageUrl == apiPrefix) or (pageUrl == apiBare) %}
+    {# ---- One reliable language for this page ---- #}
+    {% set currentLang = lang or site.defaultLang or 'en' %}
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ '/' | url }}">{{ site.name }}</a>
+        <a class="navbar-brand" href="{{ ('/' ~ currentLang ~ '/') | url }}">{{ site.name }}</a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
                 aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,20 +29,48 @@
 
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav ms-auto align-items-center">
-                <li class="nav-item"><a class="nav-link" href="{{ '/' | url }}">{{ 'home' | translate(lang) }}</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ '/api/' | url }}">{{ 'api_overview' | translate(lang) }}</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ ('/' ~ currentLang ~ '/') | url }}">
+                        {{ 'home' | translate(currentLang) }}
+                    </a>
+                </li>
 
+                {# Hide API Overview when already on any /api/* page #}
                 {% if not isApi %}
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
-                           data-bs-toggle="dropdown" aria-expanded="false">{{ 'language' | translate(lang) }}</a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
-                            <li><a class="dropdown-item" href="{{ '/nl/' | url }}">Nederlands</a></li>
-                            <li><a class="dropdown-item" href="{{ '/fr/' | url }}">Français</a></li>
-                            <li><a class="dropdown-item" href="{{ '/en/' | url }}">English</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ ('/' ~ currentLang ~ '/api/') | url }}">
+                            {{ 'api_overview' | translate(currentLang) }}
+                        </a>
                     </li>
                 {% endif %}
+
+                {# Language switcher (visible everywhere). Current language highlighted. #}
+                {% set supported = site.supportedLangs or ['nl','fr','en'] %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#" id="langDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        <span aria-hidden="true">🌐</span>
+                        <span class="text-uppercase">{{ currentLang }}</span>
+                        <span class="visually-hidden">{{ 'language' | translate(currentLang) }}</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                        {% for l in supported %}
+                            {% if isApi %}
+                                {% set target = ('/' ~ l ~ '/api/') | url %}
+                            {% else %}
+                                {% set target = ('/' ~ l ~ '/') | url %}
+                            {% endif %}
+                            <li>
+                                <a class="dropdown-item d-flex justify-content-between align-items-center{% if l == currentLang %} active{% endif %}"
+                                   href="{{ target }}"
+                                   {% if l == currentLang %}aria-current="true"{% endif %}>
+                                    <span class="text-uppercase">{{ l }}</span>
+                                    {% if l == currentLang %}<span aria-hidden="true">✓</span>{% endif %}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
@@ -56,10 +84,12 @@
             <aside class="col-auto p-0 sidebar-fixed bg-light">
                 <div class="sidebar-scroll">
                     <div class="sidebar-body">
-                        <a href="{{ '/' | url }}"
+                        <a href="{{ ('/' ~ currentLang ~ '/') | url }}"
                            class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                            <span class="fs-5 d-none d-sm-inline">{{ 'menu' | translate(lang) }}</span>
+                            <span class="fs-5 d-none d-sm-inline">{{ 'content' | translate(currentLang) }}</span>
                         </a>
+                        {# Ensure partial uses the right lang #}
+                        {% set lang = currentLang %}
                         {% include "partials/sidebar-nav.njk" %}
                     </div>
                 </div>
@@ -67,9 +97,6 @@
         {% endif %}
 
         <main class="{% if isApi %}col-12{% else %}col ps-3 content-flex{% endif %} py-3">
-            {# Manifest for anchor rewriting filter #}
-            {% set manifests = { 'nl': manifest_nl, 'fr': manifest_fr, 'en': manifest_en } %}
-            {% set manifestForLang = manifests[lang] %}
 
             {# ---- Breadcrumbs ---- #}
             {% if breadcrumbs and breadcrumbs.length %}
@@ -88,14 +115,18 @@
                 </nav>
             {% endif %}
 
+            {# Manifest for anchor rewriting filter #}
+            {% set manifests = { 'nl': manifest_nl, 'fr': manifest_fr, 'en': manifest_en } %}
+            {% set manifestForLang = manifests[currentLang] %}
+
             {# ---- Field switcher (only on field pages) ---- #}
             {% if fieldSwitcher and fieldSwitcher.items and fieldSwitcher.items.length %}
                 <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
                     <form class="d-inline-flex align-items-center"
                           onChange="var v=this.switch_to.value; if(v){location.href=v;}">
-                        <label class="form-label mb-0 me-2">{{ 'jump_to_field' | translate(lang) }}</label>
+                        <label class="form-label mb-0 me-2">{{ 'jump_to_field' | translate(currentLang) }}</label>
                         <select name="switch_to" class="form-select form-select-sm w-auto">
-                            <option value="">{{ 'choose' | translate(lang) }}</option>
+                            <option value="">{{ 'choose' | translate(currentLang) }}</option>
                             {% for item in fieldSwitcher.items %}
                                 <option value="{{ item.hrefPath | url }}">{{ item.title }}</option>
                             {% endfor %}
@@ -107,7 +138,7 @@
             {{ content
             | stripOuterHtml
             | rewriteAssetUrls
-            | rewriteDocAnchors(lang, pathPrefix, manifestForLang)
+            | rewriteDocAnchors(currentLang, pathPrefix, manifestForLang)
             | safe }}
         </main>
 

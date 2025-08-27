@@ -1,12 +1,18 @@
 export default {
     layout: "default",
     pagination: {
-        data: "collections.apiSpecs",
+        data: "collections.apiSpecsByLang",
         size: 1,
-        alias: "spec",
+        alias: "entry",
+        addAllPagesToCollections: true,
     },
-    permalink: (data) => `/api/${data.spec.fileSlug}/`,
     eleventyComputed: {
-        title: (data) => data.spec?.data?.info?.title || data.spec?.fileSlug,
+        lang: (data) => data.entry.lang,
+        spec: (data) => data.entry.spec,
+        title: (data) =>
+            data.entry?.spec?.data?.info?.title ||
+            data.entry?.spec?.fileSlug ||
+            "API",
+        permalink: (data) => `/${data.entry.lang}/api/${data.entry.spec.fileSlug}/`,
     },
 };
