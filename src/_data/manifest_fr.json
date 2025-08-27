@@ -93,7 +93,7 @@
       "fields": [
         {
           "id": "service-sequencenumber",
-          "title": "Numéro de suivi de la prestation",
+          "title": "Numéro de séquence de la prestation ou de l'absence",
           "order": 1
         },
         {
@@ -239,14 +239,9 @@
           "order": 2
         },
         {
-          "id": "weeklyhours-annualavgweeklyworkinghours",
-          "title": "Durée annuelle moyenne de travail hebdomadaire",
-          "order": 3
-        },
-        {
           "id": "weeklyhours-annualavgweeklypaidworkinghours",
           "title": "Durée moyenne annuelle  du temps de travail hebdomadaire rémunéré",
-          "order": 4
+          "order": 3
         }
       ],
       "blocks": []
@@ -276,7 +271,7 @@
       "fields": [
         {
           "id": "socialfeaturesdetail-sequencenumber",
-          "title": "Numéro de suivi",
+          "title": "Numéro de séquence",
           "order": 1
         },
         {
@@ -293,7 +288,7 @@
       "blocks": [
         {
           "id": "job",
-          "title": "-",
+          "title": "Fonction",
           "order": 1,
           "fields": [
             {
@@ -306,7 +301,7 @@
         },
         {
           "id": "gradualworkresumption",
-          "title": "-",
+          "title": "Reprise progressive du travail",
           "order": 2,
           "fields": [
             {
@@ -347,7 +342,7 @@
         },
         {
           "id": "starterjob",
-          "title": "-",
+          "title": "Premier emploi",
           "order": 4,
           "fields": [
             {
@@ -369,85 +364,13 @@
       "id": "financialelement",
       "title": "Élément financier",
       "order": 12,
-      "fields": [
-        {
-          "id": "financialelement-sequencenumber",
-          "title": "Numéro de suivi",
-          "order": 1
-        },
-        {
-          "id": "financialelement-financialtype",
-          "title": "Type d'élément financier",
-          "order": 2
-        },
-        {
-          "id": "financialelement-financialcode",
-          "title": "Code élément financier",
-          "order": 3
-        },
-        {
-          "id": "financialelement-amount",
-          "title": "Montant",
-          "order": 4
-        },
-        {
-          "id": "financialelement-allocationfrequency",
-          "title": "Fréquence d'attribution",
-          "order": 5
-        },
-        {
-          "id": "financialelement-numberofunits",
-          "title": "Nombre",
-          "order": 6
-        },
-        {
-          "id": "financialelement-amountperunit",
-          "title": "Montant par unité",
-          "order": 7
-        },
-        {
-          "id": "financialelement-subjectiontosocialsecuritycontributions",
-          "title": "Notion d'assujettissement aux cotisations de sécurité sociale",
-          "order": 8
-        }
-      ],
-      "blocks": []
-    },
-    {
-      "id": "financialelementdetail",
-      "title": "Caractéristiques financières supplémentaires",
-      "order": 13,
       "fields": [],
-      "blocks": [
-        {
-          "id": "severancepay",
-          "title": "Indemnité de licenciement",
-          "order": 1,
-          "fields": [
-            {
-              "id": "severancepay-startdate",
-              "title": "Date de début",
-              "order": 1
-            },
-            {
-              "id": "severancepay-enddate",
-              "title": "Date de fin",
-              "order": 2
-            },
-            {
-              "id": "severancepay-severancepayreductionbyoutplacement",
-              "title": "Notion de diminution de l'indemnité de rupture lors d'une procédure de reclassement professionnel",
-              "order": 3
-            }
-          ],
-          "blocks": []
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "fiscalfeatures",
       "title": "Signalétique fiscale",
-      "order": 14,
+      "order": 13,
       "fields": [
         {
           "id": "fiscalfeatures-startdate",
@@ -495,17 +418,17 @@
           "order": 9
         },
         {
-          "id": "fiscalfeatures-iscrossborderworker",
+          "id": "fiscalfeatures-crossborderworker",
           "title": "Notion de travailleur frontalier",
           "order": 10
         },
         {
-          "id": "fiscalfeatures-isbelgianresident",
+          "id": "fiscalfeatures-belgianresident",
           "title": "Notion résident belge",
           "order": 11
         },
         {
-          "id": "fiscalfeatures-fiscalsituationofpartner",
+          "id": "fiscalfeatures-incomeofpartner",
           "title": "Revenu du partenaire",
           "order": 12
         },
@@ -515,7 +438,7 @@
           "order": 13
         },
         {
-          "id": "fiscalfeatures-numberofcaredependents-numberofdependentsneedingcare",
+          "id": "fiscalfeatures-numberofdependentsneedingcare",
           "title": "Nombre de personnes à charge nécessitant des soins",
           "order": 14
         }

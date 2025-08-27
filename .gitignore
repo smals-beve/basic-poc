@@ -4,6 +4,8 @@ node_modules/
 # Eleventy build output
 _site/
 
+.npmrc
+
 # OS / editor
 .DS_Store
 .idea/
