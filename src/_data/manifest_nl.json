@@ -93,7 +93,7 @@
       "fields": [
         {
           "id": "service-sequencenumber",
-          "title": "Volgnummer van prestatie",
+          "title": "Volgnummer van prestatie of afwezigheid",
           "order": 1
         },
         {
@@ -239,14 +239,9 @@
           "order": 2
         },
         {
-          "id": "weeklyhours-annualavgweeklyworkinghours",
-          "title": "Jaarlijks gemiddelde wekelijkse arbeidsduur",
-          "order": 3
-        },
-        {
           "id": "weeklyhours-annualavgweeklypaidworkinghours",
           "title": "Jaarlijks gemiddelde wekelijkse betaalde arbeidsduur",
-          "order": 4
+          "order": 3
         }
       ],
       "blocks": []
@@ -369,85 +364,13 @@
       "id": "financialelement",
       "title": "Financieel element",
       "order": 12,
-      "fields": [
-        {
-          "id": "financialelement-sequencenumber",
-          "title": "Volgnummer",
-          "order": 1
-        },
-        {
-          "id": "financialelement-financialtype",
-          "title": "Type financieel element",
-          "order": 2
-        },
-        {
-          "id": "financialelement-financialcode",
-          "title": "Code financieel element",
-          "order": 3
-        },
-        {
-          "id": "financialelement-amount",
-          "title": "Bedrag",
-          "order": 4
-        },
-        {
-          "id": "financialelement-allocationfrequency",
-          "title": "Toewijzingsfrequentie",
-          "order": 5
-        },
-        {
-          "id": "financialelement-numberofunits",
-          "title": "Aantal",
-          "order": 6
-        },
-        {
-          "id": "financialelement-amountperunit",
-          "title": "Bedrag per eenheid",
-          "order": 7
-        },
-        {
-          "id": "financialelement-subjectiontosocialsecuritycontributions",
-          "title": "Notie onderworpen aan socialezekerheidsbijdragen",
-          "order": 8
-        }
-      ],
-      "blocks": []
-    },
-    {
-      "id": "financialelementdetail",
-      "title": "Bijkomende finaniële kenmerken",
-      "order": 13,
       "fields": [],
-      "blocks": [
-        {
-          "id": "severancepay",
-          "title": "Ontslagvergoeding",
-          "order": 1,
-          "fields": [
-            {
-              "id": "severancepay-startdate",
-              "title": "Begindatum van periode gedekt door ontslagvergoeding",
-              "order": 1
-            },
-            {
-              "id": "severancepay-enddate",
-              "title": "Einddatum van periode gedekt door ontslagvergoeding",
-              "order": 2
-            },
-            {
-              "id": "severancepay-severancepayreductionbyoutplacement",
-              "title": "Notie vermindering van verbrekingsvergoeding bij outplacementbegeleiding",
-              "order": 3
-            }
-          ],
-          "blocks": []
-        }
-      ]
+      "blocks": []
     },
     {
       "id": "fiscalfeatures",
       "title": "Fiscale signalitiek",
-      "order": 14,
+      "order": 13,
       "fields": [
         {
           "id": "fiscalfeatures-startdate",
@@ -495,17 +418,17 @@
           "order": 9
         },
         {
-          "id": "fiscalfeatures-iscrossborderworker",
+          "id": "fiscalfeatures-crossborderworker",
           "title": "Notie grensarbeider",
           "order": 10
         },
         {
-          "id": "fiscalfeatures-isbelgianresident",
+          "id": "fiscalfeatures-belgianresident",
           "title": "Notie Rijksinwoner",
           "order": 11
         },
         {
-          "id": "fiscalfeatures-fiscalsituationofpartner",
+          "id": "fiscalfeatures-incomeofpartner",
           "title": "Inkomen van partner",
           "order": 12
         },
@@ -515,7 +438,7 @@
           "order": 13
         },
         {
-          "id": "fiscalfeatures-numberofcaredependents-numberofdependentsneedingcare",
+          "id": "fiscalfeatures-numberofdependentsneedingcare",
           "title": "Aantal zorgbehoevende personen ten laste",
           "order": 14
         }
