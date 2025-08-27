@@ -1,14 +1,12 @@
----
-layout: default
-permalink: /api/
----
-
 <h1 class="mb-4">{{ 'api_specs' | translate(lang) }}</h1>
 
 {% if collections.apiSpecs and collections.apiSpecs.length %}
     <div class="list-group">
         {% for spec in collections.apiSpecs %}
-            <a href="{{ ('/api/' ~ spec.fileSlug ~ '/') | url }}" class="list-group-item list-group-item-action">
+            <a
+                    class="list-group-item list-group-item-action"
+                    href="{{ ('/' ~ lang ~ '/api/' ~ spec.fileSlug ~ '/') | url }}"
+            >
                 {{ spec.data.info.title or spec.fileSlug }}
             </a>
         {% endfor %}

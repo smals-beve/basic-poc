@@ -4,10 +4,10 @@ export default {
         nl: "Terug naar {{name}}",
         fr: "Retour à {{name}}",
     },
-    menu: {
-        en: "Menu",
-        nl: "Menu",
-        fr: "Menu",
+    content: {
+        en: "Content",
+        nl: "Inhoud",
+        fr: "Contenu",
     },
     jump_to_field: {
         en: "Jump to field",
@@ -19,14 +19,9 @@ export default {
         nl: "— kies —",
         fr: "— choisir —",
     },
-    language: {
-        en: "Language",
-        nl: "Taal",
-        fr: "Langue",
-    },
     home: {
         en: "Home",
-        nl: "Start",
+        nl: "Startpagina",
         fr: "Accueil",
     },
     api_overview: {
