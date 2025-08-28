@@ -39,4 +39,9 @@ export default {
         nl: "Geen API-specificaties gevonden.",
         fr: "Aucune spécification d’API trouvée."
     },
+    toggle_submenu_for: {
+        en: "Toggle submenu for {{name}}",
+        nl: "Submenu tonen/verbergen voor {{name}}",
+        fr: "Afficher/masquer le sous-menu pour {{name}}",
+    },
 };
