@@ -47,7 +47,8 @@
                 {# Language switcher (visible everywhere). Current language highlighted. #}
                 {% set supported = site.supportedLangs or ['nl','fr','en'] %}
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#" id="langDropdown" role="button"
+                    <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#" id="langDropdown"
+                       role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
                         <span aria-hidden="true">🌐</span>
                         <span class="text-uppercase">{{ currentLang }}</span>
@@ -103,7 +104,8 @@
                 <nav aria-label="breadcrumb" class="mb-3">
                     <ol class="breadcrumb">
                         {% for c in breadcrumbs %}
-                            <li class="breadcrumb-item{% if loop.last %} active{% endif %}" {% if loop.last %}aria-current="page"{% endif %}>
+                            <li class="breadcrumb-item{% if loop.last %} active{% endif %}"
+                                {% if loop.last %}aria-current="page"{% endif %}>
                                 {% if not loop.last %}
                                     <a href="{{ c.href | url }}">{{ c.title }}</a>
                                 {% else %}
@@ -121,17 +123,16 @@
 
             {# ---- Field switcher (only on field pages) ---- #}
             {% if fieldSwitcher and fieldSwitcher.items and fieldSwitcher.items.length %}
-                <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
-                    <form class="d-inline-flex align-items-center"
-                          onChange="var v=this.switch_to.value; if(v){location.href=v;}">
-                        <label class="form-label mb-0 me-2">{{ 'jump_to_field' | translate(currentLang) }}</label>
-                        <select name="switch_to" class="form-select form-select-sm w-auto">
-                            <option value="">{{ 'choose' | translate(currentLang) }}</option>
-                            {% for item in fieldSwitcher.items %}
-                                <option value="{{ item.hrefPath | url }}">{{ item.title }}</option>
-                            {% endfor %}
-                        </select>
-                    </form>
+                <div class="d-inline-flex align-items-center">
+                    <label for="switch_to"
+                           class="form-label mb-0 me-2">{{ 'jump_to_field' | translate(currentLang) }}</label>
+                    <select id="switch_to" class="form-select form-select-sm w-auto"
+                            onchange="var v=this.value; if(v){ location.href=v; }">
+                        <option value="">{{ 'choose' | translate(currentLang) }}</option>
+                        {% for item in fieldSwitcher.items %}
+                            <option value="{{ item.hrefPath | url }}">{{ item.title }}</option>
+                        {% endfor %}
+                    </select>
                 </div>
             {% endif %}
 

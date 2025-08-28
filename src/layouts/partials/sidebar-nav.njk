@@ -42,8 +42,11 @@
                                     data-bs-toggle="collapse"
                                     data-bs-target="#{{ collapseId }}"
                                     aria-expanded="{% if isActive %}true{% else %}false{% endif %}"
-                                    aria-controls="{{ collapseId }}">
-                                <span class="caret"></span>
+                                    aria-controls="{{ collapseId }}"
+                                    aria-label="{{ 'toggle_submenu_for' | translate(lang, { name: topLevelBlock.title }) }}"
+                            >
+                                <span class="caret" aria-hidden="true"></span>
+                                <span class="visually-hidden">{{ 'toggle_submenu_for' | translate(lang, { name: topLevelBlock.title }) }}</span>
                             </button>
                         {% endif %}
                     </div>
