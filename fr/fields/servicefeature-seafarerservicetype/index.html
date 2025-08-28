@@ -47,7 +47,8 @@
                 
                 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#" id="langDropdown" role="button"
+                    <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#" id="langDropdown"
+                       role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
                         <span aria-hidden="true">🌐</span>
                         <span class="text-uppercase">fr</span>
@@ -426,8 +427,11 @@
                                     data-bs-toggle="collapse"
                                     data-bs-target="#collapse-fr-socialfeaturesdetail"
                                     aria-expanded="false"
-                                    aria-controls="collapse-fr-socialfeaturesdetail">
-                                <span class="caret"></span>
+                                    aria-controls="collapse-fr-socialfeaturesdetail"
+                                    aria-label="Afficher/masquer le sous-menu pour Caractéristiques sociales supplémentaires"
+                            >
+                                <span class="caret" aria-hidden="true"></span>
+                                <span class="visually-hidden">Afficher/masquer le sous-menu pour Caractéristiques sociales supplémentaires</span>
                             </button>
                         
                     </div>
@@ -562,19 +566,22 @@
                 <nav aria-label="breadcrumb" class="mb-3">
                     <ol class="breadcrumb">
                         
-                            <li class="breadcrumb-item" >
+                            <li class="breadcrumb-item"
+                                >
                                 
                                     <a href="/basic-poc/fr/">Aperçu des Blocs</a>
                                 
                             </li>
                         
-                            <li class="breadcrumb-item" >
+                            <li class="breadcrumb-item"
+                                >
                                 
                                     <a href="/basic-poc/fr/blocks/servicefeature/">Caractéristiques de la prestation</a>
                                 
                             </li>
                         
-                            <li class="breadcrumb-item active" aria-current="page">
+                            <li class="breadcrumb-item active"
+                                aria-current="page">
                                 
                                     Notion de prestations des marins
                                 
@@ -590,21 +597,20 @@
 
             
             
-                <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
-                    <form class="d-inline-flex align-items-center"
-                          onChange="var v=this.switch_to.value; if(v){location.href=v;}">
-                        <label class="form-label mb-0 me-2">Aller au champ</label>
-                        <select name="switch_to" class="form-select form-select-sm w-auto">
-                            <option value="">— choisir —</option>
-                            
-                                <option value="/basic-poc/fr/fields/servicefeature-overtimetype/">Type d&#39;heure supplémentaire</option>
-                            
-                                <option value="/basic-poc/fr/fields/servicefeature-subjectiontosocialsecuritycontributions/">Notion d&#39;assujettissement aux cotisations de sécurité sociale</option>
-                            
-                                <option value="/basic-poc/fr/fields/servicefeature-overtimeincludedincalendar/">Notion d&#39;heures supplémentaires incluses dans le calendrier</option>
-                            
-                        </select>
-                    </form>
+                <div class="d-inline-flex align-items-center">
+                    <label for="switch_to"
+                           class="form-label mb-0 me-2">Aller au champ</label>
+                    <select id="switch_to" class="form-select form-select-sm w-auto"
+                            onchange="var v=this.value; if(v){ location.href=v; }">
+                        <option value="">— choisir —</option>
+                        
+                            <option value="/basic-poc/fr/fields/servicefeature-overtimetype/">Type d&#39;heure supplémentaire</option>
+                        
+                            <option value="/basic-poc/fr/fields/servicefeature-subjectiontosocialsecuritycontributions/">Notion d&#39;assujettissement aux cotisations de sécurité sociale</option>
+                        
+                            <option value="/basic-poc/fr/fields/servicefeature-overtimeincludedincalendar/">Notion d&#39;heures supplémentaires incluses dans le calendrier</option>
+                        
+                    </select>
                 </div>
             
 
