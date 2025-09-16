@@ -9,7 +9,7 @@ This repository contains functional documentation:
 
 | Type     | Description                                                                                    | Documentation FR      | Documentatie NL                                                          | Documentation EN         |
 |----------|------------------------------------------------------------------------------------------------|-----------------------|--------------------------------------------------------------------------|--------------------------|
-| Glossary | A standardized glossary in **OpenAPI (Swagger)** format, precisely describing the fields used. | [Bekijk de documentatie](src/content/technical_docs_fr/0__overview.html) | [Bekijk de documentatie](src/content/technical_docs_nl/0__overview.html) | See the EN documentation |
+| Glossary | A standardized glossary in **OpenAPI (Swagger)** format, precisely describing the fields used. | [Bekijk de documentatie](src/content/technical_docs_fr/overview.html) | [Bekijk de documentatie](src/content/technical_docs_nl/overview.html) | See the EN documentation |
 
 ## Repository Structure
 
