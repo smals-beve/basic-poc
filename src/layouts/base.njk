@@ -144,7 +144,7 @@
 
                             {# ---- Breadcrumbs ---- #}
                             {% if breadcrumbs and breadcrumbs.length %}
-                                <nav aria-label="breadcrumb" class="mb-3">
+                                <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         {% for c in breadcrumbs %}
                                             <li class="breadcrumb-item{% if loop.last %} active{% endif %}"
@@ -159,6 +159,7 @@
                                     </ol>
                                 </nav>
                             {% endif %}
+
 
                             {# Manifest for anchor rewriting filter #}
                             {% set manifests = { 'nl': manifest_nl, 'fr': manifest_fr, 'en': manifest_en } %}
