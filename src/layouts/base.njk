@@ -72,11 +72,17 @@
                 </p>
                 <img class="my-auto" src="/assets/images/logo/belgiumbe-colour.svg" alt=".be - logo" height="20">
             </div>#}
+            <div class="d-flex align-items-center gap-3">
+                <p class="mb-0 d-none d-lg-inline-flex">
+                    Lorem information and services dolores: ipsum.be
+                </p>
+                <img class="my-auto" src="/assets/images/logo/belgiumbe-colour.svg" alt=".be - logo" height="16">
+            </div>
         </div>
     </header>
     <div class="layout-content">
         <div id="sidenav" class="sidenav" style="min-width: 304px;">
-            <a href="/" class="logo d-none d-lg-block">
+            <a href="{{ ('/' ~ currentLang ~ '/') | url }}" class="logo d-none d-lg-block">
                 <img src="/assets/images/logo/logo.svg" alt="Logo {{ site.name }}" height="40">
             </a>
             {% if not isApi %}
@@ -91,17 +97,17 @@
             <div class="nav-secondary">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="material-symbols-rounded" aria-hidden="true" role="img">keyboard_arrow_left</span>To socialsecurity.be</a>
+                        <a class="nav-link" href="#"><span class="material-symbols-rounded" aria-hidden="true" role="img">keyboard_arrow_left</span>To {{ site.name }}</a>
                     </li>
+                    {#{% if not isApi %}#}
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="material-symbols-rounded" aria-hidden="true" role="img">help</span><span>Help center</span></a>
+                        <a class="nav-link {% if page.url.startsWith('/' + currentLang + '/api') %}active{% endif %}"
+                           href="{{ '/' + currentLang + '/api/' | url }}">
+                            <span class="material-symbols-rounded" aria-hidden="true" role="img">integration_instructions</span>
+                            <span>{{ 'api_overview' | translate(currentLang) }}</span>
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="material-symbols-rounded" aria-hidden="true" role="img">chat_info</span><span>Contact</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <button type="button" class="nav-link" href="#"><span class="material-symbols-rounded" aria-hidden="true" role="img">logout</span><span>Log out</span></button>
-                    </li>
+                    {#{% endif %}#}
                 </ul>
             </div>
             <span class="sidenav-close-bg"></span>
@@ -116,6 +122,20 @@
                                     <img src="/assets/images/logo/social-security-colour-rgb-small.svg" alt="logo" height="40">
                                 </a>
                                 <ul class="navbar-nav ms-auto">
+                                    <li class="nav-item d-block d-lg-none">
+                                        <button id="js-burger-trigger-sidenav" class="btn-burger" aria-label="Menu">
+                                            <div class="btn-burger-background"></div>
+                                            <div class="btn-burger-lines">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                            <div class="btn-burger-close">
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                        </button>
+                                    </li>
                                     <li class="nav-item d-none d-lg-block">
                                         <a class="btn nav-link {% if page.url == '/' + currentLang + '/' %}active{% endif %}"
                                            href="{{ '/' + currentLang + '/' | url }}">
@@ -127,7 +147,8 @@
                                         <li class="nav-item d-none d-lg-block">
                                             <a class="btn nav-link {% if page.url.startsWith('/' + currentLang + '/api') %}active{% endif %}"
                                                href="{{ '/' + currentLang + '/api/' | url }}">
-                                                {{ 'api_overview' | translate(currentLang) }}
+                                                <span class="material-symbols-rounded" aria-hidden="true" role="img">integration_instructions</span>
+                                                <span>{{ 'api_overview' | translate(currentLang) }}</span>
                                             </a>
                                         </li>
 {#                                    {% endif %}#}
@@ -219,5 +240,13 @@
 </div>
 
 <script src="{{ '/assets/js/vendor/bootstrap.bundle.min.js' | url }}"></script>
+<script src="{{ '/assets/js/static/sidenav.js' | url }}"></script>
+<script type="module">
+    import { sidenavModule } from '{{ "/assets/js/static/sidenav.js" | url }}';
+
+    document.addEventListener("DOMContentLoaded", function() {
+        sidenavModule.init();
+    });
+</script>
 </body>
 </html>

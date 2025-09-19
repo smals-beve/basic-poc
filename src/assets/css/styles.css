@@ -13,5 +13,7 @@
     z-index: -1;
 }
 #sidenav {
-   height: 100vh;
+    @media (min-width: 992px) {
+        height: 100vh;
+    }
 }
