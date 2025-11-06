@@ -49,10 +49,10 @@ export default function (eleventyConfig) {
     // Watch the source specs for rebuilds
     eleventyConfig.addWatchTarget("src/content/technical_specs");
 
-    // 2) Bootstrap CSS/JS
+    // 2) Module CSS/JS
     // eleventyConfig.addPassthroughCopy({
-    //     "node_modules/bootstrap/dist/css/bootstrap.min.css": "assets/css/bootstrap.min.css",
-    //     "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js": "assets/js/bootstrap.bundle.min.js",
+    // "node_modules/bootstrap/dist/css/bootstrap.min.css": "assets/css/bootstrap.min.css", // Not necessary because the styleguide's styling already includes Bootstrap. (https://www.styleguide.socialsecurity.be/#/installation)
+    // "src/assets/js/vendor/bootstrap.bundle.min.js": "assets/js/bootstrap.bundle.min.js", // Styleguide eGov 3.0 use 5.3.2 version (https://www.styleguide.socialsecurity.be/#/installation)
     // });
 
     // 3) Collections
