@@ -1,0 +1,19 @@
+.bg-light-subtle.full-w {
+    position: relative;
+}
+.bg-light-subtle.full-w:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--bs-light-bg-subtle);
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+}
+#sidenav {
+    @media (min-width: 992px) {
+        height: 100vh;
+    }
+}

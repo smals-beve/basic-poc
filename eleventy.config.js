@@ -55,6 +55,10 @@ export default function (eleventyConfig) {
     // "src/assets/js/vendor/bootstrap.bundle.min.js": "assets/js/bootstrap.bundle.min.js", // Styleguide eGov 3.0 use 5.3.2 version (https://www.styleguide.socialsecurity.be/#/installation)
     // });
 
+    eleventyConfig.addPassthroughCopy({
+        "src/assets/js/vendor/bootstrap.bundle.min.js": "assets/js/bootstrap.bundle.min.js",
+    });
+
     // 3) Collections
     eleventyConfig.addCollection("apiSpecs", () => loadApiSpecsMemo());
 
