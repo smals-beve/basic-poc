@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+    {# CSS -> v2.2.1 (https://www.styleguide.socialsecurity.be/) #}
     <link rel="stylesheet" href="{{ '/assets/css/styleguide-egov-theme.min.css' | url }}">
-    <link rel="stylesheet" href="{{ '/assets/styles.css' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}">
 
     {% set pageUrl = page and page.url or '' %}
     {% set cleanUrl = pageUrl | replace('/index.html','/') %}
@@ -17,142 +19,234 @@
     {# ---- One reliable language for this page ---- #}
     {% set currentLang = lang or site.defaultLang or 'en' %}
 </head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="{{ ('/' ~ currentLang ~ '/') | url }}">{{ site.name }}</a>
+<body class="theme-enterprise">
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-auto align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ ('/' ~ currentLang ~ '/') | url }}">
-                        {{ 'home' | translate(currentLang) }}
+<div class="layout-container">
+    <header class="header-top">
+        <div class="container-fluid px-6">
+            {# Desktop switcher #}
+            <div class="switch-language d-none d-lg-inline-flex">
+                {% set supported = site.supportedLangs or ['nl','fr','de','en'] %}
+                {% for l in supported %}
+                    {% if isApi %}
+                        {% set target = ('/' + l + '/api/') | url %}
+                    {% else %}
+                        {% set target = ('/' + l + '/') | url %}
+                    {% endif %}
+                    <a class="btn{% if l == currentLang %} active{% endif %}"
+                       href="{{ target }}"
+                            {% if l == currentLang %}aria-current="true"{% endif %}>
+                        {{ l | upper }}
                     </a>
-                </li>
+                {% endfor %}
+            </div>
 
-                {# Hide API Overview when already on any /api/* page #}
-                {% if not isApi %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ ('/' ~ currentLang ~ '/api/') | url }}">
-                            {{ 'api_overview' | translate(currentLang) }}
-                        </a>
-                    </li>
-                {% endif %}
-
-                {# Language switcher (visible everywhere). Current language highlighted. #}
-                {% set supported = site.supportedLangs or ['nl','fr','en'] %}
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#" id="langDropdown"
-                       role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        <span aria-hidden="true">🌐</span>
-                        <span class="text-uppercase">{{ currentLang }}</span>
-                        <span class="visually-hidden">{{ 'language' | translate(currentLang) }}</span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+            {# Mobile dropdown #}
+            <div class="d-lg-none text-uppercase">
+                <button type="button" class="btn btn-sm dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    {{ currentLang | upper }}
+                </button>
+                <div class="dropdown-menu">
+                    <ul class="overflow-hidden list-unstyled">
                         {% for l in supported %}
                             {% if isApi %}
-                                {% set target = ('/' ~ l ~ '/api/') | url %}
+                                {% set target = ('/' + l + '/api/') | url %}
                             {% else %}
-                                {% set target = ('/' ~ l ~ '/') | url %}
+                                {% set target = ('/' + l + '/') | url %}
                             {% endif %}
                             <li>
-                                <a class="dropdown-item d-flex justify-content-between align-items-center{% if l == currentLang %} active{% endif %}"
+                                <a class="dropdown-item{% if l == currentLang %} active{% endif %}"
                                    href="{{ target }}"
-                                   {% if l == currentLang %}aria-current="true"{% endif %}>
-                                    <span class="text-uppercase">{{ l }}</span>
-                                    {% if l == currentLang %}<span aria-hidden="true">✓</span>{% endif %}
+                                        {% if l == currentLang %}aria-current="true"{% endif %}>
+                                    {{ l | upper }}
                                 </a>
                             </li>
                         {% endfor %}
                     </ul>
-                </li>
-            </ul>
+                </div>
+            </div>
+            {#<div class="d-flex align-items-center gap-3">
+                <p class="mb-0 d-none d-lg-inline-flex">
+                    Official information and services: belgium.be
+                </p>
+                <img class="my-auto" src="/assets/images/logo/belgiumbe-colour.svg" alt=".be - logo" height="20">
+            </div>#}
+            <div class="d-flex align-items-center gap-3">
+                <p class="mb-0 d-none d-lg-inline-flex">
+                    Lorem information and services dolores: ipsum.be
+                </p>
+                <img class="my-auto" src="/assets/images/logo/belgiumbe-colour.svg" alt=".be - logo" height="16">
+            </div>
         </div>
-    </div>
-</nav>
-
-<div class="container-fluid">
-    <div class="row flex-nowrap">
-
-        {# Sidebar ONLY on non-API pages #}
-        {% if not isApi %}
-            <aside class="col-auto p-0 sidebar-fixed bg-light">
-                <div class="sidebar-scroll">
-                    <div class="sidebar-body">
-                        <a href="{{ ('/' ~ currentLang ~ '/') | url }}"
-                           class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                            <span class="fs-5 d-none d-sm-inline">{{ 'content' | translate(currentLang) }}</span>
+    </header>
+    <div class="layout-content">
+        <div id="sidenav" class="sidenav" style="min-width: 304px;">
+            <a href="{{ ('/' ~ currentLang ~ '/') | url }}" class="logo d-none d-lg-block">
+                <img src="/assets/images/logo/logo.svg" alt="Logo {{ site.name }}" height="40">
+            </a>
+            {% if not isApi %}
+                {#<a href="{{ ('/' ~ currentLang ~ '/') | url }}"
+                   class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline">{{ 'content' | translate(currentLang) }}</span>
+                </a>#}
+                {# Ensure partial uses the right lang #}
+                {% set lang = currentLang %}
+                {% include "partials/sidebar-nav.njk" %}
+            {% endif %}
+            <div class="nav-secondary">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="material-symbols-rounded" aria-hidden="true" role="img">keyboard_arrow_left</span>To {{ site.name }}</a>
+                    </li>
+                    {#{% if not isApi %}#}
+                    <li class="nav-item">
+                        <a class="nav-link {% if page.url.startsWith('/' + currentLang + '/api') %}active{% endif %}"
+                           href="{{ '/' + currentLang + '/api/' | url }}">
+                            <span class="material-symbols-rounded" aria-hidden="true" role="img">integration_instructions</span>
+                            <span>{{ 'api_overview' | translate(currentLang) }}</span>
                         </a>
-                        {# Ensure partial uses the right lang #}
-                        {% set lang = currentLang %}
-                        {% include "partials/sidebar-nav.njk" %}
+                    </li>
+                    {#{% endif %}#}
+                </ul>
+            </div>
+            <span class="sidenav-close-bg"></span>
+        </div>
+        <div class="container-fluid">
+            <div class="row h-100">
+                <div class="col-12 px-0 d-flex flex-column">
+                    <div class="top-navbar">
+                        <nav class="navbar">
+                            <div class="container-fluid px-6">
+                                <a href="/" class="logo d-lg-none">
+                                    <img src="/assets/images/logo/social-security-colour-rgb-small.svg" alt="logo" height="40">
+                                </a>
+                                <ul class="navbar-nav ms-auto">
+                                    <li class="nav-item d-block d-lg-none">
+                                        <button id="js-burger-trigger-sidenav" class="btn-burger" aria-label="Menu">
+                                            <div class="btn-burger-background"></div>
+                                            <div class="btn-burger-lines">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                            <div class="btn-burger-close">
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li class="nav-item d-none d-lg-block">
+                                        <a class="btn nav-link {% if page.url == '/' + currentLang + '/' %}active{% endif %}"
+                                           href="{{ '/' + currentLang + '/' | url }}">
+                                            {{ 'home' | translate(currentLang) }}
+                                        </a>
+                                    </li>
+
+{#                                    {% if not isApi %}#}
+                                        <li class="nav-item d-none d-lg-block">
+                                            <a class="btn nav-link {% if page.url.startsWith('/' + currentLang + '/api') %}active{% endif %}"
+                                               href="{{ '/' + currentLang + '/api/' | url }}">
+                                                <span class="material-symbols-rounded" aria-hidden="true" role="img">integration_instructions</span>
+                                                <span>{{ 'api_overview' | translate(currentLang) }}</span>
+                                            </a>
+                                        </li>
+{#                                    {% endif %}#}
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- Loading bar -->
+                        {#<div class="progress progress-linear">
+                            <div class="progress-bar bg-primary" role="progressbar" aria-label="Basic example"></div>
+                        </div>#}
                     </div>
+                    <div class="px-4 px-md-6 px-lg-10 px-xl-20 py-8">
+                        <main class="main">
+
+                            {# ---- Breadcrumbs ---- #}
+                            {% if breadcrumbs and breadcrumbs.length %}
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        {% for c in breadcrumbs %}
+                                            <li class="breadcrumb-item{% if loop.last %} active{% endif %}"
+                                                {% if loop.last %}aria-current="page"{% endif %}>
+                                                {% if not loop.last %}
+                                                    <a href="{{ c.href | url }}">{{ c.title }}</a>
+                                                {% else %}
+                                                    {{ c.title }}
+                                                {% endif %}
+                                            </li>
+                                        {% endfor %}
+                                    </ol>
+                                </nav>
+                            {% endif %}
+
+
+                            {# Manifest for anchor rewriting filter #}
+                            {% set manifests = { 'nl': manifest_nl, 'fr': manifest_fr, 'en': manifest_en } %}
+                            {% set manifestForLang = manifests[currentLang] %}
+
+                            {# ---- Field switcher (only on field pages) ---- #}
+                            {% if fieldSwitcher and fieldSwitcher.items and fieldSwitcher.items.length %}
+                                <div class="d-inline-flex align-items-center">
+                                    <label for="switch_to"
+                                           class="form-label mb-0 me-2">{{ 'jump_to_field' | translate(currentLang) }}</label>
+                                    <select id="switch_to" class="form-select form-select-sm w-auto"
+                                            onchange="var v=this.value; if(v){ location.href=v; }">
+                                        <option value="">{{ 'choose' | translate(currentLang) }}</option>
+                                        {% for item in fieldSwitcher.items %}
+                                            <option value="{{ item.hrefPath | url }}">{{ item.title }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            {% endif %}
+
+                            {{ content
+                            | stripOuterHtml
+                            | rewriteAssetUrls
+                            | rewriteDocAnchors(currentLang, pathPrefix, manifestForLang)
+                            | safe }}
+
+                        </main>
+                    </div>
+                    <footer class="footer">
+                        <div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
+                            <div class="d-flex flex-column gap-4 w-100">
+                                <div class="row gx-5 gy-3">
+                                    <div class="col-auto">
+                                        <a class="link-underline" href="#">Terms of use for businesses</a>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a class="link-underline" href="#">Conditions for reuse</a>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a class="link-underline" href="#">Personal data</a>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a class="link-underline" href="#">Accessibility statement</a>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a class="link-underline" href="#">Cookie policy</a>
+                                    </div>
+                                </div>
+                                <p>&#169; {{ site.year }} {{ site.author }} · <span class="text-muted">v{{ site.version }}</span></p>
+                            </div>
+                        </div>
+                    </footer>
                 </div>
-            </aside>
-        {% endif %}
-
-        <main class="{% if isApi %}col-12{% else %}col ps-3 content-flex{% endif %} py-3">
-
-            {# ---- Breadcrumbs ---- #}
-            {% if breadcrumbs and breadcrumbs.length %}
-                <nav aria-label="breadcrumb" class="mb-3">
-                    <ol class="breadcrumb">
-                        {% for c in breadcrumbs %}
-                            <li class="breadcrumb-item{% if loop.last %} active{% endif %}"
-                                {% if loop.last %}aria-current="page"{% endif %}>
-                                {% if not loop.last %}
-                                    <a href="{{ c.href | url }}">{{ c.title }}</a>
-                                {% else %}
-                                    {{ c.title }}
-                                {% endif %}
-                            </li>
-                        {% endfor %}
-                    </ol>
-                </nav>
-            {% endif %}
-
-            {# Manifest for anchor rewriting filter #}
-            {% set manifests = { 'nl': manifest_nl, 'fr': manifest_fr, 'en': manifest_en } %}
-            {% set manifestForLang = manifests[currentLang] %}
-
-            {# ---- Field switcher (only on field pages) ---- #}
-            {% if fieldSwitcher and fieldSwitcher.items and fieldSwitcher.items.length %}
-                <div class="d-inline-flex align-items-center">
-                    <label for="switch_to"
-                           class="form-label mb-0 me-2">{{ 'jump_to_field' | translate(currentLang) }}</label>
-                    <select id="switch_to" class="form-select form-select-sm w-auto"
-                            onchange="var v=this.value; if(v){ location.href=v; }">
-                        <option value="">{{ 'choose' | translate(currentLang) }}</option>
-                        {% for item in fieldSwitcher.items %}
-                            <option value="{{ item.hrefPath | url }}">{{ item.title }}</option>
-                        {% endfor %}
-                    </select>
-                </div>
-            {% endif %}
-
-            {{ content
-            | stripOuterHtml
-            | rewriteAssetUrls
-            | rewriteDocAnchors(currentLang, pathPrefix, manifestForLang)
-            | safe }}
-        </main>
-
+            </div>
+        </div>
     </div>
 </div>
 
-<footer class="text-center mt-4 mb-3">
-    <small>
-        &copy; {{ site.year }} {{ site.author }}
-        · <span class="text-muted">v{{ site.version }}</span>
-    </small>
-</footer>
+<script src="{{ '/assets/js/vendor/bootstrap.bundle.min.js' | url }}"></script>
+<script src="{{ '/assets/js/static/sidenav.js' | url }}"></script>
+<script type="module">
+    import { sidenavModule } from '{{ "/assets/js/static/sidenav.js" | url }}';
 
-<script src="{{ '/assets/js/bootstrap.bundle.min.js' | url }}"></script>
+    document.addEventListener("DOMContentLoaded", function() {
+        sidenavModule.init();
+    });
+</script>
 </body>
 </html>
