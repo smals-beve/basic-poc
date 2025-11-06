@@ -50,10 +50,10 @@ export default function (eleventyConfig) {
     eleventyConfig.addWatchTarget("src/content/technical_specs");
 
     // 2) Bootstrap CSS/JS
-    eleventyConfig.addPassthroughCopy({
-        "node_modules/bootstrap/dist/css/bootstrap.min.css": "assets/css/bootstrap.min.css",
-        "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js": "assets/js/bootstrap.bundle.min.js",
-    });
+    // eleventyConfig.addPassthroughCopy({
+    //     "node_modules/bootstrap/dist/css/bootstrap.min.css": "assets/css/bootstrap.min.css",
+    //     "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js": "assets/js/bootstrap.bundle.min.js",
+    // });
 
     // 3) Collections
     eleventyConfig.addCollection("apiSpecs", () => loadApiSpecsMemo());
