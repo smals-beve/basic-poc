@@ -8,5 +8,5 @@ export default {
     // version info
     version: "1.0.0",
     defaultLang: "nl",
-    supportedLangs: ["nl", "fr", "en"],
+    supportedLangs: ["nl", "fr"],
 };
