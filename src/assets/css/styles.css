@@ -136,7 +136,7 @@ nav[aria-label="breadcrumb"] + .pdf-page {
 
 .pdf-page {
     width: 100%;
-    max-width: var(--size-page-width);
+    /*max-width: var(--size-page-width);*/
     /*min-height: var(--size-page-height);*/
     background: white;
     margin-left: 0 !important;
