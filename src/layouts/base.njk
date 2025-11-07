@@ -81,25 +81,23 @@
         </div>
     </header>
     <div class="layout-content">
+        {% if not isApi %}
         <div id="sidenav" class="sidenav" style="min-width: 304px;">
             <a href="{{ ('/' ~ currentLang ~ '/') | url }}" class="logo d-none d-lg-block">
                 <img src="/assets/images/logo/logo.svg" alt="Logo {{ site.name }}" height="40">
             </a>
-            {% if not isApi %}
-                {#<a href="{{ ('/' ~ currentLang ~ '/') | url }}"
-                   class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                    <span class="fs-5 d-none d-sm-inline">{{ 'content' | translate(currentLang) }}</span>
-                </a>#}
-                {# Ensure partial uses the right lang #}
-                {% set lang = currentLang %}
-                {% include "partials/sidebar-nav.njk" %}
-            {% endif %}
+            {#<a href="{{ ('/' ~ currentLang ~ '/') | url }}"
+               class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <span class="fs-5 d-none d-sm-inline">{{ 'content' | translate(currentLang) }}</span>
+            </a>#}
+            {# Ensure partial uses the right lang #}
+            {% set lang = currentLang %}
+            {% include "partials/sidebar-nav.njk" %}
             <div class="nav-secondary">
                 <ul class="nav">
                     <li class="nav-item">
                         <a class="nav-link" href="#"><span class="material-symbols-rounded" aria-hidden="true" role="img">keyboard_arrow_left</span>To {{ site.name }}</a>
                     </li>
-                    {#{% if not isApi %}#}
                     <li class="nav-item">
                         <a class="nav-link {% if page.url.startsWith('/' + currentLang + '/api') %}active{% endif %}"
                            href="{{ '/' + currentLang + '/api/' | url }}">
@@ -107,11 +105,11 @@
                             <span>{{ 'api_overview' | translate(currentLang) }}</span>
                         </a>
                     </li>
-                    {#{% endif %}#}
                 </ul>
             </div>
             <span class="sidenav-close-bg"></span>
         </div>
+        {% endif %}
         <div class="container-fluid">
             <div class="row h-100">
                 <div class="col-12 px-0 d-flex flex-column">
@@ -209,27 +207,34 @@
 
                         </main>
                     </div>
+
                     <footer class="footer">
                         <div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
-                            <div class="d-flex flex-column gap-4 w-100">
-                                <div class="row gx-5 gy-3">
-                                    <div class="col-auto">
-                                        <a class="link-underline" href="#">Terms of use for businesses</a>
+                            <div class="d-flex flex-wrap flex-column flex-md-row justify-content-between gap-5">
+                                <div class="d-flex flex-column gap-4">
+                                    <div class="row gx-5 gy-3">
+                                        <div class="col-auto">
+                                            <a class="link-underline" href="#">Terms of use for businesses</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a class="link-underline" href="#">Conditions for reuse</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a class="link-underline" href="#">Personal data</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a class="link-underline" href="#">Accessibility statement</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a class="link-underline" href="#">Cookie policy</a>
+                                        </div>
                                     </div>
-                                    <div class="col-auto">
-                                        <a class="link-underline" href="#">Conditions for reuse</a>
-                                    </div>
-                                    <div class="col-auto">
-                                        <a class="link-underline" href="#">Personal data</a>
-                                    </div>
-                                    <div class="col-auto">
-                                        <a class="link-underline" href="#">Accessibility statement</a>
-                                    </div>
-                                    <div class="col-auto">
-                                        <a class="link-underline" href="#">Cookie policy</a>
-                                    </div>
+
+                                    <p>&#169; {{ site.year }} {{ site.author }} · <span class="text-muted">v{{ site.version }}</span></p>
                                 </div>
-                                <p>&#169; {{ site.year }} {{ site.author }} · <span class="text-muted">v{{ site.version }}</span></p>
+                                <a class="d-inline-block my-auto" href="https://next-generation-eu.europa.eu/" target="_blank" rel="noopener">
+                                    <img src="/assets/images/logo/nextgenerationeu-en-h-colour-rgb.svg" alt="next-generation-eu.europa logo" height="40">
+                                </a>
                             </div>
                         </div>
                     </footer>
