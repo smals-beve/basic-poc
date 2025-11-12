@@ -91,7 +91,7 @@ nav[aria-label="breadcrumb"] + .pdf-page {
 }
 
 .pdf-page .introduction {
-    background-image: url("/assets/images/intro-banner.jpg");
+    background-image: url("../images/intro-banner.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
@@ -173,7 +173,7 @@ nav[aria-label="breadcrumb"] + .pdf-page {
     z-index: 0;
     width: 56%;
     aspect-ratio: 638 / 369;
-    background: url("/assets/images/decoration.svg") no-repeat 0 100% / cover;
+    background: url("../images/decoration.svg") no-repeat 0 100% / cover;
     pointer-events: none;
 }
 
