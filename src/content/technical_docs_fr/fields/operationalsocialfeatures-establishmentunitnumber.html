@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Glossaires Datafields – ${BLOK_TECHLABEL} establishmentUnitNumber</title>
   
+    <style>
+        html, body {
+            width: initial !important;
+            max-width: initial !important;
+            min-height: initial !important;
+            overflow: initial !important;
+        }
+    </style>
 </head>
 <body class="d-flex flex-column py-8">
 
@@ -16,21 +24,23 @@
             <span>
                 Version
                 <br>
-                <strong>1.0</strong>
+                <strong>1.0.1.5</strong>
             </span>
             <span>
                 Date
                 <br>
-                <strong>26-08-2025</strong>
+                <strong>19-11-2025</strong>
             </span>
         </div>
     </div>
     <div class="px-12 py-9">
         <!-- Zone LoopList -->
-        <h2 id="operationalsocialfeatures-establishmentunitnumber">Numéro d'identification de l'unité d'établissement  locale</h2>
-        <p>Numéro attribué par la Banque-Carrefour des Entreprises identifiant de façon unique une unité d’établissement.  Il s'agit de l'unité d’établissement dans ou depuis laquelle le travailleur est occupé.</p>
+        <h2 id="operationalsocialfeatures-establishmentunitnumber">Numéro d&#x27;identification de l&#x27;unité d&#x27;établissement  locale</h2>
 
         <dl class="mt-7">
+            <dt>Description</dt>	
+            <dd>Numéro attribué par la Banque-Carrefour des Entreprises identifiant de façon unique une unité d’établissement.  Il s&#x27;agit de l&#x27;unité d’établissement dans ou depuis laquelle le travailleur est occupé.</dd>
+            <hr class="my-5">
             <dt>TechLabel</dt>	
             <dd>establishmentUnitNumber</dd>
             <hr class="my-5">
@@ -44,18 +54,15 @@
             <dd>-</dd>
 	        <hr class="my-5">
             <dt>Domaine de définition</dt>
-            <dd>Nombre à 10 chiffres dont :
-les positions 1 à 8 correspondent à un numéro de suite, avec en première position un chiffre compris entre 2 et 8 ; 
-les positions 9 et 10 correspondent à un chiffre de contrôle.
-
-Dans certaines situations, il peut se révéler nécessaire d'utiliser un numéro fictif :
-- 8999999993 = employeur étranger sans UE en Belgique pour des travailleurs qui ne sont pas occupés sur le territoire belge
-- 8999999104 =  employeur étranger sans UE en Belgique pour des travailleurs qui sont occupés sur le territoire belge ou employeur de personnel de maison  - Région flamande
-- 8999999203 = employeur étranger sans UE en Belgique pour des travailleurs qui sont occupés sur le territoire belge ou employeur de personnel de maison  - Région de Bruxelles-Capitale
-- 8999999302 = employeur étranger sans UE en Belgique pour des travailleurs qui sont occupés sur le territoire belge ou employeur de personnel de maison  - Région wallonne sans les communes relevant de la compétence de la Communauté germanophone
-- 8999999401 = employeur étranger sans UE en Belgique pour des travailleurs qui sont occupés sur le territoire belge ou employeur de personnel de maison  - Région wallonne pour les communes relevant de la compétence de la Communauté germanophone
-- 8999999005 = employeur dans l'attente d'un numéro d'UE
-- 8999999894 = pas d'application - tiers-payants (catégories d'employeurs 033, 099, 199, 299, 405, 699, 755, 756, 757, 758, 759 et 898) - Statutaire avec résidence à l'étranger</dd>
+            <dd>Nombre à 10 chiffres dont :<br>les positions 1 à 8 correspondent à un numéro de suite, avec en première position un chiffre compris entre 2 et 8 ;<br>les positions 9 et 10 correspondent à un chiffre de contrôle.<br><br>Dans certaines situations, il peut se révéler nécessaire d&#x27;utiliser un numéro fictif :<br><br><ul>
+<li>8999999993 = employeur étranger sans UE en Belgique pour des travailleurs qui ne sont pas occupés sur le territoire belge</li>
+<li>8999999104 =  employeur étranger sans UE en Belgique pour des travailleurs qui sont occupés sur le territoire belge ou employeur de personnel de maison  - Région flamande</li>
+<li>8999999203 = employeur étranger sans UE en Belgique pour des travailleurs qui sont occupés sur le territoire belge ou employeur de personnel de maison  - Région de Bruxelles-Capitale</li>
+<li>8999999302 = employeur étranger sans UE en Belgique pour des travailleurs qui sont occupés sur le territoire belge ou employeur de personnel de maison  - Région wallonne sans les communes relevant de la compétence de la Communauté germanophone</li>
+<li>8999999401 = employeur étranger sans UE en Belgique pour des travailleurs qui sont occupés sur le territoire belge ou employeur de personnel de maison  - Région wallonne pour les communes relevant de la compétence de la Communauté germanophone</li>
+<li>8999999005 = employeur dans l&#x27;attente d&#x27;un numéro d&#x27;UE</li>
+<li>8999999894 = pas d&#x27;application - tiers-payants (catégories d&#x27;employeurs 033, 099, 199, 299, 405, 699, 755, 756, 757, 758, 759 et 898) - Statutaire avec résidence à l&#x27;étranger</li>
+</ul></dd>
 	        <hr class="my-5">
             <dt>Présence</dt>
             <dd>Indispensable</dd>
@@ -64,6 +71,14 @@ Dans certaines situations, il peut se révéler nécessaire d'utiliser un numér
         <hr class="mt-11 mb-7 opacity-100">
         <!-- Zone LoopList -->
     </div>
+    <footer class="footer">
+       <div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
+             <div class="d-flex flex-column gap-4 w-100">
+                <p><b>Contact: </b>Pour obtenir de l’aide ou pour toute autre question, veuillez nous contacter à l’adresse e-mail suivante: <a href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
+                <!--<p>&#169; socialsecurity.be 2025</p>-->
+             </div>
+       </div>
+    </footer>
 </div>
 </body>
 </html>

@@ -5,32 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Glossaries  – service</title>
   
+    <style>
+        html, body {
+            width: initial !important;
+            max-width: initial !important;
+            min-height: initial !important;
+            overflow: initial !important;
+        }
+    </style>
 </head>
 <body class="d-flex flex-column py-8">
 
 <div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
 
     <div class="px-12 py-5 introduction">
-        <h2 id="service">Glossaires<br>Transfert de données salariales</h4>
+        <h4 id="service">Glossaires<br>Transfert de données salariales</h4>
         <div class="introduction__right">
             <span>
                 Version
                 <br>
-                <strong>1.0</strong>
+                <strong>1.0.1.5</strong>
             </span>
             <span>
                 Date
                 <br>
-                <strong>26-08-2025</strong>
+                <strong>19-11-2025</strong>
             </span>
         </div>
     </div>
 
 
     <div class="px-12 py-9">
-        <h2>Blok Prestation ou absence<br><code>service</code></h2>
+        <h2>Bloc Prestation ou absence<br><code>service</code></h2>
 		<span class="text-primary-emphasis fw-bolder"></span>
-        <p>La prestation ou l'absence de la personne physique sur base journalière ou sur base d'une période.</p>
+        <p><i>Description:</i><br>La prestation ou l&#x27;absence de la personne physique sur base journalière ou sur base d&#x27;une période.</p>
+        <p><i>Présence:</i><br>Obligatoire si au moins une prestation ou absence doit être communiquée.</p>
         <div class="mt-6">
             <table class="table table-striped">
                 <thead>
@@ -43,19 +52,9 @@
                 <tbody>
  <!-- ZONE_LOOPLIST -->
                 <tr>
-                    <td><a href="#service-sequencenumber" class="link-underline"><strong>Numéro de séquence de la prestation ou de l'absence</strong></a></td>
+                    <td><a href="#service-servicetype" class="link-underline"><strong>Code de prestation ou d&#x27;absence</strong></a></td>
                     <td>
-                        Numéro de séquence unique de la prestation ou de l'absence
-                    </td>
-					<td>
-						<code>sequenceNumber</code>
-					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#service-servicetype" class="link-underline"><strong>Code de prestation ou d'absence</strong></a></td>
-                    <td>
-                        Code indiquant le type de prestation ou d'absence
+                        Code indiquant le type de prestation ou d&#x27;absence
                     </td>
 					<td>
 						<code>serviceType</code>
@@ -63,11 +62,9 @@
                 </tr>
 
                 <tr>
-                    <td><a href="#service-startdate" class="link-underline"><strong>Date ou date de début de la prestation ou de l'absence</strong></a></td>
+                    <td><a href="#service-startdate" class="link-underline"><strong>Date ou date de début de la prestation ou de l&#x27;absence</strong></a></td>
                     <td>
-                        En cas d'une communication par jour, la date à laquelle la prestation ou l'absence a eu lieu. 
-
-En cas d'une communication par période, la date de début de la période au cours de laquelle la prestation ou l'absence a eu lieu.
+                        En cas d&#x27;une communication par jour, la date à laquelle la prestation ou l&#x27;absence a eu lieu.<br><br>En cas d&#x27;une communication par période, la date de début de la période au cours de laquelle la prestation ou l&#x27;absence a eu lieu.
                     </td>
 					<td>
 						<code>startDate</code>
@@ -75,11 +72,9 @@ En cas d'une communication par période, la date de début de la période au cou
                 </tr>
 
                 <tr>
-                    <td><a href="#service-enddate" class="link-underline"><strong>Date de fin de la prestation ou de l'absence</strong></a></td>
+                    <td><a href="#service-enddate" class="link-underline"><strong>Date de fin de la prestation ou de l&#x27;absence</strong></a></td>
                     <td>
-                        Date de fin de la période au cours de laquelle la prestation ou l'absence a eu lieu. 
-
-La zone n'est pas complétée quand la prestation ou l'absence est communiquée par jour.
+                        Date de fin de la période au cours de laquelle la prestation ou l&#x27;absence a eu lieu.<br><br>La zone n&#x27;est pas complétée quand la prestation ou l&#x27;absence est communiquée par jour.
                     </td>
 					<td>
 						<code>endDate</code>
@@ -87,9 +82,9 @@ La zone n'est pas complétée quand la prestation ou l'absence est communiquée 
                 </tr>
 
                 <tr>
-                    <td><a href="#service-numberofhours" class="link-underline"><strong>Nombre d'heures de prestation ou d'absence</strong></a></td>
+                    <td><a href="#service-numberofhours" class="link-underline"><strong>Nombre d&#x27;heures de prestation ou d&#x27;absence</strong></a></td>
                     <td>
-                        Nombre d'heures de la prestation ou de l'absence.
+                        Nombre d&#x27;heures de la prestation ou de l&#x27;absence.
                     </td>
 					<td>
 						<code>numberOfHours</code>
@@ -100,7 +95,14 @@ La zone n'est pas complétée quand la prestation ou l'absence est communiquée 
             </table>
         </div>
     </div>
-
+    <footer class="footer">
+       <div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
+             <div class="d-flex flex-column gap-4 w-100">
+                <p><b>Contact: </b>Pour obtenir de l’aide ou pour toute autre question, veuillez nous contacter à l’adresse e-mail suivante: <a href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
+                <!--<p>&#169; socialsecurity.be 2025</p>-->
+             </div>
+       </div>
+    </footer>
 </div>
 </body>
 </html>

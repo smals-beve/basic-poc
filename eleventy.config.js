@@ -67,7 +67,7 @@ export default function (eleventyConfig) {
         const site = eleventyConfig.globalData?.site || {};
         const langs = Array.isArray(site.supportedLangs) && site.supportedLangs.length
             ? site.supportedLangs
-            : ["nl", "fr", "en"];
+            : ["nl", "fr"];
         const out = [];
         for (const lang of langs) {
             for (const spec of specs) out.push({lang, spec});
