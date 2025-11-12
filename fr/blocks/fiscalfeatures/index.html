@@ -556,26 +556,27 @@
                             <div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
 
     <div class="px-12 py-5 introduction">
-        <h2 id="fiscalfeatures">Glossaires<br>Transfert de données salariales</h4>
+        <h4 id="fiscalfeatures">Glossaires<br>Transfert de données salariales</h4>
         <div class="introduction__right">
             <span>
                 Version
                 <br>
-                <strong>1.0</strong>
+                <strong>1.0.1.5</strong>
             </span>
             <span>
                 Date
                 <br>
-                <strong>26-08-2025</strong>
+                <strong>19-11-2025</strong>
             </span>
         </div>
     </div>
 
 
     <div class="px-12 py-9">
-        <h2>Blok Signalétique fiscale<br><code>fiscalFeatures</code></h2>
+        <h2>Bloc Signalétique fiscale<br><code>fiscalFeatures</code></h2>
 		<span class="text-primary-emphasis fw-bolder"></span>
-        <p>Les données fiscales d'application dans le calcul salarial.</p>
+        <p><i>Description:</i><br>Les données fiscales d&#x27;application dans le calcul salarial.</p>
+        <p><i>Présence:</i><br>Indispensable</p>
         <div class="mt-6">
             <table class="table table-striped">
                 <thead>
@@ -590,9 +591,7 @@
                 <tr>
                     <td><a href="/basic-poc/fr/fields/fiscalfeatures-startdate/" class="link-underline"><strong>Date de début de la signalétique fiscale</strong></a></td>
                     <td>
-                        La date de début de la période dans la période de calcul salarial à partir de laquelle l'ensemble des données qui forment ensemble la signalétique fiscale est valide.
-
-Si une ou plusieurs donnée(s) change(nt) dans la signalétique fiscale, la date de début de la signalétique fiscale correspond à la date à partir de laquelle le nouveau set de données de la signalétique fiscale est d'application.
+                        La date de début de la période dans la période de calcul salarial à partir de laquelle le set de données constituant la signalétique fiscale est valable.<br><br>Si une ou plusieurs donnée(s) change(nt) dans la signalétique fiscale, la date de début de la signalétique fiscale correspond à la date à partir de laquelle le nouveau set de données de la signalétique fiscale est d&#x27;application.
                     </td>
 					<td>
 						<code>startDate</code>
@@ -602,9 +601,7 @@ Si une ou plusieurs donnée(s) change(nt) dans la signalétique fiscale, la date
                 <tr>
                     <td><a href="/basic-poc/fr/fields/fiscalfeatures-enddate/" class="link-underline"><strong>Date de fin de la signalétique fiscale</strong></a></td>
                     <td>
-                        La date de fin de la période dans la période de calcul salarial jusqu'à ce que le set de données qui forment ensemble la signalétique fiscale est valide.  
-
-Si une ou plusieurs donnée(s) change(nt) dans la signalétique fiscale, la date de fin de la signalétique fiscale correspond à la date jusqu'à laquelle l'ancien ensemble de données de la signalétique fiscale est d'application.
+                        La date de fin de la période dans la période de calcul salarial jusqu&#x27;à laquelle le set de données constituant la signalétique fiscale est valable.<br><br>Si une ou plusieurs donnée(s) change(nt) dans la signalétique fiscale, la date de fin de la signalétique fiscale correspond à la date jusqu&#x27;à laquelle l&#x27;ancien set de données de la signalétique fiscale est d&#x27;application.
                     </td>
 					<td>
 						<code>endDate</code>
@@ -624,7 +621,7 @@ Si une ou plusieurs donnée(s) change(nt) dans la signalétique fiscale, la date
                 <tr>
                     <td><a href="/basic-poc/fr/fields/fiscalfeatures-civilstatustype/" class="link-underline"><strong>État civil</strong></a></td>
                     <td>
-                        Il s'agit de l'état civil, comme appliqué dans le cadre du calcul salarial.
+                        Il s&#x27;agit de l&#x27;état civil, comme appliqué dans le cadre du calcul salarial.
                     </td>
 					<td>
 						<code>civilStatusType</code>
@@ -632,9 +629,9 @@ Si une ou plusieurs donnée(s) change(nt) dans la signalétique fiscale, la date
                 </tr>
 
                 <tr>
-                    <td><a href="/basic-poc/fr/fields/fiscalfeatures-numberofdependentchildren/" class="link-underline"><strong>Nombre d'enfants à charge</strong></a></td>
+                    <td><a href="/basic-poc/fr/fields/fiscalfeatures-numberofdependentchildren/" class="link-underline"><strong>Nombre d&#x27;enfants à charge</strong></a></td>
                     <td>
-                        Nombre d'enfants fiscalement à charge (en cecompris les enfants moins valides à charge), comme appliqué dans le cadre du calcul salarial.
+                        Nombre d&#x27;enfants fiscalement à charge (en ce compris les enfants moins valides à charge), comme appliqué dans le cadre du calcul salarial.
                     </td>
 					<td>
 						<code>numberOfDependentChildren</code>
@@ -642,9 +639,9 @@ Si une ou plusieurs donnée(s) change(nt) dans la signalétique fiscale, la date
                 </tr>
 
                 <tr>
-                    <td><a href="/basic-poc/fr/fields/fiscalfeatures-numberofdependentdisabledchildren/" class="link-underline"><strong>Nombre d'enfants moins valides à charge</strong></a></td>
+                    <td><a href="/basic-poc/fr/fields/fiscalfeatures-numberofdependentdisabledchildren/" class="link-underline"><strong>Nombre d&#x27;enfants moins valides à charge</strong></a></td>
                     <td>
-                        Nombre d'enfants  moins valides fiscalement à charge, comme appliqué dans le cadre du calcul salarial.
+                        Nombre d&#x27;enfants  moins valides fiscalement à charge, comme appliqué dans le cadre du calcul salarial.
                     </td>
 					<td>
 						<code>numberOfDependentDisabledChildren</code>
@@ -652,9 +649,9 @@ Si une ou plusieurs donnée(s) change(nt) dans la signalétique fiscale, la date
                 </tr>
 
                 <tr>
-                    <td><a href="/basic-poc/fr/fields/fiscalfeatures-numberofdependents/" class="link-underline"><strong>Nombre d'autres personnes à charge</strong></a></td>
+                    <td><a href="/basic-poc/fr/fields/fiscalfeatures-numberofdependents/" class="link-underline"><strong>Nombre d&#x27;autres personnes à charge</strong></a></td>
                     <td>
-                        Nombre de personnes fiscalement à charge (en ce compris les autres personnes moins valides à charge et les personnes à charge nécessitant des soins) autre que les enfants fiscalement à charge, comme appliqué dans le cadre du calcul salarial.
+                        Nombre de personnes fiscalement à charge (en ce compris les autres personnes moins valides à charge et les personnes à charge nécessitant des soins) autres que les enfants fiscalement à charge, comme appliqué dans le cadre du calcul salarial.
                     </td>
 					<td>
 						<code>numberOfDependents</code>
@@ -662,9 +659,9 @@ Si une ou plusieurs donnée(s) change(nt) dans la signalétique fiscale, la date
                 </tr>
 
                 <tr>
-                    <td><a href="/basic-poc/fr/fields/fiscalfeatures-numberofdisableddependents/" class="link-underline"><strong>Nombre d'autres personnes moins valides à charge</strong></a></td>
+                    <td><a href="/basic-poc/fr/fields/fiscalfeatures-numberofdisableddependents/" class="link-underline"><strong>Nombre d&#x27;autres personnes moins valides à charge</strong></a></td>
                     <td>
-                        Nombre de personnes moins valides fiscalement à charge autre que les enfants fiscalement à charge, comme appliqué dans le cadre du calcul salarial.
+                        Nombre de personnes moins valides fiscalement à charge autres que les enfants fiscalement à charge, comme appliqué dans le cadre du calcul salarial.
                     </td>
 					<td>
 						<code>numberOfDisabledDependents</code>
@@ -694,7 +691,7 @@ Si une ou plusieurs donnée(s) change(nt) dans la signalétique fiscale, la date
                 <tr>
                     <td><a href="/basic-poc/fr/fields/fiscalfeatures-belgianresident/" class="link-underline"><strong>Notion résident belge</strong></a></td>
                     <td>
-                        Indication si la personne physique est considérée comme résidente belge d'un point de vue fiscal.
+                        Indication si la personne physique est considérée comme résidente belge d&#x27;un point de vue fiscal.
                     </td>
 					<td>
 						<code>BelgianResident</code>
@@ -714,7 +711,7 @@ Si une ou plusieurs donnée(s) change(nt) dans la signalétique fiscale, la date
                 <tr>
                     <td><a href="/basic-poc/fr/fields/fiscalfeatures-disabilityofpartner/" class="link-underline"><strong>Notion partenaire moins valide</strong></a></td>
                     <td>
-                        Indication si le partenaire de la personne physique est considéré comme une personne avec moins valide sur le plan fiscal, comme appliqué dans le cadre du calcul salarial.
+                        Indication si le partenaire de la personne physique est considéré comme une personne moins valide sur le plan fiscal, comme appliqué dans le cadre du calcul salarial.
                     </td>
 					<td>
 						<code>disabilityOfPartner</code>
@@ -730,12 +727,29 @@ Si une ou plusieurs donnée(s) change(nt) dans la signalétique fiscale, la date
 						<code>numberOfDependentsNeedingCare</code>
 					<td>
                 </tr>
+
+                <tr>
+                    <td><a href="#fiscalfeatures-retired" class="link-underline"><strong>Notion pensionné</strong></a></td>
+                    <td>
+                        Indication si la personne est pensionnée ou non
+                    </td>
+					<td>
+						<code>retired</code>
+					<td>
+                </tr>
 <!-- ZONE_LOOPLIST -->
                 </tbody>
             </table>
         </div>
     </div>
-
+    <footer class="footer">
+       <div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
+             <div class="d-flex flex-column gap-4 w-100">
+                <p><b>Contact: </b>Pour obtenir de l’aide ou pour toute autre question, veuillez nous contacter à l’adresse e-mail suivante: <a href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
+                <!--<p>&#169; socialsecurity.be 2025</p>-->
+             </div>
+       </div>
+    </footer>
 </div>
 
                         </main>

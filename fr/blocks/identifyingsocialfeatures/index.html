@@ -556,26 +556,32 @@
                             <div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
 
     <div class="px-12 py-5 introduction">
-        <h2 id="identifyingsocialfeatures">Glossaires<br>Transfert de données salariales</h4>
+        <h4 id="identifyingsocialfeatures">Glossaires<br>Transfert de données salariales</h4>
         <div class="introduction__right">
             <span>
                 Version
                 <br>
-                <strong>1.0</strong>
+                <strong>1.0.1.5</strong>
             </span>
             <span>
                 Date
                 <br>
-                <strong>26-08-2025</strong>
+                <strong>19-11-2025</strong>
             </span>
         </div>
     </div>
 
 
     <div class="px-12 py-9">
-        <h2>Blok Signalétique sociale<br><code>identifyingSocialFeatures</code></h2>
+        <h2>Bloc Signalétique sociale<br><code>identifyingSocialFeatures</code></h2>
 		<span class="text-primary-emphasis fw-bolder"></span>
-        <p>Indication du statut social et du régime de cotisation d'application sur la personne physique.</p>
+        <p><i>Description:</i><br>Indication du statut social et du régime de cotisation d&#x27;application sur la personne physique.</p>
+        <p><i>Présence:</i><br>Indispensable
+
+Interdit pour
+- les personnes déclarées en Dimona avec le type travailleur DWD, IVT, STG, TRI, S17, T17 et O17;
+- les personnes avec des activités de surveillant de temps de midi ou d&#x27;accompagnateur de bus en plus de leur activité principale pour l&#x27;école;
+- le personnel de maison travaillant moins de 8 heures par semaine et par conséquent exonéré de cotisations de sécurité sociale.</p>
         <div class="mt-6">
             <table class="table table-striped">
                 <thead>
@@ -590,9 +596,7 @@
                 <tr>
                     <td><a href="/basic-poc/fr/fields/identifyingsocialfeatures-startdate/" class="link-underline"><strong>Date de début de la signalétique sociale</strong></a></td>
                     <td>
-                        Date de début de la période dans la période de calcul salarial à partir de laquelle le set de données constituant la signalétique sociale est valide.  
-
-Si une ou plusieurs données de la signalétique sociale changent, la date de début de la signalétique sociale correspond à la date à partir de laquelle le nouveau set de données signalétiques sociales s'applique.
+                        Date de début de la période dans la période de calcul salarial à partir de laquelle le set de données constituant la signalétique sociale est valable.<br><br>Si une ou plusieurs données de la signalétique sociale changent, la date de début de la signalétique sociale correspond à la date à partir de laquelle le nouveau set de données signalétiques sociales s&#x27;applique.
                     </td>
 					<td>
 						<code>startDate</code>
@@ -602,9 +606,7 @@ Si une ou plusieurs données de la signalétique sociale changent, la date de d�
                 <tr>
                     <td><a href="/basic-poc/fr/fields/identifyingsocialfeatures-enddate/" class="link-underline"><strong>Date de fin de la signalétique sociale</strong></a></td>
                     <td>
-                        Date de fin de la période dans la période de calcul salarial jusqu'à laquelle le set de données constituant la signalétique sociale est valable.  
-
-Si une ou plusieurs données changent dans la signalétique sociale, la date de fin de la signalétique sociale correspond à la date jusqu'à laquelle l'ancien set de données signalétiques sociales s'applique.
+                        Date de fin de la période dans la période de calcul salarial jusqu&#x27;à laquelle le set de données constituant la signalétique sociale est valable.<br><br>Si une ou plusieurs données changent dans la signalétique sociale, la date de fin de la signalétique sociale correspond à la date jusqu&#x27;à laquelle l&#x27;ancien set de données signalétiques sociales s&#x27;applique.
                     </td>
 					<td>
 						<code>endDate</code>
@@ -624,7 +626,7 @@ Si une ou plusieurs données changent dans la signalétique sociale, la date de 
                 <tr>
                     <td><a href="/basic-poc/fr/fields/identifyingsocialfeatures-employerclass/" class="link-underline"><strong>Catégorie employeur</strong></a></td>
                     <td>
-                        Catégorie employeur attribuée par l'Office national de sécurité sociale à une entreprise afin de distinguer ses obligations en fonction des caractéristiques spécifiques de l'activité exercée.
+                        Catégorie employeur attribuée par l&#x27;Office national de sécurité sociale à une entreprise afin de distinguer ses obligations en fonction des caractéristiques spécifiques de l&#x27;activité exercée.
                     </td>
 					<td>
 						<code>employerClass</code>
@@ -655,7 +657,14 @@ Si une ou plusieurs données changent dans la signalétique sociale, la date de 
             </table>
         </div>
     </div>
-
+    <footer class="footer">
+       <div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
+             <div class="d-flex flex-column gap-4 w-100">
+                <p><b>Contact: </b>Pour obtenir de l’aide ou pour toute autre question, veuillez nous contacter à l’adresse e-mail suivante: <a href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
+                <!--<p>&#169; socialsecurity.be 2025</p>-->
+             </div>
+       </div>
+    </footer>
 </div>
 
                         </main>
