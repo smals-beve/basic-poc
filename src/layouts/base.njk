@@ -36,7 +36,7 @@
                     {% endif %}
                     <a class="btn{% if l == currentLang %} active{% endif %}"
                        href="{{ target }}"
-                            {% if l == currentLang %}aria-current="true"{% endif %}>
+                       {% if l == currentLang %}aria-current="true"{% endif %}>
                         {{ l | upper }}
                     </a>
                 {% endfor %}
@@ -44,7 +44,8 @@
 
             {# Mobile dropdown #}
             <div class="d-lg-none text-uppercase">
-                <button type="button" class="btn btn-sm dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button type="button" class="btn btn-sm dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                     {{ currentLang | upper }}
                 </button>
                 <div class="dropdown-menu">
@@ -58,7 +59,7 @@
                             <li>
                                 <a class="dropdown-item{% if l == currentLang %} active{% endif %}"
                                    href="{{ target }}"
-                                        {% if l == currentLang %}aria-current="true"{% endif %}>
+                                   {% if l == currentLang %}aria-current="true"{% endif %}>
                                     {{ l | upper }}
                                 </a>
                             </li>
@@ -66,49 +67,52 @@
                     </ul>
                 </div>
             </div>
-            {#<div class="d-flex align-items-center gap-3">
+            {# <div class="d-flex align-items-center gap-3">
                 <p class="mb-0 d-none d-lg-inline-flex">
                     Official information and services: belgium.be
                 </p>
-                <img class="my-auto" src="/assets/images/logo/belgiumbe-colour.svg" alt=".be - logo" height="20">
-            </div>#}
+                <img class="my-auto" src="{{ '/assets/images/logo/belgiumbe-colour.svg' | url }}" alt=".be - logo" height="20">
+            </div> #}
             <div class="d-flex align-items-center gap-3">
                 <p class="mb-0 d-none d-lg-inline-flex">
                     Lorem information and services dolores: ipsum.be
                 </p>
-                <img class="my-auto" src="/assets/images/logo/belgiumbe-colour.svg" alt=".be - logo" height="16">
+                <img class="my-auto" src="{{ '/assets/images/logo/belgiumbe-colour.svg' | url }}" alt=".be - logo"
+                     height="16">
             </div>
         </div>
     </header>
     <div class="layout-content">
         {% if not isApi %}
-        <div id="sidenav" class="sidenav" style="min-width: 304px;">
-            <a href="{{ ('/' ~ currentLang ~ '/') | url }}" class="logo d-none d-lg-block">
-                <img src="/assets/images/logo/logo.svg" alt="Logo {{ site.name }}" height="40">
-            </a>
-            {#<a href="{{ ('/' ~ currentLang ~ '/') | url }}"
+            <div id="sidenav" class="sidenav" style="min-width: 304px;">
+                <a href="{{ ('/' ~ currentLang ~ '/') | url }}" class="logo d-none d-lg-block">
+                    <img src="{{ '/assets/images/logo/logo.svg' | url }}" alt="Logo {{ site.name }}" height="40">
+                </a>
+                {# <a href="{{ ('/' ~ currentLang ~ '/') | url }}"
                class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                 <span class="fs-5 d-none d-sm-inline">{{ 'content' | translate(currentLang) }}</span>
-            </a>#}
-            {# Ensure partial uses the right lang #}
-            {% set lang = currentLang %}
-            {% include "partials/sidebar-nav.njk" %}
-            <div class="nav-secondary">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="material-symbols-rounded" aria-hidden="true" role="img">keyboard_arrow_left</span>To {{ site.name }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if page.url.startsWith('/' + currentLang + '/api') %}active{% endif %}"
-                           href="{{ '/' + currentLang + '/api/' | url }}">
-                            <span class="material-symbols-rounded" aria-hidden="true" role="img">integration_instructions</span>
-                            <span>{{ 'api_overview' | translate(currentLang) }}</span>
-                        </a>
-                    </li>
-                </ul>
+            </a> #}
+                {# Ensure partial uses the right lang #}
+                {% set lang = currentLang %}
+                {% include "partials/sidebar-nav.njk" %}
+                <div class="nav-secondary">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span class="material-symbols-rounded" aria-hidden="true"
+                                                               role="img">keyboard_arrow_left</span>To {{ site.name }}
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if page.url.startsWith('/' ~ currentLang ~ '/api') %}active{% endif %}"
+                               href="{{ ('/' ~ currentLang ~ '/api/') | url }}">
+                                <span class="material-symbols-rounded" aria-hidden="true" role="img">integration_instructions</span>
+                                <span>{{ 'api_overview' | translate(currentLang) }}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <span class="sidenav-close-bg"></span>
             </div>
-            <span class="sidenav-close-bg"></span>
-        </div>
         {% endif %}
         <div class="container-fluid">
             <div class="row h-100">
@@ -116,8 +120,9 @@
                     <div class="top-navbar">
                         <nav class="navbar">
                             <div class="container-fluid px-6">
-                                <a href="/" class="logo d-lg-none">
-                                    <img src="/assets/images/logo/social-security-colour-rgb-small.svg" alt="logo" height="40">
+                                <a href="{{ '/' | url }}" class="logo d-lg-none">
+                                    <img src="{{ '/assets/images/logo/social-security-colour-rgb-small.svg' | url }}"
+                                         alt="logo" height="40">
                                 </a>
                                 <ul class="navbar-nav ms-auto">
                                     <li class="nav-item d-block d-lg-none">
@@ -135,28 +140,28 @@
                                         </button>
                                     </li>
                                     <li class="nav-item d-none d-lg-block">
-                                        <a class="btn nav-link {% if page.url == '/' + currentLang + '/' %}active{% endif %}"
-                                           href="{{ '/' + currentLang + '/' | url }}">
+                                        <a class="btn nav-link {% if page.url == '/' ~ currentLang ~ '/' %}active{% endif %}"
+                                           href="{{ ('/' ~ currentLang ~ '/') | url }}">
                                             {{ 'home' | translate(currentLang) }}
                                         </a>
                                     </li>
 
-{#                                    {% if not isApi %}#}
-                                        <li class="nav-item d-none d-lg-block">
-                                            <a class="btn nav-link {% if page.url.startsWith('/' + currentLang + '/api') %}active{% endif %}"
-                                               href="{{ '/' + currentLang + '/api/' | url }}">
-                                                <span class="material-symbols-rounded" aria-hidden="true" role="img">integration_instructions</span>
-                                                <span>{{ 'api_overview' | translate(currentLang) }}</span>
-                                            </a>
-                                        </li>
-{#                                    {% endif %}#}
+                                    {#                                    {% if not isApi %} #}
+                                    <li class="nav-item d-none d-lg-block">
+                                        <a class="btn nav-link {% if page.url.startsWith('/' ~ currentLang ~ '/api') %}active{% endif %}"
+                                           href="{{ ('/' ~ currentLang ~ '/api/') | url }}">
+                                            <span class="material-symbols-rounded" aria-hidden="true" role="img">integration_instructions</span>
+                                            <span>{{ 'api_overview' | translate(currentLang) }}</span>
+                                        </a>
+                                    </li>
+                                    {#                                    {% endif %} #}
                                 </ul>
                             </div>
                         </nav>
                         <!-- Loading bar -->
-                        {#<div class="progress progress-linear">
+                        {# <div class="progress progress-linear">
                             <div class="progress-bar bg-primary" role="progressbar" aria-label="Basic example"></div>
-                        </div>#}
+                        </div> #}
                     </div>
                     <div class="px-4 px-md-6 px-lg-10 px-xl-20 py-8">
                         <main class="main">
@@ -230,10 +235,13 @@
                                         </div>
                                     </div>
 
-                                    <p>&#169; {{ site.year }} {{ site.author }} · <span class="text-muted">v{{ site.version }}</span></p>
+                                    <p>&#169; {{ site.year }} {{ site.author }} · <span
+                                                class="text-muted">v{{ site.version }}</span></p>
                                 </div>
-                                <a class="d-inline-block my-auto" href="https://next-generation-eu.europa.eu/" target="_blank" rel="noopener">
-                                    <img src="/assets/images/logo/nextgenerationeu-en-h-colour-rgb.svg" alt="next-generation-eu.europa logo" height="40">
+                                <a class="d-inline-block my-auto" href="https://next-generation-eu.europa.eu/"
+                                   target="_blank" rel="noopener">
+                                    <img src="{{ '/assets/images/logo/nextgenerationeu-en-h-colour-rgb.svg' | url }}"
+                                         alt="next-generation-eu.europa logo" height="40">
                                 </a>
                             </div>
                         </div>
@@ -247,9 +255,9 @@
 <script src="{{ '/assets/js/vendor/bootstrap.bundle.min.js' | url }}"></script>
 <script src="{{ '/assets/js/static/sidenav.js' | url }}"></script>
 <script type="module">
-    import { sidenavModule } from '{{ "/assets/js/static/sidenav.js" | url }}';
+    import {sidenavModule} from '{{ "/assets/js/static/sidenav.js" | url }}';
 
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         sidenavModule.init();
     });
 </script>
