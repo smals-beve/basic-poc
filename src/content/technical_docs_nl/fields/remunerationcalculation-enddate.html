@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Glossarium Datafields – ${BLOK_TECHLABEL} grossBaseSalaryAmount</title>
+  <title>Glossarium Datafields – ${BLOK_TECHLABEL} endDate</title>
   
 </head>
 <body class="d-flex flex-column py-8">
@@ -16,37 +16,41 @@
             <span>
                 Versie
                 <br>
-                <strong>1.0.1.5</strong>
+                <strong>1.0.1.4</strong>
             </span>
             <span>
                 Datum
                 <br>
-                <strong>19-11-2025</strong>
+                <strong>15-10-2025</strong>
             </span>
         </div>
     </div>
     <div class="px-12 py-9">
         <!-- Zone LoopList -->
-        <h2 id="grossbasesalary-grossbasesalaryamount">Bedrag van brutobasisloon</h2>
+        <h2 id="remunerationcalculation-enddate">Einddatum van de loonberekeningsperiode</h2>
 
         <dl class="mt-7">
             <dt>Beschrijving</dt>	
-            <dd>Bedrag van brutobasisloon</dd>
+            <dd>Einddatum van de periode waarop de loonberekening betrekking heeft.</dd>
             <hr class="my-5">
             <dt>TechLabel</dt>	
-            <dd>grossBaseSalaryAmount</dd>
+            <dd>endDate</dd>
             <hr class="my-5">
             <dt>Type</dt>	
-            <dd>integer (EuroCentAmount)</dd>
+            <dd>string($date)</dd>
             <hr class="my-5">
 	        <dt>Lengte</dt>
-            <dd>15</dd>
+            <dd>10</dd>
             <hr class="my-5">
 	        <dt>Formaat</dt>
-            <dd>-</dd>
+            <dd>JJJJ-MM-DD<br><br><ul>
+<li>JJJJ is het jaar</li>
+<li>MM is de maand</li>
+<li>DD is de dag</li>
+</ul></dd>
 	        <hr class="my-5">
             <dt>Toegelaten domein</dt>
-            <dd>[1; 999999999999999]<br><br>Het bedrag wordt uitgedrukt in eurocenten.<br>Bijvoorbeeld: 1,00 euro wordt uitgedrukt als 100.</dd>
+            <dd>De einddatum van de loonberekeningsperiode is groter dan of gelijk aan de begindatum van de loonberekeningsperiode.</dd>
 	        <hr class="my-5">
             <dt>Aanwezigheid</dt>
             <dd>Onmisbaar</dd>

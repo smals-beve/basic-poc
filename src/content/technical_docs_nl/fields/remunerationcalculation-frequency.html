@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Glossarium Datafields – ${BLOK_TECHLABEL} id</title>
+  <title>Glossarium Datafields – ${BLOK_TECHLABEL} frequency</title>
   
 </head>
 <body class="d-flex flex-column py-8">
@@ -16,37 +16,37 @@
             <span>
                 Versie
                 <br>
-                <strong>1.0.1.5</strong>
+                <strong>1.0.1.4</strong>
             </span>
             <span>
                 Datum
                 <br>
-                <strong>19-11-2025</strong>
+                <strong>15-10-2025</strong>
             </span>
         </div>
     </div>
     <div class="px-12 py-9">
         <!-- Zone LoopList -->
-        <h2 id="calculation-id">Identificatiesleutel van loonberekening</h2>
+        <h2 id="remunerationcalculation-frequency">Loonberekeningsfrequentie</h2>
 
         <dl class="mt-7">
             <dt>Beschrijving</dt>	
-            <dd>Universally Unique Identifier gegenereerd door de aangever ter identicatie van een loonberekening.</dd>
+            <dd>Frequentie waarmee de berekening van de normale bezoldiging uitgevoerd wordt.</dd>
             <hr class="my-5">
             <dt>TechLabel</dt>	
-            <dd>id</dd>
+            <dd>frequency</dd>
             <hr class="my-5">
             <dt>Type</dt>	
-            <dd>string</dd>
+            <dd>integer</dd>
             <hr class="my-5">
 	        <dt>Lengte</dt>
-            <dd>36</dd>
+            <dd>2</dd>
             <hr class="my-5">
 	        <dt>Formaat</dt>
-            <dd>8-4-4-4-12 in hexadecimale tekens</dd>
+            <dd>-</dd>
 	        <hr class="my-5">
             <dt>Toegelaten domein</dt>
-            <dd>-</dd>
+            <dd>1 = wekelijks<br>2 = halfmaandelijks<br>3 = maandelijks<br>4 = trimestrieel (driemaandelijks)<br>5 = semestrieel (zesmaandelijks)<br>6 = jaarlijks<br>99 = andere</dd>
 	        <hr class="my-5">
             <dt>Aanwezigheid</dt>
             <dd>Onmisbaar</dd>
