@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="canonical" href="https://smals-beve.github.io/basic-poc/fr/fields/socialfeaturesdetail-startdate/">
-    <link rel="stylesheet" href="/basic-poc/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/basic-poc/assets/styles.css">
+
+    
+    <link rel="stylesheet" href="/basic-poc/assets/css/styleguide-egov-theme.min.css">
+    <link rel="stylesheet" href="/basic-poc/assets/css/styles.css">
 
     
     
@@ -17,54 +19,52 @@
     
     
 </head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/basic-poc/fr/">e-Gov 3.0</a>
+<body class="theme-enterprise">
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-auto align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="/basic-poc/fr/">
-                        Accueil
+<div class="layout-container">
+    <header class="header-top">
+        <div class="container-fluid px-6">
+            
+            <div class="switch-language d-none d-lg-inline-flex">
+                
+                
+                    
+                        
+                    
+                    <a class="btn"
+                       href="/basic-poc/nl/"
+                            >
+                        NL
                     </a>
-                </li>
-
                 
-                
-                    <li class="nav-item">
-                        <a class="nav-link" href="/basic-poc/fr/api/">
-                            Aperçu de l’API
-                        </a>
-                    </li>
-                
-
-                
-                
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#" id="langDropdown"
-                       role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        <span aria-hidden="true">🌐</span>
-                        <span class="text-uppercase">fr</span>
-                        <span class="visually-hidden">language</span>
+                    
+                        
+                    
+                    <a class="btn active"
+                       href="/basic-poc/fr/"
+                            aria-current="true">
+                        FR
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                
+            </div>
+
+            
+            <div class="d-lg-none text-uppercase">
+                <button type="button" class="btn btn-sm dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    FR
+                </button>
+                <div class="dropdown-menu">
+                    <ul class="overflow-hidden list-unstyled">
                         
                             
                                 
                             
                             <li>
-                                <a class="dropdown-item d-flex justify-content-between align-items-center"
+                                <a class="dropdown-item"
                                    href="/basic-poc/nl/"
-                                   >
-                                    <span class="text-uppercase">nl</span>
-                                    
+                                        >
+                                    NL
                                 </a>
                             </li>
                         
@@ -72,547 +72,504 @@
                                 
                             
                             <li>
-                                <a class="dropdown-item d-flex justify-content-between align-items-center active"
+                                <a class="dropdown-item active"
                                    href="/basic-poc/fr/"
-                                   aria-current="true">
-                                    <span class="text-uppercase">fr</span>
-                                    <span aria-hidden="true">✓</span>
-                                </a>
-                            </li>
-                        
-                            
-                                
-                            
-                            <li>
-                                <a class="dropdown-item d-flex justify-content-between align-items-center"
-                                   href="/basic-poc/en/"
-                                   >
-                                    <span class="text-uppercase">en</span>
-                                    
+                                        aria-current="true">
+                                    FR
                                 </a>
                             </li>
                         
                     </ul>
-                </li>
-            </ul>
+                </div>
+            </div>
+            
+            <div class="d-flex align-items-center gap-3">
+                <p class="mb-0 d-none d-lg-inline-flex">
+                    Lorem information and services dolores: ipsum.be
+                </p>
+                <img class="my-auto" src="/assets/images/logo/belgiumbe-colour.svg" alt=".be - logo" height="16">
+            </div>
         </div>
-    </div>
-</nav>
-
-<div class="container-fluid">
-    <div class="row flex-nowrap">
-
+    </header>
+    <div class="layout-content">
         
+        <div id="sidenav" class="sidenav" style="min-width: 304px;">
+            <a href="/basic-poc/fr/" class="logo d-none d-lg-block">
+                <img src="/assets/images/logo/logo.svg" alt="Logo e-Gov 3.0" height="40">
+            </a>
+            
+            
+            
+            
+
+
+<ul class="nav">
+    
+    
         
-            <aside class="col-auto p-0 sidebar-fixed bg-light">
-                <div class="sidebar-scroll">
-                    <div class="sidebar-body">
-                        <a href="/basic-poc/fr/"
-                           class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                            <span class="fs-5 d-none d-sm-inline">Contenu</span>
-                        </a>
-                        
-                        
-                        
+        <li class="nav-item">
+            <a class="nav-link" href="/basic-poc/fr/">
+                <span class="label" title="Aperçu des Blocs">
+                    Aperçu des Blocs
+                </span>
+            </a>
+        </li>
+    
 
-
-<nav id="sidebar" class="sidebar bg-light">
-    <ul class="nav flex-column">
-
-        
+    
+    
+    
         
             
+            
+            
+            
+
             <li class="nav-item">
-                <a class="nav-link" href="/basic-poc/fr/">
-          <span class="label" title="Aperçu des Blocs">
-            Aperçu des Blocs
-          </span>
-                </a>
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/fr/blocks/enterprise/"
+                       title="Entreprise">
+                        <span class="label text-truncate">Entreprise</span>
+                    </a>
+                
             </li>
-            <li>
-                <hr class="my-2">
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/fr/blocks/naturalperson/"
+                       title="Personne physique">
+                        <span class="label text-truncate">Personne physique</span>
+                    </a>
+                
             </li>
-        
 
+            
         
-        
+    
         
             
-                
-                
-                
-                
-                
+            
+            
+            
 
-                <li class="nav-item">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a class="nav-link flex-grow-1"
-                           href="/basic-poc/fr/blocks/enterprise/" title="Entreprise">
-                            <span class="label text-truncate">Entreprise</span>
-                        </a>
-
-                        
-                    </div>
-
+            <li class="nav-item">
+                
                     
-                </li>
-
-                <li>
-                    <hr class="my-2">
-                </li>
-
+                    <a class="nav-link"
+                       href="/basic-poc/fr/blocks/relation/"
+                       title="Relation">
+                        <span class="label text-truncate">Relation</span>
+                    </a>
                 
+            </li>
+
             
         
+    
+        
             
-                
-                
-                
-                
-                
+            
+            
+            
 
-                <li class="nav-item">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a class="nav-link flex-grow-1"
-                           href="/basic-poc/fr/blocks/naturalperson/" title="Personne physique">
-                            <span class="label text-truncate">Personne physique</span>
-                        </a>
-
-                        
-                    </div>
-
+            <li class="nav-item">
+                
                     
-                </li>
-
-                <li>
-                    <hr class="my-2">
-                </li>
-
+                    <a class="nav-link"
+                       href="/basic-poc/fr/blocks/remunerationcalculation/"
+                       title="Calcul salarial">
+                        <span class="label text-truncate">Calcul salarial</span>
+                    </a>
                 
+            </li>
+
             
         
+    
+        
             
-                
-                
-                
-                
-                
+            
+            
+            
 
-                <li class="nav-item">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a class="nav-link flex-grow-1"
-                           href="/basic-poc/fr/blocks/relation/" title="Relation">
-                            <span class="label text-truncate">Relation</span>
-                        </a>
-
-                        
-                    </div>
-
+            <li class="nav-item">
+                
                     
-                </li>
-
-                <li>
-                    <hr class="my-2">
-                </li>
-
+                    <a class="nav-link"
+                       href="/basic-poc/fr/blocks/service/"
+                       title="Prestation ou absence">
+                        <span class="label text-truncate">Prestation ou absence</span>
+                    </a>
                 
+            </li>
+
             
         
+    
+        
             
-                
-                
-                
-                
-                
+            
+            
+            
 
-                <li class="nav-item">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a class="nav-link flex-grow-1"
-                           href="/basic-poc/fr/blocks/remunerationcalculation/" title="Calcul salarial">
-                            <span class="label text-truncate">Calcul salarial</span>
-                        </a>
-
-                        
-                    </div>
-
+            <li class="nav-item">
+                
                     
-                </li>
-
-                <li>
-                    <hr class="my-2">
-                </li>
-
+                    <a class="nav-link"
+                       href="/basic-poc/fr/blocks/servicefeature/"
+                       title="Caractéristiques de la prestation">
+                        <span class="label text-truncate">Caractéristiques de la prestation</span>
+                    </a>
                 
+            </li>
+
             
         
+    
+        
             
-                
-                
-                
-                
-                
+            
+            
+            
 
-                <li class="nav-item">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a class="nav-link flex-grow-1"
-                           href="/basic-poc/fr/blocks/service/" title="Prestation ou absence">
-                            <span class="label text-truncate">Prestation ou absence</span>
-                        </a>
-
-                        
-                    </div>
-
+            <li class="nav-item">
+                
                     
-                </li>
-
-                <li>
-                    <hr class="my-2">
-                </li>
-
+                    <a class="nav-link"
+                       href="/basic-poc/fr/blocks/identifyingsocialfeatures/"
+                       title="Signalétique sociale">
+                        <span class="label text-truncate">Signalétique sociale</span>
+                    </a>
                 
+            </li>
+
             
         
+    
+        
             
-                
-                
-                
-                
-                
+            
+            
+            
 
-                <li class="nav-item">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a class="nav-link flex-grow-1"
-                           href="/basic-poc/fr/blocks/servicefeature/" title="Caractéristiques de la prestation">
-                            <span class="label text-truncate">Caractéristiques de la prestation</span>
-                        </a>
-
-                        
-                    </div>
-
+            <li class="nav-item">
+                
                     
-                </li>
-
-                <li>
-                    <hr class="my-2">
-                </li>
-
+                    <a class="nav-link"
+                       href="/basic-poc/fr/blocks/operationalsocialfeatures/"
+                       title="Signalétique sociale périodique">
+                        <span class="label text-truncate">Signalétique sociale périodique</span>
+                    </a>
                 
+            </li>
+
             
         
+    
+        
             
-                
-                
-                
-                
-                
+            
+            
+            
 
-                <li class="nav-item">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a class="nav-link flex-grow-1"
-                           href="/basic-poc/fr/blocks/identifyingsocialfeatures/" title="Signalétique sociale">
-                            <span class="label text-truncate">Signalétique sociale</span>
-                        </a>
-
-                        
-                    </div>
-
+            <li class="nav-item">
+                
                     
-                </li>
-
-                <li>
-                    <hr class="my-2">
-                </li>
-
+                    <a class="nav-link"
+                       href="/basic-poc/fr/blocks/weeklyhours/"
+                       title="Temps de travail hebdomadaire">
+                        <span class="label text-truncate">Temps de travail hebdomadaire</span>
+                    </a>
                 
+            </li>
+
             
         
+    
+        
             
-                
-                
-                
-                
-                
+            
+            
+            
 
-                <li class="nav-item">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a class="nav-link flex-grow-1"
-                           href="/basic-poc/fr/blocks/operationalsocialfeatures/" title="Signalétique sociale périodique">
-                            <span class="label text-truncate">Signalétique sociale périodique</span>
-                        </a>
-
-                        
-                    </div>
-
+            <li class="nav-item">
+                
                     
-                </li>
-
-                <li>
-                    <hr class="my-2">
-                </li>
-
+                    <a class="nav-link"
+                       href="/basic-poc/fr/blocks/reorganisationmeasure/"
+                       title="Mesure de réorganisation du temps de travail">
+                        <span class="label text-truncate">Mesure de réorganisation du temps de travail</span>
+                    </a>
                 
+            </li>
+
             
         
+    
+        
             
-                
-                
-                
-                
-                
+            
+            
+            
 
-                <li class="nav-item">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a class="nav-link flex-grow-1"
-                           href="/basic-poc/fr/blocks/weeklyhours/" title="Temps de travail hebdomadaire">
-                            <span class="label text-truncate">Temps de travail hebdomadaire</span>
-                        </a>
-
-                        
-                    </div>
-
+            <li class="nav-item">
+                
                     
-                </li>
-
-                <li>
-                    <hr class="my-2">
-                </li>
-
-                
-            
-        
-            
-                
-                
-                
-                
-                
-
-                <li class="nav-item">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a class="nav-link flex-grow-1"
-                           href="/basic-poc/fr/blocks/reorganisationmeasure/" title="Mesure de réorganisation du temps de travail">
-                            <span class="label text-truncate">Mesure de réorganisation du temps de travail</span>
-                        </a>
-
-                        
-                    </div>
-
-                    
-                </li>
-
-                <li>
-                    <hr class="my-2">
-                </li>
-
-                
-            
-        
-            
-                
-                
-                
-                
-                
-
-                <li class="nav-item">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a class="nav-link flex-grow-1"
-                           href="/basic-poc/fr/blocks/socialfeaturesdetail/" title="Caractéristiques sociales supplémentaires">
+                    <div class="toggle-item-container">
+                        <button class="btn btn-toggle nav-link"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapse-fr-socialfeaturesdetail"
+                                aria-expanded="false"
+                                aria-controls="collapse-fr-socialfeaturesdetail"
+                                title="Caractéristiques sociales supplémentaires">
                             <span class="label text-truncate">Caractéristiques sociales supplémentaires</span>
+                        </button>
+
+                        <div class="collapse" id="collapse-fr-socialfeaturesdetail">
+                            <ul class="toggle-nav">
+                                
+                                <li>
+                                    <a class="nav-link"
+                                       href="/basic-poc/fr/blocks/socialfeaturesdetail/"
+                                       title="Caractéristiques sociales supplémentaires">
+                                        <span class="label text-truncate">Caractéristiques sociales supplémentaires - overview</span>
+                                    </a>
+                                </li>
+
+                                
+                                
+                                
+                                    
+                                        
+                                        <li>
+                                            <a class="nav-link"
+                                               href="/basic-poc/fr/blocks/job/"
+                                               title="Fonction">
+                                                <span class="label text-truncate">Fonction</span>
+                                            </a>
+                                        </li>
+                                        
+                                    
+                                
+                                    
+                                        
+                                        <li>
+                                            <a class="nav-link"
+                                               href="/basic-poc/fr/blocks/gradualworkresumption/"
+                                               title="Reprise progressive du travail">
+                                                <span class="label text-truncate">Reprise progressive du travail</span>
+                                            </a>
+                                        </li>
+                                        
+                                    
+                                
+                                    
+                                        
+                                        <li>
+                                            <a class="nav-link"
+                                               href="/basic-poc/fr/blocks/dismissal/"
+                                               title="Licenciement">
+                                                <span class="label text-truncate">Licenciement</span>
+                                            </a>
+                                        </li>
+                                        
+                                    
+                                
+                                    
+                                        
+                                        <li>
+                                            <a class="nav-link"
+                                               href="/basic-poc/fr/blocks/starterjob/"
+                                               title="Premier emploi">
+                                                <span class="label text-truncate">Premier emploi</span>
+                                            </a>
+                                        </li>
+                                        
+                                    
+                                
+                            </ul>
+                        </div>
+                    </div>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/fr/blocks/financialelement/"
+                       title="Élément financier">
+                        <span class="label text-truncate">Élément financier</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/fr/blocks/fiscalfeatures/"
+                       title="Signalétique fiscale">
+                        <span class="label text-truncate">Signalétique fiscale</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+</ul>
+            <div class="nav-secondary">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="material-symbols-rounded" aria-hidden="true" role="img">keyboard_arrow_left</span>To e-Gov 3.0</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           href="/fr/basic-poc/api/">
+                            <span class="material-symbols-rounded" aria-hidden="true" role="img">integration_instructions</span>
+                            <span>Aperçu de l’API</span>
                         </a>
-
-                        
-                            <button class="btn btn-sm btn-link p-0 ms-2 collapse-toggle collapsed"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#collapse-fr-socialfeaturesdetail"
-                                    aria-expanded="false"
-                                    aria-controls="collapse-fr-socialfeaturesdetail"
-                                    aria-label="Afficher/masquer le sous-menu pour Caractéristiques sociales supplémentaires"
-                            >
-                                <span class="caret" aria-hidden="true"></span>
-                                <span class="visually-hidden">Afficher/masquer le sous-menu pour Caractéristiques sociales supplémentaires</span>
-                            </button>
-                        
-                    </div>
-
-                    
-                        <ul id="collapse-fr-socialfeaturesdetail"
-                            class="nav flex-column ms-3 collapse"
-                            data-bs-parent="#sidebar">
-                            
-                            
-                                
-                                    
-                                    <li class="nav-item">
-                                        <a class="nav-link"
-                                           href="/basic-poc/fr/blocks/job/" title="Fonction">
-                                            <span class="label text-truncate">Fonction</span>
+                    </li>
+                </ul>
+            </div>
+            <span class="sidenav-close-bg"></span>
+        </div>
+        
+        <div class="container-fluid">
+            <div class="row h-100">
+                <div class="col-12 px-0 d-flex flex-column">
+                    <div class="top-navbar">
+                        <nav class="navbar">
+                            <div class="container-fluid px-6">
+                                <a href="/" class="logo d-lg-none">
+                                    <img src="/assets/images/logo/social-security-colour-rgb-small.svg" alt="logo" height="40">
+                                </a>
+                                <ul class="navbar-nav ms-auto">
+                                    <li class="nav-item d-block d-lg-none">
+                                        <button id="js-burger-trigger-sidenav" class="btn-burger" aria-label="Menu">
+                                            <div class="btn-burger-background"></div>
+                                            <div class="btn-burger-lines">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                            <div class="btn-burger-close">
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li class="nav-item d-none d-lg-block">
+                                        <a class="btn nav-link "
+                                           href="/fr/basic-poc/">
+                                            Accueil
                                         </a>
                                     </li>
-                                    
-                                
-                            
-                                
-                                    
-                                    <li class="nav-item">
-                                        <a class="nav-link"
-                                           href="/basic-poc/fr/blocks/gradualworkresumption/" title="Reprise progressive du travail">
-                                            <span class="label text-truncate">Reprise progressive du travail</span>
-                                        </a>
-                                    </li>
-                                    
-                                
-                            
-                                
-                                    
-                                    <li class="nav-item">
-                                        <a class="nav-link"
-                                           href="/basic-poc/fr/blocks/dismissal/" title="Licenciement">
-                                            <span class="label text-truncate">Licenciement</span>
-                                        </a>
-                                    </li>
-                                    
-                                
-                            
-                                
-                                    
-                                    <li class="nav-item">
-                                        <a class="nav-link"
-                                           href="/basic-poc/fr/blocks/starterjob/" title="Premier emploi">
-                                            <span class="label text-truncate">Premier emploi</span>
-                                        </a>
-                                    </li>
-                                    
-                                
-                            
-                        </ul>
-                    
-                </li>
 
-                <li>
-                    <hr class="my-2">
-                </li>
 
-                
-            
-        
-            
-                
-                
-                
-                
-                
+                                        <li class="nav-item d-none d-lg-block">
+                                            <a class="btn nav-link "
+                                               href="/fr/basic-poc/api/">
+                                                <span class="material-symbols-rounded" aria-hidden="true" role="img">integration_instructions</span>
+                                                <span>Aperçu de l’API</span>
+                                            </a>
+                                        </li>
 
-                <li class="nav-item">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a class="nav-link flex-grow-1"
-                           href="/basic-poc/fr/blocks/financialelement/" title="Élément financier">
-                            <span class="label text-truncate">Élément financier</span>
-                        </a>
-
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- Loading bar -->
                         
                     </div>
+                    <div class="px-4 px-md-6 px-lg-10 px-xl-20 py-8">
+                        <main class="main">
 
-                    
-                </li>
+                            
+                            
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        
+                                            <li class="breadcrumb-item"
+                                                >
+                                                
+                                                    <a href="/basic-poc/fr/">Aperçu des Blocs</a>
+                                                
+                                            </li>
+                                        
+                                            <li class="breadcrumb-item"
+                                                >
+                                                
+                                                    <a href="/basic-poc/fr/blocks/socialfeaturesdetail/">Caractéristiques sociales supplémentaires</a>
+                                                
+                                            </li>
+                                        
+                                            <li class="breadcrumb-item active"
+                                                aria-current="page">
+                                                
+                                                    Date de début
+                                                
+                                            </li>
+                                        
+                                    </ol>
+                                </nav>
+                            
 
-                <li>
-                    <hr class="my-2">
-                </li>
 
-                
-            
-        
-            
-                
-                
-                
-                
-                
+                            
+                            
+                            
 
-                <li class="nav-item">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a class="nav-link flex-grow-1"
-                           href="/basic-poc/fr/blocks/fiscalfeatures/" title="Signalétique fiscale">
-                            <span class="label text-truncate">Signalétique fiscale</span>
-                        </a>
+                            
+                            
+                                <div class="d-inline-flex align-items-center">
+                                    <label for="switch_to"
+                                           class="form-label mb-0 me-2">Aller au champ</label>
+                                    <select id="switch_to" class="form-select form-select-sm w-auto"
+                                            onchange="var v=this.value; if(v){ location.href=v; }">
+                                        <option value="">— choisir —</option>
+                                        
+                                            <option value="/basic-poc/fr/fields/socialfeaturesdetail-sequencenumber/">Numéro de séquence</option>
+                                        
+                                            <option value="/basic-poc/fr/fields/socialfeaturesdetail-enddate/">Date de fin</option>
+                                        
+                                    </select>
+                                </div>
+                            
 
-                        
-                    </div>
-
-                    
-                </li>
-
-                <li>
-                    <hr class="my-2">
-                </li>
-
-                
-            
-        
-    </ul>
-</nav>
-
-                    </div>
-                </div>
-            </aside>
-        
-
-        <main class="col ps-3 content-flex py-3">
-
-            
-            
-                <nav aria-label="breadcrumb" class="mb-3">
-                    <ol class="breadcrumb">
-                        
-                            <li class="breadcrumb-item"
-                                >
-                                
-                                    <a href="/basic-poc/fr/">Aperçu des Blocs</a>
-                                
-                            </li>
-                        
-                            <li class="breadcrumb-item"
-                                >
-                                
-                                    <a href="/basic-poc/fr/blocks/socialfeaturesdetail/">Caractéristiques sociales supplémentaires</a>
-                                
-                            </li>
-                        
-                            <li class="breadcrumb-item active"
-                                aria-current="page">
-                                
-                                    Date de début
-                                
-                            </li>
-                        
-                    </ol>
-                </nav>
-            
-
-            
-            
-            
-
-            
-            
-                <div class="d-inline-flex align-items-center">
-                    <label for="switch_to"
-                           class="form-label mb-0 me-2">Aller au champ</label>
-                    <select id="switch_to" class="form-select form-select-sm w-auto"
-                            onchange="var v=this.value; if(v){ location.href=v; }">
-                        <option value="">— choisir —</option>
-                        
-                            <option value="/basic-poc/fr/fields/socialfeaturesdetail-sequencenumber/">Numéro de séquence</option>
-                        
-                            <option value="/basic-poc/fr/fields/socialfeaturesdetail-enddate/">Date de fin</option>
-                        
-                    </select>
-                </div>
-            
-
-            <div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
+                            <div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
 
     <div class="px-12 py-5 introduction">
         <h4>Glossaires<br>Transfert de données salariales</h4>
@@ -660,18 +617,54 @@ Si une ou plusieurs donnée(s) change(nt) dans une des sous-classes des  caract
         <!-- Zone LoopList -->
     </div>
 </div>
-        </main>
 
+                        </main>
+                    </div>
+
+                    <footer class="footer">
+                        <div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
+                            <div class="d-flex flex-wrap flex-column flex-md-row justify-content-between gap-5">
+                                <div class="d-flex flex-column gap-4">
+                                    <div class="row gx-5 gy-3">
+                                        <div class="col-auto">
+                                            <a class="link-underline" href="#">Terms of use for businesses</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a class="link-underline" href="#">Conditions for reuse</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a class="link-underline" href="#">Personal data</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a class="link-underline" href="#">Accessibility statement</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a class="link-underline" href="#">Cookie policy</a>
+                                        </div>
+                                    </div>
+
+                                    <p>&#169; 2025 Smals · <span class="text-muted">v1.0.0</span></p>
+                                </div>
+                                <a class="d-inline-block my-auto" href="https://next-generation-eu.europa.eu/" target="_blank" rel="noopener">
+                                    <img src="/assets/images/logo/nextgenerationeu-en-h-colour-rgb.svg" alt="next-generation-eu.europa logo" height="40">
+                                </a>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<footer class="text-center mt-4 mb-3">
-    <small>
-        &copy; 2025 Smals
-        · <span class="text-muted">v1.0.0</span>
-    </small>
-</footer>
+<script src="/basic-poc/assets/js/vendor/bootstrap.bundle.min.js"></script>
+<script src="/basic-poc/assets/js/static/sidenav.js"></script>
+<script type="module">
+    import { sidenavModule } from '/basic-poc/assets/js/static/sidenav.js';
 
-<script src="/basic-poc/assets/js/bootstrap.bundle.min.js"></script>
+    document.addEventListener("DOMContentLoaded", function() {
+        sidenavModule.init();
+    });
+</script>
 </body>
 </html>
