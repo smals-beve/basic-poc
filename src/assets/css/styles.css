@@ -1,0 +1,241 @@
+body {
+    overflow: initial !important;
+}
+
+@media (max-width: 991.98px) {
+    .sidenav {
+        top: 72px;
+        height: calc(100vh - 72px);
+    }
+}
+
+.bg-light-subtle.full-w {
+    position: relative;
+}
+.bg-light-subtle.full-w:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--bs-light-bg-subtle);
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+}
+#sidenav {
+    @media (min-width: 992px) {
+        height: 100vh;
+    }
+}
+
+nav[aria-label="breadcrumb"] + .pdf-page {
+    margin-top: 1.5rem;
+}
+
+/* PDF PAGE CSS CLASSES ======================================================== */
+
+.pdf-page .text-primary-dark {
+    color: var(--color-primary-900);
+}
+.pdf-page .bg-light-subtle {
+    --bs-light-bg-subtle: #F6F5F3;
+}
+
+
+/* PDF PAGE CSS LAYOUT ======================================================== */
+:root {
+    --size-page-width: 1190px;
+    --size-page-height: 1684px;
+}
+
+.pdf-page pre {
+    background: var(--color-neutral-50);
+    padding: 1rem;
+    border-radius: var(--bs-card-border-radius);
+}
+
+.pdf-page dl > hr:last-child {
+    display: none;
+}
+
+.pdf-page h3 code {
+    position: relative;
+    display: block;
+    padding-inline: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.54;
+    color: var(--color-neutral-1000);
+}
+
+.pdf-page h3 + * {
+    margin-top: .75rem;
+}
+
+.pdf-page h3 code:before {
+    content: '[';
+}
+.pdf-page h3 code:after {
+    content: ']';
+}
+
+.pdf-page h2:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 1399px) {
+    .pdf-page > .bg-light-subtle > .row > *[class^="col-md-"] {
+        width: auto !important;
+    }
+}
+
+.pdf-page .introduction {
+    background-image: url("/assets/images/intro-banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.pdf-page .introduction h1,
+.pdf-page .introduction h2 {
+    margin: 0 !important;
+}
+
+.pdf-page .introduction__right {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    height: max-content;
+    margin-block: auto;
+}
+
+.pdf-page .introduction__right span {
+    position: relative;
+    display: inline-block;
+}
+
+.pdf-page .introduction__right span + span {
+    padding-left: 2rem;
+}
+
+.pdf-page .introduction__right span + span:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: white;
+    opacity: .45;
+}
+
+.pdf-page {
+    width: 100%;
+    /*max-width: var(--size-page-width);*/
+    /*min-height: var(--size-page-height);*/
+    background: white;
+    margin-left: 0 !important;
+}
+
+.pdf-page .pdf-page > div {
+    position: relative;
+    z-index: 1;
+}
+
+/* Make the section with the decoration a flex column and
+   keep the footer at the bottom inside this section */
+.pdf-page .bottom-decoration {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /*min-height: var(--size-page-height);*/
+    /* Reserve space for the SVG so content/footer don't overlap it.
+       Tweak values to your visual needs. */
+    padding-bottom: clamp(80px, 10vh, 220px);
+}
+
+/* Ensure all direct children render above the decoration */
+.pdf-page .bottom-decoration > * {
+    position: relative;
+    z-index: 1;
+}
+
+.pdf-page .bottom-decoration::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    width: 56%;
+    aspect-ratio: 638 / 369;
+    background: url("/assets/images/decoration.svg") no-repeat 0 100% / cover;
+    pointer-events: none;
+}
+
+/* Pin the footer to the bottom within .bottom-decoration */
+.pdf-page .bottom-decoration > .footer {
+    margin-top: auto;
+    z-index: 1; /* stays above the decoration */
+}
+
+
+/* PDF PAGE CSS CARDS ======================================================== */
+
+.pdf-page .card {
+    --bs-card-border-radius: 1rem;
+    --bs-card-spacer-y: 1rem;
+    --bs-card-spacer-x: 1rem;
+}
+
+
+/* PDF PAGE CSS TABLES ======================================================== */
+
+.pdf-page .table {
+    --bs-table-striped-bg: var(--color-neutral-50);
+    --bs-table-color: var(--color-neutral-1000);
+    --bs-table-striped-color: var(--color-neutral-1000);
+
+    border: var(--bs-border-width) solid var(--color-neutral-black-200);
+    border-radius: var(--border-radius);
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+}
+
+.pdf-page .table:last-child {
+    margin-bottom: 0;
+}
+
+.pdf-page .table th,
+.pdf-page .table td {
+    vertical-align: middle;
+}
+
+/* Remove bottom margin from the last child elements inside cells */
+.pdf-page .table th :is(ul, ol, h1, h2, h3, h4, h5, p, a, .tag):last-child,
+.pdf-page .table td :is(ul, ol, h1, h2, h3, h4, h5, p, a, .tag):last-child {
+    margin-bottom: 0;
+}
+
+.pdf-page .table > :not(caption) > * > * {
+    transition: .35s box-shadow ease, .35s background-color ease, .35s border-bottom ease;
+    padding: calc(var(--spacer-5, 3rem) - .031rem) var(--spacer-5, 3rem);
+}
+
+.pdf-page .table > thead > tr > th,
+.pdf-page .table > tbody > tr:not(:last-child) > td {
+    border-color: var(--color-neutral-black-100);
+}
+
+.pdf-page .table > tbody > tr:last-child > td {
+    border-bottom-width: 0;
+}
+
+.pdf-page .table.table-sm > :not(caption) > * > * {
+    padding: .5rem;
+}

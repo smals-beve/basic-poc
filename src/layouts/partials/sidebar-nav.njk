@@ -1,83 +1,82 @@
 {% set manifests = { 'nl': manifest_nl, 'fr': manifest_fr, 'en': manifest_en } %}
 {% set manifestForLang = manifests[lang] %}
 
-<nav id="sidebar" class="sidebar bg-light">
-    <ul class="nav flex-column">
+<ul class="nav">
+    {# Overview link #}
+    {% if manifestForLang and manifestForLang.overview %}
+        {% set overviewUrl = ('/' ~ lang ~ '/') | url %}
+        <li class="nav-item">
+            <a class="nav-link{% if page.url == overviewUrl %} active{% endif %}" href="{{ overviewUrl }}">
+                <span class="label" title="{{ manifestForLang.overview.title }}">
+                    {{ manifestForLang.overview.title }}
+                </span>
+            </a>
+        </li>
+    {% endif %}
 
-        {# Overview link #}
-        {% if manifestForLang and manifestForLang.overview %}
-            {% set overviewUrl = ('/' ~ lang ~ '/') | url %}
+    {# Top-level blocks with one level of nested sub-blocks #}
+    {% set lastTopBlockId = '' %}
+    {% for topLevelBlock in (manifestForLang.blocks or []) | sort(attribute='order') %}
+        {% if topLevelBlock.id != lastTopBlockId %}
+            {% set topBlockUrl = ('/' ~ lang ~ '/blocks/' ~ topLevelBlock.id ~ '/') | url %}
+            {% set hasNestedBlocks = topLevelBlock.blocks and (topLevelBlock.blocks | length) > 0 %}
+            {% set isActive = (page.url == topBlockUrl) or (page.url and page.url.indexOf(topBlockUrl) == 0) %}
+            {% set collapseId = 'collapse-' ~ lang ~ '-' ~ topLevelBlock.id %}
+
             <li class="nav-item">
-                <a class="nav-link{% if page.url == overviewUrl %} active{% endif %}" href="{{ overviewUrl }}">
-          <span class="label" title="{{ manifestForLang.overview.title }}">
-            {{ manifestForLang.overview.title }}
-          </span>
-                </a>
-            </li>
-            <li>
-                <hr class="my-2">
-            </li>
-        {% endif %}
-
-        {# Top-level blocks with one level of nested sub-blocks #}
-        {% set lastTopBlockId = '' %}
-        {% for topLevelBlock in (manifestForLang.blocks or []) | sort(attribute='order') %}
-            {% if topLevelBlock.id != lastTopBlockId %}
-                {% set topBlockUrl = ('/' ~ lang ~ '/blocks/' ~ topLevelBlock.id ~ '/') | url %}
-                {% set hasNestedBlocks = topLevelBlock.blocks and (topLevelBlock.blocks | length) > 0 %}
-                {# active when this exact block or any of its nested paths are open #}
-                {% set isActive = (page.url == topBlockUrl) or (page.url and page.url.indexOf(topBlockUrl) == 0) %}
-                {% set collapseId = 'collapse-' ~ lang ~ '-' ~ topLevelBlock.id %}
-
-                <li class="nav-item">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a class="nav-link flex-grow-1{% if isActive %} active{% endif %}"
-                           href="{{ topBlockUrl }}" title="{{ topLevelBlock.title }}">
+                {% if hasNestedBlocks %}
+                    {# Block avec sous-menus - utilise la structure toggle #}
+                    <div class="toggle-item-container">
+                        <button class="btn btn-toggle nav-link{% if isActive %} active{% endif %}"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#{{ collapseId }}"
+                                aria-expanded="{% if isActive %}true{% else %}false{% endif %}"
+                                aria-controls="{{ collapseId }}"
+                                title="{{ topLevelBlock.title }}">
                             <span class="label text-truncate">{{ topLevelBlock.title }}</span>
-                        </a>
+                        </button>
 
-                        {% if hasNestedBlocks %}
-                            <button class="btn btn-sm btn-link p-0 ms-2 collapse-toggle{% if not isActive %} collapsed{% endif %}"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#{{ collapseId }}"
-                                    aria-expanded="{% if isActive %}true{% else %}false{% endif %}"
-                                    aria-controls="{{ collapseId }}"
-                                    aria-label="{{ 'toggle_submenu_for' | translate(lang, { name: topLevelBlock.title }) }}"
-                            >
-                                <span class="caret" aria-hidden="true"></span>
-                                <span class="visually-hidden">{{ 'toggle_submenu_for' | translate(lang, { name: topLevelBlock.title }) }}</span>
-                            </button>
-                        {% endif %}
+                        <div class="collapse{% if isActive %} show{% endif %}" id="{{ collapseId }}">
+                            <ul class="toggle-nav">
+                                {# Lien vers la page principale du top-level block #}
+                                <li>
+                                    <a class="nav-link{% if page.url == topBlockUrl %} active{% endif %}"
+                                       href="{{ topBlockUrl }}"
+                                       title="{{ topLevelBlock.title }}">
+                                        <span class="label text-truncate">{{ topLevelBlock.title }} - {{ 'overview' | translate(lang) }}</span>
+                                    </a>
+                                </li>
+
+                                {# Sous-blocs #}
+                                {% set lastNestedBlockId = '' %}
+                                {% for nestedBlock in (topLevelBlock.blocks or []) | sort(attribute='order') %}
+                                    {% if nestedBlock.id != lastNestedBlockId %}
+                                        {% set nestedBlockUrl = ('/' ~ lang ~ '/blocks/' ~ nestedBlock.id ~ '/') | url %}
+                                        <li>
+                                            <a class="nav-link{% if page.url == nestedBlockUrl %} active{% endif %}"
+                                               href="{{ nestedBlockUrl }}"
+                                               title="{{ nestedBlock.title }}">
+                                                <span class="label text-truncate">{{ nestedBlock.title }}</span>
+                                            </a>
+                                        </li>
+                                        {% set lastNestedBlockId = nestedBlock.id %}
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
+                {% else %}
+                    {# Block sans sous-menus - lien simple #}
+                    <a class="nav-link{% if isActive %} active{% endif %}"
+                       href="{{ topBlockUrl }}"
+                       title="{{ topLevelBlock.title }}">
+                        <span class="label text-truncate">{{ topLevelBlock.title }}</span>
+                    </a>
+                {% endif %}
+            </li>
 
-                    {% if hasNestedBlocks %}
-                        <ul id="{{ collapseId }}"
-                            class="nav flex-column ms-3 collapse{% if isActive %} show{% endif %}"
-                            data-bs-parent="#sidebar">
-                            {% set lastNestedBlockId = '' %}
-                            {% for nestedBlock in (topLevelBlock.blocks or []) | sort(attribute='order') %}
-                                {% if nestedBlock.id != lastNestedBlockId %}
-                                    {% set nestedBlockUrl = ('/' ~ lang ~ '/blocks/' ~ nestedBlock.id ~ '/') | url %}
-                                    <li class="nav-item">
-                                        <a class="nav-link{% if page.url == nestedBlockUrl %} active{% endif %}"
-                                           href="{{ nestedBlockUrl }}" title="{{ nestedBlock.title }}">
-                                            <span class="label text-truncate">{{ nestedBlock.title }}</span>
-                                        </a>
-                                    </li>
-                                    {% set lastNestedBlockId = nestedBlock.id %}
-                                {% endif %}
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
-                </li>
-
-                <li>
-                    <hr class="my-2">
-                </li>
-
-                {% set lastTopBlockId = topLevelBlock.id %}
-            {% endif %}
-        {% endfor %}
-    </ul>
-</nav>
+            {% set lastTopBlockId = topLevelBlock.id %}
+        {% endif %}
+    {% endfor %}
+</ul>
