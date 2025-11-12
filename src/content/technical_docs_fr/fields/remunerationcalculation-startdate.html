@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Glossaires Datafields – ${BLOK_TECHLABEL} usingEmployerEnterpriseNumber</title>
+  <title>Glossaires Datafields – ${BLOK_TECHLABEL} startDate</title>
   
     <style>
         html, body {
@@ -24,43 +24,44 @@
             <span>
                 Version
                 <br>
-                <strong>1.0.1.5</strong>
+                <strong>1.0.1.4</strong>
             </span>
             <span>
                 Date
                 <br>
-                <strong>19-11-2025</strong>
+                <strong>15-10-2025</strong>
             </span>
         </div>
     </div>
     <div class="px-12 py-9">
         <!-- Zone LoopList -->
-        <h2 id="usingemployer-usingemployerenterprisenumber">Numéro d&#x27;entreprise de l&#x27;entreprise utilisatrice</h2>
+        <h2 id="remunerationcalculation-startdate">Date de début de la période de calcul salarial</h2>
 
         <dl class="mt-7">
             <dt>Description</dt>	
-            <dd>Numéro  d&#x27;entreprise de l&#x27;entreprise utilisatrice chez laquelle le travailleur intérimaire est occupé</dd>
+            <dd>Date de début de la période à laquelle se rapporte le calcul salarial.</dd>
             <hr class="my-5">
             <dt>TechLabel</dt>	
-            <dd>usingEmployerEnterpriseNumber</dd>
+            <dd>startDate</dd>
             <hr class="my-5">
             <dt>Type</dt>	
-            <dd>integer</dd>
+            <dd>string($date)</dd>
             <hr class="my-5">
 	        <dt>Longeur</dt>
             <dd>10</dd>
             <hr class="my-5">
 	        <dt>Format</dt>
-            <dd>NNNNNNNNCC<br><br><ul>
-<li>NNNNNNNN est le numéro</li>
-<li>CC est le nombre-contrôle.</li>
+            <dd>AAAA-MM-JJ<br><br><ul>
+<li>AAAA est l&#x27;année</li>
+<li>MM est le mois</li>
+<li>JJ est le jour</li>
 </ul></dd>
 	        <hr class="my-5">
             <dt>Domaine de définition</dt>
-            <dd>Nombre à 10 chiffres.</dd>
+            <dd>-</dd>
 	        <hr class="my-5">
             <dt>Présence</dt>
-            <dd>Obligatoire si l&#x27;entreprise utilisatrice possède un numéro d&#x27;entreprise</dd>
+            <dd>Indispensable</dd>
 	        <hr class="my-5">
         </dl>
         <hr class="mt-11 mb-7 opacity-100">

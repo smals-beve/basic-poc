@@ -120,27 +120,27 @@
       "blocks": []
     },
     {
-      "id": "servicefeature",
+      "id": "servicefeatures",
       "title": "Caractéristiques de la prestation",
       "order": 6,
       "fields": [
         {
-          "id": "servicefeature-overtimetype",
+          "id": "servicefeatures-overtimetype",
           "title": "Type d'heure supplémentaire",
           "order": 1
         },
         {
-          "id": "servicefeature-subjectiontosocialsecuritycontributions",
+          "id": "servicefeatures-subjectiontosocialsecuritycontributions",
           "title": "Notion d'assujettissement aux cotisations de sécurité sociale",
           "order": 2
         },
         {
-          "id": "servicefeature-overtimeincludedincalendar",
+          "id": "servicefeatures-overtimeincludedincalendar",
           "title": "Notion d'heures supplémentaires incluses dans le calendrier",
           "order": 3
         },
         {
-          "id": "servicefeature-seafarerservicetype",
+          "id": "servicefeatures-seafarerservicetype",
           "title": "Notion de prestations des marins",
           "order": 4
         }
@@ -163,24 +163,19 @@
           "order": 2
         },
         {
-          "id": "identifyingsocialfeatures-employmentstatus",
-          "title": "Statut",
-          "order": 3
-        },
-        {
           "id": "identifyingsocialfeatures-employerclass",
           "title": "Catégorie employeur",
-          "order": 4
+          "order": 3
         },
         {
           "id": "identifyingsocialfeatures-workercode",
           "title": "Code travailleur",
-          "order": 5
+          "order": 4
         },
         {
           "id": "identifyingsocialfeatures-flatratecode",
           "title": "Code forfait",
-          "order": 6
+          "order": 5
         }
       ],
       "blocks": []
@@ -247,17 +242,17 @@
       "blocks": []
     },
     {
-      "id": "reorganisationmeasure",
+      "id": "reorganisationmeasures",
       "title": "Mesure de réorganisation du temps de travail",
       "order": 10,
       "fields": [
         {
-          "id": "reorganisationmeasure-reorganisationmeasuretype",
+          "id": "reorganisationmeasures-reorganisationmeasuretype",
           "title": "Mesure de réorganisation du temps de travail",
           "order": 1
         },
         {
-          "id": "reorganisationmeasure-reorganisationmeasurepercentage",
+          "id": "reorganisationmeasures-reorganisationmeasurepercentage",
           "title": "Pourcentage de la mesure de réorganisation du temps de travail",
           "order": 2
         }
@@ -265,47 +260,57 @@
       "blocks": []
     },
     {
-      "id": "socialfeaturesdetail",
+      "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail",
       "title": "Caractéristiques sociales supplémentaires",
       "order": 11,
       "fields": [
         {
-          "id": "socialfeaturesdetail-sequencenumber",
+          "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-sequencenumber",
           "title": "Numéro de séquence",
           "order": 1
         },
         {
-          "id": "socialfeaturesdetail-startdate",
+          "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-startdate",
           "title": "Date de début",
           "order": 2
         },
         {
-          "id": "socialfeaturesdetail-enddate",
+          "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-enddate",
           "title": "Date de fin",
           "order": 3
         }
       ],
       "blocks": [
         {
-          "id": "job",
+          "id": "jobs",
           "title": "Fonction",
           "order": 1,
           "fields": [
             {
-              "id": "job-jobtitle",
+              "id": "jobs-title",
               "title": "Dénomination de la fonction",
               "order": 1
+            },
+            {
+              "id": "jobs-professionalclassificationsectoralcla",
+              "title": "Qualification professionnelle dans CCT sectorielle",
+              "order": 2
+            },
+            {
+              "id": "jobs-professionalclassificationenterprise",
+              "title": "Qualification professionnelle au niveau de l'entreprise",
+              "order": 3
             }
           ],
           "blocks": []
         },
         {
-          "id": "gradualworkresumption",
+          "id": "gradualworkresumptions",
           "title": "Reprise progressive du travail",
           "order": 2,
           "fields": [
             {
-              "id": "gradualworkresumption-weeklymaxnbrofhoursallowed",
+              "id": "gradualworkresumptions-weeklymaxnbrofhoursallowed",
               "title": "Nombre maximum d'heures de travail autorisées par semaine dans le cadre d'une reprise progressive du travail",
               "order": 1
             }
@@ -313,27 +318,27 @@
           "blocks": []
         },
         {
-          "id": "dismissal",
+          "id": "dismissals",
           "title": "Licenciement",
           "order": 3,
           "fields": [
             {
-              "id": "dismissal-noticeperiodstartdate",
+              "id": "dismissals-noticeperiodstartdate",
               "title": "Date de début du délai de préavis",
               "order": 1
             },
             {
-              "id": "dismissal-noticeperiodmonths",
+              "id": "dismissals-noticeperiodmonths",
               "title": "Délai de préavis théorique en mois",
               "order": 2
             },
             {
-              "id": "dismissal-noticeperiodweeks",
+              "id": "dismissals-noticeperiodweeks",
               "title": "Délai de préavis théorique en semaines",
               "order": 3
             },
             {
-              "id": "dismissal-noticeperioddays",
+              "id": "dismissals-noticeperioddays",
               "title": "Délai de préavis théorique en jours",
               "order": 4
             }
@@ -341,17 +346,17 @@
           "blocks": []
         },
         {
-          "id": "starterjob",
+          "id": "starterjobs",
           "title": "Premier emploi",
           "order": 4,
           "fields": [
             {
-              "id": "starterjob-starterjobtype",
+              "id": "starterjobs-starterjobtype",
               "title": "Type de convention de premier emploi",
               "order": 1
             },
             {
-              "id": "starterjob-remunpercentageforstartertraining",
+              "id": "starterjobs-remunpercentageforstartertraining",
               "title": "Pourcentage du salaire dans le cadre  d'une convention premier emploi consacré à la formation",
               "order": 2
             }
@@ -361,16 +366,9 @@
       ]
     },
     {
-      "id": "financialelement",
-      "title": "Élément financier",
-      "order": 12,
-      "fields": [],
-      "blocks": []
-    },
-    {
       "id": "fiscalfeatures",
       "title": "Signalétique fiscale",
-      "order": 13,
+      "order": 12,
       "fields": [
         {
           "id": "fiscalfeatures-startdate",
@@ -383,64 +381,154 @@
           "order": 2
         },
         {
-          "id": "fiscalfeatures-employmentstatus",
-          "title": "Statut",
-          "order": 3
-        },
-        {
           "id": "fiscalfeatures-civilstatustype",
           "title": "État civil",
-          "order": 4
+          "order": 3
         },
         {
           "id": "fiscalfeatures-numberofdependentchildren",
           "title": "Nombre d'enfants à charge",
-          "order": 5
+          "order": 4
         },
         {
           "id": "fiscalfeatures-numberofdependentdisabledchildren",
           "title": "Nombre d'enfants moins valides à charge",
-          "order": 6
+          "order": 5
         },
         {
           "id": "fiscalfeatures-numberofdependents",
           "title": "Nombre d'autres personnes à charge",
-          "order": 7
+          "order": 6
         },
         {
           "id": "fiscalfeatures-numberofdisableddependents",
           "title": "Nombre d'autres personnes moins valides à charge",
-          "order": 8
+          "order": 7
         },
         {
           "id": "fiscalfeatures-disabilityindicator",
           "title": "Notion de moins valide",
-          "order": 9
+          "order": 8
         },
         {
           "id": "fiscalfeatures-crossborderworker",
           "title": "Notion de travailleur frontalier",
-          "order": 10
+          "order": 9
         },
         {
           "id": "fiscalfeatures-belgianresident",
           "title": "Notion résident belge",
-          "order": 11
+          "order": 10
         },
         {
           "id": "fiscalfeatures-incomeofpartner",
           "title": "Revenu du partenaire",
-          "order": 12
+          "order": 11
         },
         {
           "id": "fiscalfeatures-disabilityofpartner",
           "title": "Notion partenaire moins valide",
-          "order": 13
+          "order": 12
         },
         {
           "id": "fiscalfeatures-numberofdependentsneedingcare",
           "title": "Nombre de personnes à charge nécessitant des soins",
+          "order": 13
+        },
+        {
+          "id": "fiscalfeatures-retired",
+          "title": "Notion pensionné",
           "order": 14
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "financialelements",
+      "title": "Élément financier",
+      "order": 13,
+      "fields": [
+        {
+          "id": "financialelements-code",
+          "title": "Code élément financier",
+          "order": 1
+        },
+        {
+          "id": "financialelements-amount",
+          "title": "Montant",
+          "order": 2
+        },
+        {
+          "id": "financialelements-roles",
+          "title": "Rôle de l'élément financier",
+          "order": 3
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "bonusfeatures",
+      "title": "Caractéristiques de la prime",
+      "order": 14,
+      "fields": [
+        {
+          "id": "bonusfeatures-allocationfrequency",
+          "title": "Fréquence d'attribution",
+          "order": 1
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "voucherfeatures",
+      "title": "Caractéristiques du  chèque",
+      "order": 15,
+      "fields": [
+        {
+          "id": "voucherfeatures-numberofunits",
+          "title": "Nombre de chèques",
+          "order": 1
+        },
+        {
+          "id": "voucherfeatures-amountperunit",
+          "title": "Montant par chèque",
+          "order": 2
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "severancepayfeatures",
+      "title": "Caractéristiques de l'indemnité de rupture de la relation",
+      "order": 16,
+      "fields": [
+        {
+          "id": "severancepayfeatures-startdate",
+          "title": "Date de début de la période couverte par l'indemnité de rupture de la relation",
+          "order": 1
+        },
+        {
+          "id": "severancepayfeatures-enddate",
+          "title": "Date de fin de la période couverte par l'indemnité de rupture de la relation",
+          "order": 2
+        },
+        {
+          "id": "severancepayfeatures-numberofdaysreductionbyoutplacement",
+          "title": "Nombre de jours diminuant l'indemnité de rupture dans le cadre d'un accompagnement de reclassement professionnel",
+          "order": 3
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "holidayafterseverancefeatures",
+      "title": "Caractéristiques des jours fériés  après la sortie de service payés par l'entreprise",
+      "order": 17,
+      "fields": [
+        {
+          "id": "holidayafterseverancefeatures-date",
+          "title": "Date du jour férié payé après la sortie de service",
+          "order": 1
         }
       ],
       "blocks": []

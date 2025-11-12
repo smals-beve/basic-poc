@@ -120,27 +120,27 @@
       "blocks": []
     },
     {
-      "id": "servicefeature",
+      "id": "servicefeatures",
       "title": "Prestatiekenmerken",
       "order": 6,
       "fields": [
         {
-          "id": "servicefeature-overtimetype",
+          "id": "servicefeatures-overtimetype",
           "title": "Type overuur",
           "order": 1
         },
         {
-          "id": "servicefeature-subjectiontosocialsecuritycontributions",
+          "id": "servicefeatures-subjectiontosocialsecuritycontributions",
           "title": "Notie onderworpen aan socialezekerheidsbijdragen",
           "order": 2
         },
         {
-          "id": "servicefeature-overtimeincludedincalendar",
+          "id": "servicefeatures-overtimeincludedincalendar",
           "title": "Notie overuren inbegrepen in kalender",
           "order": 3
         },
         {
-          "id": "servicefeature-seafarerservicetype",
+          "id": "servicefeatures-seafarerservicetype",
           "title": "Notie prestaties van zeevarenden",
           "order": 4
         }
@@ -159,28 +159,23 @@
         },
         {
           "id": "identifyingsocialfeatures-enddate",
-          "title": "EInddatum van sociale signalitiek",
+          "title": "Einddatum van sociale signalitiek",
           "order": 2
-        },
-        {
-          "id": "identifyingsocialfeatures-employmentstatus",
-          "title": "Statuut",
-          "order": 3
         },
         {
           "id": "identifyingsocialfeatures-employerclass",
           "title": "Werkgeverscategorie",
-          "order": 4
+          "order": 3
         },
         {
           "id": "identifyingsocialfeatures-workercode",
           "title": "Werknemerskengetal",
-          "order": 5
+          "order": 4
         },
         {
           "id": "identifyingsocialfeatures-flatratecode",
           "title": "Forfaitcode",
-          "order": 6
+          "order": 5
         }
       ],
       "blocks": []
@@ -197,7 +192,7 @@
         },
         {
           "id": "operationalsocialfeatures-enddate",
-          "title": "EInddatum van periodieke sociale signalitiek",
+          "title": "Einddatum van periodieke sociale signalitiek",
           "order": 2
         },
         {
@@ -247,17 +242,17 @@
       "blocks": []
     },
     {
-      "id": "reorganisationmeasure",
+      "id": "reorganisationmeasures",
       "title": "Maatregel tot reorganisatie van arbeidstijd",
       "order": 10,
       "fields": [
         {
-          "id": "reorganisationmeasure-reorganisationmeasuretype",
+          "id": "reorganisationmeasures-reorganisationmeasuretype",
           "title": "Maatregel tot reorganisatie van de arbeidstijd",
           "order": 1
         },
         {
-          "id": "reorganisationmeasure-reorganisationmeasurepercentage",
+          "id": "reorganisationmeasures-reorganisationmeasurepercentage",
           "title": "Percentage van maatregel tot reorganisatie van arbeidstijd",
           "order": 2
         }
@@ -265,47 +260,57 @@
       "blocks": []
     },
     {
-      "id": "socialfeaturesdetail",
+      "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail",
       "title": "Bijkomende sociale kenmerken",
       "order": 11,
       "fields": [
         {
-          "id": "socialfeaturesdetail-sequencenumber",
+          "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-sequencenumber",
           "title": "Volgnummer",
           "order": 1
         },
         {
-          "id": "socialfeaturesdetail-startdate",
+          "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-startdate",
           "title": "Begindatum",
           "order": 2
         },
         {
-          "id": "socialfeaturesdetail-enddate",
+          "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-enddate",
           "title": "Einddatum",
           "order": 3
         }
       ],
       "blocks": [
         {
-          "id": "job",
+          "id": "jobs",
           "title": "Functie",
           "order": 1,
           "fields": [
             {
-              "id": "job-jobtitle",
+              "id": "jobs-title",
               "title": "Benaming van de functie",
               "order": 1
+            },
+            {
+              "id": "jobs-professionalclassificationsectoralcla",
+              "title": "Beroepskwalificatie in sectorale cao",
+              "order": 2
+            },
+            {
+              "id": "jobs-professionalclassificationenterprise",
+              "title": "Beroepskwalificatie op ondernemingsniveau",
+              "order": 3
             }
           ],
           "blocks": []
         },
         {
-          "id": "gradualworkresumption",
+          "id": "gradualworkresumptions",
           "title": "Progressieve werkhervatting",
           "order": 2,
           "fields": [
             {
-              "id": "gradualworkresumption-weeklymaxnbrofhoursallowed",
+              "id": "gradualworkresumptions-weeklymaxnbrofhoursallowed",
               "title": "Maximale aantal uren toegestane arbeid per week in het kader van progressieve werkhervatting",
               "order": 1
             }
@@ -313,27 +318,27 @@
           "blocks": []
         },
         {
-          "id": "dismissal",
+          "id": "dismissals",
           "title": "Ontslag",
           "order": 3,
           "fields": [
             {
-              "id": "dismissal-noticeperiodstartdate",
+              "id": "dismissals-noticeperiodstartdate",
               "title": "Startdatum van opzeggingstermijn",
               "order": 1
             },
             {
-              "id": "dismissal-noticeperiodmonths",
+              "id": "dismissals-noticeperiodmonths",
               "title": "Theoretische opzeggingstermijn in maanden",
               "order": 2
             },
             {
-              "id": "dismissal-noticeperiodweeks",
+              "id": "dismissals-noticeperiodweeks",
               "title": "Theoretische opzeggingstermijn in weken",
               "order": 3
             },
             {
-              "id": "dismissal-noticeperioddays",
+              "id": "dismissals-noticeperioddays",
               "title": "Theoretische opzeggingstermijn in dagen",
               "order": 4
             }
@@ -341,17 +346,17 @@
           "blocks": []
         },
         {
-          "id": "starterjob",
+          "id": "starterjobs",
           "title": "Startbaan",
           "order": 4,
           "fields": [
             {
-              "id": "starterjob-starterjobtype",
+              "id": "starterjobs-starterjobtype",
               "title": "Type startbaanovereenkomst",
               "order": 1
             },
             {
-              "id": "starterjob-remunpercentageforstartertraining",
+              "id": "starterjobs-remunpercentageforstartertraining",
               "title": "Percentage van loon in het kader van startbaanovereenkomst besteed aan opleiding",
               "order": 2
             }
@@ -361,16 +366,9 @@
       ]
     },
     {
-      "id": "financialelement",
-      "title": "Financieel element",
-      "order": 12,
-      "fields": [],
-      "blocks": []
-    },
-    {
       "id": "fiscalfeatures",
       "title": "Fiscale signalitiek",
-      "order": 13,
+      "order": 12,
       "fields": [
         {
           "id": "fiscalfeatures-startdate",
@@ -383,64 +381,154 @@
           "order": 2
         },
         {
-          "id": "fiscalfeatures-employmentstatus",
-          "title": "Statuut",
-          "order": 3
-        },
-        {
           "id": "fiscalfeatures-civilstatustype",
           "title": "Burgerlijke staat",
-          "order": 4
+          "order": 3
         },
         {
           "id": "fiscalfeatures-numberofdependentchildren",
           "title": "Aantal kinderen ten laste",
-          "order": 5
+          "order": 4
         },
         {
           "id": "fiscalfeatures-numberofdependentdisabledchildren",
           "title": "Aantal mindervalide kinderen ten laste",
-          "order": 6
+          "order": 5
         },
         {
           "id": "fiscalfeatures-numberofdependents",
           "title": "Aantal andere personen ten laste",
-          "order": 7
+          "order": 6
         },
         {
           "id": "fiscalfeatures-numberofdisableddependents",
           "title": "Aantal andere mindervalide personen  ten laste",
-          "order": 8
+          "order": 7
         },
         {
           "id": "fiscalfeatures-disabilityindicator",
           "title": "Notie mindervalide",
-          "order": 9
+          "order": 8
         },
         {
           "id": "fiscalfeatures-crossborderworker",
           "title": "Notie grensarbeider",
-          "order": 10
+          "order": 9
         },
         {
           "id": "fiscalfeatures-belgianresident",
           "title": "Notie Rijksinwoner",
-          "order": 11
+          "order": 10
         },
         {
           "id": "fiscalfeatures-incomeofpartner",
           "title": "Inkomen van partner",
-          "order": 12
+          "order": 11
         },
         {
           "id": "fiscalfeatures-disabilityofpartner",
           "title": "Notie mindervalide partner",
-          "order": 13
+          "order": 12
         },
         {
           "id": "fiscalfeatures-numberofdependentsneedingcare",
           "title": "Aantal zorgbehoevende personen ten laste",
+          "order": 13
+        },
+        {
+          "id": "fiscalfeatures-retired",
+          "title": "Notie gepensioneerd",
           "order": 14
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "financialelements",
+      "title": "Financieel element",
+      "order": 13,
+      "fields": [
+        {
+          "id": "financialelements-code",
+          "title": "Code financieel element",
+          "order": 1
+        },
+        {
+          "id": "financialelements-amount",
+          "title": "Bedrag",
+          "order": 2
+        },
+        {
+          "id": "financialelements-roles",
+          "title": "Rol van financieel element",
+          "order": 3
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "bonusfeatures",
+      "title": "Kenmerken van premie",
+      "order": 14,
+      "fields": [
+        {
+          "id": "bonusfeatures-allocationfrequency",
+          "title": "Toewijzingsfrequentie",
+          "order": 1
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "voucherfeatures",
+      "title": "Kenmerken van cheque",
+      "order": 15,
+      "fields": [
+        {
+          "id": "voucherfeatures-numberofunits",
+          "title": "Aantal cheques",
+          "order": 1
+        },
+        {
+          "id": "voucherfeatures-amountperunit",
+          "title": "Bedrag per cheque",
+          "order": 2
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "severancepayfeatures",
+      "title": "Kenmerken van beëindigingsvergoeding",
+      "order": 16,
+      "fields": [
+        {
+          "id": "severancepayfeatures-startdate",
+          "title": "Begindatum van periode gedekt door beëindigingsvergoeding",
+          "order": 1
+        },
+        {
+          "id": "severancepayfeatures-enddate",
+          "title": "Einddatum van periode gedekt door beëindigingsvergoeding",
+          "order": 2
+        },
+        {
+          "id": "severancepayfeatures-numberofdaysreductionbyoutplacement",
+          "title": "Aantal dagen vermindering verbrekingsvergoeding bij outplacementbegeleiding",
+          "order": 3
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "holidayafterseverancefeatures",
+      "title": "Kenmerken van feestdagen  na uitdiensttreding uitbetaald door de onderneming",
+      "order": 17,
+      "fields": [
+        {
+          "id": "holidayafterseverancefeatures-date",
+          "title": "Datum van feestdag uitbetaald na uitdiensttreding",
+          "order": 1
         }
       ],
       "blocks": []
