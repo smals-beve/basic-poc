@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Glossaires Datafields – ${BLOK_TECHLABEL} startDate</title>
   
+    <style>
+        html, body {
+            width: initial !important;
+            max-width: initial !important;
+            min-height: initial !important;
+            overflow: initial !important;
+        }
+    </style>
 </head>
 <body class="d-flex flex-column py-8">
 
@@ -16,23 +24,23 @@
             <span>
                 Version
                 <br>
-                <strong>1.0</strong>
+                <strong>1.0.1.5</strong>
             </span>
             <span>
                 Date
                 <br>
-                <strong>26-08-2025</strong>
+                <strong>19-11-2025</strong>
             </span>
         </div>
     </div>
     <div class="px-12 py-9">
         <!-- Zone LoopList -->
         <h2 id="identifyingsocialfeatures-startdate">Date de début de la signalétique sociale</h2>
-        <p>Date de début de la période dans la période de calcul salarial à partir de laquelle le set de données constituant la signalétique sociale est valide.  
-
-Si une ou plusieurs données de la signalétique sociale changent, la date de début de la signalétique sociale correspond à la date à partir de laquelle le nouveau set de données signalétiques sociales s'applique.</p>
 
         <dl class="mt-7">
+            <dt>Description</dt>	
+            <dd>Date de début de la période dans la période de calcul salarial à partir de laquelle le set de données constituant la signalétique sociale est valable.<br><br>Si une ou plusieurs données de la signalétique sociale changent, la date de début de la signalétique sociale correspond à la date à partir de laquelle le nouveau set de données signalétiques sociales s&#x27;applique.</dd>
+            <hr class="my-5">
             <dt>TechLabel</dt>	
             <dd>startDate</dd>
             <hr class="my-5">
@@ -43,12 +51,14 @@ Si une ou plusieurs données de la signalétique sociale changent, la date de d�
             <dd>10</dd>
             <hr class="my-5">
 	        <dt>Format</dt>
-            <dd>AAAA-MM-JJ<br>· AAAA est l'année<br>· MM est le mois<br>. JJ est le jour</dd>
+            <dd>AAAA-MM-JJ<br><br><ul>
+<li>AAAA est l&#x27;année</li>
+<li>MM est le mois</li>
+<li>JJ est le jour</li>
+</ul></dd>
 	        <hr class="my-5">
             <dt>Domaine de définition</dt>
-            <dd>La date de début de la signalétique sociale est supérieure ou égale à la date de début de la période de calcul du salarial.
-
-Si plusieurs blocs  « signalétique sociale » sont communiqués, la date de début de la signalétique sociale ne peut pas se situer dans la période de validité d'un autre bloc « signalétique sociale ».</dd>
+            <dd>La date de début de la signalétique sociale est supérieure ou égale à la date de début de la période de calcul du salarial.<br><br>Si plusieurs blocs  « signalétique sociale » sont communiqués, la date de début de la signalétique sociale ne peut pas se situer dans la période de validité d&#x27;un autre bloc « signalétique sociale ».</dd>
 	        <hr class="my-5">
             <dt>Présence</dt>
             <dd>Indispensable</dd>
@@ -57,6 +67,14 @@ Si plusieurs blocs  « signalétique sociale » sont communiqués, la date de 
         <hr class="mt-11 mb-7 opacity-100">
         <!-- Zone LoopList -->
     </div>
+    <footer class="footer">
+       <div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
+             <div class="d-flex flex-column gap-4 w-100">
+                <p><b>Contact: </b>Pour obtenir de l’aide ou pour toute autre question, veuillez nous contacter à l’adresse e-mail suivante: <a href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
+                <!--<p>&#169; socialsecurity.be 2025</p>-->
+             </div>
+       </div>
+    </footer>
 </div>
 </body>
 </html>

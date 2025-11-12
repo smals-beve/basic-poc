@@ -5,23 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Glossarium – Schema service</title>
   
+    <style>
+        html, body {
+            width: initial !important;
+            max-width: initial !important;
+            min-height: initial !important;
+            overflow: initial !important;
+        }
+    </style>
 </head>
 <body class="d-flex flex-column py-8">
 
 <div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
 
     <div class="px-12 py-5 introduction">
-        <h2 id="service">Glossarium<br>Loondata-transfer</h4>
+        <h4 id="service">Glossarium<br>Loondata-transfer</h4>
         <div class="introduction__right">
             <span>
                 Versie
                 <br>
-                <strong>1.0</strong>
+                <strong>1.0.1.5</strong>
             </span>
             <span>
                 Datum
                 <br>
-                <strong>26-08-2025</strong>
+                <strong>19-11-2025</strong>
             </span>
         </div>
     </div>
@@ -30,8 +38,8 @@
     <div class="px-12 py-9">
         <h2>Blok Prestatie of afwezigheid<br><code>service</code></h2>
         <span class="text-primary-emphasis fw-bolder d-block mb-2 blok-dtype"></span>
-        <p>De prestatie of afwezigheid van de natuurlijke persoon op dag- of periodebasis.</p>
-
+        <p><i>Beschrijving:</i><br>De prestatie of afwezigheid van de natuurlijke persoon op dag- of periodebasis.</p>
+        <p><i>Aanwezigheid:</i><br>Verplicht, indien minstens één prestatie of afwezigheid moet worden meegedeeld.</p>
         <div class="mt-6">
             <table class="table table-striped">
                 <thead>
@@ -43,16 +51,6 @@
                 </thead>
                 <tbody>
  <!-- ZONE_LOOPLIST -->
-                <tr>
-                    <td><a href="#service-sequencenumber" class="link-underline"><strong>Volgnummer van prestatie of afwezigheid</strong></a></td>
-                    <td>
-                        Uniek volgnummer van de prestatie of afwezigheid
-                    </td>
-					<td>
-						<code>sequenceNumber</code>
-					<td>
-                </tr>
-
                 <tr>
                     <td><a href="#service-servicetype" class="link-underline"><strong>Prestatie- of afwezigheidscode</strong></a></td>
                     <td>
@@ -66,9 +64,7 @@
                 <tr>
                     <td><a href="#service-startdate" class="link-underline"><strong>Datum of begindatum van prestatie of afwezigheid</strong></a></td>
                     <td>
-                        In geval van een mededeling per dag, de datum waarop de prestatie of de afwezigheid heeft plaatsgevonden.
-
-In het geval van een mededeling per periode, de begindatum van de periode waarin de prestatie of de afwezigheid heeft plaatsgevonden.
+                        In geval van een mededeling per dag, de datum waarop de prestatie of de afwezigheid heeft plaatsgevonden.<br><br>In het geval van een mededeling per periode, de begindatum van de periode waarin de prestatie of de afwezigheid heeft plaatsgevonden.
                     </td>
 					<td>
 						<code>startDate</code>
@@ -78,9 +74,7 @@ In het geval van een mededeling per periode, de begindatum van de periode waarin
                 <tr>
                     <td><a href="#service-enddate" class="link-underline"><strong>Einddatum van prestatie of afwezigheid</strong></a></td>
                     <td>
-                        De einddatum van de periode waarin de prestatie of afwezigheid heeft plaatsgevonden.
-
-Deze zone wordt niet ingevuld als de prestatie of de afwezigheid per dag wordt meegedeeld.
+                        De einddatum van de periode waarin de prestatie of afwezigheid heeft plaatsgevonden.<br><br>Deze zone wordt niet ingevuld als de prestatie of de afwezigheid per dag wordt meegedeeld.
                     </td>
 					<td>
 						<code>endDate</code>
@@ -101,7 +95,14 @@ Deze zone wordt niet ingevuld als de prestatie of de afwezigheid per dag wordt m
             </table>
         </div>
     </div>
-
+    <footer class="footer">
+       <div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
+             <div class="d-flex flex-column gap-4 w-100">
+                 <p><b>Contact: </b>Voor hulp of verdere vragen kan u ons contacteren via volgend mailadres: <a href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
+                 <!--<p>&#169; socialsecurity.be 2025</p>-->
+             </div>
+       </div>
+    </footer>
 </div>
 </body>
 </html>
