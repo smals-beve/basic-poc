@@ -54,32 +54,32 @@
       "blocks": []
     },
     {
-      "id": "remunerationcalculation",
+      "id": "calculation",
       "title": "Calcul salarial",
       "order": 4,
       "fields": [
         {
-          "id": "remunerationcalculation-id",
+          "id": "calculation-id",
           "title": "Clé d'identification du calcul salarial",
           "order": 1
         },
         {
-          "id": "remunerationcalculation-startdate",
+          "id": "calculation-startdate",
           "title": "Date de début de la période de calcul salarial",
           "order": 2
         },
         {
-          "id": "remunerationcalculation-enddate",
+          "id": "calculation-enddate",
           "title": "Date de fin de la période de calcul",
           "order": 3
         },
         {
-          "id": "remunerationcalculation-calculationdate",
+          "id": "calculation-calculationdate",
           "title": "Date du calcul salarial",
           "order": 4
         },
         {
-          "id": "remunerationcalculation-frequency",
+          "id": "calculation-frequency",
           "title": "Fréquence du calcul salarial",
           "order": 5
         }
@@ -92,29 +92,24 @@
       "order": 5,
       "fields": [
         {
-          "id": "service-sequencenumber",
-          "title": "Numéro de séquence de la prestation ou de l'absence",
-          "order": 1
-        },
-        {
           "id": "service-servicetype",
           "title": "Code de prestation ou d'absence",
-          "order": 2
+          "order": 1
         },
         {
           "id": "service-startdate",
           "title": "Date ou date de début de la prestation ou de l'absence",
-          "order": 3
+          "order": 2
         },
         {
           "id": "service-enddate",
           "title": "Date de fin de la prestation ou de l'absence",
-          "order": 4
+          "order": 3
         },
         {
           "id": "service-numberofhours",
           "title": "Nombre d'heures de prestation ou d'absence",
-          "order": 5
+          "order": 4
         }
       ],
       "blocks": []
@@ -143,6 +138,16 @@
           "id": "servicefeatures-seafarerservicetype",
           "title": "Notion de prestations des marins",
           "order": 4
+        },
+        {
+          "id": "servicefeatures-legalvacationorigin",
+          "title": "Origine des vacances légales",
+          "order": 5
+        },
+        {
+          "id": "servicefeatures-nonassimilationlegalvacationrights",
+          "title": "Non-assimilation aux prestations normales pour la détermination du droit aux vacances légales",
+          "order": 6
         }
       ],
       "blocks": []
@@ -163,19 +168,24 @@
           "order": 2
         },
         {
+          "id": "identifyingsocialfeatures-employmentstatus",
+          "title": "Statut",
+          "order": 3
+        },
+        {
           "id": "identifyingsocialfeatures-employerclass",
           "title": "Catégorie employeur",
-          "order": 3
+          "order": 4
         },
         {
           "id": "identifyingsocialfeatures-workercode",
           "title": "Code travailleur",
-          "order": 4
+          "order": 5
         },
         {
           "id": "identifyingsocialfeatures-flatratecode",
           "title": "Code forfait",
-          "order": 5
+          "order": 6
         }
       ],
       "blocks": []
@@ -229,12 +239,12 @@
           "order": 1
         },
         {
-          "id": "weeklyhours-effectiveavgweeklyworkinghours",
+          "id": "weeklyhours-effectiveaverageweeklyworkinghours",
           "title": "Durée effective moyenne de travail hebdomadaire",
           "order": 2
         },
         {
-          "id": "weeklyhours-annualavgweeklypaidworkinghours",
+          "id": "weeklyhours-annualaverageweeklypaidworkinghours",
           "title": "Durée moyenne annuelle  du temps de travail hebdomadaire rémunéré",
           "order": 3
         }
@@ -265,19 +275,14 @@
       "order": 11,
       "fields": [
         {
-          "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-sequencenumber",
-          "title": "Numéro de séquence",
-          "order": 1
-        },
-        {
           "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-startdate",
           "title": "Date de début",
-          "order": 2
+          "order": 1
         },
         {
           "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-enddate",
           "title": "Date de fin",
-          "order": 3
+          "order": 2
         }
       ],
       "blocks": [
@@ -381,64 +386,69 @@
           "order": 2
         },
         {
+          "id": "fiscalfeatures-employmentstatus",
+          "title": "Statut",
+          "order": 3
+        },
+        {
           "id": "fiscalfeatures-civilstatustype",
           "title": "État civil",
-          "order": 3
+          "order": 4
         },
         {
           "id": "fiscalfeatures-numberofdependentchildren",
           "title": "Nombre d'enfants à charge",
-          "order": 4
+          "order": 5
         },
         {
           "id": "fiscalfeatures-numberofdependentdisabledchildren",
           "title": "Nombre d'enfants moins valides à charge",
-          "order": 5
+          "order": 6
         },
         {
           "id": "fiscalfeatures-numberofdependents",
           "title": "Nombre d'autres personnes à charge",
-          "order": 6
+          "order": 7
         },
         {
           "id": "fiscalfeatures-numberofdisableddependents",
           "title": "Nombre d'autres personnes moins valides à charge",
-          "order": 7
+          "order": 8
         },
         {
           "id": "fiscalfeatures-disabilityindicator",
           "title": "Notion de moins valide",
-          "order": 8
+          "order": 9
         },
         {
           "id": "fiscalfeatures-crossborderworker",
           "title": "Notion de travailleur frontalier",
-          "order": 9
+          "order": 10
         },
         {
           "id": "fiscalfeatures-belgianresident",
           "title": "Notion résident belge",
-          "order": 10
+          "order": 11
         },
         {
           "id": "fiscalfeatures-incomeofpartner",
           "title": "Revenu du partenaire",
-          "order": 11
+          "order": 12
         },
         {
           "id": "fiscalfeatures-disabilityofpartner",
           "title": "Notion partenaire moins valide",
-          "order": 12
+          "order": 13
         },
         {
           "id": "fiscalfeatures-numberofdependentsneedingcare",
           "title": "Nombre de personnes à charge nécessitant des soins",
-          "order": 13
+          "order": 14
         },
         {
           "id": "fiscalfeatures-retired",
           "title": "Notion pensionné",
-          "order": 14
+          "order": 15
         }
       ],
       "blocks": []
@@ -529,6 +539,42 @@
           "id": "holidayafterseverancefeatures-date",
           "title": "Date du jour férié payé après la sortie de service",
           "order": 1
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "vacationpayfeatures",
+      "title": "Caractéristiques du simple pécule de vacances",
+      "order": 18,
+      "fields": [
+        {
+          "id": "vacationpayfeatures-vacationhoursbalance",
+          "title": "Solde d'heures de vacances",
+          "order": 1
+        },
+        {
+          "id": "vacationpayfeatures-initialvacationhours",
+          "title": "Nombre initial d'heures de vacances",
+          "order": 2
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "paidrightbalancefeatures",
+      "title": "Caractéristiques du solde des droits payé",
+      "order": 19,
+      "fields": [
+        {
+          "id": "paidrightbalancefeatures-numberofpaidhours",
+          "title": "Nombre d'heures payées",
+          "order": 1
+        },
+        {
+          "id": "paidrightbalancefeatures-servicetype",
+          "title": "Code prestation ou absence payée",
+          "order": 2
         }
       ],
       "blocks": []

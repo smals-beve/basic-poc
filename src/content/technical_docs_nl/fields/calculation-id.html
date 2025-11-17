@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Glossarium Datafields – ${BLOK_TECHLABEL} sequenceNumber</title>
+  <title>Glossarium Datafields – ${BLOK_TECHLABEL} id</title>
   
 </head>
 <body class="d-flex flex-column py-8">
@@ -16,37 +16,37 @@
             <span>
                 Versie
                 <br>
-                <strong>1.0.1.4</strong>
+                <strong>1.0.1.5</strong>
             </span>
             <span>
                 Datum
                 <br>
-                <strong>15-10-2025</strong>
+                <strong>19-11-2025</strong>
             </span>
         </div>
     </div>
     <div class="px-12 py-9">
         <!-- Zone LoopList -->
-        <h2 id="service-sequencenumber">Volgnummer van prestatie of afwezigheid</h2>
+        <h2 id="calculation-id">Identificatiesleutel van loonberekening</h2>
 
         <dl class="mt-7">
             <dt>Beschrijving</dt>	
-            <dd>Uniek volgnummer van de prestatie of afwezigheid</dd>
+            <dd>Universally Unique Identifier gegenereerd door de aangever ter identicatie van een loonberekening.</dd>
             <hr class="my-5">
             <dt>TechLabel</dt>	
-            <dd>sequenceNumber</dd>
+            <dd>id</dd>
             <hr class="my-5">
             <dt>Type</dt>	
-            <dd>integer</dd>
+            <dd>string</dd>
             <hr class="my-5">
 	        <dt>Lengte</dt>
-            <dd>3</dd>
+            <dd>36</dd>
             <hr class="my-5">
 	        <dt>Formaat</dt>
-            <dd>-</dd>
+            <dd>8-4-4-4-12 in hexadecimale tekens</dd>
 	        <hr class="my-5">
             <dt>Toegelaten domein</dt>
-            <dd>[1; 999]</dd>
+            <dd>-</dd>
 	        <hr class="my-5">
             <dt>Aanwezigheid</dt>
             <dd>Onmisbaar</dd>
