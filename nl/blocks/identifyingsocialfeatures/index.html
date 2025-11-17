@@ -191,7 +191,7 @@
                 
                     
                     <a class="nav-link"
-                       href="/basic-poc/nl/blocks/remunerationcalculation/"
+                       href="/basic-poc/nl/blocks/calculation/"
                        title="Loonberekening">
                         <span class="label text-truncate">Loonberekening</span>
                     </a>
@@ -532,6 +532,46 @@
             
         
     
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/nl/blocks/vacationpayfeatures/"
+                       title="Kenmerken van enkel vakantiegeld">
+                        <span class="label text-truncate">Kenmerken van enkel vakantiegeld</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/nl/blocks/paidrightbalancefeatures/"
+                       title="Kenmerken van uitbetaald  saldo van  rechten">
+                        <span class="label text-truncate">Kenmerken van uitbetaald  saldo van  rechten</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
 </ul>
                 <div class="nav-secondary">
                     <ul class="nav">
@@ -641,12 +681,12 @@
             <span>
                 Versie
                 <br>
-                <strong>1.0.1.4</strong>
+                <strong>1.0.1.5</strong>
             </span>
             <span>
                 Datum
                 <br>
-                <strong>15-10-2025</strong>
+                <strong>19-11-2025</strong>
             </span>
         </div>
     </div>
@@ -656,7 +696,12 @@
         <h2>Blok Sociale Signalitiek<br><code>identifyingSocialFeatures</code></h2>
         <span class="text-primary-emphasis fw-bolder d-block mb-2 blok-dtype"></span>
         <p><i>Beschrijving:</i><br>Aanduiding van het sociale statuut en de bijdrageregeling van toepassing op de natuurlijke persoon.</p>
-        <p><i>Aanwezigheid:</i><br>Verplicht, indien de natuurlijke persoon is onderworpen aan de Belgische sociale zekerheid.</p>
+        <p><i>Aanwezigheid:</i><br>Onmisbaar.
+
+Verboden voor 
+- de personen die in Dimona worden aangegeven met type werknemer DWD, IVT, STG, TRI, S17, T17 en O17;
+- de personen met activiteiten als middagtoezichter of busbegeleider, naast hun hoofdactiviteit voor de school;
+- het huispersoneel-bedienden dat minder dan 8 uren per week presteert en bijgevolg is vrijgesteld van socialezekerheidsbijdragen.</p>
         <div class="mt-6">
             <table class="table table-striped">
                 <thead>
@@ -685,6 +730,16 @@
                     </td>
 					<td>
 						<code>endDate</code>
+					<td>
+                </tr>
+
+                <tr>
+                    <td><a href="/basic-poc/nl/fields/identifyingsocialfeatures-employmentstatus/" class="link-underline"><strong>Statuut</strong></a></td>
+                    <td>
+                        Het statuut van de natuurlijke persoon
+                    </td>
+					<td>
+						<code>employmentStatus</code>
 					<td>
                 </tr>
 

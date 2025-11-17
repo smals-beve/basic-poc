@@ -191,7 +191,7 @@
                 
                     
                     <a class="nav-link"
-                       href="/basic-poc/fr/blocks/remunerationcalculation/"
+                       href="/basic-poc/fr/blocks/calculation/"
                        title="Calcul salarial">
                         <span class="label text-truncate">Calcul salarial</span>
                     </a>
@@ -532,6 +532,46 @@
             
         
     
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/fr/blocks/vacationpayfeatures/"
+                       title="Caractéristiques du simple pécule de vacances">
+                        <span class="label text-truncate">Caractéristiques du simple pécule de vacances</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/fr/blocks/paidrightbalancefeatures/"
+                       title="Caractéristiques du solde des droits payé">
+                        <span class="label text-truncate">Caractéristiques du solde des droits payé</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
 </ul>
                 <div class="nav-secondary">
                     <ul class="nav">
@@ -641,12 +681,12 @@
             <span>
                 Version
                 <br>
-                <strong>1.0.1.4</strong>
+                <strong>1.0.1.5</strong>
             </span>
             <span>
                 Date
                 <br>
-                <strong>15-10-2025</strong>
+                <strong>19-11-2025</strong>
             </span>
         </div>
     </div>
@@ -656,7 +696,12 @@
         <h2>Bloc Signalétique sociale<br><code>identifyingSocialFeatures</code></h2>
 		<span class="text-primary-emphasis fw-bolder"></span>
         <p><i>Description:</i><br>Indication du statut social et du régime de cotisation d&#x27;application sur la personne physique.</p>
-        <p><i>Présence:</i><br>Obligatoire si la personne physique est soumise à la sécurité sociale belge.</p>
+        <p><i>Présence:</i><br>Indispensable
+
+Interdit pour
+- les personnes déclarées en Dimona avec le type travailleur DWD, IVT, STG, TRI, S17, T17 et O17;
+- les personnes avec des activités de surveillant de temps de midi ou d&#x27;accompagnateur de bus en plus de leur activité principale pour l&#x27;école;
+- le personnel de maison (employé) travaillant moins de 8 heures par semaine et par conséquent exonéré de cotisations de sécurité sociale.</p>
         <div class="mt-6">
             <table class="table table-striped">
                 <thead>
@@ -685,6 +730,16 @@
                     </td>
 					<td>
 						<code>endDate</code>
+					<td>
+                </tr>
+
+                <tr>
+                    <td><a href="/basic-poc/fr/fields/identifyingsocialfeatures-employmentstatus/" class="link-underline"><strong>Statut</strong></a></td>
+                    <td>
+                        Statut de la personne physique
+                    </td>
+					<td>
+						<code>employmentStatus</code>
 					<td>
                 </tr>
 
