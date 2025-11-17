@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Glossaires Datafields – ${BLOK_TECHLABEL} effectiveAvgWeeklyWorkingHours</title>
+  <title>Glossaires Datafields – ${BLOK_TECHLABEL} id</title>
   
     <style>
         html, body {
@@ -24,41 +24,37 @@
             <span>
                 Version
                 <br>
-                <strong>1.0.1.4</strong>
+                <strong>1.0.1.5</strong>
             </span>
             <span>
                 Date
                 <br>
-                <strong>15-10-2025</strong>
+                <strong>19-11-2025</strong>
             </span>
         </div>
     </div>
     <div class="px-12 py-9">
         <!-- Zone LoopList -->
-        <h2 id="weeklyhours-effectiveavgweeklyworkinghours">Durée effective moyenne de travail hebdomadaire</h2>
+        <h2 id="calculation-id">Clé d&#x27;identification du calcul salarial</h2>
 
         <dl class="mt-7">
             <dt>Description</dt>	
-            <dd>Par cycle, le nombre d&#x27;heures à prester par semaine, en ce compris l&#x27;éventuel repos compensatoire rémunéré et l&#x27;éventuel repos compensatoire non rémunéré.</dd>
+            <dd>Universally Unique Identifier généré par le déclarant pour identifier un calcul salarial.</dd>
             <hr class="my-5">
             <dt>TechLabel</dt>	
-            <dd>effectiveAvgWeeklyWorkingHours</dd>
+            <dd>id</dd>
             <hr class="my-5">
             <dt>Type</dt>	
-            <dd>integer</dd>
+            <dd>string</dd>
             <hr class="my-5">
 	        <dt>Longeur</dt>
-            <dd>5</dd>
+            <dd>36</dd>
             <hr class="my-5">
 	        <dt>Format</dt>
-            <dd>-</dd>
+            <dd>8-4-4-4-12 en caractères hexadécimaux</dd>
 	        <hr class="my-5">
             <dt>Domaine de définition</dt>
-            <dd>[0; 99999]<br><br>Les heures sont exprimées en centièmes d&#x27;heures.<br>Exemples :<br><br><ul>
-<li>1 heure est exprimée par 100.</li>
-<li>4 heures et 30 minutes sont exprimées par 450.</li>
-<li>12 heures et 22 minutes sont exprimées par 1237.</li>
-</ul></dd>
+            <dd>-</dd>
 	        <hr class="my-5">
             <dt>Présence</dt>
             <dd>Indispensable</dd>

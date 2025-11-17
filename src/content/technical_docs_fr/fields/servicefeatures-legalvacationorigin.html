@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Glossaires Datafields – ${BLOK_TECHLABEL} calculationDate</title>
+  <title>Glossaires Datafields – ${BLOK_TECHLABEL} legalVacationOrigin</title>
   
     <style>
         html, body {
@@ -24,44 +24,40 @@
             <span>
                 Version
                 <br>
-                <strong>1.0.1.4</strong>
+                <strong>1.0.1.5</strong>
             </span>
             <span>
                 Date
                 <br>
-                <strong>15-10-2025</strong>
+                <strong>19-11-2025</strong>
             </span>
         </div>
     </div>
     <div class="px-12 py-9">
         <!-- Zone LoopList -->
-        <h2 id="remunerationcalculation-calculationdate">Date du calcul salarial</h2>
+        <h2 id="servicefeatures-legalvacationorigin">Origine des vacances légales</h2>
 
         <dl class="mt-7">
             <dt>Description</dt>	
-            <dd>La date du calcul salarial est la date à laquelle le calcul salarial est clôturé par celui qui fait ce calcul. Une modification pour la même période de calcul entrainera un nouveau calcul salarial avec une nouvelle date de calcul salarial.</dd>
+            <dd>Indication que la vacance légale a été octroyée sur base d&#x27;une attestation de vacances ou sur base d&#x27;un chèque vacances.</dd>
             <hr class="my-5">
             <dt>TechLabel</dt>	
-            <dd>calculationDate</dd>
+            <dd>legalVacationOrigin</dd>
             <hr class="my-5">
             <dt>Type</dt>	
-            <dd>string($date)</dd>
+            <dd>integer</dd>
             <hr class="my-5">
 	        <dt>Longeur</dt>
-            <dd>10</dd>
+            <dd>2</dd>
             <hr class="my-5">
 	        <dt>Format</dt>
-            <dd>AAAA-MM-JJ<br><br><ul>
-<li>AAAA est l&#x27;année</li>
-<li>MM est le mois</li>
-<li>JJ est le jour</li>
-</ul></dd>
-	        <hr class="my-5">
-            <dt>Domaine de définition</dt>
             <dd>-</dd>
 	        <hr class="my-5">
+            <dt>Domaine de définition</dt>
+            <dd>1 = octroyé sur base d&#x27;une attestation de vacances ou sur base d&#x27;un chèque vacances.</dd>
+	        <hr class="my-5">
             <dt>Présence</dt>
-            <dd>Indispensable</dd>
+            <dd>Obligatoire si des vacances légales (code prestation ou absence 1204001) est accordé sur base d&#x27;une attestation vacances ou d&#x27;un chèque vacances.</dd>
 	        <hr class="my-5">
         </dl>
         <hr class="mt-11 mb-7 opacity-100">

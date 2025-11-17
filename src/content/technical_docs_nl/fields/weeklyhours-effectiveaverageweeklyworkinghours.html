@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Glossarium Datafields – ${BLOK_TECHLABEL} startDate</title>
+  <title>Glossarium Datafields – ${BLOK_TECHLABEL} effectiveAverageWeeklyWorkingHours</title>
   
 </head>
 <body class="d-flex flex-column py-8">
@@ -16,41 +16,41 @@
             <span>
                 Versie
                 <br>
-                <strong>1.0.1.4</strong>
+                <strong>1.0.1.5</strong>
             </span>
             <span>
                 Datum
                 <br>
-                <strong>15-10-2025</strong>
+                <strong>19-11-2025</strong>
             </span>
         </div>
     </div>
     <div class="px-12 py-9">
         <!-- Zone LoopList -->
-        <h2 id="remunerationcalculation-startdate">Begindatum van de loonberekeningsperiode</h2>
+        <h2 id="weeklyhours-effectiveaverageweeklyworkinghours">Effectieve gemiddelde wekelijkse arbeidsduur</h2>
 
         <dl class="mt-7">
             <dt>Beschrijving</dt>	
-            <dd>Begindatum van de periode waarop de loonberekening betrekking heeft.</dd>
+            <dd>Per cyclus het aantal te presteren uren per week, inclusief de eventuele betaalde inhaalrust en inclusief  de eventuele onbetaalde inhaalrust.</dd>
             <hr class="my-5">
             <dt>TechLabel</dt>	
-            <dd>startDate</dd>
+            <dd>effectiveAverageWeeklyWorkingHours</dd>
             <hr class="my-5">
             <dt>Type</dt>	
-            <dd>string($date)</dd>
+            <dd>integer</dd>
             <hr class="my-5">
 	        <dt>Lengte</dt>
-            <dd>10</dd>
+            <dd>5</dd>
             <hr class="my-5">
 	        <dt>Formaat</dt>
-            <dd>JJJJ-MM-DD<br><br><ul>
-<li>JJJJ is het jaar</li>
-<li>MM is de maand</li>
-<li>DD is de dag</li>
-</ul></dd>
+            <dd>-</dd>
 	        <hr class="my-5">
             <dt>Toegelaten domein</dt>
-            <dd>-</dd>
+            <dd>[0; 16800]<br><br>De uren worden uitgedrukt in honderdsten van uren.<br>Voorbeelden :<br><br><ul>
+<li>1 uur wordt uitgedrukt als 100.</li>
+<li>4 uren en 30 minuten wordt uitgedrukt als 450.</li>
+<li>12 uren en 22 minuten wordt uitgedrukt als 1237.</li>
+</ul></dd>
 	        <hr class="my-5">
             <dt>Aanwezigheid</dt>
             <dd>Onmisbaar</dd>

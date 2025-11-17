@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Glossaires Datafields – ${BLOK_TECHLABEL} endDate</title>
+  <title>Glossaires Datafields – ${BLOK_TECHLABEL} numberOfPaidHours</title>
   
     <style>
         html, body {
@@ -24,41 +24,41 @@
             <span>
                 Version
                 <br>
-                <strong>1.0.1.4</strong>
+                <strong>1.0.1.5</strong>
             </span>
             <span>
                 Date
                 <br>
-                <strong>15-10-2025</strong>
+                <strong>19-11-2025</strong>
             </span>
         </div>
     </div>
     <div class="px-12 py-9">
         <!-- Zone LoopList -->
-        <h2 id="remunerationcalculation-enddate">Date de fin de la période de calcul</h2>
+        <h2 id="paidrightbalancefeatures-numberofpaidhours">Nombre d&#x27;heures payées</h2>
 
         <dl class="mt-7">
             <dt>Description</dt>	
-            <dd>Date de fin de la période à laquelle se rapporte le calcul salarial.</dd>
+            <dd>Nombre d&#x27;heures de la prestation ou de l&#x27;absence payée.</dd>
             <hr class="my-5">
             <dt>TechLabel</dt>	
-            <dd>endDate</dd>
+            <dd>numberOfPaidHours</dd>
             <hr class="my-5">
             <dt>Type</dt>	
-            <dd>string($date)</dd>
+            <dd>integer</dd>
             <hr class="my-5">
 	        <dt>Longeur</dt>
-            <dd>10</dd>
+            <dd>5</dd>
             <hr class="my-5">
 	        <dt>Format</dt>
-            <dd>AAAA-MM-JJ<br><br><ul>
-<li>AAAA est l&#x27;année</li>
-<li>MM est le mois</li>
-<li>JJ est le jour</li>
-</ul></dd>
+            <dd>-</dd>
 	        <hr class="my-5">
             <dt>Domaine de définition</dt>
-            <dd>La date de fin de la période de calcul est supérieure ou égale à la date de début de la période de calcul.</dd>
+            <dd>[1; 99999]<br><br>Les heures sont exprimées en centièmes d&#x27;heures.<br>Exemples :<br><br><ul>
+<li>1 heure est exprimée par 100.</li>
+<li>4 heures et 30 minutes sont exprimées par 450.</li>
+<li>12 heures et 22 minutes sont exprimées par 1237.</li>
+</ul></dd>
 	        <hr class="my-5">
             <dt>Présence</dt>
             <dd>Indispensable</dd>
