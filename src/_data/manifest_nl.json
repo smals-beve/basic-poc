@@ -573,7 +573,7 @@
         },
         {
           "id": "paidrightbalancefeatures-servicetype",
-          "title": "Code uitbetaalde prestatie of aanwezigheid",
+          "title": "Code uitbetaalde prestatie of afwezigheid",
           "order": 2
         }
       ],
