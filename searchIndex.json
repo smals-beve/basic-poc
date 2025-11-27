@@ -1,0 +1,1431 @@
+
+[
+  {
+    "lang": "nl",
+    "type": "overview",
+    "id": "overview",
+    "title": "Overzicht van Blokken",
+    "url": "/nl/"
+  },
+  {
+    "lang": "nl",
+    "type": "block",
+    "id": "enterprise",
+    "title": "Onderneming",
+    "url": "/nl/blocks/enterprise/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "enterprise-enterprisenumber",
+    "title": "Ondernemingsnummer",
+    "url": "/nl/fields/enterprise-enterprisenumber/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "enterprise-nssonumber",
+    "title": "RSZ-nummer",
+    "url": "/nl/fields/enterprise-nssonumber/"
+  },
+  {
+    "lang": "nl",
+    "type": "block",
+    "id": "naturalperson",
+    "title": "Natuurlijke persoon",
+    "url": "/nl/blocks/naturalperson/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "naturalperson-ssin",
+    "title": "Identificatienummer bij de sociale zekerheid - INSZ",
+    "url": "/nl/fields/naturalperson-ssin/"
+  },
+  {
+    "lang": "nl",
+    "type": "block",
+    "id": "relation",
+    "title": "Relatie",
+    "url": "/nl/blocks/relation/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "relation-declarantreference",
+    "title": "Identificatiesleutel van relatie",
+    "url": "/nl/fields/relation-declarantreference/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "relation-relationtype",
+    "title": "Type relatie",
+    "url": "/nl/fields/relation-relationtype/"
+  },
+  {
+    "lang": "nl",
+    "type": "block",
+    "id": "calculation",
+    "title": "Loonberekening",
+    "url": "/nl/blocks/calculation/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "calculation-id",
+    "title": "Identificatiesleutel van loonberekening",
+    "url": "/nl/fields/calculation-id/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "calculation-startdate",
+    "title": "Begindatum van de loonberekeningsperiode",
+    "url": "/nl/fields/calculation-startdate/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "calculation-enddate",
+    "title": "Einddatum van de loonberekeningsperiode",
+    "url": "/nl/fields/calculation-enddate/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "calculation-calculationdate",
+    "title": "Loonberekeningsdatum",
+    "url": "/nl/fields/calculation-calculationdate/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "calculation-frequency",
+    "title": "Loonberekeningsfrequentie",
+    "url": "/nl/fields/calculation-frequency/"
+  },
+  {
+    "lang": "nl",
+    "type": "block",
+    "id": "service",
+    "title": "Prestatie of afwezigheid",
+    "url": "/nl/blocks/service/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "service-servicetype",
+    "title": "Prestatie- of afwezigheidscode",
+    "url": "/nl/fields/service-servicetype/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "service-startdate",
+    "title": "Datum of begindatum van prestatie of afwezigheid",
+    "url": "/nl/fields/service-startdate/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "service-enddate",
+    "title": "Einddatum van prestatie of afwezigheid",
+    "url": "/nl/fields/service-enddate/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "service-numberofhours",
+    "title": "Aantal uren van prestatie of afwezigheid",
+    "url": "/nl/fields/service-numberofhours/"
+  },
+  {
+    "lang": "nl",
+    "type": "block",
+    "id": "servicefeatures",
+    "title": "Prestatiekenmerken",
+    "url": "/nl/blocks/servicefeatures/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "servicefeatures-overtimetype",
+    "title": "Type overuur",
+    "url": "/nl/fields/servicefeatures-overtimetype/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "servicefeatures-subjectiontosocialsecuritycontributions",
+    "title": "Notie onderworpen aan socialezekerheidsbijdragen",
+    "url": "/nl/fields/servicefeatures-subjectiontosocialsecuritycontributions/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "servicefeatures-overtimeincludedincalendar",
+    "title": "Notie overuren inbegrepen in kalender",
+    "url": "/nl/fields/servicefeatures-overtimeincludedincalendar/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "servicefeatures-seafarerservicetype",
+    "title": "Notie prestaties van zeevarenden",
+    "url": "/nl/fields/servicefeatures-seafarerservicetype/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "servicefeatures-legalvacationorigin",
+    "title": "Oorsprong wettelijke vakantie",
+    "url": "/nl/fields/servicefeatures-legalvacationorigin/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "servicefeatures-nonassimilationlegalvacationrights",
+    "title": "Niet-gelijkstelling met gewone prestaties bij bepaling van recht op wettelijke vakantie",
+    "url": "/nl/fields/servicefeatures-nonassimilationlegalvacationrights/"
+  },
+  {
+    "lang": "nl",
+    "type": "block",
+    "id": "identifyingsocialfeatures",
+    "title": "Sociale Signalitiek",
+    "url": "/nl/blocks/identifyingsocialfeatures/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "identifyingsocialfeatures-startdate",
+    "title": "Begindatum van sociale signalitiek",
+    "url": "/nl/fields/identifyingsocialfeatures-startdate/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "identifyingsocialfeatures-enddate",
+    "title": "Einddatum van sociale signalitiek",
+    "url": "/nl/fields/identifyingsocialfeatures-enddate/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "identifyingsocialfeatures-employmentstatus",
+    "title": "Statuut",
+    "url": "/nl/fields/identifyingsocialfeatures-employmentstatus/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "identifyingsocialfeatures-employerclass",
+    "title": "Werkgeverscategorie",
+    "url": "/nl/fields/identifyingsocialfeatures-employerclass/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "identifyingsocialfeatures-workercode",
+    "title": "Werknemerskengetal",
+    "url": "/nl/fields/identifyingsocialfeatures-workercode/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "identifyingsocialfeatures-flatratecode",
+    "title": "Forfaitcode",
+    "url": "/nl/fields/identifyingsocialfeatures-flatratecode/"
+  },
+  {
+    "lang": "nl",
+    "type": "block",
+    "id": "operationalsocialfeatures",
+    "title": "Periodieke sociale Signalitiek",
+    "url": "/nl/blocks/operationalsocialfeatures/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "operationalsocialfeatures-startdate",
+    "title": "Begindatum van periodieke sociale signalitiek",
+    "url": "/nl/fields/operationalsocialfeatures-startdate/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "operationalsocialfeatures-enddate",
+    "title": "Einddatum van periodieke sociale signalitiek",
+    "url": "/nl/fields/operationalsocialfeatures-enddate/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "operationalsocialfeatures-contracttype",
+    "title": "Volume",
+    "url": "/nl/fields/operationalsocialfeatures-contracttype/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "operationalsocialfeatures-establishmentunitnumber",
+    "title": "Identificatienummer van de lokale vestigingseenheid",
+    "url": "/nl/fields/operationalsocialfeatures-establishmentunitnumber/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "operationalsocialfeatures-jointcommissionnumber",
+    "title": "Nummer van paritair comité",
+    "url": "/nl/fields/operationalsocialfeatures-jointcommissionnumber/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "operationalsocialfeatures-economicactivity",
+    "title": "NACE-code",
+    "url": "/nl/fields/operationalsocialfeatures-economicactivity/"
+  },
+  {
+    "lang": "nl",
+    "type": "block",
+    "id": "weeklyhours",
+    "title": "Wekelijkse arbeidsduur",
+    "url": "/nl/blocks/weeklyhours/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "weeklyhours-weeklyhourstype",
+    "title": "Type",
+    "url": "/nl/fields/weeklyhours-weeklyhourstype/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "weeklyhours-effectiveaverageweeklyworkinghours",
+    "title": "Effectieve gemiddelde wekelijkse arbeidsduur",
+    "url": "/nl/fields/weeklyhours-effectiveaverageweeklyworkinghours/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "weeklyhours-annualaverageweeklypaidworkinghours",
+    "title": "Jaarlijks gemiddelde wekelijkse betaalde arbeidsduur",
+    "url": "/nl/fields/weeklyhours-annualaverageweeklypaidworkinghours/"
+  },
+  {
+    "lang": "nl",
+    "type": "block",
+    "id": "reorganisationmeasures",
+    "title": "Maatregel tot reorganisatie van arbeidstijd",
+    "url": "/nl/blocks/reorganisationmeasures/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "reorganisationmeasures-reorganisationmeasuretype",
+    "title": "Maatregel tot reorganisatie van de arbeidstijd",
+    "url": "/nl/fields/reorganisationmeasures-reorganisationmeasuretype/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "reorganisationmeasures-reorganisationmeasurepercentage",
+    "title": "Percentage van maatregel tot reorganisatie van arbeidstijd",
+    "url": "/nl/fields/reorganisationmeasures-reorganisationmeasurepercentage/"
+  },
+  {
+    "lang": "nl",
+    "type": "block",
+    "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail",
+    "title": "Bijkomende sociale kenmerken",
+    "url": "/nl/blocks/operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-startdate",
+    "title": "Begindatum",
+    "url": "/nl/fields/operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-startdate/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-enddate",
+    "title": "Einddatum",
+    "url": "/nl/fields/operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-enddate/"
+  },
+  {
+    "lang": "nl",
+    "type": "block",
+    "id": "jobs",
+    "title": "Functie",
+    "url": "/nl/blocks/jobs/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "jobs-title",
+    "title": "Benaming van de functie",
+    "url": "/nl/fields/jobs-title/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "jobs-professionalclassificationsectoralcla",
+    "title": "Beroepskwalificatie in sectorale cao",
+    "url": "/nl/fields/jobs-professionalclassificationsectoralcla/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "jobs-professionalclassificationenterprise",
+    "title": "Beroepskwalificatie op ondernemingsniveau",
+    "url": "/nl/fields/jobs-professionalclassificationenterprise/"
+  },
+  {
+    "lang": "nl",
+    "type": "block",
+    "id": "gradualworkresumptions",
+    "title": "Progressieve werkhervatting",
+    "url": "/nl/blocks/gradualworkresumptions/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "gradualworkresumptions-weeklymaxnbrofhoursallowed",
+    "title": "Maximale aantal uren toegestane arbeid per week in het kader van progressieve werkhervatting",
+    "url": "/nl/fields/gradualworkresumptions-weeklymaxnbrofhoursallowed/"
+  },
+  {
+    "lang": "nl",
+    "type": "block",
+    "id": "dismissals",
+    "title": "Ontslag",
+    "url": "/nl/blocks/dismissals/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "dismissals-noticeperiodstartdate",
+    "title": "Startdatum van opzeggingstermijn",
+    "url": "/nl/fields/dismissals-noticeperiodstartdate/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "dismissals-noticeperiodmonths",
+    "title": "Theoretische opzeggingstermijn in maanden",
+    "url": "/nl/fields/dismissals-noticeperiodmonths/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "dismissals-noticeperiodweeks",
+    "title": "Theoretische opzeggingstermijn in weken",
+    "url": "/nl/fields/dismissals-noticeperiodweeks/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "dismissals-noticeperioddays",
+    "title": "Theoretische opzeggingstermijn in dagen",
+    "url": "/nl/fields/dismissals-noticeperioddays/"
+  },
+  {
+    "lang": "nl",
+    "type": "block",
+    "id": "starterjobs",
+    "title": "Startbaan",
+    "url": "/nl/blocks/starterjobs/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "starterjobs-starterjobtype",
+    "title": "Type startbaanovereenkomst",
+    "url": "/nl/fields/starterjobs-starterjobtype/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "starterjobs-remunpercentageforstartertraining",
+    "title": "Percentage van loon in het kader van startbaanovereenkomst besteed aan opleiding",
+    "url": "/nl/fields/starterjobs-remunpercentageforstartertraining/"
+  },
+  {
+    "lang": "nl",
+    "type": "block",
+    "id": "fiscalfeatures",
+    "title": "Fiscale signalitiek",
+    "url": "/nl/blocks/fiscalfeatures/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "fiscalfeatures-startdate",
+    "title": "Begindatum van fiscale signalitiek",
+    "url": "/nl/fields/fiscalfeatures-startdate/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "fiscalfeatures-enddate",
+    "title": "Einddatum van fiscale signalitiek",
+    "url": "/nl/fields/fiscalfeatures-enddate/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "fiscalfeatures-employmentstatus",
+    "title": "Statuut",
+    "url": "/nl/fields/fiscalfeatures-employmentstatus/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "fiscalfeatures-civilstatustype",
+    "title": "Burgerlijke staat",
+    "url": "/nl/fields/fiscalfeatures-civilstatustype/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "fiscalfeatures-numberofdependentchildren",
+    "title": "Aantal kinderen ten laste",
+    "url": "/nl/fields/fiscalfeatures-numberofdependentchildren/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "fiscalfeatures-numberofdependentdisabledchildren",
+    "title": "Aantal mindervalide kinderen ten laste",
+    "url": "/nl/fields/fiscalfeatures-numberofdependentdisabledchildren/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "fiscalfeatures-numberofdependents",
+    "title": "Aantal andere personen ten laste",
+    "url": "/nl/fields/fiscalfeatures-numberofdependents/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "fiscalfeatures-numberofdisableddependents",
+    "title": "Aantal andere mindervalide personen  ten laste",
+    "url": "/nl/fields/fiscalfeatures-numberofdisableddependents/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "fiscalfeatures-disabilityindicator",
+    "title": "Notie mindervalide",
+    "url": "/nl/fields/fiscalfeatures-disabilityindicator/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "fiscalfeatures-crossborderworker",
+    "title": "Notie grensarbeider",
+    "url": "/nl/fields/fiscalfeatures-crossborderworker/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "fiscalfeatures-belgianresident",
+    "title": "Notie Rijksinwoner",
+    "url": "/nl/fields/fiscalfeatures-belgianresident/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "fiscalfeatures-incomeofpartner",
+    "title": "Inkomen van partner",
+    "url": "/nl/fields/fiscalfeatures-incomeofpartner/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "fiscalfeatures-disabilityofpartner",
+    "title": "Notie mindervalide partner",
+    "url": "/nl/fields/fiscalfeatures-disabilityofpartner/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "fiscalfeatures-numberofdependentsneedingcare",
+    "title": "Aantal zorgbehoevende personen ten laste",
+    "url": "/nl/fields/fiscalfeatures-numberofdependentsneedingcare/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "fiscalfeatures-retired",
+    "title": "Notie gepensioneerd",
+    "url": "/nl/fields/fiscalfeatures-retired/"
+  },
+  {
+    "lang": "nl",
+    "type": "block",
+    "id": "financialelements",
+    "title": "Financieel element",
+    "url": "/nl/blocks/financialelements/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "financialelements-code",
+    "title": "Code financieel element",
+    "url": "/nl/fields/financialelements-code/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "financialelements-amount",
+    "title": "Bedrag",
+    "url": "/nl/fields/financialelements-amount/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "financialelements-roles",
+    "title": "Rol van financieel element",
+    "url": "/nl/fields/financialelements-roles/"
+  },
+  {
+    "lang": "nl",
+    "type": "block",
+    "id": "bonusfeatures",
+    "title": "Kenmerken van premie",
+    "url": "/nl/blocks/bonusfeatures/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "bonusfeatures-allocationfrequency",
+    "title": "Toewijzingsfrequentie",
+    "url": "/nl/fields/bonusfeatures-allocationfrequency/"
+  },
+  {
+    "lang": "nl",
+    "type": "block",
+    "id": "voucherfeatures",
+    "title": "Kenmerken van cheque",
+    "url": "/nl/blocks/voucherfeatures/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "voucherfeatures-numberofunits",
+    "title": "Aantal cheques",
+    "url": "/nl/fields/voucherfeatures-numberofunits/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "voucherfeatures-amountperunit",
+    "title": "Bedrag per cheque",
+    "url": "/nl/fields/voucherfeatures-amountperunit/"
+  },
+  {
+    "lang": "nl",
+    "type": "block",
+    "id": "severancepayfeatures",
+    "title": "Kenmerken van beëindigingsvergoeding",
+    "url": "/nl/blocks/severancepayfeatures/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "severancepayfeatures-startdate",
+    "title": "Begindatum van periode gedekt door beëindigingsvergoeding",
+    "url": "/nl/fields/severancepayfeatures-startdate/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "severancepayfeatures-enddate",
+    "title": "Einddatum van periode gedekt door beëindigingsvergoeding",
+    "url": "/nl/fields/severancepayfeatures-enddate/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "severancepayfeatures-numberofdaysreductionbyoutplacement",
+    "title": "Aantal dagen vermindering verbrekingsvergoeding bij outplacementbegeleiding",
+    "url": "/nl/fields/severancepayfeatures-numberofdaysreductionbyoutplacement/"
+  },
+  {
+    "lang": "nl",
+    "type": "block",
+    "id": "holidayafterseverancefeatures",
+    "title": "Kenmerken van feestdagen  na uitdiensttreding uitbetaald door de onderneming",
+    "url": "/nl/blocks/holidayafterseverancefeatures/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "holidayafterseverancefeatures-date",
+    "title": "Datum van feestdag uitbetaald na uitdiensttreding",
+    "url": "/nl/fields/holidayafterseverancefeatures-date/"
+  },
+  {
+    "lang": "nl",
+    "type": "block",
+    "id": "vacationpayfeatures",
+    "title": "Kenmerken van enkel vakantiegeld",
+    "url": "/nl/blocks/vacationpayfeatures/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "vacationpayfeatures-vacationhoursbalance",
+    "title": "Saldo van aantal uren vakantie",
+    "url": "/nl/fields/vacationpayfeatures-vacationhoursbalance/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "vacationpayfeatures-initialvacationhours",
+    "title": "Oorspronkelijk aantal uren vakantie",
+    "url": "/nl/fields/vacationpayfeatures-initialvacationhours/"
+  },
+  {
+    "lang": "nl",
+    "type": "block",
+    "id": "paidrightbalancefeatures",
+    "title": "Kenmerken van uitbetaald  saldo van  rechten",
+    "url": "/nl/blocks/paidrightbalancefeatures/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "paidrightbalancefeatures-numberofpaidhours",
+    "title": "Aantal uitbetaalde uren",
+    "url": "/nl/fields/paidrightbalancefeatures-numberofpaidhours/"
+  },
+  {
+    "lang": "nl",
+    "type": "field",
+    "id": "paidrightbalancefeatures-servicetype",
+    "title": "Code uitbetaalde prestatie of afwezigheid",
+    "url": "/nl/fields/paidrightbalancefeatures-servicetype/"
+  },
+  {
+    "lang": "fr",
+    "type": "overview",
+    "id": "overview",
+    "title": "Aperçu des Blocs",
+    "url": "/fr/"
+  },
+  {
+    "lang": "fr",
+    "type": "block",
+    "id": "enterprise",
+    "title": "Entreprise",
+    "url": "/fr/blocks/enterprise/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "enterprise-enterprisenumber",
+    "title": "Numéro d'entreprise",
+    "url": "/fr/fields/enterprise-enterprisenumber/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "enterprise-nssonumber",
+    "title": "Numéro ONSS",
+    "url": "/fr/fields/enterprise-nssonumber/"
+  },
+  {
+    "lang": "fr",
+    "type": "block",
+    "id": "naturalperson",
+    "title": "Personne physique",
+    "url": "/fr/blocks/naturalperson/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "naturalperson-ssin",
+    "title": "Numéro d'identification de la sécurité sociale - NISS",
+    "url": "/fr/fields/naturalperson-ssin/"
+  },
+  {
+    "lang": "fr",
+    "type": "block",
+    "id": "relation",
+    "title": "Relation",
+    "url": "/fr/blocks/relation/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "relation-declarantreference",
+    "title": "Clé d'identification de la relation",
+    "url": "/fr/fields/relation-declarantreference/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "relation-relationtype",
+    "title": "Type de relation",
+    "url": "/fr/fields/relation-relationtype/"
+  },
+  {
+    "lang": "fr",
+    "type": "block",
+    "id": "calculation",
+    "title": "Calcul salarial",
+    "url": "/fr/blocks/calculation/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "calculation-id",
+    "title": "Clé d'identification du calcul salarial",
+    "url": "/fr/fields/calculation-id/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "calculation-startdate",
+    "title": "Date de début de la période de calcul salarial",
+    "url": "/fr/fields/calculation-startdate/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "calculation-enddate",
+    "title": "Date de fin de la période de calcul",
+    "url": "/fr/fields/calculation-enddate/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "calculation-calculationdate",
+    "title": "Date du calcul salarial",
+    "url": "/fr/fields/calculation-calculationdate/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "calculation-frequency",
+    "title": "Fréquence du calcul salarial",
+    "url": "/fr/fields/calculation-frequency/"
+  },
+  {
+    "lang": "fr",
+    "type": "block",
+    "id": "service",
+    "title": "Prestation ou absence",
+    "url": "/fr/blocks/service/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "service-servicetype",
+    "title": "Code de prestation ou d'absence",
+    "url": "/fr/fields/service-servicetype/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "service-startdate",
+    "title": "Date ou date de début de la prestation ou de l'absence",
+    "url": "/fr/fields/service-startdate/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "service-enddate",
+    "title": "Date de fin de la prestation ou de l'absence",
+    "url": "/fr/fields/service-enddate/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "service-numberofhours",
+    "title": "Nombre d'heures de prestation ou d'absence",
+    "url": "/fr/fields/service-numberofhours/"
+  },
+  {
+    "lang": "fr",
+    "type": "block",
+    "id": "servicefeatures",
+    "title": "Caractéristiques de la prestation",
+    "url": "/fr/blocks/servicefeatures/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "servicefeatures-overtimetype",
+    "title": "Type d'heure supplémentaire",
+    "url": "/fr/fields/servicefeatures-overtimetype/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "servicefeatures-subjectiontosocialsecuritycontributions",
+    "title": "Notion d'assujettissement aux cotisations de sécurité sociale",
+    "url": "/fr/fields/servicefeatures-subjectiontosocialsecuritycontributions/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "servicefeatures-overtimeincludedincalendar",
+    "title": "Notion d'heures supplémentaires incluses dans le calendrier",
+    "url": "/fr/fields/servicefeatures-overtimeincludedincalendar/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "servicefeatures-seafarerservicetype",
+    "title": "Notion de prestations des marins",
+    "url": "/fr/fields/servicefeatures-seafarerservicetype/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "servicefeatures-legalvacationorigin",
+    "title": "Origine des vacances légales",
+    "url": "/fr/fields/servicefeatures-legalvacationorigin/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "servicefeatures-nonassimilationlegalvacationrights",
+    "title": "Non-assimilation aux prestations normales pour la détermination du droit aux vacances légales",
+    "url": "/fr/fields/servicefeatures-nonassimilationlegalvacationrights/"
+  },
+  {
+    "lang": "fr",
+    "type": "block",
+    "id": "identifyingsocialfeatures",
+    "title": "Signalétique sociale",
+    "url": "/fr/blocks/identifyingsocialfeatures/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "identifyingsocialfeatures-startdate",
+    "title": "Date de début de la signalétique sociale",
+    "url": "/fr/fields/identifyingsocialfeatures-startdate/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "identifyingsocialfeatures-enddate",
+    "title": "Date de fin de la signalétique sociale",
+    "url": "/fr/fields/identifyingsocialfeatures-enddate/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "identifyingsocialfeatures-employmentstatus",
+    "title": "Statut",
+    "url": "/fr/fields/identifyingsocialfeatures-employmentstatus/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "identifyingsocialfeatures-employerclass",
+    "title": "Catégorie employeur",
+    "url": "/fr/fields/identifyingsocialfeatures-employerclass/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "identifyingsocialfeatures-workercode",
+    "title": "Code travailleur",
+    "url": "/fr/fields/identifyingsocialfeatures-workercode/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "identifyingsocialfeatures-flatratecode",
+    "title": "Code forfait",
+    "url": "/fr/fields/identifyingsocialfeatures-flatratecode/"
+  },
+  {
+    "lang": "fr",
+    "type": "block",
+    "id": "operationalsocialfeatures",
+    "title": "Signalétique sociale périodique",
+    "url": "/fr/blocks/operationalsocialfeatures/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "operationalsocialfeatures-startdate",
+    "title": "Date de début de la signalétique sociale périodique",
+    "url": "/fr/fields/operationalsocialfeatures-startdate/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "operationalsocialfeatures-enddate",
+    "title": "Date de fin de la signalétique sociale périodique",
+    "url": "/fr/fields/operationalsocialfeatures-enddate/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "operationalsocialfeatures-contracttype",
+    "title": "Volume",
+    "url": "/fr/fields/operationalsocialfeatures-contracttype/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "operationalsocialfeatures-establishmentunitnumber",
+    "title": "Numéro d'identification de l'unité d'établissement  locale",
+    "url": "/fr/fields/operationalsocialfeatures-establishmentunitnumber/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "operationalsocialfeatures-jointcommissionnumber",
+    "title": "Numéro de commission paritaire",
+    "url": "/fr/fields/operationalsocialfeatures-jointcommissionnumber/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "operationalsocialfeatures-economicactivity",
+    "title": "Code NACE",
+    "url": "/fr/fields/operationalsocialfeatures-economicactivity/"
+  },
+  {
+    "lang": "fr",
+    "type": "block",
+    "id": "weeklyhours",
+    "title": "Temps de travail hebdomadaire",
+    "url": "/fr/blocks/weeklyhours/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "weeklyhours-weeklyhourstype",
+    "title": "Type",
+    "url": "/fr/fields/weeklyhours-weeklyhourstype/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "weeklyhours-effectiveaverageweeklyworkinghours",
+    "title": "Durée effective moyenne de travail hebdomadaire",
+    "url": "/fr/fields/weeklyhours-effectiveaverageweeklyworkinghours/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "weeklyhours-annualaverageweeklypaidworkinghours",
+    "title": "Durée moyenne annuelle  du temps de travail hebdomadaire rémunéré",
+    "url": "/fr/fields/weeklyhours-annualaverageweeklypaidworkinghours/"
+  },
+  {
+    "lang": "fr",
+    "type": "block",
+    "id": "reorganisationmeasures",
+    "title": "Mesure de réorganisation du temps de travail",
+    "url": "/fr/blocks/reorganisationmeasures/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "reorganisationmeasures-reorganisationmeasuretype",
+    "title": "Mesure de réorganisation du temps de travail",
+    "url": "/fr/fields/reorganisationmeasures-reorganisationmeasuretype/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "reorganisationmeasures-reorganisationmeasurepercentage",
+    "title": "Pourcentage de la mesure de réorganisation du temps de travail",
+    "url": "/fr/fields/reorganisationmeasures-reorganisationmeasurepercentage/"
+  },
+  {
+    "lang": "fr",
+    "type": "block",
+    "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail",
+    "title": "Caractéristiques sociales supplémentaires",
+    "url": "/fr/blocks/operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-startdate",
+    "title": "Date de début",
+    "url": "/fr/fields/operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-startdate/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-enddate",
+    "title": "Date de fin",
+    "url": "/fr/fields/operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-enddate/"
+  },
+  {
+    "lang": "fr",
+    "type": "block",
+    "id": "jobs",
+    "title": "Fonction",
+    "url": "/fr/blocks/jobs/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "jobs-title",
+    "title": "Dénomination de la fonction",
+    "url": "/fr/fields/jobs-title/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "jobs-professionalclassificationsectoralcla",
+    "title": "Qualification professionnelle dans CCT sectorielle",
+    "url": "/fr/fields/jobs-professionalclassificationsectoralcla/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "jobs-professionalclassificationenterprise",
+    "title": "Qualification professionnelle au niveau de l'entreprise",
+    "url": "/fr/fields/jobs-professionalclassificationenterprise/"
+  },
+  {
+    "lang": "fr",
+    "type": "block",
+    "id": "gradualworkresumptions",
+    "title": "Reprise progressive du travail",
+    "url": "/fr/blocks/gradualworkresumptions/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "gradualworkresumptions-weeklymaxnbrofhoursallowed",
+    "title": "Nombre maximum d'heures de travail autorisées par semaine dans le cadre d'une reprise progressive du travail",
+    "url": "/fr/fields/gradualworkresumptions-weeklymaxnbrofhoursallowed/"
+  },
+  {
+    "lang": "fr",
+    "type": "block",
+    "id": "dismissals",
+    "title": "Licenciement",
+    "url": "/fr/blocks/dismissals/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "dismissals-noticeperiodstartdate",
+    "title": "Date de début du délai de préavis",
+    "url": "/fr/fields/dismissals-noticeperiodstartdate/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "dismissals-noticeperiodmonths",
+    "title": "Délai de préavis théorique en mois",
+    "url": "/fr/fields/dismissals-noticeperiodmonths/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "dismissals-noticeperiodweeks",
+    "title": "Délai de préavis théorique en semaines",
+    "url": "/fr/fields/dismissals-noticeperiodweeks/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "dismissals-noticeperioddays",
+    "title": "Délai de préavis théorique en jours",
+    "url": "/fr/fields/dismissals-noticeperioddays/"
+  },
+  {
+    "lang": "fr",
+    "type": "block",
+    "id": "starterjobs",
+    "title": "Premier emploi",
+    "url": "/fr/blocks/starterjobs/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "starterjobs-starterjobtype",
+    "title": "Type de convention de premier emploi",
+    "url": "/fr/fields/starterjobs-starterjobtype/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "starterjobs-remunpercentageforstartertraining",
+    "title": "Pourcentage du salaire dans le cadre  d'une convention premier emploi consacré à la formation",
+    "url": "/fr/fields/starterjobs-remunpercentageforstartertraining/"
+  },
+  {
+    "lang": "fr",
+    "type": "block",
+    "id": "fiscalfeatures",
+    "title": "Signalétique fiscale",
+    "url": "/fr/blocks/fiscalfeatures/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "fiscalfeatures-startdate",
+    "title": "Date de début de la signalétique fiscale",
+    "url": "/fr/fields/fiscalfeatures-startdate/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "fiscalfeatures-enddate",
+    "title": "Date de fin de la signalétique fiscale",
+    "url": "/fr/fields/fiscalfeatures-enddate/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "fiscalfeatures-employmentstatus",
+    "title": "Statut",
+    "url": "/fr/fields/fiscalfeatures-employmentstatus/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "fiscalfeatures-civilstatustype",
+    "title": "État civil",
+    "url": "/fr/fields/fiscalfeatures-civilstatustype/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "fiscalfeatures-numberofdependentchildren",
+    "title": "Nombre d'enfants à charge",
+    "url": "/fr/fields/fiscalfeatures-numberofdependentchildren/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "fiscalfeatures-numberofdependentdisabledchildren",
+    "title": "Nombre d'enfants moins valides à charge",
+    "url": "/fr/fields/fiscalfeatures-numberofdependentdisabledchildren/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "fiscalfeatures-numberofdependents",
+    "title": "Nombre d'autres personnes à charge",
+    "url": "/fr/fields/fiscalfeatures-numberofdependents/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "fiscalfeatures-numberofdisableddependents",
+    "title": "Nombre d'autres personnes moins valides à charge",
+    "url": "/fr/fields/fiscalfeatures-numberofdisableddependents/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "fiscalfeatures-disabilityindicator",
+    "title": "Notion de moins valide",
+    "url": "/fr/fields/fiscalfeatures-disabilityindicator/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "fiscalfeatures-crossborderworker",
+    "title": "Notion de travailleur frontalier",
+    "url": "/fr/fields/fiscalfeatures-crossborderworker/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "fiscalfeatures-belgianresident",
+    "title": "Notion résident belge",
+    "url": "/fr/fields/fiscalfeatures-belgianresident/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "fiscalfeatures-incomeofpartner",
+    "title": "Revenu du partenaire",
+    "url": "/fr/fields/fiscalfeatures-incomeofpartner/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "fiscalfeatures-disabilityofpartner",
+    "title": "Notion partenaire moins valide",
+    "url": "/fr/fields/fiscalfeatures-disabilityofpartner/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "fiscalfeatures-numberofdependentsneedingcare",
+    "title": "Nombre de personnes à charge nécessitant des soins",
+    "url": "/fr/fields/fiscalfeatures-numberofdependentsneedingcare/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "fiscalfeatures-retired",
+    "title": "Notion pensionné",
+    "url": "/fr/fields/fiscalfeatures-retired/"
+  },
+  {
+    "lang": "fr",
+    "type": "block",
+    "id": "financialelements",
+    "title": "Élément financier",
+    "url": "/fr/blocks/financialelements/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "financialelements-code",
+    "title": "Code élément financier",
+    "url": "/fr/fields/financialelements-code/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "financialelements-amount",
+    "title": "Montant",
+    "url": "/fr/fields/financialelements-amount/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "financialelements-roles",
+    "title": "Rôle de l'élément financier",
+    "url": "/fr/fields/financialelements-roles/"
+  },
+  {
+    "lang": "fr",
+    "type": "block",
+    "id": "bonusfeatures",
+    "title": "Caractéristiques de la prime",
+    "url": "/fr/blocks/bonusfeatures/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "bonusfeatures-allocationfrequency",
+    "title": "Fréquence d'attribution",
+    "url": "/fr/fields/bonusfeatures-allocationfrequency/"
+  },
+  {
+    "lang": "fr",
+    "type": "block",
+    "id": "voucherfeatures",
+    "title": "Caractéristiques du  chèque",
+    "url": "/fr/blocks/voucherfeatures/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "voucherfeatures-numberofunits",
+    "title": "Nombre de chèques",
+    "url": "/fr/fields/voucherfeatures-numberofunits/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "voucherfeatures-amountperunit",
+    "title": "Montant par chèque",
+    "url": "/fr/fields/voucherfeatures-amountperunit/"
+  },
+  {
+    "lang": "fr",
+    "type": "block",
+    "id": "severancepayfeatures",
+    "title": "Caractéristiques de l'indemnité de rupture de la relation",
+    "url": "/fr/blocks/severancepayfeatures/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "severancepayfeatures-startdate",
+    "title": "Date de début de la période couverte par l'indemnité de rupture de la relation",
+    "url": "/fr/fields/severancepayfeatures-startdate/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "severancepayfeatures-enddate",
+    "title": "Date de fin de la période couverte par l'indemnité de rupture de la relation",
+    "url": "/fr/fields/severancepayfeatures-enddate/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "severancepayfeatures-numberofdaysreductionbyoutplacement",
+    "title": "Nombre de jours diminuant l'indemnité de rupture dans le cadre d'un accompagnement de reclassement professionnel",
+    "url": "/fr/fields/severancepayfeatures-numberofdaysreductionbyoutplacement/"
+  },
+  {
+    "lang": "fr",
+    "type": "block",
+    "id": "holidayafterseverancefeatures",
+    "title": "Caractéristiques des jours fériés  après la sortie de service payés par l'entreprise",
+    "url": "/fr/blocks/holidayafterseverancefeatures/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "holidayafterseverancefeatures-date",
+    "title": "Date du jour férié payé après la sortie de service",
+    "url": "/fr/fields/holidayafterseverancefeatures-date/"
+  },
+  {
+    "lang": "fr",
+    "type": "block",
+    "id": "vacationpayfeatures",
+    "title": "Caractéristiques du simple pécule de vacances",
+    "url": "/fr/blocks/vacationpayfeatures/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "vacationpayfeatures-vacationhoursbalance",
+    "title": "Solde d'heures de vacances",
+    "url": "/fr/fields/vacationpayfeatures-vacationhoursbalance/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "vacationpayfeatures-initialvacationhours",
+    "title": "Nombre initial d'heures de vacances",
+    "url": "/fr/fields/vacationpayfeatures-initialvacationhours/"
+  },
+  {
+    "lang": "fr",
+    "type": "block",
+    "id": "paidrightbalancefeatures",
+    "title": "Caractéristiques du solde des droits payé",
+    "url": "/fr/blocks/paidrightbalancefeatures/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "paidrightbalancefeatures-numberofpaidhours",
+    "title": "Nombre d'heures payées",
+    "url": "/fr/fields/paidrightbalancefeatures-numberofpaidhours/"
+  },
+  {
+    "lang": "fr",
+    "type": "field",
+    "id": "paidrightbalancefeatures-servicetype",
+    "title": "Code prestation ou absence payée",
+    "url": "/fr/fields/paidrightbalancefeatures-servicetype/"
+  }
+]

@@ -105,6 +105,19 @@
                 
 
 
+<div class="mb-3 px-3">
+    <input
+            id="search-input"
+            class="form-control"
+            type="search"
+            placeholder="Zoeken…"
+            data-lang="nl"
+            autocomplete="off"
+    />
+    <div id="search-results" class="list-group mt-2 d-none"></div>
+</div>
+
+
 <ul class="nav">
     
     
@@ -573,6 +586,7 @@
         
     
 </ul>
+
                 <div class="nav-secondary">
                     <ul class="nav">
                         <li class="nav-item">
@@ -806,6 +820,7 @@
 
 <script src="/basic-poc/assets/js/vendor/bootstrap.bundle.min.js"></script>
 <script src="/basic-poc/assets/js/static/sidenav.js"></script>
+<script type="module" src="/basic-poc/js/search/index.js"></script>
 <script type="module">
     import {sidenavModule} from '/basic-poc/assets/js/static/sidenav.js';
 
