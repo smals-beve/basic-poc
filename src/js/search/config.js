@@ -1,5 +1,3 @@
-export const SEARCH_INDEX_URL = "/searchIndex.json";
-
 const translations = {
     nl: {
         no_results_found: "Geen resultaten gevonden.",

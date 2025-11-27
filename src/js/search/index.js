@@ -1,12 +1,11 @@
-import {SEARCH_INDEX_URL} from "./config.js";
 import {normalizeText} from "./utils.js";
-import {searchItems, renderResults, clearResults} from "./core.js";
+import {clearResults, renderResults, searchItems} from "./core.js";
 
 let indexCache = null;
 
-const loadIndex = async () => {
+const loadIndex = async (url) => {
     if (indexCache) return indexCache;
-    const res = await fetch(SEARCH_INDEX_URL);
+    const res = await fetch(url);
     indexCache = await res.json();
     return indexCache;
 };
@@ -15,6 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const input = document.getElementById("search-input");
     const box = document.getElementById("search-results");
     if (!input || !box) return;
+
+    // Use URL from data-attribute (handles pathPrefix)
+    const searchIndexUrl = input.dataset.searchIndexUrl;
 
     let resultsCache = [];
     let activeIndex = -1;
@@ -38,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const lang = input.dataset.lang;
         activeIndex = -1;
 
-        // trigger on 3rd character
+        // Trigger search from 3rd character
         if (q.length < 3) {
             resultsCache = [];
             currentTerms = [];
@@ -46,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        const idx = await loadIndex();
+        const idx = await loadIndex(searchIndexUrl);
         resultsCache = searchItems(q, lang, idx);
         currentTerms = normalizeText(q).split(/\s+/).filter(Boolean);
 
