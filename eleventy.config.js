@@ -211,11 +211,6 @@ export default function (eleventyConfig) {
     );
 
     /** --------------------------------------------------------------
-     * 9) JSON filter (for /searchIndex.json)
-     * -------------------------------------------------------------- */
-    eleventyConfig.addFilter("json", (value) => JSON.stringify(value, null, 2));
-
-    /** --------------------------------------------------------------
      * Final Eleventy settings
      * -------------------------------------------------------------- */
     return {

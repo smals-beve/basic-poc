@@ -1,7 +1,7 @@
-import manifest_nl from "./manifest_nl.json" with { type: "json" };
-import manifest_fr from "./manifest_fr.json" with { type: "json" };
+import manifest_nl from "./manifest_nl.json" with {type: "json"};
+import manifest_fr from "./manifest_fr.json" with {type: "json"};
 
-const manifests = { nl: manifest_nl, fr: manifest_fr };
+const manifests = {nl: manifest_nl, fr: manifest_fr};
 
 const indexFromManifest = (lang, manifest) => {
     const items = [];
@@ -12,37 +12,35 @@ const indexFromManifest = (lang, manifest) => {
             type: "overview",
             id: "overview",
             title: manifest.overview.title,
-            url: `/${lang}/`,
+            hrefPath: `/${lang}/`,
         });
     }
 
     const visitBlock = (block) => {
-        // Block itself
+        // Block
         items.push({
             lang,
             type: "block",
             id: block.id,
             title: block.title,
-            url: `/${lang}/blocks/${block.id}/`,
+            hrefPath: `/${lang}/blocks/${block.id}/`,
         });
-
-        // Its fields
+        // Block fields
         for (const field of block.fields || []) {
             items.push({
                 lang,
                 type: "field",
                 id: field.id,
                 title: field.title,
-                url: `/${lang}/fields/${field.id}/`,
+                hrefPath: `/${lang}/fields/${field.id}/`,
             });
         }
 
-        // Nested blocks (any depth)
         for (const child of block.blocks || []) {
             visitBlock(child);
         }
     };
-
+    // Nested blocks (any depth)
     for (const block of manifest.blocks || []) {
         visitBlock(block);
     }
