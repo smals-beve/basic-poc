@@ -44,4 +44,12 @@ export default {
         nl: "Submenu tonen/verbergen voor {{name}}",
         fr: "Afficher/masquer le sous-menu pour {{name}}",
     },
+    search_placeholder: {
+        nl: "Zoeken…",
+        fr: "Rechercher…"
+    },
+    no_results_found: {
+        nl: "Geen resultaten gevonden.",
+        fr: "Aucun résultat trouvé."
+    }
 };
