@@ -17,10 +17,21 @@
     {% set isApi = '/api/' in cleanUrl %}
 
     {# ---- One reliable language for this page ---- #}
-    {% set currentLang = lang or site.defaultLang or 'en' %}
+    {% set currentLang = lang or site.defaultLang or 'fr' %}
+
+    {# Shared logo per language #}
+    {% set logoSrc = null %}
+    {% set logoAlt = null %}
+
+    {% if currentLang == 'fr' %}
+        {% set logoSrc = '/assets/images/logo/securite_sociale_logo.svg' %}
+        {% set logoAlt = 'logo de la sécurité sociale' %}
+        {% elif currentLang == 'nl' %}
+        {% set logoSrc = '/assets/images/logo/social_zekerheid_logo.svg' %}
+        {% set logoAlt = 'logo van de sociale zekerheid' %}
+    {% endif %}
 </head>
 <body class="theme-enterprise">
-
 
 <div class="layout-container">
     <header class="header-top">
@@ -85,13 +96,12 @@
     <div class="layout-content">
         {% if not isApi %}
             <div id="sidenav" class="sidenav" style="min-width: 304px;">
-                <a href="{{ ('/' ~ currentLang ~ '/') | url }}" class="logo d-none d-lg-block">
-                    <img src="{{ '/assets/images/logo/logo.svg' | url }}" alt="Logo {{ site.name }}" height="40">
-                </a>
-                {# <a href="{{ ('/' ~ currentLang ~ '/') | url }}"
-               class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                <span class="fs-5 d-none d-sm-inline">{{ 'content' | translate(currentLang) }}</span>
-            </a> #}
+                {% if logoSrc %}
+                    <a href="{{ ('/' ~ currentLang ~ '/') | url }}" class="logo d-none d-lg-block">
+                        <img src="{{ logoSrc | url }}" alt="{{ logoAlt }}" height="54">
+                    </a>
+                {% endif %}
+
                 {# Ensure partial uses the right lang #}
                 {% set lang = currentLang %}
                 {% include "partials/sidebar-nav.njk" %}
@@ -120,10 +130,11 @@
                     <div class="top-navbar">
                         <nav class="navbar">
                             <div class="container-fluid px-6">
-                                <a href="{{ '/' | url }}" class="logo d-lg-none">
-                                    <img src="{{ '/assets/images/logo/social-security-colour-rgb-small.svg' | url }}"
-                                         alt="logo" height="40">
-                                </a>
+                                {% if logoSrc %}
+                                    <a href="{{ ('/' ~ currentLang ~ '/') | url }}" class="logo d-lg-none">
+                                        <img src="{{ logoSrc | url }}" alt="{{ logoAlt }}" height="54">
+                                    </a>
+                                {% endif %}
                                 <ul class="navbar-nav ms-auto">
                                     <li class="nav-item d-block d-lg-none">
                                         <button id="js-burger-trigger-sidenav" class="btn-burger" aria-label="Menu">
