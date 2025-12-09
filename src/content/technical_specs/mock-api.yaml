@@ -1,0 +1,24 @@
+openapi: 3.0.3
+info:
+  title: Mock API
+  version: 1.0.0
+  description: A simple mock API used to demonstrate how easily new specs can be added.
+
+paths:
+  /mock/items:
+    get:
+      summary: List mock items
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    name:
+                      type: string
