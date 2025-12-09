@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Spécifications API | e-Gov 3.0</title>
+    <title>Mock API | e-Gov 3.0</title>
     <meta name="description" content="Documentation portal for the e-Gov 3.0 API and technical specifications.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="canonical" href="https://smals-beve.github.io/basic-poc/fr/api/">
+    <link rel="canonical" href="https://smals-beve.github.io/basic-poc/nl/api/mock-api/">
 
     
     <link rel="stylesheet" href="/basic-poc/assets/css/styleguide-egov-theme.min.css">
@@ -26,7 +26,7 @@
     
         
         
-        
+    
 
     <link rel="icon" type="image/png" sizes="32x32" href="/basic-poc/assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/basic-poc/assets/images/favicon-16x16.png">
@@ -43,18 +43,18 @@
                     
                         
                     
-                    <a class="btn"
+                    <a class="btn active"
                        href="/basic-poc/nl/api/"
-                       >
+                       aria-current="true">
                         NL
                     </a>
                 
                     
                         
                     
-                    <a class="btn active"
+                    <a class="btn"
                        href="/basic-poc/fr/api/"
-                       aria-current="true">
+                       >
                         FR
                     </a>
                 
@@ -64,7 +64,7 @@
             <div class="d-lg-none text-uppercase">
                 <button type="button" class="btn btn-sm dropdown-toggle" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                    FR
+                    NL
                 </button>
                 <div class="dropdown-menu">
                     <ul class="overflow-hidden list-unstyled">
@@ -73,9 +73,9 @@
                                 
                             
                             <li>
-                                <a class="dropdown-item"
+                                <a class="dropdown-item active"
                                    href="/basic-poc/nl/api/"
-                                   >
+                                   aria-current="true">
                                     NL
                                 </a>
                             </li>
@@ -84,9 +84,9 @@
                                 
                             
                             <li>
-                                <a class="dropdown-item active"
+                                <a class="dropdown-item"
                                    href="/basic-poc/fr/api/"
-                                   aria-current="true">
+                                   >
                                     FR
                                 </a>
                             </li>
@@ -113,8 +113,8 @@
                         <nav class="navbar">
                             <div class="container-fluid px-6">
                                 
-                                    <a href="/basic-poc/fr/" class="logo d-lg-none">
-                                        <img src="/basic-poc/assets/images/logo/securite_sociale_logo.svg" alt="logo de la sécurité sociale" height="54">
+                                    <a href="/basic-poc/nl/" class="logo d-lg-none">
+                                        <img src="/basic-poc/assets/images/logo/social_zekerheid_logo.svg" alt="logo van de sociale zekerheid" height="54">
                                     </a>
                                 
                                 <ul class="navbar-nav ms-auto">
@@ -134,17 +134,17 @@
                                     </li>
                                     <li class="nav-item d-none d-lg-block">
                                         <a class="btn nav-link "
-                                           href="/basic-poc/fr/">
-                                            Accueil
+                                           href="/basic-poc/nl/">
+                                            Startpagina
                                         </a>
                                     </li>
 
                                     
                                     <li class="nav-item d-none d-lg-block">
                                         <a class="btn nav-link active"
-                                           href="/basic-poc/fr/api/">
+                                           href="/basic-poc/nl/api/">
                                             <span class="material-symbols-rounded" aria-hidden="true" role="img">integration_instructions</span>
-                                            <span>Aperçu de l’API</span>
+                                            <span>API Overzicht</span>
                                         </a>
                                     </li>
                                     
@@ -168,26 +168,23 @@
                             
                             
 
-                            <h1 class="mb-4">Spécifications API</h1>
+                            <p class="mb-3">
+    <a href="/basic-poc/nl/api/">← API Specificaties</a>
+</p>
 
+<div id="swagger-ui"></div>
 
-    <div class="list-group">
-        
-            <a
-                    class="list-group-item list-group-item-action"
-                    href="/basic-poc/fr/api/basic/"
-            >
-                Work Remuneration - REST API
-            </a>
-        
-            <a
-                    class="list-group-item list-group-item-action"
-                    href="/basic-poc/fr/api/mock-api/"
-            >
-                Mock API
-            </a>
-        
-    </div>
+<link rel="stylesheet" href="/basic-poc/lib4ui/swagger-ui.css">
+<script src="/basic-poc/lib4ui/swagger-ui-bundle.js"></script>
+<script src="/basic-poc/lib4ui/swagger-ui-standalone-preset.js"></script>
+<script>
+    SwaggerUIBundle({
+        url: "/basic-poc/content/technical_specs/mock-api.yaml",
+        dom_id: "#swagger-ui",
+        deepLinking: true,
+        presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset],
+    });
+</script>
 
                         </main>
                     </div>

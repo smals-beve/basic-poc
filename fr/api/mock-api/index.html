@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Spécifications API | e-Gov 3.0</title>
+    <title>Mock API | e-Gov 3.0</title>
     <meta name="description" content="Documentation portal for the e-Gov 3.0 API and technical specifications.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="canonical" href="https://smals-beve.github.io/basic-poc/fr/api/">
+    <link rel="canonical" href="https://smals-beve.github.io/basic-poc/fr/api/mock-api/">
 
     
     <link rel="stylesheet" href="/basic-poc/assets/css/styleguide-egov-theme.min.css">
@@ -168,26 +168,23 @@
                             
                             
 
-                            <h1 class="mb-4">Spécifications API</h1>
+                            <p class="mb-3">
+    <a href="/basic-poc/fr/api/">← Spécifications API</a>
+</p>
 
+<div id="swagger-ui"></div>
 
-    <div class="list-group">
-        
-            <a
-                    class="list-group-item list-group-item-action"
-                    href="/basic-poc/fr/api/basic/"
-            >
-                Work Remuneration - REST API
-            </a>
-        
-            <a
-                    class="list-group-item list-group-item-action"
-                    href="/basic-poc/fr/api/mock-api/"
-            >
-                Mock API
-            </a>
-        
-    </div>
+<link rel="stylesheet" href="/basic-poc/lib4ui/swagger-ui.css">
+<script src="/basic-poc/lib4ui/swagger-ui-bundle.js"></script>
+<script src="/basic-poc/lib4ui/swagger-ui-standalone-preset.js"></script>
+<script>
+    SwaggerUIBundle({
+        url: "/basic-poc/content/technical_specs/mock-api.yaml",
+        dom_id: "#swagger-ui",
+        deepLinking: true,
+        presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset],
+    });
+</script>
 
                         </main>
                     </div>
