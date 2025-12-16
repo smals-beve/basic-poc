@@ -110,6 +110,11 @@
           "id": "service-numberofhours",
           "title": "Aantal uren van prestatie of afwezigheid",
           "order": 4
+        },
+        {
+          "id": "service-externalreference",
+          "title": "Referentie van de aangever",
+          "order": 5
         }
       ],
       "blocks": []
@@ -148,6 +153,11 @@
           "id": "servicefeatures-nonassimilationlegalvacationrights",
           "title": "Niet-gelijkstelling met gewone prestaties bij bepaling van recht op wettelijke vakantie",
           "order": 6
+        },
+        {
+          "id": "servicefeatures-externalreference",
+          "title": "Referentie van de aangever",
+          "order": 7
         }
       ],
       "blocks": []
@@ -186,6 +196,11 @@
           "id": "identifyingsocialfeatures-flatratecode",
           "title": "Forfaitcode",
           "order": 6
+        },
+        {
+          "id": "identifyingsocialfeatures-externalreference",
+          "title": "Referentie van de aangever",
+          "order": 7
         }
       ],
       "blocks": []
@@ -224,6 +239,16 @@
           "id": "operationalsocialfeatures-economicactivity",
           "title": "NACE-code",
           "order": 6
+        },
+        {
+          "id": "operationalsocialfeatures-educationsectorpaymentmethod",
+          "title": "Betalingswijze in het onderwijs",
+          "order": 7
+        },
+        {
+          "id": "operationalsocialfeatures-externalreference",
+          "title": "Referentie van de aangever",
+          "order": 8
         }
       ],
       "blocks": []
@@ -247,6 +272,11 @@
           "id": "weeklyhours-annualaverageweeklypaidworkinghours",
           "title": "Jaarlijks gemiddelde wekelijkse betaalde arbeidsduur",
           "order": 3
+        },
+        {
+          "id": "weeklyhours-externalreference",
+          "title": "Referentie van de aangever",
+          "order": 4
         }
       ],
       "blocks": []
@@ -265,6 +295,11 @@
           "id": "reorganisationmeasures-reorganisationmeasurepercentage",
           "title": "Percentage van maatregel tot reorganisatie van arbeidstijd",
           "order": 2
+        },
+        {
+          "id": "reorganisationmeasures-externalreference",
+          "title": "Referentie van de aangever",
+          "order": 3
         }
       ],
       "blocks": []
@@ -283,6 +318,11 @@
           "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-enddate",
           "title": "Einddatum",
           "order": 2
+        },
+        {
+          "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-externalreference",
+          "title": "Referentie van de aangever",
+          "order": 3
         }
       ],
       "blocks": [
@@ -310,12 +350,12 @@
           "blocks": []
         },
         {
-          "id": "gradualworkresumptions",
+          "id": "gradualworkresumption",
           "title": "Progressieve werkhervatting",
           "order": 2,
           "fields": [
             {
-              "id": "gradualworkresumptions-weeklymaxnbrofhoursallowed",
+              "id": "gradualworkresumption-weeklymaxnbrofhoursallowed",
               "title": "Maximale aantal uren toegestane arbeid per week in het kader van progressieve werkhervatting",
               "order": 1
             }
@@ -323,27 +363,27 @@
           "blocks": []
         },
         {
-          "id": "dismissals",
+          "id": "dismissal",
           "title": "Ontslag",
           "order": 3,
           "fields": [
             {
-              "id": "dismissals-noticeperiodstartdate",
+              "id": "dismissal-noticeperiodstartdate",
               "title": "Startdatum van opzeggingstermijn",
               "order": 1
             },
             {
-              "id": "dismissals-noticeperiodmonths",
+              "id": "dismissal-noticeperiodmonths",
               "title": "Theoretische opzeggingstermijn in maanden",
               "order": 2
             },
             {
-              "id": "dismissals-noticeperiodweeks",
+              "id": "dismissal-noticeperiodweeks",
               "title": "Theoretische opzeggingstermijn in weken",
               "order": 3
             },
             {
-              "id": "dismissals-noticeperioddays",
+              "id": "dismissal-noticeperioddays",
               "title": "Theoretische opzeggingstermijn in dagen",
               "order": 4
             }
@@ -449,6 +489,11 @@
           "id": "fiscalfeatures-retired",
           "title": "Notie gepensioneerd",
           "order": 15
+        },
+        {
+          "id": "fiscalfeatures-externalreference",
+          "title": "Referentie van de aangever",
+          "order": 16
         }
       ],
       "blocks": []
@@ -472,6 +517,11 @@
           "id": "financialelements-roles",
           "title": "Rol van financieel element",
           "order": 3
+        },
+        {
+          "id": "financialelements-externalreference",
+          "title": "Referentie van de aangever",
+          "order": 4
         }
       ],
       "blocks": []
@@ -485,6 +535,11 @@
           "id": "bonusfeatures-allocationfrequency",
           "title": "Toewijzingsfrequentie",
           "order": 1
+        },
+        {
+          "id": "bonusfeatures-externalreference",
+          "title": "Referentie van de aangever",
+          "order": 2
         }
       ],
       "blocks": []
@@ -503,6 +558,11 @@
           "id": "voucherfeatures-amountperunit",
           "title": "Bedrag per cheque",
           "order": 2
+        },
+        {
+          "id": "voucherfeatures-externalreference",
+          "title": "Referentie van de aangever",
+          "order": 3
         }
       ],
       "blocks": []
@@ -526,6 +586,11 @@
           "id": "severancepayfeatures-numberofdaysreductionbyoutplacement",
           "title": "Aantal dagen vermindering verbrekingsvergoeding bij outplacementbegeleiding",
           "order": 3
+        },
+        {
+          "id": "severancepayfeatures-externalreference",
+          "title": "Referentie van de aangever",
+          "order": 4
         }
       ],
       "blocks": []
@@ -539,6 +604,29 @@
           "id": "holidayafterseverancefeatures-date",
           "title": "Datum van feestdag uitbetaald na uitdiensttreding",
           "order": 1
+        },
+        {
+          "id": "holidayafterseverancefeatures-externalreference",
+          "title": "Referentie van de aangever",
+          "order": 2
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "usingemployer",
+      "title": "Gebruikende onderneming",
+      "order": 18,
+      "fields": [
+        {
+          "id": "usingemployer-enterprisenumber",
+          "title": "Ondernemingsnummer van gebruikende onderneming",
+          "order": 1
+        },
+        {
+          "id": "usingemployer-externalreference",
+          "title": "Referentie van de aangever",
+          "order": 2
         }
       ],
       "blocks": []
@@ -546,7 +634,7 @@
     {
       "id": "vacationpayfeatures",
       "title": "Kenmerken van enkel vakantiegeld",
-      "order": 18,
+      "order": 19,
       "fields": [
         {
           "id": "vacationpayfeatures-vacationhoursbalance",
@@ -557,6 +645,11 @@
           "id": "vacationpayfeatures-initialvacationhours",
           "title": "Oorspronkelijk aantal uren vakantie",
           "order": 2
+        },
+        {
+          "id": "vacationpayfeatures-externalreference",
+          "title": "Referentie van de aangever",
+          "order": 3
         }
       ],
       "blocks": []
@@ -564,7 +657,7 @@
     {
       "id": "paidrightbalancefeatures",
       "title": "Kenmerken van uitbetaald  saldo van  rechten",
-      "order": 19,
+      "order": 20,
       "fields": [
         {
           "id": "paidrightbalancefeatures-numberofpaidhours",
@@ -575,6 +668,11 @@
           "id": "paidrightbalancefeatures-servicetype",
           "title": "Code uitbetaalde prestatie of afwezigheid",
           "order": 2
+        },
+        {
+          "id": "paidrightbalancefeatures-externalreference",
+          "title": "Referentie van de aangever",
+          "order": 3
         }
       ],
       "blocks": []

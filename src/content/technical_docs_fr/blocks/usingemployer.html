@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Glossaries  – dismissals</title>
+  <title>Glossaries  – usingEmployer</title>
   
     <style>
         html, body {
@@ -19,27 +19,27 @@
 <div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
 
     <div class="px-12 py-5 introduction">
-        <h4 id="dismissals">Glossaires<br>Transfert de données salariales</h4>
+        <h4 id="usingemployer">Glossaires<br>Transfert de données salariales</h4>
         <div class="introduction__right">
             <span>
                 Version
                 <br>
-                <strong>1.0.1.5</strong>
+                <strong>1.0.1.6</strong>
             </span>
             <span>
                 Date
                 <br>
-                <strong>19-11-2025</strong>
+                <strong>18-12-2025</strong>
             </span>
         </div>
     </div>
 
 
     <div class="px-12 py-9">
-        <h2>Bloc Licenciement<br><code>dismissals</code></h2>
-		<span class="text-primary-emphasis fw-bolder">Sous-classe / spécialisation des caractéristiques sociales supplémentaires</span>
-        <p><i>Description:</i><br>Données relatives au licenciement de la personne physique.<br><br>Ces données sont toujours liées au bloc &quot;signalétique sociale&quot;.</p>
-        <p><i>Présence:</i><br>Obligatoire en cas de licenciement.</p>
+        <h2>Bloc Entreprise utilisatrice<br><code>usingEmployer</code></h2>
+		<span class="text-primary-emphasis fw-bolder"></span>
+        <p><i>Description:</i><br>Les données d&#x27;identification de l&#x27;entreprise utilisatrice chez laquelle l&#x27;intérimaire est occupé</p>
+        <p><i>Présence:</i><br>Obligatoire pour les travailleurs occasionnels occupés dans le secteur de l&#x27;horeca via une agence d&#x27;intérim.</p>
         <div class="mt-6">
             <table class="table table-striped">
                 <thead>
@@ -52,42 +52,22 @@
                 <tbody>
  <!-- ZONE_LOOPLIST -->
                 <tr>
-                    <td><a href="#dismissals-noticeperiodstartdate" class="link-underline"><strong>Date de début du délai de préavis</strong></a></td>
+                    <td><a href="#usingemployer-enterprisenumber" class="link-underline"><strong>Numéro d&#x27;entreprise de l&#x27;entreprise utilisatrice</strong></a></td>
                     <td>
-                        La date à laquelle le délai de préavis commence.
+                        Numéro  d&#x27;entreprise de l&#x27;entreprise utilisatrice chez laquelle le travailleur intérimaire est occupé
                     </td>
 					<td>
-						<code>noticePeriodStartDate</code>
+						<code>enterpriseNumber</code>
 					<td>
                 </tr>
 
                 <tr>
-                    <td><a href="#dismissals-noticeperiodmonths" class="link-underline"><strong>Délai de préavis théorique en mois</strong></a></td>
+                    <td><a href="#usingemployer-externalreference" class="link-underline"><strong>Référence du déclarant</strong></a></td>
                     <td>
-                        Le délai de préavis théorique exprimé en mois.
+                        Référence  utilisée par le déclarant.
                     </td>
 					<td>
-						<code>noticePeriodMonths</code>
-					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#dismissals-noticeperiodweeks" class="link-underline"><strong>Délai de préavis théorique en semaines</strong></a></td>
-                    <td>
-                        Le délai de préavis théorique exprimé en semaines.
-                    </td>
-					<td>
-						<code>noticePeriodWeeks</code>
-					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#dismissals-noticeperioddays" class="link-underline"><strong>Délai de préavis théorique en jours</strong></a></td>
-                    <td>
-                        Le délai de préavis théorique exprimé en jours.
-                    </td>
-					<td>
-						<code>noticePeriodDays</code>
+						<code>externalReference</code>
 					<td>
                 </tr>
 <!-- ZONE_LOOPLIST -->

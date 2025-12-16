@@ -24,12 +24,12 @@
             <span>
                 Version
                 <br>
-                <strong>1.0.1.5</strong>
+                <strong>1.0.1.6</strong>
             </span>
             <span>
                 Date
                 <br>
-                <strong>19-11-2025</strong>
+                <strong>18-12-2025</strong>
             </span>
         </div>
     </div>
@@ -39,7 +39,7 @@
         <h2>Bloc Prestation ou absence<br><code>service</code></h2>
 		<span class="text-primary-emphasis fw-bolder"></span>
         <p><i>Description:</i><br>La prestation ou l&#x27;absence de la personne physique sur base journalière ou sur base d&#x27;une période.</p>
-        <p><i>Présence:</i><br>Obligatoire si au moins une prestation ou absence doit être communiquée.</p>
+        <p><i>Présence:</i><br>Obligatoire dans un message original ou un message de modification, si au moins une prestation ou absence doit être communiquée.<br>Optionnel dans un message d’annulation.</p>
         <div class="mt-6">
             <table class="table table-striped">
                 <thead>
@@ -88,6 +88,16 @@
                     </td>
 					<td>
 						<code>numberOfHours</code>
+					<td>
+                </tr>
+
+                <tr>
+                    <td><a href="#service-externalreference" class="link-underline"><strong>Référence du déclarant</strong></a></td>
+                    <td>
+                        Référence  utilisée par le déclarant.
+                    </td>
+					<td>
+						<code>externalReference</code>
 					<td>
                 </tr>
 <!-- ZONE_LOOPLIST -->

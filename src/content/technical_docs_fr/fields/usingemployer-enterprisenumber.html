@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Glossaires Datafields – ${BLOK_TECHLABEL} weeklyMaxNbrOfHoursAllowed</title>
+  <title>Glossaires Datafields – ${BLOK_TECHLABEL} enterpriseNumber</title>
   
     <style>
         html, body {
@@ -24,41 +24,40 @@
             <span>
                 Version
                 <br>
-                <strong>1.0.1.5</strong>
+                <strong>1.0.1.6</strong>
             </span>
             <span>
                 Date
                 <br>
-                <strong>19-11-2025</strong>
+                <strong>18-12-2025</strong>
             </span>
         </div>
     </div>
     <div class="px-12 py-9">
         <!-- Zone LoopList -->
-        <h2 id="gradualworkresumptions-weeklymaxnbrofhoursallowed">Nombre maximum d&#x27;heures de travail autorisées par semaine dans le cadre d&#x27;une reprise progressive du travail</h2>
+        <h2 id="usingemployer-enterprisenumber">Numéro d&#x27;entreprise de l&#x27;entreprise utilisatrice</h2>
 
         <dl class="mt-7">
             <dt>Description</dt>	
-            <dd>Le nombre maximum d&#x27;heures de travail autorisées par semaine dans le cadre d&#x27;une reprise progressive du travail après une période d&#x27;incapacité de travail.</dd>
+            <dd>Numéro  d&#x27;entreprise de l&#x27;entreprise utilisatrice chez laquelle le travailleur intérimaire est occupé</dd>
             <hr class="my-5">
             <dt>TechLabel</dt>	
-            <dd>weeklyMaxNbrOfHoursAllowed</dd>
+            <dd>enterpriseNumber</dd>
             <hr class="my-5">
             <dt>Type</dt>	
             <dd>integer</dd>
             <hr class="my-5">
 	        <dt>Longeur</dt>
-            <dd>5</dd>
+            <dd>10</dd>
             <hr class="my-5">
 	        <dt>Format</dt>
-            <dd>-</dd>
+            <dd>NNNNNNNNCC<br><br><ul>
+<li>NNNNNNNN est le numéro</li>
+<li>CC est le nombre-contrôle.</li>
+</ul></dd>
 	        <hr class="my-5">
             <dt>Domaine de définition</dt>
-            <dd>[1; 99999]<br><br>Les heures sont exprimées en centièmes d&#x27;heures.<br>Exemples :<br><br><ul>
-<li>1 heure est exprimée par 100.</li>
-<li>4 heures et 30 minutes sont exprimées par 450.</li>
-<li>12 heures et 22 minutes sont exprimées par 1237.</li>
-</ul></dd>
+            <dd>Nombre à 10 chiffres.</dd>
 	        <hr class="my-5">
             <dt>Présence</dt>
             <dd>Indispensable</dd>
