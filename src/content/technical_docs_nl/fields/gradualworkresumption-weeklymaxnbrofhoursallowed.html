@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Glossarium Datafields – ${BLOK_TECHLABEL} noticePeriodWeeks</title>
+  <title>Glossarium Datafields – ${BLOK_TECHLABEL} weeklyMaxNbrOfHoursAllowed</title>
   
 </head>
 <body class="d-flex flex-column py-8">
@@ -16,25 +16,25 @@
             <span>
                 Versie
                 <br>
-                <strong>1.0.1.5</strong>
+                <strong>1.0.1.6</strong>
             </span>
             <span>
                 Datum
                 <br>
-                <strong>19-11-2025</strong>
+                <strong>18-12-2025</strong>
             </span>
         </div>
     </div>
     <div class="px-12 py-9">
         <!-- Zone LoopList -->
-        <h2 id="dismissals-noticeperiodweeks">Theoretische opzeggingstermijn in weken</h2>
+        <h2 id="gradualworkresumption-weeklymaxnbrofhoursallowed">Maximale aantal uren toegestane arbeid per week in het kader van progressieve werkhervatting</h2>
 
         <dl class="mt-7">
             <dt>Beschrijving</dt>	
-            <dd>De theoretische opzegtermijn uitgedrukt in weken.</dd>
+            <dd>Het maximale aantal uren per week toegestane arbeid in het kader van een progressieve werkhervatting na een periode van arbeidsongeschiktheid.</dd>
             <hr class="my-5">
             <dt>TechLabel</dt>	
-            <dd>noticePeriodWeeks</dd>
+            <dd>weeklyMaxNbrOfHoursAllowed</dd>
             <hr class="my-5">
             <dt>Type</dt>	
             <dd>integer</dd>
@@ -46,10 +46,14 @@
             <dd>-</dd>
 	        <hr class="my-5">
             <dt>Toegelaten domein</dt>
-            <dd>[1; 99999]</dd>
+            <dd>[1; 99999]<br><br>De uren worden uitgedrukt in honderdsten van uren.<br>Voorbeelden :<br><br><ul>
+<li>1 uur wordt uitgedrukt als 100.</li>
+<li>4 uren en 30 minuten wordt uitgedrukt als 450.</li>
+<li>12 uren en 22 minuten wordt uitgedrukt als 1237.</li>
+</ul></dd>
 	        <hr class="my-5">
             <dt>Aanwezigheid</dt>
-            <dd>Verplicht, in geval van een ontslag waarbij de theroretische opzeggingstermijn wordt uitgedrukt in weken.</dd>
+            <dd>Onmisbaar</dd>
 	    <hr class="my-5">
         </dl>
         <hr class="mt-11 mb-7 opacity-100">

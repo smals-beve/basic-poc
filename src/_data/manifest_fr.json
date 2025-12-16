@@ -110,6 +110,11 @@
           "id": "service-numberofhours",
           "title": "Nombre d'heures de prestation ou d'absence",
           "order": 4
+        },
+        {
+          "id": "service-externalreference",
+          "title": "Référence du déclarant",
+          "order": 5
         }
       ],
       "blocks": []
@@ -148,6 +153,11 @@
           "id": "servicefeatures-nonassimilationlegalvacationrights",
           "title": "Non-assimilation aux prestations normales pour la détermination du droit aux vacances légales",
           "order": 6
+        },
+        {
+          "id": "servicefeatures-externalreference",
+          "title": "Référence du déclarant",
+          "order": 7
         }
       ],
       "blocks": []
@@ -186,6 +196,11 @@
           "id": "identifyingsocialfeatures-flatratecode",
           "title": "Code forfait",
           "order": 6
+        },
+        {
+          "id": "identifyingsocialfeatures-externalreference",
+          "title": "Référence du déclarant",
+          "order": 7
         }
       ],
       "blocks": []
@@ -224,6 +239,16 @@
           "id": "operationalsocialfeatures-economicactivity",
           "title": "Code NACE",
           "order": 6
+        },
+        {
+          "id": "operationalsocialfeatures-educationsectorpaymentmethod",
+          "title": "Mode de paiement dans l'enseignement",
+          "order": 7
+        },
+        {
+          "id": "operationalsocialfeatures-externalreference",
+          "title": "Référence du déclarant",
+          "order": 8
         }
       ],
       "blocks": []
@@ -247,6 +272,11 @@
           "id": "weeklyhours-annualaverageweeklypaidworkinghours",
           "title": "Durée moyenne annuelle  du temps de travail hebdomadaire rémunéré",
           "order": 3
+        },
+        {
+          "id": "weeklyhours-externalreference",
+          "title": "Référence du déclarant",
+          "order": 4
         }
       ],
       "blocks": []
@@ -265,6 +295,11 @@
           "id": "reorganisationmeasures-reorganisationmeasurepercentage",
           "title": "Pourcentage de la mesure de réorganisation du temps de travail",
           "order": 2
+        },
+        {
+          "id": "reorganisationmeasures-externalreference",
+          "title": "Référence du déclarant",
+          "order": 3
         }
       ],
       "blocks": []
@@ -283,6 +318,11 @@
           "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-enddate",
           "title": "Date de fin",
           "order": 2
+        },
+        {
+          "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-externalreference",
+          "title": "Référence du déclarant",
+          "order": 3
         }
       ],
       "blocks": [
@@ -310,12 +350,12 @@
           "blocks": []
         },
         {
-          "id": "gradualworkresumptions",
+          "id": "gradualworkresumption",
           "title": "Reprise progressive du travail",
           "order": 2,
           "fields": [
             {
-              "id": "gradualworkresumptions-weeklymaxnbrofhoursallowed",
+              "id": "gradualworkresumption-weeklymaxnbrofhoursallowed",
               "title": "Nombre maximum d'heures de travail autorisées par semaine dans le cadre d'une reprise progressive du travail",
               "order": 1
             }
@@ -323,27 +363,27 @@
           "blocks": []
         },
         {
-          "id": "dismissals",
+          "id": "dismissal",
           "title": "Licenciement",
           "order": 3,
           "fields": [
             {
-              "id": "dismissals-noticeperiodstartdate",
+              "id": "dismissal-noticeperiodstartdate",
               "title": "Date de début du délai de préavis",
               "order": 1
             },
             {
-              "id": "dismissals-noticeperiodmonths",
+              "id": "dismissal-noticeperiodmonths",
               "title": "Délai de préavis théorique en mois",
               "order": 2
             },
             {
-              "id": "dismissals-noticeperiodweeks",
+              "id": "dismissal-noticeperiodweeks",
               "title": "Délai de préavis théorique en semaines",
               "order": 3
             },
             {
-              "id": "dismissals-noticeperioddays",
+              "id": "dismissal-noticeperioddays",
               "title": "Délai de préavis théorique en jours",
               "order": 4
             }
@@ -449,6 +489,11 @@
           "id": "fiscalfeatures-retired",
           "title": "Notion pensionné",
           "order": 15
+        },
+        {
+          "id": "fiscalfeatures-externalreference",
+          "title": "Référence du déclarant",
+          "order": 16
         }
       ],
       "blocks": []
@@ -472,6 +517,11 @@
           "id": "financialelements-roles",
           "title": "Rôle de l'élément financier",
           "order": 3
+        },
+        {
+          "id": "financialelements-externalreference",
+          "title": "Référence du déclarant",
+          "order": 4
         }
       ],
       "blocks": []
@@ -485,6 +535,11 @@
           "id": "bonusfeatures-allocationfrequency",
           "title": "Fréquence d'attribution",
           "order": 1
+        },
+        {
+          "id": "bonusfeatures-externalreference",
+          "title": "Référence du déclarant",
+          "order": 2
         }
       ],
       "blocks": []
@@ -503,29 +558,39 @@
           "id": "voucherfeatures-amountperunit",
           "title": "Montant par chèque",
           "order": 2
+        },
+        {
+          "id": "voucherfeatures-externalreference",
+          "title": "Référence du déclarant",
+          "order": 3
         }
       ],
       "blocks": []
     },
     {
       "id": "severancepayfeatures",
-      "title": "Caractéristiques de l'indemnité de rupture de la relation",
+      "title": "Caractéristiques de l'indemnité de fin de la relation",
       "order": 16,
       "fields": [
         {
           "id": "severancepayfeatures-startdate",
-          "title": "Date de début de la période couverte par l'indemnité de rupture de la relation",
+          "title": "Date de début de la période couverte par l'indemnité de fin de la relation",
           "order": 1
         },
         {
           "id": "severancepayfeatures-enddate",
-          "title": "Date de fin de la période couverte par l'indemnité de rupture de la relation",
+          "title": "Date de fin de la période couverte par l'indemnité de fin de la relation",
           "order": 2
         },
         {
           "id": "severancepayfeatures-numberofdaysreductionbyoutplacement",
           "title": "Nombre de jours diminuant l'indemnité de rupture dans le cadre d'un accompagnement de reclassement professionnel",
           "order": 3
+        },
+        {
+          "id": "severancepayfeatures-externalreference",
+          "title": "Référence du déclarant",
+          "order": 4
         }
       ],
       "blocks": []
@@ -539,6 +604,29 @@
           "id": "holidayafterseverancefeatures-date",
           "title": "Date du jour férié payé après la sortie de service",
           "order": 1
+        },
+        {
+          "id": "holidayafterseverancefeatures-externalreference",
+          "title": "Référence du déclarant",
+          "order": 2
+        }
+      ],
+      "blocks": []
+    },
+    {
+      "id": "usingemployer",
+      "title": "Entreprise utilisatrice",
+      "order": 18,
+      "fields": [
+        {
+          "id": "usingemployer-enterprisenumber",
+          "title": "Numéro d'entreprise de l'entreprise utilisatrice",
+          "order": 1
+        },
+        {
+          "id": "usingemployer-externalreference",
+          "title": "Référence du déclarant",
+          "order": 2
         }
       ],
       "blocks": []
@@ -546,7 +634,7 @@
     {
       "id": "vacationpayfeatures",
       "title": "Caractéristiques du simple pécule de vacances",
-      "order": 18,
+      "order": 19,
       "fields": [
         {
           "id": "vacationpayfeatures-vacationhoursbalance",
@@ -557,6 +645,11 @@
           "id": "vacationpayfeatures-initialvacationhours",
           "title": "Nombre initial d'heures de vacances",
           "order": 2
+        },
+        {
+          "id": "vacationpayfeatures-externalreference",
+          "title": "Référence du déclarant",
+          "order": 3
         }
       ],
       "blocks": []
@@ -564,7 +657,7 @@
     {
       "id": "paidrightbalancefeatures",
       "title": "Caractéristiques du solde des droits payé",
-      "order": 19,
+      "order": 20,
       "fields": [
         {
           "id": "paidrightbalancefeatures-numberofpaidhours",
@@ -575,6 +668,11 @@
           "id": "paidrightbalancefeatures-servicetype",
           "title": "Code prestation ou absence payée",
           "order": 2
+        },
+        {
+          "id": "paidrightbalancefeatures-externalreference",
+          "title": "Référence du déclarant",
+          "order": 3
         }
       ],
       "blocks": []

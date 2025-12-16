@@ -24,22 +24,22 @@
             <span>
                 Version
                 <br>
-                <strong>1.0.1.5</strong>
+                <strong>1.0.1.6</strong>
             </span>
             <span>
                 Date
                 <br>
-                <strong>19-11-2025</strong>
+                <strong>18-12-2025</strong>
             </span>
         </div>
     </div>
 
 
     <div class="px-12 py-9">
-        <h2>Bloc Caractéristiques de l&#x27;indemnité de rupture de la relation<br><code>severancePayFeatures</code></h2>
+        <h2>Bloc Caractéristiques de l&#x27;indemnité de fin de la relation<br><code>severancePayFeatures</code></h2>
 		<span class="text-primary-emphasis fw-bolder"></span>
-        <p><i>Description:</i><br>Les caractéristiques d&#x27;une indemnité accordée à une personne physique suite à la rupture de la relation.</p>
-        <p><i>Présence:</i><br>Obligatoire dans le cas d’une indemnité de rupture exprimée en temps de travail, d’une indemnité de reclassement ou d’une indemnité de sortie.</p>
+        <p><i>Description:</i><br>Les caractéristiques d&#x27;une indemnité accordée à une personne physique suite à la fin de la relation.</p>
+        <p><i>Présence:</i><br>Obligatoire dans le cas d’une indemnité de fin de la relation exprimée en temps de travail  (codes 0060001, 0060002, 0060003, 0060004 et 0060099)</p>
         <div class="mt-6">
             <table class="table table-striped">
                 <thead>
@@ -52,7 +52,7 @@
                 <tbody>
  <!-- ZONE_LOOPLIST -->
                 <tr>
-                    <td><a href="#severancepayfeatures-startdate" class="link-underline"><strong>Date de début de la période couverte par l&#x27;indemnité de rupture de la relation</strong></a></td>
+                    <td><a href="#severancepayfeatures-startdate" class="link-underline"><strong>Date de début de la période couverte par l&#x27;indemnité de fin de la relation</strong></a></td>
                     <td>
                         La date de début de la période de référence liée à une indemnité de rupture exprimée en temps de travail, à une indemnité de reclassement ou à une indemnité de sortie.
                     </td>
@@ -62,7 +62,7 @@
                 </tr>
 
                 <tr>
-                    <td><a href="#severancepayfeatures-enddate" class="link-underline"><strong>Date de fin de la période couverte par l&#x27;indemnité de rupture de la relation</strong></a></td>
+                    <td><a href="#severancepayfeatures-enddate" class="link-underline"><strong>Date de fin de la période couverte par l&#x27;indemnité de fin de la relation</strong></a></td>
                     <td>
                         La date de fin de la période de référence liée à une indemnité de rupture exprimée en temps de travail, à une indemnité de reclassement ou à une indemnité de sortie.
                     </td>
@@ -78,6 +78,16 @@
                     </td>
 					<td>
 						<code>numberOfDaysReductionByOutplacement</code>
+					<td>
+                </tr>
+
+                <tr>
+                    <td><a href="#severancepayfeatures-externalreference" class="link-underline"><strong>Référence du déclarant</strong></a></td>
+                    <td>
+                        Référence  utilisée par le déclarant.
+                    </td>
+					<td>
+						<code>externalReference</code>
 					<td>
                 </tr>
 <!-- ZONE_LOOPLIST -->
