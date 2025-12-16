@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Referentie van de aangever | e-Gov 3.0</title>
+    <meta name="description" content="Documentation portal for the e-Gov 3.0 API and technical specifications.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="canonical" href="https://smals-beve.github.io/basic-poc/nl/fields/weeklyhours-externalreference/">
+
+    
+    <link rel="stylesheet" href="/basic-poc/assets/css/styleguide-egov-theme.min.css">
+    <link rel="stylesheet" href="/basic-poc/assets/css/styles.css">
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+        
+        
+    
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/basic-poc/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/basic-poc/assets/images/favicon-16x16.png">
+</head>
+<body class="theme-enterprise">
+
+<div class="layout-container">
+    <header class="header-top">
+        <div class="container-fluid px-6">
+            
+            <div class="switch-language d-none d-lg-inline-flex">
+                
+                
+                    
+                        
+                    
+                    <a class="btn active"
+                       href="/basic-poc/nl/"
+                       aria-current="true">
+                        NL
+                    </a>
+                
+                    
+                        
+                    
+                    <a class="btn"
+                       href="/basic-poc/fr/"
+                       >
+                        FR
+                    </a>
+                
+            </div>
+
+            
+            <div class="d-lg-none text-uppercase">
+                <button type="button" class="btn btn-sm dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                    NL
+                </button>
+                <div class="dropdown-menu">
+                    <ul class="overflow-hidden list-unstyled">
+                        
+                            
+                                
+                            
+                            <li>
+                                <a class="dropdown-item active"
+                                   href="/basic-poc/nl/"
+                                   aria-current="true">
+                                    NL
+                                </a>
+                            </li>
+                        
+                            
+                                
+                            
+                            <li>
+                                <a class="dropdown-item"
+                                   href="/basic-poc/fr/"
+                                   >
+                                    FR
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="d-flex align-items-center gap-3">
+                <p class="mb-0 d-none d-lg-inline-flex">
+                    Lorem information and services dolores: ipsum.be
+                </p>
+                <img class="my-auto" src="/basic-poc/assets/images/logo/belgiumbe-colour.svg" alt=".be - logo"
+                     height="16">
+            </div>
+        </div>
+    </header>
+    <div class="layout-content">
+        
+            <div id="sidenav" class="sidenav" style="min-width: 304px;">
+                
+                    <a href="/basic-poc/nl/" class="logo d-none d-lg-block">
+                        <img src="/basic-poc/assets/images/logo/social_zekerheid_logo.svg" alt="logo van de sociale zekerheid" height="54">
+                    </a>
+                
+
+                
+                
+                
+
+
+<div class="px-3 pt-10 pt-lg-0">
+    <input
+            id="search-input"
+            class="form-control"
+            type="search"
+            placeholder="Zoeken…"
+            data-lang="nl"
+            data-search-index-url="/basic-poc/searchIndex.json"
+            autocomplete="off"
+    />
+    <div id="search-results" class="list-group mt-2 d-none"></div>
+</div>
+
+
+<ul class="nav">
+    
+    
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/basic-poc/nl/">
+                <span class="label" title="Overzicht van Blokken">
+                    Overzicht van Blokken
+                </span>
+            </a>
+        </li>
+    
+
+    
+    
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/nl/blocks/enterprise/"
+                       title="Onderneming">
+                        <span class="label text-truncate">Onderneming</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/nl/blocks/naturalperson/"
+                       title="Natuurlijke persoon">
+                        <span class="label text-truncate">Natuurlijke persoon</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/nl/blocks/relation/"
+                       title="Relatie">
+                        <span class="label text-truncate">Relatie</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/nl/blocks/calculation/"
+                       title="Loonberekening">
+                        <span class="label text-truncate">Loonberekening</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/nl/blocks/service/"
+                       title="Prestatie of afwezigheid">
+                        <span class="label text-truncate">Prestatie of afwezigheid</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/nl/blocks/servicefeatures/"
+                       title="Prestatiekenmerken">
+                        <span class="label text-truncate">Prestatiekenmerken</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/nl/blocks/identifyingsocialfeatures/"
+                       title="Sociale Signalitiek">
+                        <span class="label text-truncate">Sociale Signalitiek</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/nl/blocks/operationalsocialfeatures/"
+                       title="Periodieke sociale Signalitiek">
+                        <span class="label text-truncate">Periodieke sociale Signalitiek</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/nl/blocks/weeklyhours/"
+                       title="Wekelijkse arbeidsduur">
+                        <span class="label text-truncate">Wekelijkse arbeidsduur</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/nl/blocks/reorganisationmeasures/"
+                       title="Maatregel tot reorganisatie van arbeidstijd">
+                        <span class="label text-truncate">Maatregel tot reorganisatie van arbeidstijd</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <div class="toggle-item-container">
+                        <button class="btn btn-toggle nav-link"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapse-nl-operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail"
+                                aria-expanded="false"
+                                aria-controls="collapse-nl-operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail"
+                                title="Bijkomende sociale kenmerken">
+                            <span class="label text-truncate">Bijkomende sociale kenmerken</span>
+                        </button>
+
+                        <div class="collapse" id="collapse-nl-operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail">
+                            <ul class="toggle-nav">
+                                
+                                <li>
+                                    <a class="nav-link"
+                                       href="/basic-poc/nl/blocks/operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail/"
+                                       title="Bijkomende sociale kenmerken">
+                                        <span class="label text-truncate">Bijkomende sociale kenmerken - overview</span>
+                                    </a>
+                                </li>
+
+                                
+                                
+                                
+                                    
+                                        
+                                        <li>
+                                            <a class="nav-link"
+                                               href="/basic-poc/nl/blocks/jobs/"
+                                               title="Functie">
+                                                <span class="label text-truncate">Functie</span>
+                                            </a>
+                                        </li>
+                                        
+                                    
+                                
+                                    
+                                        
+                                        <li>
+                                            <a class="nav-link"
+                                               href="/basic-poc/nl/blocks/gradualworkresumption/"
+                                               title="Progressieve werkhervatting">
+                                                <span class="label text-truncate">Progressieve werkhervatting</span>
+                                            </a>
+                                        </li>
+                                        
+                                    
+                                
+                                    
+                                        
+                                        <li>
+                                            <a class="nav-link"
+                                               href="/basic-poc/nl/blocks/dismissal/"
+                                               title="Ontslag">
+                                                <span class="label text-truncate">Ontslag</span>
+                                            </a>
+                                        </li>
+                                        
+                                    
+                                
+                                    
+                                        
+                                        <li>
+                                            <a class="nav-link"
+                                               href="/basic-poc/nl/blocks/starterjobs/"
+                                               title="Startbaan">
+                                                <span class="label text-truncate">Startbaan</span>
+                                            </a>
+                                        </li>
+                                        
+                                    
+                                
+                            </ul>
+                        </div>
+                    </div>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/nl/blocks/fiscalfeatures/"
+                       title="Fiscale signalitiek">
+                        <span class="label text-truncate">Fiscale signalitiek</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/nl/blocks/financialelements/"
+                       title="Financieel element">
+                        <span class="label text-truncate">Financieel element</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/nl/blocks/bonusfeatures/"
+                       title="Kenmerken van premie">
+                        <span class="label text-truncate">Kenmerken van premie</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/nl/blocks/voucherfeatures/"
+                       title="Kenmerken van cheque">
+                        <span class="label text-truncate">Kenmerken van cheque</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/nl/blocks/severancepayfeatures/"
+                       title="Kenmerken van beëindigingsvergoeding">
+                        <span class="label text-truncate">Kenmerken van beëindigingsvergoeding</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/nl/blocks/holidayafterseverancefeatures/"
+                       title="Kenmerken van feestdagen  na uitdiensttreding uitbetaald door de onderneming">
+                        <span class="label text-truncate">Kenmerken van feestdagen  na uitdiensttreding uitbetaald door de onderneming</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/nl/blocks/usingemployer/"
+                       title="Gebruikende onderneming">
+                        <span class="label text-truncate">Gebruikende onderneming</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/nl/blocks/vacationpayfeatures/"
+                       title="Kenmerken van enkel vakantiegeld">
+                        <span class="label text-truncate">Kenmerken van enkel vakantiegeld</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/nl/blocks/paidrightbalancefeatures/"
+                       title="Kenmerken van uitbetaald  saldo van  rechten">
+                        <span class="label text-truncate">Kenmerken van uitbetaald  saldo van  rechten</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+</ul>
+
+                <div class="nav-secondary">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span class="material-symbols-rounded" aria-hidden="true"
+                                                               role="img">keyboard_arrow_left</span>To e-Gov 3.0
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link "
+                               href="/basic-poc/nl/api/">
+                                <span class="material-symbols-rounded" aria-hidden="true" role="img">integration_instructions</span>
+                                <span>API Overzicht</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <span class="sidenav-close-bg"></span>
+            </div>
+        
+        <div class="container-fluid">
+            <div class="row h-100">
+                <div class="col-12 px-0 d-flex flex-column">
+                    <div class="top-navbar">
+                        <nav class="navbar">
+                            <div class="container-fluid px-6">
+                                
+                                    <a href="/basic-poc/nl/" class="logo d-lg-none">
+                                        <img src="/basic-poc/assets/images/logo/social_zekerheid_logo.svg" alt="logo van de sociale zekerheid" height="54">
+                                    </a>
+                                
+                                <ul class="navbar-nav ms-auto">
+                                    <li class="nav-item d-block d-lg-none">
+                                        <button id="js-burger-trigger-sidenav" class="btn-burger" aria-label="Menu">
+                                            <div class="btn-burger-background"></div>
+                                            <div class="btn-burger-lines">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                            <div class="btn-burger-close">
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li class="nav-item d-none d-lg-block">
+                                        <a class="btn nav-link "
+                                           href="/basic-poc/nl/">
+                                            Startpagina
+                                        </a>
+                                    </li>
+
+                                    
+                                    <li class="nav-item d-none d-lg-block">
+                                        <a class="btn nav-link "
+                                           href="/basic-poc/nl/api/">
+                                            <span class="material-symbols-rounded" aria-hidden="true" role="img">integration_instructions</span>
+                                            <span>API Overzicht</span>
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- Loading bar -->
+                        
+                    </div>
+                    <div class="px-4 px-md-6 px-lg-10 px-xl-20 py-8">
+                        <main class="main">
+
+                            
+                            
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        
+                                            <li class="breadcrumb-item"
+                                                >
+                                                
+                                                    <a href="/basic-poc/nl/">Overzicht van Blokken</a>
+                                                
+                                            </li>
+                                        
+                                            <li class="breadcrumb-item"
+                                                >
+                                                
+                                                    <a href="/basic-poc/nl/blocks/weeklyhours/">Wekelijkse arbeidsduur</a>
+                                                
+                                            </li>
+                                        
+                                            <li class="breadcrumb-item active"
+                                                aria-current="page">
+                                                
+                                                    Referentie van de aangever
+                                                
+                                            </li>
+                                        
+                                    </ol>
+                                </nav>
+                            
+
+
+                            
+                            
+                            
+
+                            
+                            
+                                <div class="d-inline-flex align-items-center my-4">
+                                    <label for="switch_to"
+                                           class="form-label mb-0 me-2">Ga naar veld</label>
+                                    <select id="switch_to" class="form-select form-select-sm w-auto"
+                                            onchange="var v=this.value; if(v){ location.href=v; }">
+                                        <option value="">— kies —</option>
+                                        
+                                            <option value="/basic-poc/nl/fields/weeklyhours-weeklyhourstype/">Type</option>
+                                        
+                                            <option value="/basic-poc/nl/fields/weeklyhours-effectiveaverageweeklyworkinghours/">Effectieve gemiddelde wekelijkse arbeidsduur</option>
+                                        
+                                            <option value="/basic-poc/nl/fields/weeklyhours-annualaverageweeklypaidworkinghours/">Jaarlijks gemiddelde wekelijkse betaalde arbeidsduur</option>
+                                        
+                                    </select>
+                                </div>
+                            
+
+                            <div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
+
+    <div class="px-12 py-5 introduction">
+        <h4>Glossarium<br>Loondata-transfer</h4>
+        <div class="introduction__right">
+            <span>
+                Versie
+                <br>
+                <strong>1.0.1.6</strong>
+            </span>
+            <span>
+                Datum
+                <br>
+                <strong>18-12-2025</strong>
+            </span>
+        </div>
+    </div>
+    <div class="px-12 py-9">
+        <!-- Zone LoopList -->
+        <h2 id="weeklyhours-externalreference">Referentie van de aangever</h2>
+
+        <dl class="mt-7">
+            <dt>Beschrijving</dt>	
+            <dd>Referentie gebruikt door de aangever.</dd>
+            <hr class="my-5">
+            <dt>TechLabel</dt>	
+            <dd>externalReference</dd>
+            <hr class="my-5">
+            <dt>Type</dt>	
+            <dd>string</dd>
+            <hr class="my-5">
+	        <dt>Lengte</dt>
+            <dd>64</dd>
+            <hr class="my-5">
+	        <dt>Formaat</dt>
+            <dd>-</dd>
+	        <hr class="my-5">
+            <dt>Toegelaten domein</dt>
+            <dd>-</dd>
+	        <hr class="my-5">
+            <dt>Aanwezigheid</dt>
+            <dd>Facultatief</dd>
+	    <hr class="my-5">
+        </dl>
+        <hr class="mt-11 mb-7 opacity-100">
+        <!-- Zone LoopList -->
+    </div>
+    <footer class="footer">
+       <div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
+             <div class="d-flex flex-column gap-4 w-100">
+                 <p><b>Contact: </b>Voor hulp of verdere vragen kan u ons contacteren via volgend mailadres: <a href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
+                <!--<p>&#169; socialsecurity.be 2025</p>-->
+             </div>
+       </div>
+    </footer>
+</div>
+
+                        </main>
+                    </div>
+
+                    <footer class="footer">
+                        <div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
+                            <div class="d-flex flex-wrap flex-column flex-md-row justify-content-between gap-5">
+                                <div class="d-flex flex-column gap-4">
+                                    <div class="row gx-5 gy-3">
+                                        <div class="col-auto">
+                                            <a class="link-underline" href="#">Terms of use for businesses</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a class="link-underline" href="#">Conditions for reuse</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a class="link-underline" href="#">Personal data</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a class="link-underline" href="#">Accessibility statement</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a class="link-underline" href="#">Cookie policy</a>
+                                        </div>
+                                    </div>
+
+                                    <p>&#169; 2025 Smals · <span
+                                                class="text-muted">v1.0.0</span></p>
+                                </div>
+                                <a class="d-inline-block my-auto" href="https://next-generation-eu.europa.eu/"
+                                   target="_blank" rel="noopener">
+                                    <img src="/basic-poc/assets/images/logo/nextgenerationeu-en-h-colour-rgb.svg"
+                                         alt="next-generation-eu.europa logo" height="40">
+                                </a>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/basic-poc/assets/js/vendor/bootstrap.bundle.min.js"></script>
+<script src="/basic-poc/assets/js/static/sidenav.js"></script>
+<script type="module" src="/basic-poc/js/search/index.js"></script>
+<script type="module">
+    import {sidenavModule} from '/basic-poc/assets/js/static/sidenav.js';
+
+    document.addEventListener("DOMContentLoaded", function () {
+        sidenavModule.init();
+    });
+</script>
+</body>
+</html>

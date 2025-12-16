@@ -398,7 +398,7 @@
                                         
                                         <li>
                                             <a class="nav-link"
-                                               href="/basic-poc/fr/blocks/gradualworkresumptions/"
+                                               href="/basic-poc/fr/blocks/gradualworkresumption/"
                                                title="Reprise progressive du travail">
                                                 <span class="label text-truncate">Reprise progressive du travail</span>
                                             </a>
@@ -410,7 +410,7 @@
                                         
                                         <li>
                                             <a class="nav-link"
-                                               href="/basic-poc/fr/blocks/dismissals/"
+                                               href="/basic-poc/fr/blocks/dismissal/"
                                                title="Licenciement">
                                                 <span class="label text-truncate">Licenciement</span>
                                             </a>
@@ -530,8 +530,8 @@
                     
                     <a class="nav-link"
                        href="/basic-poc/fr/blocks/severancepayfeatures/"
-                       title="Caractéristiques de l&#39;indemnité de rupture de la relation">
-                        <span class="label text-truncate">Caractéristiques de l&#39;indemnité de rupture de la relation</span>
+                       title="Caractéristiques de l&#39;indemnité de fin de la relation">
+                        <span class="label text-truncate">Caractéristiques de l&#39;indemnité de fin de la relation</span>
                     </a>
                 
             </li>
@@ -552,6 +552,26 @@
                        href="/basic-poc/fr/blocks/holidayafterseverancefeatures/"
                        title="Caractéristiques des jours fériés  après la sortie de service payés par l&#39;entreprise">
                         <span class="label text-truncate">Caractéristiques des jours fériés  après la sortie de service payés par l&#39;entreprise</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/fr/blocks/usingemployer/"
+                       title="Entreprise utilisatrice">
+                        <span class="label text-truncate">Entreprise utilisatrice</span>
                     </a>
                 
             </li>
@@ -710,12 +730,12 @@
             <span>
                 Version
                 <br>
-                <strong>1.0.1.5</strong>
+                <strong>1.0.1.6</strong>
             </span>
             <span>
                 Date
                 <br>
-                <strong>19-11-2025</strong>
+                <strong>18-12-2025</strong>
             </span>
         </div>
     </div>
@@ -725,7 +745,7 @@
         <h2>Bloc Signalétique sociale<br><code>identifyingSocialFeatures</code></h2>
 		<span class="text-primary-emphasis fw-bolder"></span>
         <p><i>Description:</i><br>Indication du statut social et du régime de cotisation d&#x27;application sur la personne physique.</p>
-        <p><i>Présence:</i><br>Indispensable<br><br>Interdit pour<br><br><ul>
+        <p><i>Présence:</i><br>Indispensable dans un message original ou un message de modification.<br>Optionnel dans un message d’annulation.<br><br>Toujours interdit pour<br><br><ul>
 <li>les personnes déclarées en Dimona avec le type travailleur DWD, IVT, STG, TRI, S17, T17 et O17;</li>
 <li>les personnes avec des activités de surveillant de temps de midi ou d&#x27;accompagnateur de bus en plus de leur activité principale pour l&#x27;école;</li>
 <li>le personnel de maison (employé) travaillant moins de 8 heures par semaine et, par conséquent, exonéré de cotisations de sécurité sociale.</li>
@@ -798,6 +818,16 @@
                     </td>
 					<td>
 						<code>flatRateCode</code>
+					<td>
+                </tr>
+
+                <tr>
+                    <td><a href="/basic-poc/fr/fields/identifyingsocialfeatures-externalreference/" class="link-underline"><strong>Référence du déclarant</strong></a></td>
+                    <td>
+                        Référence  utilisée par le déclarant.
+                    </td>
+					<td>
+						<code>externalReference</code>
 					<td>
                 </tr>
 <!-- ZONE_LOOPLIST -->

@@ -163,6 +163,14 @@
 
     {
     "lang": "nl",
+    "type": "field",
+    "id": "service-externalreference",
+    "title": "Referentie van de aangever",
+    "url": "/basic-poc/nl/fields/service-externalreference/"
+    },
+
+    {
+    "lang": "nl",
     "type": "block",
     "id": "servicefeatures",
     "title": "Prestatiekenmerken",
@@ -215,6 +223,14 @@
     "id": "servicefeatures-nonassimilationlegalvacationrights",
     "title": "Niet-gelijkstelling met gewone prestaties bij bepaling van recht op wettelijke vakantie",
     "url": "/basic-poc/nl/fields/servicefeatures-nonassimilationlegalvacationrights/"
+    },
+
+    {
+    "lang": "nl",
+    "type": "field",
+    "id": "servicefeatures-externalreference",
+    "title": "Referentie van de aangever",
+    "url": "/basic-poc/nl/fields/servicefeatures-externalreference/"
     },
 
     {
@@ -275,6 +291,14 @@
 
     {
     "lang": "nl",
+    "type": "field",
+    "id": "identifyingsocialfeatures-externalreference",
+    "title": "Referentie van de aangever",
+    "url": "/basic-poc/nl/fields/identifyingsocialfeatures-externalreference/"
+    },
+
+    {
+    "lang": "nl",
     "type": "block",
     "id": "operationalsocialfeatures",
     "title": "Periodieke sociale Signalitiek",
@@ -331,6 +355,22 @@
 
     {
     "lang": "nl",
+    "type": "field",
+    "id": "operationalsocialfeatures-educationsectorpaymentmethod",
+    "title": "Betalingswijze in het onderwijs",
+    "url": "/basic-poc/nl/fields/operationalsocialfeatures-educationsectorpaymentmethod/"
+    },
+
+    {
+    "lang": "nl",
+    "type": "field",
+    "id": "operationalsocialfeatures-externalreference",
+    "title": "Referentie van de aangever",
+    "url": "/basic-poc/nl/fields/operationalsocialfeatures-externalreference/"
+    },
+
+    {
+    "lang": "nl",
     "type": "block",
     "id": "weeklyhours",
     "title": "Wekelijkse arbeidsduur",
@@ -363,6 +403,14 @@
 
     {
     "lang": "nl",
+    "type": "field",
+    "id": "weeklyhours-externalreference",
+    "title": "Referentie van de aangever",
+    "url": "/basic-poc/nl/fields/weeklyhours-externalreference/"
+    },
+
+    {
+    "lang": "nl",
     "type": "block",
     "id": "reorganisationmeasures",
     "title": "Maatregel tot reorganisatie van arbeidstijd",
@@ -387,6 +435,14 @@
 
     {
     "lang": "nl",
+    "type": "field",
+    "id": "reorganisationmeasures-externalreference",
+    "title": "Referentie van de aangever",
+    "url": "/basic-poc/nl/fields/reorganisationmeasures-externalreference/"
+    },
+
+    {
+    "lang": "nl",
     "type": "block",
     "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail",
     "title": "Bijkomende sociale kenmerken",
@@ -407,6 +463,14 @@
     "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-enddate",
     "title": "Einddatum",
     "url": "/basic-poc/nl/fields/operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-enddate/"
+    },
+
+    {
+    "lang": "nl",
+    "type": "field",
+    "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-externalreference",
+    "title": "Referentie van de aangever",
+    "url": "/basic-poc/nl/fields/operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-externalreference/"
     },
 
     {
@@ -444,57 +508,57 @@
     {
     "lang": "nl",
     "type": "block",
-    "id": "gradualworkresumptions",
+    "id": "gradualworkresumption",
     "title": "Progressieve werkhervatting",
-    "url": "/basic-poc/nl/blocks/gradualworkresumptions/"
+    "url": "/basic-poc/nl/blocks/gradualworkresumption/"
     },
 
     {
     "lang": "nl",
     "type": "field",
-    "id": "gradualworkresumptions-weeklymaxnbrofhoursallowed",
+    "id": "gradualworkresumption-weeklymaxnbrofhoursallowed",
     "title": "Maximale aantal uren toegestane arbeid per week in het kader van progressieve werkhervatting",
-    "url": "/basic-poc/nl/fields/gradualworkresumptions-weeklymaxnbrofhoursallowed/"
+    "url": "/basic-poc/nl/fields/gradualworkresumption-weeklymaxnbrofhoursallowed/"
     },
 
     {
     "lang": "nl",
     "type": "block",
-    "id": "dismissals",
+    "id": "dismissal",
     "title": "Ontslag",
-    "url": "/basic-poc/nl/blocks/dismissals/"
+    "url": "/basic-poc/nl/blocks/dismissal/"
     },
 
     {
     "lang": "nl",
     "type": "field",
-    "id": "dismissals-noticeperiodstartdate",
+    "id": "dismissal-noticeperiodstartdate",
     "title": "Startdatum van opzeggingstermijn",
-    "url": "/basic-poc/nl/fields/dismissals-noticeperiodstartdate/"
+    "url": "/basic-poc/nl/fields/dismissal-noticeperiodstartdate/"
     },
 
     {
     "lang": "nl",
     "type": "field",
-    "id": "dismissals-noticeperiodmonths",
+    "id": "dismissal-noticeperiodmonths",
     "title": "Theoretische opzeggingstermijn in maanden",
-    "url": "/basic-poc/nl/fields/dismissals-noticeperiodmonths/"
+    "url": "/basic-poc/nl/fields/dismissal-noticeperiodmonths/"
     },
 
     {
     "lang": "nl",
     "type": "field",
-    "id": "dismissals-noticeperiodweeks",
+    "id": "dismissal-noticeperiodweeks",
     "title": "Theoretische opzeggingstermijn in weken",
-    "url": "/basic-poc/nl/fields/dismissals-noticeperiodweeks/"
+    "url": "/basic-poc/nl/fields/dismissal-noticeperiodweeks/"
     },
 
     {
     "lang": "nl",
     "type": "field",
-    "id": "dismissals-noticeperioddays",
+    "id": "dismissal-noticeperioddays",
     "title": "Theoretische opzeggingstermijn in dagen",
-    "url": "/basic-poc/nl/fields/dismissals-noticeperioddays/"
+    "url": "/basic-poc/nl/fields/dismissal-noticeperioddays/"
     },
 
     {
@@ -651,6 +715,14 @@
 
     {
     "lang": "nl",
+    "type": "field",
+    "id": "fiscalfeatures-externalreference",
+    "title": "Referentie van de aangever",
+    "url": "/basic-poc/nl/fields/fiscalfeatures-externalreference/"
+    },
+
+    {
+    "lang": "nl",
     "type": "block",
     "id": "financialelements",
     "title": "Financieel element",
@@ -683,6 +755,14 @@
 
     {
     "lang": "nl",
+    "type": "field",
+    "id": "financialelements-externalreference",
+    "title": "Referentie van de aangever",
+    "url": "/basic-poc/nl/fields/financialelements-externalreference/"
+    },
+
+    {
+    "lang": "nl",
     "type": "block",
     "id": "bonusfeatures",
     "title": "Kenmerken van premie",
@@ -695,6 +775,14 @@
     "id": "bonusfeatures-allocationfrequency",
     "title": "Toewijzingsfrequentie",
     "url": "/basic-poc/nl/fields/bonusfeatures-allocationfrequency/"
+    },
+
+    {
+    "lang": "nl",
+    "type": "field",
+    "id": "bonusfeatures-externalreference",
+    "title": "Referentie van de aangever",
+    "url": "/basic-poc/nl/fields/bonusfeatures-externalreference/"
     },
 
     {
@@ -719,6 +807,14 @@
     "id": "voucherfeatures-amountperunit",
     "title": "Bedrag per cheque",
     "url": "/basic-poc/nl/fields/voucherfeatures-amountperunit/"
+    },
+
+    {
+    "lang": "nl",
+    "type": "field",
+    "id": "voucherfeatures-externalreference",
+    "title": "Referentie van de aangever",
+    "url": "/basic-poc/nl/fields/voucherfeatures-externalreference/"
     },
 
     {
@@ -755,6 +851,14 @@
 
     {
     "lang": "nl",
+    "type": "field",
+    "id": "severancepayfeatures-externalreference",
+    "title": "Referentie van de aangever",
+    "url": "/basic-poc/nl/fields/severancepayfeatures-externalreference/"
+    },
+
+    {
+    "lang": "nl",
     "type": "block",
     "id": "holidayafterseverancefeatures",
     "title": "Kenmerken van feestdagen  na uitdiensttreding uitbetaald door de onderneming",
@@ -767,6 +871,38 @@
     "id": "holidayafterseverancefeatures-date",
     "title": "Datum van feestdag uitbetaald na uitdiensttreding",
     "url": "/basic-poc/nl/fields/holidayafterseverancefeatures-date/"
+    },
+
+    {
+    "lang": "nl",
+    "type": "field",
+    "id": "holidayafterseverancefeatures-externalreference",
+    "title": "Referentie van de aangever",
+    "url": "/basic-poc/nl/fields/holidayafterseverancefeatures-externalreference/"
+    },
+
+    {
+    "lang": "nl",
+    "type": "block",
+    "id": "usingemployer",
+    "title": "Gebruikende onderneming",
+    "url": "/basic-poc/nl/blocks/usingemployer/"
+    },
+
+    {
+    "lang": "nl",
+    "type": "field",
+    "id": "usingemployer-enterprisenumber",
+    "title": "Ondernemingsnummer van gebruikende onderneming",
+    "url": "/basic-poc/nl/fields/usingemployer-enterprisenumber/"
+    },
+
+    {
+    "lang": "nl",
+    "type": "field",
+    "id": "usingemployer-externalreference",
+    "title": "Referentie van de aangever",
+    "url": "/basic-poc/nl/fields/usingemployer-externalreference/"
     },
 
     {
@@ -795,6 +931,14 @@
 
     {
     "lang": "nl",
+    "type": "field",
+    "id": "vacationpayfeatures-externalreference",
+    "title": "Referentie van de aangever",
+    "url": "/basic-poc/nl/fields/vacationpayfeatures-externalreference/"
+    },
+
+    {
+    "lang": "nl",
     "type": "block",
     "id": "paidrightbalancefeatures",
     "title": "Kenmerken van uitbetaald  saldo van  rechten",
@@ -815,6 +959,14 @@
     "id": "paidrightbalancefeatures-servicetype",
     "title": "Code uitbetaalde prestatie of afwezigheid",
     "url": "/basic-poc/nl/fields/paidrightbalancefeatures-servicetype/"
+    },
+
+    {
+    "lang": "nl",
+    "type": "field",
+    "id": "paidrightbalancefeatures-externalreference",
+    "title": "Referentie van de aangever",
+    "url": "/basic-poc/nl/fields/paidrightbalancefeatures-externalreference/"
     },
 
     {
@@ -979,6 +1131,14 @@
 
     {
     "lang": "fr",
+    "type": "field",
+    "id": "service-externalreference",
+    "title": "Référence du déclarant",
+    "url": "/basic-poc/fr/fields/service-externalreference/"
+    },
+
+    {
+    "lang": "fr",
     "type": "block",
     "id": "servicefeatures",
     "title": "Caractéristiques de la prestation",
@@ -1031,6 +1191,14 @@
     "id": "servicefeatures-nonassimilationlegalvacationrights",
     "title": "Non-assimilation aux prestations normales pour la détermination du droit aux vacances légales",
     "url": "/basic-poc/fr/fields/servicefeatures-nonassimilationlegalvacationrights/"
+    },
+
+    {
+    "lang": "fr",
+    "type": "field",
+    "id": "servicefeatures-externalreference",
+    "title": "Référence du déclarant",
+    "url": "/basic-poc/fr/fields/servicefeatures-externalreference/"
     },
 
     {
@@ -1091,6 +1259,14 @@
 
     {
     "lang": "fr",
+    "type": "field",
+    "id": "identifyingsocialfeatures-externalreference",
+    "title": "Référence du déclarant",
+    "url": "/basic-poc/fr/fields/identifyingsocialfeatures-externalreference/"
+    },
+
+    {
+    "lang": "fr",
     "type": "block",
     "id": "operationalsocialfeatures",
     "title": "Signalétique sociale périodique",
@@ -1147,6 +1323,22 @@
 
     {
     "lang": "fr",
+    "type": "field",
+    "id": "operationalsocialfeatures-educationsectorpaymentmethod",
+    "title": "Mode de paiement dans l'enseignement",
+    "url": "/basic-poc/fr/fields/operationalsocialfeatures-educationsectorpaymentmethod/"
+    },
+
+    {
+    "lang": "fr",
+    "type": "field",
+    "id": "operationalsocialfeatures-externalreference",
+    "title": "Référence du déclarant",
+    "url": "/basic-poc/fr/fields/operationalsocialfeatures-externalreference/"
+    },
+
+    {
+    "lang": "fr",
     "type": "block",
     "id": "weeklyhours",
     "title": "Temps de travail hebdomadaire",
@@ -1179,6 +1371,14 @@
 
     {
     "lang": "fr",
+    "type": "field",
+    "id": "weeklyhours-externalreference",
+    "title": "Référence du déclarant",
+    "url": "/basic-poc/fr/fields/weeklyhours-externalreference/"
+    },
+
+    {
+    "lang": "fr",
     "type": "block",
     "id": "reorganisationmeasures",
     "title": "Mesure de réorganisation du temps de travail",
@@ -1203,6 +1403,14 @@
 
     {
     "lang": "fr",
+    "type": "field",
+    "id": "reorganisationmeasures-externalreference",
+    "title": "Référence du déclarant",
+    "url": "/basic-poc/fr/fields/reorganisationmeasures-externalreference/"
+    },
+
+    {
+    "lang": "fr",
     "type": "block",
     "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail",
     "title": "Caractéristiques sociales supplémentaires",
@@ -1223,6 +1431,14 @@
     "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-enddate",
     "title": "Date de fin",
     "url": "/basic-poc/fr/fields/operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-enddate/"
+    },
+
+    {
+    "lang": "fr",
+    "type": "field",
+    "id": "operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-externalreference",
+    "title": "Référence du déclarant",
+    "url": "/basic-poc/fr/fields/operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-externalreference/"
     },
 
     {
@@ -1260,57 +1476,57 @@
     {
     "lang": "fr",
     "type": "block",
-    "id": "gradualworkresumptions",
+    "id": "gradualworkresumption",
     "title": "Reprise progressive du travail",
-    "url": "/basic-poc/fr/blocks/gradualworkresumptions/"
+    "url": "/basic-poc/fr/blocks/gradualworkresumption/"
     },
 
     {
     "lang": "fr",
     "type": "field",
-    "id": "gradualworkresumptions-weeklymaxnbrofhoursallowed",
+    "id": "gradualworkresumption-weeklymaxnbrofhoursallowed",
     "title": "Nombre maximum d'heures de travail autorisées par semaine dans le cadre d'une reprise progressive du travail",
-    "url": "/basic-poc/fr/fields/gradualworkresumptions-weeklymaxnbrofhoursallowed/"
+    "url": "/basic-poc/fr/fields/gradualworkresumption-weeklymaxnbrofhoursallowed/"
     },
 
     {
     "lang": "fr",
     "type": "block",
-    "id": "dismissals",
+    "id": "dismissal",
     "title": "Licenciement",
-    "url": "/basic-poc/fr/blocks/dismissals/"
+    "url": "/basic-poc/fr/blocks/dismissal/"
     },
 
     {
     "lang": "fr",
     "type": "field",
-    "id": "dismissals-noticeperiodstartdate",
+    "id": "dismissal-noticeperiodstartdate",
     "title": "Date de début du délai de préavis",
-    "url": "/basic-poc/fr/fields/dismissals-noticeperiodstartdate/"
+    "url": "/basic-poc/fr/fields/dismissal-noticeperiodstartdate/"
     },
 
     {
     "lang": "fr",
     "type": "field",
-    "id": "dismissals-noticeperiodmonths",
+    "id": "dismissal-noticeperiodmonths",
     "title": "Délai de préavis théorique en mois",
-    "url": "/basic-poc/fr/fields/dismissals-noticeperiodmonths/"
+    "url": "/basic-poc/fr/fields/dismissal-noticeperiodmonths/"
     },
 
     {
     "lang": "fr",
     "type": "field",
-    "id": "dismissals-noticeperiodweeks",
+    "id": "dismissal-noticeperiodweeks",
     "title": "Délai de préavis théorique en semaines",
-    "url": "/basic-poc/fr/fields/dismissals-noticeperiodweeks/"
+    "url": "/basic-poc/fr/fields/dismissal-noticeperiodweeks/"
     },
 
     {
     "lang": "fr",
     "type": "field",
-    "id": "dismissals-noticeperioddays",
+    "id": "dismissal-noticeperioddays",
     "title": "Délai de préavis théorique en jours",
-    "url": "/basic-poc/fr/fields/dismissals-noticeperioddays/"
+    "url": "/basic-poc/fr/fields/dismissal-noticeperioddays/"
     },
 
     {
@@ -1467,6 +1683,14 @@
 
     {
     "lang": "fr",
+    "type": "field",
+    "id": "fiscalfeatures-externalreference",
+    "title": "Référence du déclarant",
+    "url": "/basic-poc/fr/fields/fiscalfeatures-externalreference/"
+    },
+
+    {
+    "lang": "fr",
     "type": "block",
     "id": "financialelements",
     "title": "Élément financier",
@@ -1499,6 +1723,14 @@
 
     {
     "lang": "fr",
+    "type": "field",
+    "id": "financialelements-externalreference",
+    "title": "Référence du déclarant",
+    "url": "/basic-poc/fr/fields/financialelements-externalreference/"
+    },
+
+    {
+    "lang": "fr",
     "type": "block",
     "id": "bonusfeatures",
     "title": "Caractéristiques de la prime",
@@ -1511,6 +1743,14 @@
     "id": "bonusfeatures-allocationfrequency",
     "title": "Fréquence d'attribution",
     "url": "/basic-poc/fr/fields/bonusfeatures-allocationfrequency/"
+    },
+
+    {
+    "lang": "fr",
+    "type": "field",
+    "id": "bonusfeatures-externalreference",
+    "title": "Référence du déclarant",
+    "url": "/basic-poc/fr/fields/bonusfeatures-externalreference/"
     },
 
     {
@@ -1539,9 +1779,17 @@
 
     {
     "lang": "fr",
+    "type": "field",
+    "id": "voucherfeatures-externalreference",
+    "title": "Référence du déclarant",
+    "url": "/basic-poc/fr/fields/voucherfeatures-externalreference/"
+    },
+
+    {
+    "lang": "fr",
     "type": "block",
     "id": "severancepayfeatures",
-    "title": "Caractéristiques de l'indemnité de rupture de la relation",
+    "title": "Caractéristiques de l'indemnité de fin de la relation",
     "url": "/basic-poc/fr/blocks/severancepayfeatures/"
     },
 
@@ -1549,7 +1797,7 @@
     "lang": "fr",
     "type": "field",
     "id": "severancepayfeatures-startdate",
-    "title": "Date de début de la période couverte par l'indemnité de rupture de la relation",
+    "title": "Date de début de la période couverte par l'indemnité de fin de la relation",
     "url": "/basic-poc/fr/fields/severancepayfeatures-startdate/"
     },
 
@@ -1557,7 +1805,7 @@
     "lang": "fr",
     "type": "field",
     "id": "severancepayfeatures-enddate",
-    "title": "Date de fin de la période couverte par l'indemnité de rupture de la relation",
+    "title": "Date de fin de la période couverte par l'indemnité de fin de la relation",
     "url": "/basic-poc/fr/fields/severancepayfeatures-enddate/"
     },
 
@@ -1567,6 +1815,14 @@
     "id": "severancepayfeatures-numberofdaysreductionbyoutplacement",
     "title": "Nombre de jours diminuant l'indemnité de rupture dans le cadre d'un accompagnement de reclassement professionnel",
     "url": "/basic-poc/fr/fields/severancepayfeatures-numberofdaysreductionbyoutplacement/"
+    },
+
+    {
+    "lang": "fr",
+    "type": "field",
+    "id": "severancepayfeatures-externalreference",
+    "title": "Référence du déclarant",
+    "url": "/basic-poc/fr/fields/severancepayfeatures-externalreference/"
     },
 
     {
@@ -1583,6 +1839,38 @@
     "id": "holidayafterseverancefeatures-date",
     "title": "Date du jour férié payé après la sortie de service",
     "url": "/basic-poc/fr/fields/holidayafterseverancefeatures-date/"
+    },
+
+    {
+    "lang": "fr",
+    "type": "field",
+    "id": "holidayafterseverancefeatures-externalreference",
+    "title": "Référence du déclarant",
+    "url": "/basic-poc/fr/fields/holidayafterseverancefeatures-externalreference/"
+    },
+
+    {
+    "lang": "fr",
+    "type": "block",
+    "id": "usingemployer",
+    "title": "Entreprise utilisatrice",
+    "url": "/basic-poc/fr/blocks/usingemployer/"
+    },
+
+    {
+    "lang": "fr",
+    "type": "field",
+    "id": "usingemployer-enterprisenumber",
+    "title": "Numéro d'entreprise de l'entreprise utilisatrice",
+    "url": "/basic-poc/fr/fields/usingemployer-enterprisenumber/"
+    },
+
+    {
+    "lang": "fr",
+    "type": "field",
+    "id": "usingemployer-externalreference",
+    "title": "Référence du déclarant",
+    "url": "/basic-poc/fr/fields/usingemployer-externalreference/"
     },
 
     {
@@ -1611,6 +1899,14 @@
 
     {
     "lang": "fr",
+    "type": "field",
+    "id": "vacationpayfeatures-externalreference",
+    "title": "Référence du déclarant",
+    "url": "/basic-poc/fr/fields/vacationpayfeatures-externalreference/"
+    },
+
+    {
+    "lang": "fr",
     "type": "block",
     "id": "paidrightbalancefeatures",
     "title": "Caractéristiques du solde des droits payé",
@@ -1631,6 +1927,14 @@
     "id": "paidrightbalancefeatures-servicetype",
     "title": "Code prestation ou absence payée",
     "url": "/basic-poc/fr/fields/paidrightbalancefeatures-servicetype/"
+    },
+
+    {
+    "lang": "fr",
+    "type": "field",
+    "id": "paidrightbalancefeatures-externalreference",
+    "title": "Référence du déclarant",
+    "url": "/basic-poc/fr/fields/paidrightbalancefeatures-externalreference/"
     }
 
 ]

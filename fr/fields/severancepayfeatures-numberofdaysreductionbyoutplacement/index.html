@@ -398,7 +398,7 @@
                                         
                                         <li>
                                             <a class="nav-link"
-                                               href="/basic-poc/fr/blocks/gradualworkresumptions/"
+                                               href="/basic-poc/fr/blocks/gradualworkresumption/"
                                                title="Reprise progressive du travail">
                                                 <span class="label text-truncate">Reprise progressive du travail</span>
                                             </a>
@@ -410,7 +410,7 @@
                                         
                                         <li>
                                             <a class="nav-link"
-                                               href="/basic-poc/fr/blocks/dismissals/"
+                                               href="/basic-poc/fr/blocks/dismissal/"
                                                title="Licenciement">
                                                 <span class="label text-truncate">Licenciement</span>
                                             </a>
@@ -530,8 +530,8 @@
                     
                     <a class="nav-link"
                        href="/basic-poc/fr/blocks/severancepayfeatures/"
-                       title="Caractéristiques de l&#39;indemnité de rupture de la relation">
-                        <span class="label text-truncate">Caractéristiques de l&#39;indemnité de rupture de la relation</span>
+                       title="Caractéristiques de l&#39;indemnité de fin de la relation">
+                        <span class="label text-truncate">Caractéristiques de l&#39;indemnité de fin de la relation</span>
                     </a>
                 
             </li>
@@ -552,6 +552,26 @@
                        href="/basic-poc/fr/blocks/holidayafterseverancefeatures/"
                        title="Caractéristiques des jours fériés  après la sortie de service payés par l&#39;entreprise">
                         <span class="label text-truncate">Caractéristiques des jours fériés  après la sortie de service payés par l&#39;entreprise</span>
+                    </a>
+                
+            </li>
+
+            
+        
+    
+        
+            
+            
+            
+            
+
+            <li class="nav-item">
+                
+                    
+                    <a class="nav-link"
+                       href="/basic-poc/fr/blocks/usingemployer/"
+                       title="Entreprise utilisatrice">
+                        <span class="label text-truncate">Entreprise utilisatrice</span>
                     </a>
                 
             </li>
@@ -686,7 +706,7 @@
                                             <li class="breadcrumb-item"
                                                 >
                                                 
-                                                    <a href="/basic-poc/fr/blocks/severancepayfeatures/">Caractéristiques de l&#39;indemnité de rupture de la relation</a>
+                                                    <a href="/basic-poc/fr/blocks/severancepayfeatures/">Caractéristiques de l&#39;indemnité de fin de la relation</a>
                                                 
                                             </li>
                                         
@@ -715,9 +735,11 @@
                                             onchange="var v=this.value; if(v){ location.href=v; }">
                                         <option value="">— choisir —</option>
                                         
-                                            <option value="/basic-poc/fr/fields/severancepayfeatures-startdate/">Date de début de la période couverte par l&#39;indemnité de rupture de la relation</option>
+                                            <option value="/basic-poc/fr/fields/severancepayfeatures-startdate/">Date de début de la période couverte par l&#39;indemnité de fin de la relation</option>
                                         
-                                            <option value="/basic-poc/fr/fields/severancepayfeatures-enddate/">Date de fin de la période couverte par l&#39;indemnité de rupture de la relation</option>
+                                            <option value="/basic-poc/fr/fields/severancepayfeatures-enddate/">Date de fin de la période couverte par l&#39;indemnité de fin de la relation</option>
+                                        
+                                            <option value="/basic-poc/fr/fields/severancepayfeatures-externalreference/">Référence du déclarant</option>
                                         
                                     </select>
                                 </div>
@@ -731,12 +753,12 @@
             <span>
                 Version
                 <br>
-                <strong>1.0.1.5</strong>
+                <strong>1.0.1.6</strong>
             </span>
             <span>
                 Date
                 <br>
-                <strong>19-11-2025</strong>
+                <strong>18-12-2025</strong>
             </span>
         </div>
     </div>
@@ -761,10 +783,10 @@
             <dd>-</dd>
 	        <hr class="my-5">
             <dt>Domaine de définition</dt>
-            <dd>[0; 28]</dd>
+            <dd>[1; 28]</dd>
 	        <hr class="my-5">
             <dt>Présence</dt>
-            <dd>Obligatoire dans le cas d&#x27;une indemnité de rupture exprimée en temps de travail.</dd>
+            <dd>Obligatoire dans le cas d&#x27;une indemnité de rupture exprimée en temps de travail qui a été diminuée dans le cadre d&#x27;un accompagnement de reclassement professionnel.</dd>
 	        <hr class="my-5">
         </dl>
         <hr class="mt-11 mb-7 opacity-100">
