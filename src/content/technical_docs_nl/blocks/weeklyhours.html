@@ -1,108 +1,109 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Glossarium – Schema weeklyHours</title>
-  
-    <style>
-        html, body {
-            width: initial !important;
-            max-width: initial !important;
-            min-height: initial !important;
-            overflow: initial !important;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Glossarium – Schema weeklyHours</title>
+	
+	<style>
+		html, body {
+			width: initial !important;
+			max-width: initial !important;
+			min-height: initial !important;
+			overflow: initial !important;
+		}
+	</style>
 </head>
 <body class="d-flex flex-column py-8">
 
 <div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
 
-    <div class="px-12 py-5 introduction">
-        <h4 id="weeklyhours">Glossarium<br>Loondata-transfer</h4>
-        <div class="introduction__right">
+	<div class="px-12 py-5 introduction">
+		<h4 id="weeklyhours">Glossarium<br>Loondata-transfer</h4>
+		<div class="introduction__right">
             <span>
                 Versie
                 <br>
                 <strong>1.0.1.6</strong>
             </span>
-            <span>
+			<span>
                 Datum
                 <br>
                 <strong>18-12-2025</strong>
             </span>
-        </div>
-    </div>
+		</div>
+	</div>
 
 
-    <div class="px-12 py-9">
-        <h2>Blok Wekelijkse arbeidsduur<br><code>weeklyHours</code></h2>
-        <span class="text-primary-emphasis fw-bolder d-block mb-2 blok-dtype"></span>
-        <p><i>Beschrijving:</i><br>Het aantal te presteren uren per week door de natuurlijk persoon en door de fictieve maatpersoon gelinkt aan de natuurlijke persoon.</p>
-        <p><i>Aanwezigheid:</i><br>Onmisbaar</p>
-        <div class="mt-6">
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th scope="col" class="text-nowrap">Veldnaam</th>
-                    <th scope="col" class="text-nowrap">Beschrijving</th>
+	<div class="px-12 py-9">
+		<h2>Blok Wekelijkse arbeidsduur<br><code>weeklyHours</code></h2>
+		<span class="text-primary-emphasis fw-bolder d-block mb-2 blok-dtype"></span>
+		<p><i>Beschrijving:</i><br>Het aantal te presteren uren per week door de natuurlijk persoon en door de fictieve maatpersoon gelinkt aan de natuurlijke persoon.</p>
+		<p><i>Aanwezigheid:</i><br>Onmisbaar</p>
+		<div class="mt-6">
+			<table class="table table-striped">
+				<thead>
+				<tr>
+					<th scope="col" class="text-nowrap">Veldnaam</th>
+					<th scope="col" class="text-nowrap">Beschrijving</th>
 					<th scope="col" class="text-nowrap">TechLabel</th>
-                </tr>
-                </thead>
-                <tbody>
- <!-- ZONE_LOOPLIST -->
-                <tr>
-                    <td><a href="#weeklyhours-weeklyhourstype" class="link-underline"><strong>Type</strong></a></td>
-                    <td>
-                        Aanduiding van het element van de tewerkstellingsbreuk meegedeeld in het blok &quot;wekelijkse arbeidsduur&quot;.
-                    </td>
+				</tr>
+				</thead>
+				<tbody>
+				<!-- ZONE_LOOPLIST -->
+				<tr>
+					<td><a href="#weeklyhours-weeklyhourstype" class="link-underline"><strong>Type</strong></a></td>
+					<td>
+						Aanduiding van het element van de tewerkstellingsbreuk meegedeeld in het blok &quot;wekelijkse arbeidsduur&quot;.
+					</td>
 					<td>
 						<code>weeklyHoursType</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#weeklyhours-effectiveaverageweeklyworkinghours" class="link-underline"><strong>Effectieve gemiddelde wekelijkse arbeidsduur</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#weeklyhours-effectiveaverageweeklyworkinghours" class="link-underline"><strong>Effectieve gemiddelde wekelijkse arbeidsduur</strong></a></td>
-                    <td>
-                        Per cyclus het aantal te presteren uren per week, inclusief de eventuele betaalde inhaalrust en inclusief  de eventuele onbetaalde inhaalrust.
-                    </td>
+						Per cyclus het aantal te presteren uren per week, inclusief de eventuele betaalde inhaalrust en inclusief  de eventuele onbetaalde inhaalrust.
+					</td>
 					<td>
 						<code>effectiveAverageWeeklyWorkingHours</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#weeklyhours-annualaverageweeklypaidworkinghours" class="link-underline"><strong>Jaarlijks gemiddelde wekelijkse betaalde arbeidsduur</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#weeklyhours-annualaverageweeklypaidworkinghours" class="link-underline"><strong>Jaarlijks gemiddelde wekelijkse betaalde arbeidsduur</strong></a></td>
-                    <td>
-                        Op jaarbasis het aantal te presteren uren per week inclusief de eventuele betaalde inhaalrust en  exclusief de eventuele onbetaalde inhaalrust.
-                    </td>
+						Op jaarbasis het aantal te presteren uren per week inclusief de eventuele betaalde inhaalrust en  exclusief de eventuele onbetaalde inhaalrust.
+					</td>
 					<td>
 						<code>annualAverageWeeklyPaidWorkingHours</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#weeklyhours-externalreference" class="link-underline"><strong>Referentie van de aangever</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#weeklyhours-externalreference" class="link-underline"><strong>Referentie van de aangever</strong></a></td>
-                    <td>
-                        Referentie gebruikt door de aangever.
-                    </td>
+						Referentie gebruikt door de aangever.
+					</td>
 					<td>
 						<code>externalReference</code>
-					<td>
-                </tr>
-<!-- ZONE_LOOPLIST -->
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <footer class="footer">
-       <div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
-             <div class="d-flex flex-column gap-4 w-100">
-                 <p><b>Contact: </b>Voor hulp of verdere vragen kan u ons contacteren via volgend mailadres: <a href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
-                 <!--<p>&#169; socialsecurity.be 2025</p>-->
-             </div>
-       </div>
-    </footer>
+					</td>
+				</tr>
+				<!-- ZONE_LOOPLIST -->
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
+			<div class="d-flex flex-column gap-4 w-100">
+				<p><b>Contact: </b>Voor hulp of verdere vragen kan u ons contacteren via volgend mailadres: <a
+					href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
+				<!--<p>&#169; socialsecurity.be 2025</p>-->
+			</div>
+		</div>
+	</footer>
 </div>
 </body>
 </html>
