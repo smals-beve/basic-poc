@@ -1,228 +1,229 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Glossaries  – fiscalFeatures</title>
-  
-    <style>
-        html, body {
-            width: initial !important;
-            max-width: initial !important;
-            min-height: initial !important;
-            overflow: initial !important;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Glossaries – fiscalFeatures</title>
+	
+	<style>
+		html, body {
+			width: initial !important;
+			max-width: initial !important;
+			min-height: initial !important;
+			overflow: initial !important;
+		}
+	</style>
 </head>
 <body class="d-flex flex-column py-8">
 
 <div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
 
-    <div class="px-12 py-5 introduction">
-        <h4 id="fiscalfeatures">Glossaires<br>Transfert de données salariales</h4>
-        <div class="introduction__right">
+	<div class="px-12 py-5 introduction">
+		<h4 id="fiscalfeatures">Glossaires<br>Transfert de données salariales</h4>
+		<div class="introduction__right">
             <span>
                 Version
                 <br>
                 <strong>1.0.1.6</strong>
             </span>
-            <span>
+			<span>
                 Date
                 <br>
                 <strong>18-12-2025</strong>
             </span>
-        </div>
-    </div>
+		</div>
+	</div>
 
 
-    <div class="px-12 py-9">
-        <h2>Bloc Signalétique fiscale<br><code>fiscalFeatures</code></h2>
+	<div class="px-12 py-9">
+		<h2>Bloc Signalétique fiscale<br><code>fiscalFeatures</code></h2>
 		<span class="text-primary-emphasis fw-bolder"></span>
-        <p><i>Description:</i><br>Les données fiscales d&#x27;application dans le calcul salarial.</p>
-        <p><i>Présence:</i><br>Indispensable dans un message original ou un message de modification.<br>Optionnel dans un message d’annulation.</p>
-        <div class="mt-6">
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th scope="col" class="text-nowrap">Nom du champ</th>
-                    <th scope="col" class="text-nowrap">Description</th>
+		<p><i>Description:</i><br>Les données fiscales d&#x27;application dans le calcul salarial.</p>
+		<p><i>Présence:</i><br>Indispensable dans un message original ou un message de modification.<br>Optionnel dans un message d’annulation.</p>
+		<div class="mt-6">
+			<table class="table table-striped">
+				<thead>
+				<tr>
+					<th scope="col" class="text-nowrap">Nom du champ</th>
+					<th scope="col" class="text-nowrap">Description</th>
 					<th scope="col" class="text-nowrap">TechLabel</th>
-                </tr>
-                </thead>
-                <tbody>
- <!-- ZONE_LOOPLIST -->
-                <tr>
-                    <td><a href="#fiscalfeatures-startdate" class="link-underline"><strong>Date de début de la signalétique fiscale</strong></a></td>
-                    <td>
-                        La date de début de la période dans la période de calcul salarial à partir de laquelle le set de données constituant la signalétique fiscale est valable.<br><br>Si une ou plusieurs donnée(s) change(nt) dans la signalétique fiscale, la date de début de la signalétique fiscale correspond à la date à partir de laquelle le nouveau set de données de la signalétique fiscale est d&#x27;application.
-                    </td>
+				</tr>
+				</thead>
+				<tbody>
+				<!-- ZONE_LOOPLIST -->
+				<tr>
+					<td><a href="#fiscalfeatures-startdate" class="link-underline"><strong>Date de début de la signalétique fiscale</strong></a></td>
+					<td>
+						La date de début de la période dans la période de calcul salarial à partir de laquelle le set de données constituant la signalétique fiscale est valable.<br><br>Si une ou plusieurs donnée(s) change(nt) dans la signalétique fiscale, la date de début de la signalétique fiscale correspond à la date à partir de laquelle le nouveau set de données de la signalétique fiscale est d&#x27;application.
+					</td>
 					<td>
 						<code>startDate</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#fiscalfeatures-enddate" class="link-underline"><strong>Date de fin de la signalétique fiscale</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#fiscalfeatures-enddate" class="link-underline"><strong>Date de fin de la signalétique fiscale</strong></a></td>
-                    <td>
-                        La date de fin de la période dans la période de calcul salarial jusqu&#x27;à laquelle le set de données constituant la signalétique fiscale est valable.<br><br>Si une ou plusieurs donnée(s) change(nt) dans la signalétique fiscale, la date de fin de la signalétique fiscale correspond à la date jusqu&#x27;à laquelle l&#x27;ancien set de données de la signalétique fiscale est d&#x27;application.
-                    </td>
+						La date de fin de la période dans la période de calcul salarial jusqu&#x27;à laquelle le set de données constituant la signalétique fiscale est valable.<br><br>Si une ou plusieurs donnée(s) change(nt) dans la signalétique fiscale, la date de fin de la signalétique fiscale correspond à la date jusqu&#x27;à laquelle l&#x27;ancien set de données de la signalétique fiscale est d&#x27;application.
+					</td>
 					<td>
 						<code>endDate</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#fiscalfeatures-employmentstatus" class="link-underline"><strong>Statut</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#fiscalfeatures-employmentstatus" class="link-underline"><strong>Statut</strong></a></td>
-                    <td>
-                        Statut de la personne physique
-                    </td>
+						Statut de la personne physique
+					</td>
 					<td>
 						<code>employmentStatus</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#fiscalfeatures-civilstatustype" class="link-underline"><strong>État civil</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#fiscalfeatures-civilstatustype" class="link-underline"><strong>État civil</strong></a></td>
-                    <td>
-                        Il s&#x27;agit de l&#x27;état civil, comme appliqué dans le cadre du calcul salarial.
-                    </td>
+						Il s&#x27;agit de l&#x27;état civil, comme appliqué dans le cadre du calcul salarial.
+					</td>
 					<td>
 						<code>civilStatusType</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#fiscalfeatures-numberofdependentchildren" class="link-underline"><strong>Nombre d&#x27;enfants à charge</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#fiscalfeatures-numberofdependentchildren" class="link-underline"><strong>Nombre d&#x27;enfants à charge</strong></a></td>
-                    <td>
-                        Nombre d&#x27;enfants fiscalement à charge (en ce compris les enfants moins valides à charge), comme appliqué dans le cadre du calcul salarial.
-                    </td>
+						Nombre d&#x27;enfants fiscalement à charge (en ce compris les enfants moins valides à charge), comme appliqué dans le cadre du calcul salarial.
+					</td>
 					<td>
 						<code>numberOfDependentChildren</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#fiscalfeatures-numberofdependentdisabledchildren" class="link-underline"><strong>Nombre d&#x27;enfants moins valides à charge</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#fiscalfeatures-numberofdependentdisabledchildren" class="link-underline"><strong>Nombre d&#x27;enfants moins valides à charge</strong></a></td>
-                    <td>
-                        Nombre d&#x27;enfants  moins valides fiscalement à charge, comme appliqué dans le cadre du calcul salarial.
-                    </td>
+						Nombre d&#x27;enfants  moins valides fiscalement à charge, comme appliqué dans le cadre du calcul salarial.
+					</td>
 					<td>
 						<code>numberOfDependentDisabledChildren</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#fiscalfeatures-numberofdependents" class="link-underline"><strong>Nombre d&#x27;autres personnes à charge</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#fiscalfeatures-numberofdependents" class="link-underline"><strong>Nombre d&#x27;autres personnes à charge</strong></a></td>
-                    <td>
-                        Nombre de personnes fiscalement à charge (en ce compris les autres personnes moins valides à charge et les personnes à charge nécessitant des soins) autres que les enfants fiscalement à charge, comme appliqué dans le cadre du calcul salarial.
-                    </td>
+						Nombre de personnes fiscalement à charge (en ce compris les autres personnes moins valides à charge et les personnes à charge nécessitant des soins) autres que les enfants fiscalement à charge, comme appliqué dans le cadre du calcul salarial.
+					</td>
 					<td>
 						<code>numberOfDependents</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#fiscalfeatures-numberofdisableddependents" class="link-underline"><strong>Nombre d&#x27;autres personnes moins valides à charge</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#fiscalfeatures-numberofdisableddependents" class="link-underline"><strong>Nombre d&#x27;autres personnes moins valides à charge</strong></a></td>
-                    <td>
-                        Nombre de personnes moins valides fiscalement à charge autres que les enfants fiscalement à charge, comme appliqué dans le cadre du calcul salarial.
-                    </td>
+						Nombre de personnes moins valides fiscalement à charge autres que les enfants fiscalement à charge, comme appliqué dans le cadre du calcul salarial.
+					</td>
 					<td>
 						<code>numberOfDisabledDependents</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#fiscalfeatures-disabilityindicator" class="link-underline"><strong>Notion de moins valide</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#fiscalfeatures-disabilityindicator" class="link-underline"><strong>Notion de moins valide</strong></a></td>
-                    <td>
-                        Indication si la personne physique est considérée sur le plan fiscal comme une personne moins valide, comme appliqué dans le cadre du calcul salarial.
-                    </td>
+						Indication si la personne physique est considérée sur le plan fiscal comme une personne moins valide, comme appliqué dans le cadre du calcul salarial.
+					</td>
 					<td>
 						<code>disabilityIndicator</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#fiscalfeatures-crossborderworker" class="link-underline"><strong>Notion de travailleur frontalier</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#fiscalfeatures-crossborderworker" class="link-underline"><strong>Notion de travailleur frontalier</strong></a></td>
-                    <td>
-                        Indication si la personne physique a le statut fiscal de travailleur frontalier, comme appliqué dans le cadre du calcul salarial.
-                    </td>
+						Indication si la personne physique a le statut fiscal de travailleur frontalier, comme appliqué dans le cadre du calcul salarial.
+					</td>
 					<td>
 						<code>crossBorderWorker</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#fiscalfeatures-belgianresident" class="link-underline"><strong>Notion résident belge</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#fiscalfeatures-belgianresident" class="link-underline"><strong>Notion résident belge</strong></a></td>
-                    <td>
-                        Indication si la personne physique est considérée comme résidente belge d&#x27;un point de vue fiscal.
-                    </td>
+						Indication si la personne physique est considérée comme résidente belge d&#x27;un point de vue fiscal.
+					</td>
 					<td>
 						<code>belgianResident</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#fiscalfeatures-incomeofpartner" class="link-underline"><strong>Revenu du partenaire</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#fiscalfeatures-incomeofpartner" class="link-underline"><strong>Revenu du partenaire</strong></a></td>
-                    <td>
-                        Indication du revenu du partenaire de la personne physique, comme appliqué dans le cadre du calcul salarial.
-                    </td>
+						Indication du revenu du partenaire de la personne physique, comme appliqué dans le cadre du calcul salarial.
+					</td>
 					<td>
 						<code>incomeOfPartner</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#fiscalfeatures-disabilityofpartner" class="link-underline"><strong>Notion partenaire moins valide</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#fiscalfeatures-disabilityofpartner" class="link-underline"><strong>Notion partenaire moins valide</strong></a></td>
-                    <td>
-                        Indication si le partenaire de la personne physique est considéré comme une personne moins valide sur le plan fiscal, comme appliqué dans le cadre du calcul salarial.
-                    </td>
+						Indication si le partenaire de la personne physique est considéré comme une personne moins valide sur le plan fiscal, comme appliqué dans le cadre du calcul salarial.
+					</td>
 					<td>
 						<code>disabilityOfPartner</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#fiscalfeatures-numberofdependentsneedingcare" class="link-underline"><strong>Nombre de personnes à charge nécessitant des soins</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#fiscalfeatures-numberofdependentsneedingcare" class="link-underline"><strong>Nombre de personnes à charge nécessitant des soins</strong></a></td>
-                    <td>
-                        Nombre de personnes à charge nécessitant des soins comme appliqué dans le cadre du calcul salarial.
-                    </td>
+						Nombre de personnes à charge nécessitant des soins comme appliqué dans le cadre du calcul salarial.
+					</td>
 					<td>
 						<code>numberOfDependentsNeedingCare</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#fiscalfeatures-retired" class="link-underline"><strong>Notion pensionné</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#fiscalfeatures-retired" class="link-underline"><strong>Notion pensionné</strong></a></td>
-                    <td>
-                        Indication si la personne est pensionnée ou non
-                    </td>
+						Indication si la personne est pensionnée ou non
+					</td>
 					<td>
 						<code>retired</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#fiscalfeatures-externalreference" class="link-underline"><strong>Référence du déclarant</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#fiscalfeatures-externalreference" class="link-underline"><strong>Référence du déclarant</strong></a></td>
-                    <td>
-                        Référence  utilisée par le déclarant.
-                    </td>
+						Référence  utilisée par le déclarant.
+					</td>
 					<td>
 						<code>externalReference</code>
-					<td>
-                </tr>
-<!-- ZONE_LOOPLIST -->
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <footer class="footer">
-       <div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
-             <div class="d-flex flex-column gap-4 w-100">
-                <p><b>Contact: </b>Pour obtenir de l’aide ou pour toute autre question, veuillez nous contacter à l’adresse e-mail suivante: <a href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
-                <!--<p>&#169; socialsecurity.be 2025</p>-->
-             </div>
-       </div>
-    </footer>
+					</td>
+				</tr>
+				<!-- ZONE_LOOPLIST -->
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
+			<div class="d-flex flex-column gap-4 w-100">
+				<p><b>Contact: </b>Pour obtenir de l’aide ou pour toute autre question, veuillez nous contacter à
+					l’adresse e-mail suivante: <a href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
+				<!--<p>&#169; socialsecurity.be 2025</p>-->
+			</div>
+		</div>
+	</footer>
 </div>
 </body>
 </html>

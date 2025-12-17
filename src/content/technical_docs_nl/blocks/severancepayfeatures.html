@@ -1,108 +1,109 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Glossarium – Schema severancePayFeatures</title>
-  
-    <style>
-        html, body {
-            width: initial !important;
-            max-width: initial !important;
-            min-height: initial !important;
-            overflow: initial !important;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Glossarium – Schema severancePayFeatures</title>
+	
+	<style>
+		html, body {
+			width: initial !important;
+			max-width: initial !important;
+			min-height: initial !important;
+			overflow: initial !important;
+		}
+	</style>
 </head>
 <body class="d-flex flex-column py-8">
 
 <div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
 
-    <div class="px-12 py-5 introduction">
-        <h4 id="severancepayfeatures">Glossarium<br>Loondata-transfer</h4>
-        <div class="introduction__right">
+	<div class="px-12 py-5 introduction">
+		<h4 id="severancepayfeatures">Glossarium<br>Loondata-transfer</h4>
+		<div class="introduction__right">
             <span>
                 Versie
                 <br>
                 <strong>1.0.1.6</strong>
             </span>
-            <span>
+			<span>
                 Datum
                 <br>
                 <strong>18-12-2025</strong>
             </span>
-        </div>
-    </div>
+		</div>
+	</div>
 
 
-    <div class="px-12 py-9">
-        <h2>Blok Kenmerken van beëindigingsvergoeding<br><code>severancePayFeatures</code></h2>
-        <span class="text-primary-emphasis fw-bolder d-block mb-2 blok-dtype"></span>
-        <p><i>Beschrijving:</i><br>De kenmerken van een vergoeding toegekend aan een natuurlijk persoon naar aanleiding van de beëindiging van de relatie.</p>
-        <p><i>Aanwezigheid:</i><br>Verplicht in geval van een beëindigingsvergoeding uitgedrukt in arbeidstijd (codes 0060001, 0060002, 0060003, 0060004 en 0060099).</p>
-        <div class="mt-6">
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th scope="col" class="text-nowrap">Veldnaam</th>
-                    <th scope="col" class="text-nowrap">Beschrijving</th>
+	<div class="px-12 py-9">
+		<h2>Blok Kenmerken van beëindigingsvergoeding<br><code>severancePayFeatures</code></h2>
+		<span class="text-primary-emphasis fw-bolder d-block mb-2 blok-dtype"></span>
+		<p><i>Beschrijving:</i><br>De kenmerken van een vergoeding toegekend aan een natuurlijk persoon naar aanleiding van de beëindiging van de relatie.</p>
+		<p><i>Aanwezigheid:</i><br>Verplicht in geval van een beëindigingsvergoeding uitgedrukt in arbeidstijd (codes 0060001, 0060002, 0060003, 0060004 en 0060099).</p>
+		<div class="mt-6">
+			<table class="table table-striped">
+				<thead>
+				<tr>
+					<th scope="col" class="text-nowrap">Veldnaam</th>
+					<th scope="col" class="text-nowrap">Beschrijving</th>
 					<th scope="col" class="text-nowrap">TechLabel</th>
-                </tr>
-                </thead>
-                <tbody>
- <!-- ZONE_LOOPLIST -->
-                <tr>
-                    <td><a href="#severancepayfeatures-startdate" class="link-underline"><strong>Begindatum van periode gedekt door beëindigingsvergoeding</strong></a></td>
-                    <td>
-                        De begindatum van de referteperiode gekoppeld aan een verbrekingsvergoeding uitgedrukt in arbeidstijd, een inschakelingsvergoeding of een uittredingsvergoeding.
-                    </td>
+				</tr>
+				</thead>
+				<tbody>
+				<!-- ZONE_LOOPLIST -->
+				<tr>
+					<td><a href="#severancepayfeatures-startdate" class="link-underline"><strong>Begindatum van periode gedekt door beëindigingsvergoeding</strong></a></td>
+					<td>
+						De begindatum van de referteperiode gekoppeld aan een verbrekingsvergoeding uitgedrukt in arbeidstijd, een inschakelingsvergoeding of een uittredingsvergoeding.
+					</td>
 					<td>
 						<code>startDate</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#severancepayfeatures-enddate" class="link-underline"><strong>Einddatum van periode gedekt door beëindigingsvergoeding</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#severancepayfeatures-enddate" class="link-underline"><strong>Einddatum van periode gedekt door beëindigingsvergoeding</strong></a></td>
-                    <td>
-                        De einddatum van de referteperiode gekoppeld aan een verbrekingsvergoeding uitgedrukt in arbeidstijd, een inschakelingsvergoeding of een uittredingsvergoeding.
-                    </td>
+						De einddatum van de referteperiode gekoppeld aan een verbrekingsvergoeding uitgedrukt in arbeidstijd, een inschakelingsvergoeding of een uittredingsvergoeding.
+					</td>
 					<td>
 						<code>endDate</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#severancepayfeatures-numberofdaysreductionbyoutplacement" class="link-underline"><strong>Aantal dagen vermindering verbrekingsvergoeding bij outplacementbegeleiding</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#severancepayfeatures-numberofdaysreductionbyoutplacement" class="link-underline"><strong>Aantal dagen vermindering verbrekingsvergoeding bij outplacementbegeleiding</strong></a></td>
-                    <td>
-                        Aantal dagen waarmee de verbrekingsvergoeding uitgedrukt in arbeidstijd werd verminderd in het kader van outplacementbegeleiding.
-                    </td>
+						Aantal dagen waarmee de verbrekingsvergoeding uitgedrukt in arbeidstijd werd verminderd in het kader van outplacementbegeleiding.
+					</td>
 					<td>
 						<code>numberOfDaysReductionByOutplacement</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#severancepayfeatures-externalreference" class="link-underline"><strong>Referentie van de aangever</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#severancepayfeatures-externalreference" class="link-underline"><strong>Referentie van de aangever</strong></a></td>
-                    <td>
-                        Referentie gebruikt door de aangever.
-                    </td>
+						Referentie gebruikt door de aangever.
+					</td>
 					<td>
 						<code>externalReference</code>
-					<td>
-                </tr>
-<!-- ZONE_LOOPLIST -->
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <footer class="footer">
-       <div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
-             <div class="d-flex flex-column gap-4 w-100">
-                 <p><b>Contact: </b>Voor hulp of verdere vragen kan u ons contacteren via volgend mailadres: <a href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
-                 <!--<p>&#169; socialsecurity.be 2025</p>-->
-             </div>
-       </div>
-    </footer>
+					</td>
+				</tr>
+				<!-- ZONE_LOOPLIST -->
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
+			<div class="d-flex flex-column gap-4 w-100">
+				<p><b>Contact: </b>Voor hulp of verdere vragen kan u ons contacteren via volgend mailadres: <a
+					href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
+				<!--<p>&#169; socialsecurity.be 2025</p>-->
+			</div>
+		</div>
+	</footer>
 </div>
 </body>
 </html>

@@ -1,108 +1,109 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Glossaries  – severancePayFeatures</title>
-  
-    <style>
-        html, body {
-            width: initial !important;
-            max-width: initial !important;
-            min-height: initial !important;
-            overflow: initial !important;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Glossaries – severancePayFeatures</title>
+	
+	<style>
+		html, body {
+			width: initial !important;
+			max-width: initial !important;
+			min-height: initial !important;
+			overflow: initial !important;
+		}
+	</style>
 </head>
 <body class="d-flex flex-column py-8">
 
 <div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
 
-    <div class="px-12 py-5 introduction">
-        <h4 id="severancepayfeatures">Glossaires<br>Transfert de données salariales</h4>
-        <div class="introduction__right">
+	<div class="px-12 py-5 introduction">
+		<h4 id="severancepayfeatures">Glossaires<br>Transfert de données salariales</h4>
+		<div class="introduction__right">
             <span>
                 Version
                 <br>
                 <strong>1.0.1.6</strong>
             </span>
-            <span>
+			<span>
                 Date
                 <br>
                 <strong>18-12-2025</strong>
             </span>
-        </div>
-    </div>
+		</div>
+	</div>
 
 
-    <div class="px-12 py-9">
-        <h2>Bloc Caractéristiques de l&#x27;indemnité de fin de la relation<br><code>severancePayFeatures</code></h2>
+	<div class="px-12 py-9">
+		<h2>Bloc Caractéristiques de l&#x27;indemnité de fin de la relation<br><code>severancePayFeatures</code></h2>
 		<span class="text-primary-emphasis fw-bolder"></span>
-        <p><i>Description:</i><br>Les caractéristiques d&#x27;une indemnité accordée à une personne physique suite à la fin de la relation.</p>
-        <p><i>Présence:</i><br>Obligatoire dans le cas d’une indemnité de fin de la relation exprimée en temps de travail  (codes 0060001, 0060002, 0060003, 0060004 et 0060099)</p>
-        <div class="mt-6">
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th scope="col" class="text-nowrap">Nom du champ</th>
-                    <th scope="col" class="text-nowrap">Description</th>
+		<p><i>Description:</i><br>Les caractéristiques d&#x27;une indemnité accordée à une personne physique suite à la fin de la relation.</p>
+		<p><i>Présence:</i><br>Obligatoire dans le cas d’une indemnité de fin de la relation exprimée en temps de travail  (codes 0060001, 0060002, 0060003, 0060004 et 0060099)</p>
+		<div class="mt-6">
+			<table class="table table-striped">
+				<thead>
+				<tr>
+					<th scope="col" class="text-nowrap">Nom du champ</th>
+					<th scope="col" class="text-nowrap">Description</th>
 					<th scope="col" class="text-nowrap">TechLabel</th>
-                </tr>
-                </thead>
-                <tbody>
- <!-- ZONE_LOOPLIST -->
-                <tr>
-                    <td><a href="#severancepayfeatures-startdate" class="link-underline"><strong>Date de début de la période couverte par l&#x27;indemnité de fin de la relation</strong></a></td>
-                    <td>
-                        La date de début de la période de référence liée à une indemnité de rupture exprimée en temps de travail, à une indemnité de reclassement ou à une indemnité de sortie.
-                    </td>
+				</tr>
+				</thead>
+				<tbody>
+				<!-- ZONE_LOOPLIST -->
+				<tr>
+					<td><a href="#severancepayfeatures-startdate" class="link-underline"><strong>Date de début de la période couverte par l&#x27;indemnité de fin de la relation</strong></a></td>
+					<td>
+						La date de début de la période de référence liée à une indemnité de rupture exprimée en temps de travail, à une indemnité de reclassement ou à une indemnité de sortie.
+					</td>
 					<td>
 						<code>startDate</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#severancepayfeatures-enddate" class="link-underline"><strong>Date de fin de la période couverte par l&#x27;indemnité de fin de la relation</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#severancepayfeatures-enddate" class="link-underline"><strong>Date de fin de la période couverte par l&#x27;indemnité de fin de la relation</strong></a></td>
-                    <td>
-                        La date de fin de la période de référence liée à une indemnité de rupture exprimée en temps de travail, à une indemnité de reclassement ou à une indemnité de sortie.
-                    </td>
+						La date de fin de la période de référence liée à une indemnité de rupture exprimée en temps de travail, à une indemnité de reclassement ou à une indemnité de sortie.
+					</td>
 					<td>
 						<code>endDate</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#severancepayfeatures-numberofdaysreductionbyoutplacement" class="link-underline"><strong>Nombre de jours diminuant l&#x27;indemnité de rupture dans le cadre d&#x27;un accompagnement de reclassement professionnel</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#severancepayfeatures-numberofdaysreductionbyoutplacement" class="link-underline"><strong>Nombre de jours diminuant l&#x27;indemnité de rupture dans le cadre d&#x27;un accompagnement de reclassement professionnel</strong></a></td>
-                    <td>
-                        Nombre de jours avec lesquels l&#x27;indemnité de rupture exprimée en temps de travail a été diminuée dans le cadre d&#x27;un accompagnement de reclassement professionnel.
-                    </td>
+						Nombre de jours avec lesquels l&#x27;indemnité de rupture exprimée en temps de travail a été diminuée dans le cadre d&#x27;un accompagnement de reclassement professionnel.
+					</td>
 					<td>
 						<code>numberOfDaysReductionByOutplacement</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#severancepayfeatures-externalreference" class="link-underline"><strong>Référence du déclarant</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#severancepayfeatures-externalreference" class="link-underline"><strong>Référence du déclarant</strong></a></td>
-                    <td>
-                        Référence  utilisée par le déclarant.
-                    </td>
+						Référence  utilisée par le déclarant.
+					</td>
 					<td>
 						<code>externalReference</code>
-					<td>
-                </tr>
-<!-- ZONE_LOOPLIST -->
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <footer class="footer">
-       <div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
-             <div class="d-flex flex-column gap-4 w-100">
-                <p><b>Contact: </b>Pour obtenir de l’aide ou pour toute autre question, veuillez nous contacter à l’adresse e-mail suivante: <a href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
-                <!--<p>&#169; socialsecurity.be 2025</p>-->
-             </div>
-       </div>
-    </footer>
+					</td>
+				</tr>
+				<!-- ZONE_LOOPLIST -->
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
+			<div class="d-flex flex-column gap-4 w-100">
+				<p><b>Contact: </b>Pour obtenir de l’aide ou pour toute autre question, veuillez nous contacter à
+					l’adresse e-mail suivante: <a href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
+				<!--<p>&#169; socialsecurity.be 2025</p>-->
+			</div>
+		</div>
+	</footer>
 </div>
 </body>
 </html>

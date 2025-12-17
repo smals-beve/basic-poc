@@ -1,98 +1,99 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Glossarium – Schema vacationPayFeatures</title>
-  
-    <style>
-        html, body {
-            width: initial !important;
-            max-width: initial !important;
-            min-height: initial !important;
-            overflow: initial !important;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Glossarium – Schema vacationPayFeatures</title>
+	
+	<style>
+		html, body {
+			width: initial !important;
+			max-width: initial !important;
+			min-height: initial !important;
+			overflow: initial !important;
+		}
+	</style>
 </head>
 <body class="d-flex flex-column py-8">
 
 <div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
 
-    <div class="px-12 py-5 introduction">
-        <h4 id="vacationpayfeatures">Glossarium<br>Loondata-transfer</h4>
-        <div class="introduction__right">
+	<div class="px-12 py-5 introduction">
+		<h4 id="vacationpayfeatures">Glossarium<br>Loondata-transfer</h4>
+		<div class="introduction__right">
             <span>
                 Versie
                 <br>
                 <strong>1.0.1.6</strong>
             </span>
-            <span>
+			<span>
                 Datum
                 <br>
                 <strong>18-12-2025</strong>
             </span>
-        </div>
-    </div>
+		</div>
+	</div>
 
 
-    <div class="px-12 py-9">
-        <h2>Blok Kenmerken van enkel vakantiegeld<br><code>vacationPayFeatures</code></h2>
-        <span class="text-primary-emphasis fw-bolder d-block mb-2 blok-dtype"></span>
-        <p><i>Beschrijving:</i><br>Kenmerken van het enkel (vertrek)vakantiegeld</p>
-        <p><i>Aanwezigheid:</i><br>Verplicht in geval van enkel vertrekvakantiegeld (code financieel element 0050010) en uitbetaald overgedragen verlof (code 0050014).</p>
-        <div class="mt-6">
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th scope="col" class="text-nowrap">Veldnaam</th>
-                    <th scope="col" class="text-nowrap">Beschrijving</th>
+	<div class="px-12 py-9">
+		<h2>Blok Kenmerken van enkel vakantiegeld<br><code>vacationPayFeatures</code></h2>
+		<span class="text-primary-emphasis fw-bolder d-block mb-2 blok-dtype"></span>
+		<p><i>Beschrijving:</i><br>Kenmerken van het enkel (vertrek)vakantiegeld</p>
+		<p><i>Aanwezigheid:</i><br>Verplicht in geval van enkel vertrekvakantiegeld (code financieel element 0050010) en uitbetaald overgedragen verlof (code 0050014).</p>
+		<div class="mt-6">
+			<table class="table table-striped">
+				<thead>
+				<tr>
+					<th scope="col" class="text-nowrap">Veldnaam</th>
+					<th scope="col" class="text-nowrap">Beschrijving</th>
 					<th scope="col" class="text-nowrap">TechLabel</th>
-                </tr>
-                </thead>
-                <tbody>
- <!-- ZONE_LOOPLIST -->
-                <tr>
-                    <td><a href="#vacationpayfeatures-vacationhoursbalance" class="link-underline"><strong>Saldo van aantal uren vakantie</strong></a></td>
-                    <td>
-                        Het aantal uitbetaalde uren wettelijke vakantie die de persoon nog niet heeft opgenomen of het aantal uitbetaalde uren verlof die niet zijn opgenomen tijdens het vakantiejaar omwille van een schorsing van de tewerkstelling.
-                    </td>
+				</tr>
+				</thead>
+				<tbody>
+				<!-- ZONE_LOOPLIST -->
+				<tr>
+					<td><a href="#vacationpayfeatures-vacationhoursbalance" class="link-underline"><strong>Saldo van aantal uren vakantie</strong></a></td>
+					<td>
+						Het aantal uitbetaalde uren wettelijke vakantie die de persoon nog niet heeft opgenomen of het aantal uitbetaalde uren verlof die niet zijn opgenomen tijdens het vakantiejaar omwille van een schorsing van de tewerkstelling.
+					</td>
 					<td>
 						<code>vacationHoursBalance</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#vacationpayfeatures-initialvacationhours" class="link-underline"><strong>Oorspronkelijk aantal uren vakantie</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#vacationpayfeatures-initialvacationhours" class="link-underline"><strong>Oorspronkelijk aantal uren vakantie</strong></a></td>
-                    <td>
-                        Het aantal uren wettelijke vakantie waarop de persoon oorspronkelijk recht had.
-                    </td>
+						Het aantal uren wettelijke vakantie waarop de persoon oorspronkelijk recht had.
+					</td>
 					<td>
 						<code>initialVacationHours</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#vacationpayfeatures-externalreference" class="link-underline"><strong>Referentie van de aangever</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="#vacationpayfeatures-externalreference" class="link-underline"><strong>Referentie van de aangever</strong></a></td>
-                    <td>
-                        Referentie gebruikt door de aangever.
-                    </td>
+						Referentie gebruikt door de aangever.
+					</td>
 					<td>
 						<code>externalReference</code>
-					<td>
-                </tr>
-<!-- ZONE_LOOPLIST -->
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <footer class="footer">
-       <div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
-             <div class="d-flex flex-column gap-4 w-100">
-                 <p><b>Contact: </b>Voor hulp of verdere vragen kan u ons contacteren via volgend mailadres: <a href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
-                 <!--<p>&#169; socialsecurity.be 2025</p>-->
-             </div>
-       </div>
-    </footer>
+					</td>
+				</tr>
+				<!-- ZONE_LOOPLIST -->
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
+			<div class="d-flex flex-column gap-4 w-100">
+				<p><b>Contact: </b>Voor hulp of verdere vragen kan u ons contacteren via volgend mailadres: <a
+					href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
+				<!--<p>&#169; socialsecurity.be 2025</p>-->
+			</div>
+		</div>
+	</footer>
 </div>
 </body>
 </html>
