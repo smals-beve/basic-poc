@@ -724,101 +724,102 @@
 
                             <div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
 
-    <div class="px-12 py-5 introduction">
-        <h4 id="calculation">Glossarium<br>Loondata-transfer</h4>
-        <div class="introduction__right">
+	<div class="px-12 py-5 introduction">
+		<h4 id="calculation">Glossarium<br>Loondata-transfer</h4>
+		<div class="introduction__right">
             <span>
                 Versie
                 <br>
                 <strong>1.0.1.6</strong>
             </span>
-            <span>
+			<span>
                 Datum
                 <br>
                 <strong>18-12-2025</strong>
             </span>
-        </div>
-    </div>
+		</div>
+	</div>
 
 
-    <div class="px-12 py-9">
-        <h2>Blok Loonberekening<br><code>calculation</code></h2>
-        <span class="text-primary-emphasis fw-bolder d-block mb-2 blok-dtype"></span>
-        <p><i>Beschrijving:</i><br>De loonberekening uitgevoerd in het kader van de relatie tussen de natuurlijke persoon en de onderneming.</p>
-        <p><i>Aanwezigheid:</i><br>Onmisbaar</p>
-        <div class="mt-6">
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th scope="col" class="text-nowrap">Veldnaam</th>
-                    <th scope="col" class="text-nowrap">Beschrijving</th>
+	<div class="px-12 py-9">
+		<h2>Blok Loonberekening<br><code>calculation</code></h2>
+		<span class="text-primary-emphasis fw-bolder d-block mb-2 blok-dtype"></span>
+		<p><i>Beschrijving:</i><br>De loonberekening uitgevoerd in het kader van de relatie tussen de natuurlijke persoon en de onderneming.</p>
+		<p><i>Aanwezigheid:</i><br>Onmisbaar</p>
+		<div class="mt-6">
+			<table class="table table-striped">
+				<thead>
+				<tr>
+					<th scope="col" class="text-nowrap">Veldnaam</th>
+					<th scope="col" class="text-nowrap">Beschrijving</th>
 					<th scope="col" class="text-nowrap">TechLabel</th>
-                </tr>
-                </thead>
-                <tbody>
- <!-- ZONE_LOOPLIST -->
-                <tr>
-                    <td><a href="/basic-poc/nl/fields/calculation-id/" class="link-underline"><strong>Identificatiesleutel van loonberekening</strong></a></td>
-                    <td>
-                        Universally Unique Identifier gegenereerd door de aangever ter identicatie van een loonberekening.
-                    </td>
+				</tr>
+				</thead>
+				<tbody>
+				<!-- ZONE_LOOPLIST -->
+				<tr>
+					<td><a href="/basic-poc/nl/fields/calculation-id/" class="link-underline"><strong>Identificatiesleutel van loonberekening</strong></a></td>
+					<td>
+						Universally Unique Identifier gegenereerd door de aangever ter identicatie van een loonberekening.
+					</td>
 					<td>
 						<code>id</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="/basic-poc/nl/fields/calculation-startdate/" class="link-underline"><strong>Begindatum van de loonberekeningsperiode</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="/basic-poc/nl/fields/calculation-startdate/" class="link-underline"><strong>Begindatum van de loonberekeningsperiode</strong></a></td>
-                    <td>
-                        Begindatum van de periode waarop de loonberekening betrekking heeft.
-                    </td>
+						Begindatum van de periode waarop de loonberekening betrekking heeft.
+					</td>
 					<td>
 						<code>startDate</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="/basic-poc/nl/fields/calculation-enddate/" class="link-underline"><strong>Einddatum van de loonberekeningsperiode</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="/basic-poc/nl/fields/calculation-enddate/" class="link-underline"><strong>Einddatum van de loonberekeningsperiode</strong></a></td>
-                    <td>
-                        Einddatum van de periode waarop de loonberekening betrekking heeft.
-                    </td>
+						Einddatum van de periode waarop de loonberekening betrekking heeft.
+					</td>
 					<td>
 						<code>endDate</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="/basic-poc/nl/fields/calculation-calculationdate/" class="link-underline"><strong>Loonberekeningsdatum</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="/basic-poc/nl/fields/calculation-calculationdate/" class="link-underline"><strong>Loonberekeningsdatum</strong></a></td>
-                    <td>
-                        De loonberekeningsdatum is de datum waarop de loonberekening is afgerond door de loonberekenaar. Een wijziging voor dezelfde berekeningsperiode zal tot een nieuwe loonberekening met nieuwe loonberekeningsdatum leiden.
-                    </td>
+						De loonberekeningsdatum is de datum waarop de loonberekening is afgerond door de loonberekenaar. Een wijziging voor dezelfde berekeningsperiode zal tot een nieuwe loonberekening met nieuwe loonberekeningsdatum leiden.
+					</td>
 					<td>
 						<code>calculationDate</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="/basic-poc/nl/fields/calculation-frequency/" class="link-underline"><strong>Loonberekeningsfrequentie</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="/basic-poc/nl/fields/calculation-frequency/" class="link-underline"><strong>Loonberekeningsfrequentie</strong></a></td>
-                    <td>
-                        Frequentie waarmee de berekening van de normale bezoldiging uitgevoerd wordt.
-                    </td>
+						Frequentie waarmee de berekening van de normale bezoldiging uitgevoerd wordt.
+					</td>
 					<td>
 						<code>frequency</code>
-					<td>
-                </tr>
-<!-- ZONE_LOOPLIST -->
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <footer class="footer">
-       <div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
-             <div class="d-flex flex-column gap-4 w-100">
-                 <p><b>Contact: </b>Voor hulp of verdere vragen kan u ons contacteren via volgend mailadres: <a href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
-                 <!--<p>&#169; socialsecurity.be 2025</p>-->
-             </div>
-       </div>
-    </footer>
+					</td>
+				</tr>
+				<!-- ZONE_LOOPLIST -->
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
+			<div class="d-flex flex-column gap-4 w-100">
+				<p><b>Contact: </b>Voor hulp of verdere vragen kan u ons contacteren via volgend mailadres: <a
+					href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
+				<!--<p>&#169; socialsecurity.be 2025</p>-->
+			</div>
+		</div>
+	</footer>
 </div>
 
                         </main>

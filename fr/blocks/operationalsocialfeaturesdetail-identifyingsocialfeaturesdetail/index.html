@@ -724,82 +724,83 @@
 
                             <div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
 
-    <div class="px-12 py-5 introduction">
-        <h4 id="operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail">Glossaires<br>Transfert de données salariales</h4>
-        <div class="introduction__right">
+	<div class="px-12 py-5 introduction">
+		<h4 id="operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail">Glossaires<br>Transfert de données salariales</h4>
+		<div class="introduction__right">
             <span>
                 Version
                 <br>
                 <strong>1.0.1.6</strong>
             </span>
-            <span>
+			<span>
                 Date
                 <br>
                 <strong>18-12-2025</strong>
             </span>
-        </div>
-    </div>
+		</div>
+	</div>
 
 
-    <div class="px-12 py-9">
-        <h2>Bloc Caractéristiques sociales supplémentaires<br><code>operationalSocialFeaturesDetail
+	<div class="px-12 py-9">
+		<h2>Bloc Caractéristiques sociales supplémentaires<br><code>operationalSocialFeaturesDetail
 identifyingSocialFeaturesDetail</code></h2>
 		<span class="text-primary-emphasis fw-bolder">Superclasse / Générique</span>
-        <p><i>Description:</i><br>Données supplémentaires sur les modalités de mise en œuvre de la signalétique sociale.</p>
-        <p><i>Présence:</i><br>Obligatoire si au moins une des sous-classes / spécialisations doit être communiquée. Ne peut pas être mentionné seul.</p>
-        <div class="mt-6">
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th scope="col" class="text-nowrap">Nom du champ</th>
-                    <th scope="col" class="text-nowrap">Description</th>
+		<p><i>Description:</i><br>Données supplémentaires sur les modalités de mise en œuvre de la signalétique sociale.</p>
+		<p><i>Présence:</i><br>Obligatoire si au moins une des sous-classes / spécialisations doit être communiquée. Ne peut pas être mentionné seul.</p>
+		<div class="mt-6">
+			<table class="table table-striped">
+				<thead>
+				<tr>
+					<th scope="col" class="text-nowrap">Nom du champ</th>
+					<th scope="col" class="text-nowrap">Description</th>
 					<th scope="col" class="text-nowrap">TechLabel</th>
-                </tr>
-                </thead>
-                <tbody>
- <!-- ZONE_LOOPLIST -->
-                <tr>
-                    <td><a href="/basic-poc/fr/fields/operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-startdate/" class="link-underline"><strong>Date de début</strong></a></td>
-                    <td>
-                        La date de début de la période dans la période de la signalétique sociale ou dans la période de la signalétique sociale périodique à partir de laquelle le set de données, constituant une des sous-classes des caractéristiques sociales supplémentaires,  est valable.<br><br>Si une ou plusieurs donnée(s) change(nt) dans une des sous-classes des  caractéristiques sociales supplémentaires, la date de début du bloc correspond à la date à partir de laquelle le nouveau set de données est d&#x27;application.
-                    </td>
+				</tr>
+				</thead>
+				<tbody>
+				<!-- ZONE_LOOPLIST -->
+				<tr>
+					<td><a href="/basic-poc/fr/fields/operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-startdate/" class="link-underline"><strong>Date de début</strong></a></td>
+					<td>
+						La date de début de la période dans la période de la signalétique sociale ou dans la période de la signalétique sociale périodique à partir de laquelle le set de données, constituant une des sous-classes des caractéristiques sociales supplémentaires,  est valable.<br><br>Si une ou plusieurs donnée(s) change(nt) dans une des sous-classes des  caractéristiques sociales supplémentaires, la date de début du bloc correspond à la date à partir de laquelle le nouveau set de données est d&#x27;application.
+					</td>
 					<td>
 						<code>startDate</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="/basic-poc/fr/fields/operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-enddate/" class="link-underline"><strong>Date de fin</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="/basic-poc/fr/fields/operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-enddate/" class="link-underline"><strong>Date de fin</strong></a></td>
-                    <td>
-                        La date de fin de la période dans la période de la signalétique sociale ou dans la période de la signalétique sociale périodique jusqu&#x27;à laquelle le set de données, constituant une des sous-classes des caractéristiques sociales supplémentaires, est valable.<br><br>Si une ou plusieurs donnée(s) change(nt) dans une des sous-classes des caractéristiques sociales supplémentaires, la date de fin du bloc correspond à la date jusqu&#x27;à laquelle l&#x27;ancien set de données est d&#x27;application.
-                    </td>
+						La date de fin de la période dans la période de la signalétique sociale ou dans la période de la signalétique sociale périodique jusqu&#x27;à laquelle le set de données, constituant une des sous-classes des caractéristiques sociales supplémentaires, est valable.<br><br>Si une ou plusieurs donnée(s) change(nt) dans une des sous-classes des caractéristiques sociales supplémentaires, la date de fin du bloc correspond à la date jusqu&#x27;à laquelle l&#x27;ancien set de données est d&#x27;application.
+					</td>
 					<td>
 						<code>endDate</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="/basic-poc/fr/fields/operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-externalreference/" class="link-underline"><strong>Référence du déclarant</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="/basic-poc/fr/fields/operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail-externalreference/" class="link-underline"><strong>Référence du déclarant</strong></a></td>
-                    <td>
-                        Référence  utilisée par le déclarant.
-                    </td>
+						Référence  utilisée par le déclarant.
+					</td>
 					<td>
 						<code>externalReference</code>
-					<td>
-                </tr>
-<!-- ZONE_LOOPLIST -->
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <footer class="footer">
-       <div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
-             <div class="d-flex flex-column gap-4 w-100">
-                <p><b>Contact: </b>Pour obtenir de l’aide ou pour toute autre question, veuillez nous contacter à l’adresse e-mail suivante: <a href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
-                <!--<p>&#169; socialsecurity.be 2025</p>-->
-             </div>
-       </div>
-    </footer>
+					</td>
+				</tr>
+				<!-- ZONE_LOOPLIST -->
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
+			<div class="d-flex flex-column gap-4 w-100">
+				<p><b>Contact: </b>Pour obtenir de l’aide ou pour toute autre question, veuillez nous contacter à
+					l’adresse e-mail suivante: <a href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
+				<!--<p>&#169; socialsecurity.be 2025</p>-->
+			</div>
+		</div>
+	</footer>
 </div>
 
                         </main>

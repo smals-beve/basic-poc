@@ -724,101 +724,102 @@
 
                             <div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
 
-    <div class="px-12 py-5 introduction">
-        <h4 id="service">Glossarium<br>Loondata-transfer</h4>
-        <div class="introduction__right">
+	<div class="px-12 py-5 introduction">
+		<h4 id="service">Glossarium<br>Loondata-transfer</h4>
+		<div class="introduction__right">
             <span>
                 Versie
                 <br>
                 <strong>1.0.1.6</strong>
             </span>
-            <span>
+			<span>
                 Datum
                 <br>
                 <strong>18-12-2025</strong>
             </span>
-        </div>
-    </div>
+		</div>
+	</div>
 
 
-    <div class="px-12 py-9">
-        <h2>Blok Prestatie of afwezigheid<br><code>service</code></h2>
-        <span class="text-primary-emphasis fw-bolder d-block mb-2 blok-dtype"></span>
-        <p><i>Beschrijving:</i><br>De prestatie of afwezigheid van de natuurlijke persoon op dag- of periodebasis.</p>
-        <p><i>Aanwezigheid:</i><br>Verplicht in een origineel of wijzigend bericht, indien minstens één prestatie of afwezigheid moet worden meegedeeld.<br>Optioneel in een annulerend bericht.</p>
-        <div class="mt-6">
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th scope="col" class="text-nowrap">Veldnaam</th>
-                    <th scope="col" class="text-nowrap">Beschrijving</th>
+	<div class="px-12 py-9">
+		<h2>Blok Prestatie of afwezigheid<br><code>service</code></h2>
+		<span class="text-primary-emphasis fw-bolder d-block mb-2 blok-dtype"></span>
+		<p><i>Beschrijving:</i><br>De prestatie of afwezigheid van de natuurlijke persoon op dag- of periodebasis.</p>
+		<p><i>Aanwezigheid:</i><br>Verplicht in een origineel of wijzigend bericht, indien minstens één prestatie of afwezigheid moet worden meegedeeld.<br>Optioneel in een annulerend bericht.</p>
+		<div class="mt-6">
+			<table class="table table-striped">
+				<thead>
+				<tr>
+					<th scope="col" class="text-nowrap">Veldnaam</th>
+					<th scope="col" class="text-nowrap">Beschrijving</th>
 					<th scope="col" class="text-nowrap">TechLabel</th>
-                </tr>
-                </thead>
-                <tbody>
- <!-- ZONE_LOOPLIST -->
-                <tr>
-                    <td><a href="/basic-poc/nl/fields/service-servicetype/" class="link-underline"><strong>Prestatie- of afwezigheidscode</strong></a></td>
-                    <td>
-                        Code die het type prestatie of afwezigheid aanduidt.
-                    </td>
+				</tr>
+				</thead>
+				<tbody>
+				<!-- ZONE_LOOPLIST -->
+				<tr>
+					<td><a href="/basic-poc/nl/fields/service-servicetype/" class="link-underline"><strong>Prestatie- of afwezigheidscode</strong></a></td>
+					<td>
+						Code die het type prestatie of afwezigheid aanduidt.
+					</td>
 					<td>
 						<code>serviceType</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="/basic-poc/nl/fields/service-startdate/" class="link-underline"><strong>Datum of begindatum van prestatie of afwezigheid</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="/basic-poc/nl/fields/service-startdate/" class="link-underline"><strong>Datum of begindatum van prestatie of afwezigheid</strong></a></td>
-                    <td>
-                        In geval van een mededeling per dag, de datum waarop de prestatie of de afwezigheid heeft plaatsgevonden.<br><br>In het geval van een mededeling per periode, de begindatum van de periode waarin de prestatie of de afwezigheid heeft plaatsgevonden.
-                    </td>
+						In geval van een mededeling per dag, de datum waarop de prestatie of de afwezigheid heeft plaatsgevonden.<br><br>In het geval van een mededeling per periode, de begindatum van de periode waarin de prestatie of de afwezigheid heeft plaatsgevonden.
+					</td>
 					<td>
 						<code>startDate</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="/basic-poc/nl/fields/service-enddate/" class="link-underline"><strong>Einddatum van prestatie of afwezigheid</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="/basic-poc/nl/fields/service-enddate/" class="link-underline"><strong>Einddatum van prestatie of afwezigheid</strong></a></td>
-                    <td>
-                        De einddatum van de periode waarin de prestatie of afwezigheid heeft plaatsgevonden.<br><br>Deze zone wordt niet ingevuld als de prestatie of de afwezigheid per dag wordt meegedeeld.
-                    </td>
+						De einddatum van de periode waarin de prestatie of afwezigheid heeft plaatsgevonden.<br><br>Deze zone wordt niet ingevuld als de prestatie of de afwezigheid per dag wordt meegedeeld.
+					</td>
 					<td>
 						<code>endDate</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="/basic-poc/nl/fields/service-numberofhours/" class="link-underline"><strong>Aantal uren van prestatie of afwezigheid</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="/basic-poc/nl/fields/service-numberofhours/" class="link-underline"><strong>Aantal uren van prestatie of afwezigheid</strong></a></td>
-                    <td>
-                        Aantal uren van de prestatie of van de afwezigheid.
-                    </td>
+						Aantal uren van de prestatie of van de afwezigheid.
+					</td>
 					<td>
 						<code>numberOfHours</code>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><a href="/basic-poc/nl/fields/service-externalreference/" class="link-underline"><strong>Referentie van de aangever</strong></a></td>
 					<td>
-                </tr>
-
-                <tr>
-                    <td><a href="/basic-poc/nl/fields/service-externalreference/" class="link-underline"><strong>Referentie van de aangever</strong></a></td>
-                    <td>
-                        Referentie gebruikt door de aangever.
-                    </td>
+						Referentie gebruikt door de aangever.
+					</td>
 					<td>
 						<code>externalReference</code>
-					<td>
-                </tr>
-<!-- ZONE_LOOPLIST -->
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <footer class="footer">
-       <div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
-             <div class="d-flex flex-column gap-4 w-100">
-                 <p><b>Contact: </b>Voor hulp of verdere vragen kan u ons contacteren via volgend mailadres: <a href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
-                 <!--<p>&#169; socialsecurity.be 2025</p>-->
-             </div>
-       </div>
-    </footer>
+					</td>
+				</tr>
+				<!-- ZONE_LOOPLIST -->
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
+			<div class="d-flex flex-column gap-4 w-100">
+				<p><b>Contact: </b>Voor hulp of verdere vragen kan u ons contacteren via volgend mailadres: <a
+					href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
+				<!--<p>&#169; socialsecurity.be 2025</p>-->
+			</div>
+		</div>
+	</footer>
 </div>
 
                         </main>
