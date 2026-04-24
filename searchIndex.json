@@ -516,9 +516,9 @@
     {
     "lang": "nl",
     "type": "field",
-    "id": "gradualworkresumption-weeklymaxnbrofhoursallowed",
+    "id": "gradualworkresumption-weeklymaxnumberofhoursallowed",
     "title": "Maximale aantal uren toegestane arbeid per week in het kader van progressieve werkhervatting",
-    "url": "/basic-poc/nl/fields/gradualworkresumption-weeklymaxnbrofhoursallowed/"
+    "url": "/basic-poc/nl/fields/gradualworkresumption-weeklymaxnumberofhoursallowed/"
     },
 
     {
@@ -1484,9 +1484,9 @@
     {
     "lang": "fr",
     "type": "field",
-    "id": "gradualworkresumption-weeklymaxnbrofhoursallowed",
+    "id": "gradualworkresumption-weeklymaxnumberofhoursallowed",
     "title": "Nombre maximum d'heures de travail autorisées par semaine dans le cadre d'une reprise progressive du travail",
-    "url": "/basic-poc/fr/fields/gradualworkresumption-weeklymaxnbrofhoursallowed/"
+    "url": "/basic-poc/fr/fields/gradualworkresumption-weeklymaxnumberofhoursallowed/"
     },
 
     {

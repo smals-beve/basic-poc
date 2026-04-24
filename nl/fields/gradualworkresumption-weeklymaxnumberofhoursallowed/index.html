@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Nombre maximum d&#39;heures de travail autorisées par semaine dans le cadre d&#39;une reprise progressive du travail | e-Gov 3.0</title>
+    <title>Maximale aantal uren toegestane arbeid per week in het kader van progressieve werkhervatting | e-Gov 3.0</title>
     <meta name="description" content="Documentation portal for the e-Gov 3.0 API and technical specifications.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="canonical" href="https://smals-beve.github.io/basic-poc/fr/fields/gradualworkresumption-weeklymaxnbrofhoursallowed/">
+    <link rel="canonical" href="https://smals-beve.github.io/basic-poc/nl/fields/gradualworkresumption-weeklymaxnumberofhoursallowed/">
 
     
     <link rel="stylesheet" href="/basic-poc/assets/css/styleguide-egov-theme.min.css">
@@ -26,7 +26,7 @@
     
         
         
-        
+    
 
     <link rel="icon" type="image/png" sizes="32x32" href="/basic-poc/assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/basic-poc/assets/images/favicon-16x16.png">
@@ -43,18 +43,18 @@
                     
                         
                     
-                    <a class="btn"
+                    <a class="btn active"
                        href="/basic-poc/nl/"
-                       >
+                       aria-current="true">
                         NL
                     </a>
                 
                     
                         
                     
-                    <a class="btn active"
+                    <a class="btn"
                        href="/basic-poc/fr/"
-                       aria-current="true">
+                       >
                         FR
                     </a>
                 
@@ -64,7 +64,7 @@
             <div class="d-lg-none text-uppercase">
                 <button type="button" class="btn btn-sm dropdown-toggle" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                    FR
+                    NL
                 </button>
                 <div class="dropdown-menu">
                     <ul class="overflow-hidden list-unstyled">
@@ -73,9 +73,9 @@
                                 
                             
                             <li>
-                                <a class="dropdown-item"
+                                <a class="dropdown-item active"
                                    href="/basic-poc/nl/"
-                                   >
+                                   aria-current="true">
                                     NL
                                 </a>
                             </li>
@@ -84,9 +84,9 @@
                                 
                             
                             <li>
-                                <a class="dropdown-item active"
+                                <a class="dropdown-item"
                                    href="/basic-poc/fr/"
-                                   aria-current="true">
+                                   >
                                     FR
                                 </a>
                             </li>
@@ -108,8 +108,8 @@
         
             <div id="sidenav" class="sidenav" style="min-width: 304px;">
                 
-                    <a href="/basic-poc/fr/" class="logo d-none d-lg-block">
-                        <img src="/basic-poc/assets/images/logo/securite_sociale_logo.svg" alt="logo de la sécurité sociale" height="54">
+                    <a href="/basic-poc/nl/" class="logo d-none d-lg-block">
+                        <img src="/basic-poc/assets/images/logo/social_zekerheid_logo.svg" alt="logo van de sociale zekerheid" height="54">
                     </a>
                 
 
@@ -123,8 +123,8 @@
             id="search-input"
             class="form-control"
             type="search"
-            placeholder="Rechercher…"
-            data-lang="fr"
+            placeholder="Zoeken…"
+            data-lang="nl"
             data-search-index-url="/basic-poc/searchIndex.json"
             autocomplete="off"
     />
@@ -137,9 +137,9 @@
     
         
         <li class="nav-item">
-            <a class="nav-link" href="/basic-poc/fr/">
-                <span class="label" title="Aperçu des Blocs">
-                    Aperçu des Blocs
+            <a class="nav-link" href="/basic-poc/nl/">
+                <span class="label" title="Overzicht van Blokken">
+                    Overzicht van Blokken
                 </span>
             </a>
         </li>
@@ -158,9 +158,9 @@
                 
                     
                     <a class="nav-link"
-                       href="/basic-poc/fr/blocks/enterprise/"
-                       title="Entreprise">
-                        <span class="label text-truncate">Entreprise</span>
+                       href="/basic-poc/nl/blocks/enterprise/"
+                       title="Onderneming">
+                        <span class="label text-truncate">Onderneming</span>
                     </a>
                 
             </li>
@@ -178,9 +178,9 @@
                 
                     
                     <a class="nav-link"
-                       href="/basic-poc/fr/blocks/naturalperson/"
-                       title="Personne physique">
-                        <span class="label text-truncate">Personne physique</span>
+                       href="/basic-poc/nl/blocks/naturalperson/"
+                       title="Natuurlijke persoon">
+                        <span class="label text-truncate">Natuurlijke persoon</span>
                     </a>
                 
             </li>
@@ -198,9 +198,9 @@
                 
                     
                     <a class="nav-link"
-                       href="/basic-poc/fr/blocks/relation/"
-                       title="Relation">
-                        <span class="label text-truncate">Relation</span>
+                       href="/basic-poc/nl/blocks/relation/"
+                       title="Relatie">
+                        <span class="label text-truncate">Relatie</span>
                     </a>
                 
             </li>
@@ -218,9 +218,9 @@
                 
                     
                     <a class="nav-link"
-                       href="/basic-poc/fr/blocks/calculation/"
-                       title="Calcul salarial">
-                        <span class="label text-truncate">Calcul salarial</span>
+                       href="/basic-poc/nl/blocks/calculation/"
+                       title="Loonberekening">
+                        <span class="label text-truncate">Loonberekening</span>
                     </a>
                 
             </li>
@@ -238,9 +238,9 @@
                 
                     
                     <a class="nav-link"
-                       href="/basic-poc/fr/blocks/service/"
-                       title="Prestation ou absence">
-                        <span class="label text-truncate">Prestation ou absence</span>
+                       href="/basic-poc/nl/blocks/service/"
+                       title="Prestatie of afwezigheid">
+                        <span class="label text-truncate">Prestatie of afwezigheid</span>
                     </a>
                 
             </li>
@@ -258,9 +258,9 @@
                 
                     
                     <a class="nav-link"
-                       href="/basic-poc/fr/blocks/servicefeatures/"
-                       title="Caractéristiques de la prestation">
-                        <span class="label text-truncate">Caractéristiques de la prestation</span>
+                       href="/basic-poc/nl/blocks/servicefeatures/"
+                       title="Prestatiekenmerken">
+                        <span class="label text-truncate">Prestatiekenmerken</span>
                     </a>
                 
             </li>
@@ -278,9 +278,9 @@
                 
                     
                     <a class="nav-link"
-                       href="/basic-poc/fr/blocks/identifyingsocialfeatures/"
-                       title="Signalétique sociale">
-                        <span class="label text-truncate">Signalétique sociale</span>
+                       href="/basic-poc/nl/blocks/identifyingsocialfeatures/"
+                       title="Sociale Signalitiek">
+                        <span class="label text-truncate">Sociale Signalitiek</span>
                     </a>
                 
             </li>
@@ -298,9 +298,9 @@
                 
                     
                     <a class="nav-link"
-                       href="/basic-poc/fr/blocks/operationalsocialfeatures/"
-                       title="Signalétique sociale périodique">
-                        <span class="label text-truncate">Signalétique sociale périodique</span>
+                       href="/basic-poc/nl/blocks/operationalsocialfeatures/"
+                       title="Periodieke sociale Signalitiek">
+                        <span class="label text-truncate">Periodieke sociale Signalitiek</span>
                     </a>
                 
             </li>
@@ -318,9 +318,9 @@
                 
                     
                     <a class="nav-link"
-                       href="/basic-poc/fr/blocks/weeklyhours/"
-                       title="Temps de travail hebdomadaire">
-                        <span class="label text-truncate">Temps de travail hebdomadaire</span>
+                       href="/basic-poc/nl/blocks/weeklyhours/"
+                       title="Wekelijkse arbeidsduur">
+                        <span class="label text-truncate">Wekelijkse arbeidsduur</span>
                     </a>
                 
             </li>
@@ -338,9 +338,9 @@
                 
                     
                     <a class="nav-link"
-                       href="/basic-poc/fr/blocks/reorganisationmeasures/"
-                       title="Mesure de réorganisation du temps de travail">
-                        <span class="label text-truncate">Mesure de réorganisation du temps de travail</span>
+                       href="/basic-poc/nl/blocks/reorganisationmeasures/"
+                       title="Maatregel tot reorganisatie van arbeidstijd">
+                        <span class="label text-truncate">Maatregel tot reorganisatie van arbeidstijd</span>
                     </a>
                 
             </li>
@@ -361,21 +361,21 @@
                         <button class="btn btn-toggle nav-link"
                                 type="button"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#collapse-fr-operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail"
+                                data-bs-target="#collapse-nl-operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail"
                                 aria-expanded="false"
-                                aria-controls="collapse-fr-operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail"
-                                title="Caractéristiques sociales supplémentaires">
-                            <span class="label text-truncate">Caractéristiques sociales supplémentaires</span>
+                                aria-controls="collapse-nl-operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail"
+                                title="Bijkomende sociale kenmerken">
+                            <span class="label text-truncate">Bijkomende sociale kenmerken</span>
                         </button>
 
-                        <div class="collapse" id="collapse-fr-operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail">
+                        <div class="collapse" id="collapse-nl-operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail">
                             <ul class="toggle-nav">
                                 
                                 <li>
                                     <a class="nav-link"
-                                       href="/basic-poc/fr/blocks/operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail/"
-                                       title="Caractéristiques sociales supplémentaires">
-                                        <span class="label text-truncate">Caractéristiques sociales supplémentaires - overview</span>
+                                       href="/basic-poc/nl/blocks/operationalsocialfeaturesdetail-identifyingsocialfeaturesdetail/"
+                                       title="Bijkomende sociale kenmerken">
+                                        <span class="label text-truncate">Bijkomende sociale kenmerken - overview</span>
                                     </a>
                                 </li>
 
@@ -386,9 +386,9 @@
                                         
                                         <li>
                                             <a class="nav-link"
-                                               href="/basic-poc/fr/blocks/jobs/"
-                                               title="Fonction">
-                                                <span class="label text-truncate">Fonction</span>
+                                               href="/basic-poc/nl/blocks/jobs/"
+                                               title="Functie">
+                                                <span class="label text-truncate">Functie</span>
                                             </a>
                                         </li>
                                         
@@ -398,9 +398,9 @@
                                         
                                         <li>
                                             <a class="nav-link"
-                                               href="/basic-poc/fr/blocks/gradualworkresumption/"
-                                               title="Reprise progressive du travail">
-                                                <span class="label text-truncate">Reprise progressive du travail</span>
+                                               href="/basic-poc/nl/blocks/gradualworkresumption/"
+                                               title="Progressieve werkhervatting">
+                                                <span class="label text-truncate">Progressieve werkhervatting</span>
                                             </a>
                                         </li>
                                         
@@ -410,9 +410,9 @@
                                         
                                         <li>
                                             <a class="nav-link"
-                                               href="/basic-poc/fr/blocks/dismissal/"
-                                               title="Licenciement">
-                                                <span class="label text-truncate">Licenciement</span>
+                                               href="/basic-poc/nl/blocks/dismissal/"
+                                               title="Ontslag">
+                                                <span class="label text-truncate">Ontslag</span>
                                             </a>
                                         </li>
                                         
@@ -422,9 +422,9 @@
                                         
                                         <li>
                                             <a class="nav-link"
-                                               href="/basic-poc/fr/blocks/starterjobs/"
-                                               title="Premier emploi">
-                                                <span class="label text-truncate">Premier emploi</span>
+                                               href="/basic-poc/nl/blocks/starterjobs/"
+                                               title="Startbaan">
+                                                <span class="label text-truncate">Startbaan</span>
                                             </a>
                                         </li>
                                         
@@ -449,9 +449,9 @@
                 
                     
                     <a class="nav-link"
-                       href="/basic-poc/fr/blocks/fiscalfeatures/"
-                       title="Signalétique fiscale">
-                        <span class="label text-truncate">Signalétique fiscale</span>
+                       href="/basic-poc/nl/blocks/fiscalfeatures/"
+                       title="Fiscale signalitiek">
+                        <span class="label text-truncate">Fiscale signalitiek</span>
                     </a>
                 
             </li>
@@ -469,9 +469,9 @@
                 
                     
                     <a class="nav-link"
-                       href="/basic-poc/fr/blocks/financialelements/"
-                       title="Élément financier">
-                        <span class="label text-truncate">Élément financier</span>
+                       href="/basic-poc/nl/blocks/financialelements/"
+                       title="Financieel element">
+                        <span class="label text-truncate">Financieel element</span>
                     </a>
                 
             </li>
@@ -489,9 +489,9 @@
                 
                     
                     <a class="nav-link"
-                       href="/basic-poc/fr/blocks/bonusfeatures/"
-                       title="Caractéristiques de la prime">
-                        <span class="label text-truncate">Caractéristiques de la prime</span>
+                       href="/basic-poc/nl/blocks/bonusfeatures/"
+                       title="Kenmerken van premie">
+                        <span class="label text-truncate">Kenmerken van premie</span>
                     </a>
                 
             </li>
@@ -509,9 +509,9 @@
                 
                     
                     <a class="nav-link"
-                       href="/basic-poc/fr/blocks/voucherfeatures/"
-                       title="Caractéristiques du  chèque">
-                        <span class="label text-truncate">Caractéristiques du  chèque</span>
+                       href="/basic-poc/nl/blocks/voucherfeatures/"
+                       title="Kenmerken van cheque">
+                        <span class="label text-truncate">Kenmerken van cheque</span>
                     </a>
                 
             </li>
@@ -529,9 +529,9 @@
                 
                     
                     <a class="nav-link"
-                       href="/basic-poc/fr/blocks/severancepayfeatures/"
-                       title="Caractéristiques de l&#39;indemnité de fin de la relation">
-                        <span class="label text-truncate">Caractéristiques de l&#39;indemnité de fin de la relation</span>
+                       href="/basic-poc/nl/blocks/severancepayfeatures/"
+                       title="Kenmerken van beëindigingsvergoeding">
+                        <span class="label text-truncate">Kenmerken van beëindigingsvergoeding</span>
                     </a>
                 
             </li>
@@ -549,9 +549,9 @@
                 
                     
                     <a class="nav-link"
-                       href="/basic-poc/fr/blocks/holidayafterseverancefeatures/"
-                       title="Caractéristiques des jours fériés  après la sortie de service payés par l&#39;entreprise">
-                        <span class="label text-truncate">Caractéristiques des jours fériés  après la sortie de service payés par l&#39;entreprise</span>
+                       href="/basic-poc/nl/blocks/holidayafterseverancefeatures/"
+                       title="Kenmerken van feestdagen  na uitdiensttreding uitbetaald door de onderneming">
+                        <span class="label text-truncate">Kenmerken van feestdagen  na uitdiensttreding uitbetaald door de onderneming</span>
                     </a>
                 
             </li>
@@ -569,9 +569,9 @@
                 
                     
                     <a class="nav-link"
-                       href="/basic-poc/fr/blocks/usingemployer/"
-                       title="Entreprise utilisatrice">
-                        <span class="label text-truncate">Entreprise utilisatrice</span>
+                       href="/basic-poc/nl/blocks/usingemployer/"
+                       title="Gebruikende onderneming">
+                        <span class="label text-truncate">Gebruikende onderneming</span>
                     </a>
                 
             </li>
@@ -589,9 +589,9 @@
                 
                     
                     <a class="nav-link"
-                       href="/basic-poc/fr/blocks/vacationpayfeatures/"
-                       title="Caractéristiques du simple pécule de vacances">
-                        <span class="label text-truncate">Caractéristiques du simple pécule de vacances</span>
+                       href="/basic-poc/nl/blocks/vacationpayfeatures/"
+                       title="Kenmerken van enkel vakantiegeld">
+                        <span class="label text-truncate">Kenmerken van enkel vakantiegeld</span>
                     </a>
                 
             </li>
@@ -609,9 +609,9 @@
                 
                     
                     <a class="nav-link"
-                       href="/basic-poc/fr/blocks/paidrightbalancefeatures/"
-                       title="Caractéristiques du solde des droits payé">
-                        <span class="label text-truncate">Caractéristiques du solde des droits payé</span>
+                       href="/basic-poc/nl/blocks/paidrightbalancefeatures/"
+                       title="Kenmerken van uitbetaald  saldo van  rechten">
+                        <span class="label text-truncate">Kenmerken van uitbetaald  saldo van  rechten</span>
                     </a>
                 
             </li>
@@ -630,9 +630,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link "
-                               href="/basic-poc/fr/api/">
+                               href="/basic-poc/nl/api/">
                                 <span class="material-symbols-rounded" aria-hidden="true" role="img">integration_instructions</span>
-                                <span>Aperçu de l’API</span>
+                                <span>API Overzicht</span>
                             </a>
                         </li>
                     </ul>
@@ -647,8 +647,8 @@
                         <nav class="navbar">
                             <div class="container-fluid px-6">
                                 
-                                    <a href="/basic-poc/fr/" class="logo d-lg-none">
-                                        <img src="/basic-poc/assets/images/logo/securite_sociale_logo.svg" alt="logo de la sécurité sociale" height="54">
+                                    <a href="/basic-poc/nl/" class="logo d-lg-none">
+                                        <img src="/basic-poc/assets/images/logo/social_zekerheid_logo.svg" alt="logo van de sociale zekerheid" height="54">
                                     </a>
                                 
                                 <ul class="navbar-nav ms-auto">
@@ -668,17 +668,17 @@
                                     </li>
                                     <li class="nav-item d-none d-lg-block">
                                         <a class="btn nav-link "
-                                           href="/basic-poc/fr/">
-                                            Accueil
+                                           href="/basic-poc/nl/">
+                                            Startpagina
                                         </a>
                                     </li>
 
                                     
                                     <li class="nav-item d-none d-lg-block">
                                         <a class="btn nav-link "
-                                           href="/basic-poc/fr/api/">
+                                           href="/basic-poc/nl/api/">
                                             <span class="material-symbols-rounded" aria-hidden="true" role="img">integration_instructions</span>
-                                            <span>Aperçu de l’API</span>
+                                            <span>API Overzicht</span>
                                         </a>
                                     </li>
                                     
@@ -699,21 +699,21 @@
                                             <li class="breadcrumb-item"
                                                 >
                                                 
-                                                    <a href="/basic-poc/fr/">Aperçu des Blocs</a>
+                                                    <a href="/basic-poc/nl/">Overzicht van Blokken</a>
                                                 
                                             </li>
                                         
                                             <li class="breadcrumb-item"
                                                 >
                                                 
-                                                    <a href="/basic-poc/fr/blocks/gradualworkresumption/">Reprise progressive du travail</a>
+                                                    <a href="/basic-poc/nl/blocks/gradualworkresumption/">Progressieve werkhervatting</a>
                                                 
                                             </li>
                                         
                                             <li class="breadcrumb-item active"
                                                 aria-current="page">
                                                 
-                                                    Nombre maximum d&#39;heures de travail autorisées par semaine dans le cadre d&#39;une reprise progressive du travail
+                                                    Maximale aantal uren toegestane arbeid per week in het kader van progressieve werkhervatting
                                                 
                                             </li>
                                         
@@ -732,56 +732,50 @@
                             <div class="pdf-page theme-enterprise mx-auto bottom-decoration pb-7">
 
 	<div class="px-12 py-5 introduction">
-		<h4>Glossaires<br>Transfert de données salariales</h4>
+		<h4>Glossarium<br>Loondata-transfer</h4>
 		<div class="introduction__right">
             <span>
-                Version
+                Versie
                 <br>
-                <strong>1.0.1.6</strong>
+                <strong>1.0.1.7</strong>
             </span>
 			<span>
-                Date
+                Datum
                 <br>
-                <strong>18-12-2025</strong>
+                <strong>28-04-2026</strong>
             </span>
 		</div>
 	</div>
 	<div class="px-12 py-9">
 		<!-- Zone LoopList -->
-		<h2 id="gradualworkresumption-weeklymaxnbrofhoursallowed">Nombre maximum d&#x27;heures de travail autorisées par semaine dans le cadre d&#x27;une reprise progressive du travail</h2>
+		<h2 id="gradualworkresumption-weeklymaxnumberofhoursallowed">Maximale aantal uren toegestane arbeid per week in het kader van progressieve werkhervatting</h2>
 
 		<div class="dl-block">
 			<dl class="mt-7">
-				<dt>Description</dt>
-				<dd>Le nombre maximum d&#x27;heures de travail autorisées par semaine dans le cadre d&#x27;une reprise progressive du travail après une période d&#x27;incapacité de travail.</dd>
+				<dt>Beschrijving</dt>
+				<dd>Het maximale aantal uren per week toegestane arbeid in het kader van een progressieve werkhervatting na een periode van arbeidsongeschiktheid.</dd>
 				<hr class="my-5">
-
 				<dt>TechLabel</dt>
-				<dd>weeklyMaxNbrOfHoursAllowed</dd>
+				<dd>weeklyMaxNumberOfHoursAllowed</dd>
 				<hr class="my-5">
-
 				<dt>Type</dt>
 				<dd>integer</dd>
 				<hr class="my-5">
-
-				<dt>Longeur</dt>
+				<dt>Lengte</dt>
 				<dd>5</dd>
 				<hr class="my-5">
-
-				<dt>Format</dt>
+				<dt>Formaat</dt>
 				<dd>-</dd>
 				<hr class="my-5">
-
-				<dt>Domaine de définition</dt>
-				<dd>[1; 99999]<br><br>Les heures sont exprimées en centièmes d&#x27;heures.<br>Exemples :<br><br><ul>
-<li>1 heure est exprimée par 100.</li>
-<li>4 heures et 30 minutes sont exprimées par 450.</li>
-<li>12 heures et 22 minutes sont exprimées par 1237.</li>
+				<dt>Toegelaten domein</dt>
+				<dd>[1; 99999]<br><br>De uren worden uitgedrukt in honderdsten van uren.<br>Voorbeelden :<br><br><ul>
+<li>1 uur wordt uitgedrukt als 100.</li>
+<li>4 uren en 30 minuten wordt uitgedrukt als 450.</li>
+<li>12 uren en 22 minuten wordt uitgedrukt als 1237.</li>
 </ul></dd>
 				<hr class="my-5">
-
-				<dt>Présence</dt>
-				<dd>Indispensable</dd>
+				<dt>Aanwezigheid</dt>
+				<dd>Onmisbaar</dd>
 				<hr class="my-5">
 			</dl>
 
@@ -792,8 +786,8 @@
 	<footer class="footer">
 		<div class="px-4 px-md-6 px-lg-10 px-xl-20 py-5 py-lg-6">
 			<div class="d-flex flex-column gap-4 w-100">
-				<p><b>Contact: </b>Pour obtenir de l’aide ou pour toute autre question, veuillez nous contacter à
-					l’adresse e-mail suivante: <a href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
+				<p><b>Contact: </b>Voor hulp of verdere vragen kan u ons contacteren via volgend mailadres: <a
+					href="mailto:egov@onssrszlss.fgov.be">egov@onssrszlss.fgov.be</a></p>
 				<!--<p>&#169; socialsecurity.be 2025</p>-->
 			</div>
 		</div>
@@ -825,8 +819,8 @@
                                         </div>
                                     </div>
 
-                                    <p>&#169; 2025 Smals · <span
-                                                class="text-muted">v1.0.0</span></p>
+                                    <p>&#169; 2026 Smals · <span
+                                                class="text-muted">v1.0.1.7</span></p>
                                 </div>
                                 <a class="d-inline-block my-auto" href="https://next-generation-eu.europa.eu/"
                                    target="_blank" rel="noopener">
