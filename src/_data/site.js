@@ -6,7 +6,7 @@ export default {
     author: "Smals",
     year: new Date().getFullYear(),
     // version info
-    version: "1.0.0",
+    version: "1.0.1.7",
     defaultLang: "nl",
     supportedLangs: ["nl", "fr"],
 };
